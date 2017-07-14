@@ -1,0 +1,65 @@
+{% extends "application/v1/layout.html" %}
+
+{% block content %}
+
+<main id="content" role="main" class="multi-page">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+    <h2 class="heading-large">Charges</h2>
+
+    <form method="post" action="purchase_date">
+
+      <fieldset class="inline form-group">
+        <legend class="form-label mbq">Do you or your partner pay ground rent?</legend>
+        <div class="form-group mbh">
+          <label for="ground_rent_yes" class="block-label selection-button-radio" data-target="ground_rend_message">
+            <input id="ground_rent_yes" type="radio" name="ground_rent" value="Yes">
+            Yes
+          </label>
+          <label for="ground_rent_no" class="block-label selection-button-radio">
+            <input id="ground_rent_no" type="radio" name="ground_rent" value="No">
+            No
+          </label>
+        </div>
+        <div class="panel panel-indent js-hidden" id="ground_rend_message">
+          {# <p>We'll write to you about this</p> #}
+          <div class="form-group">
+            <label class="form-label" for="ground_rent_amount">How much is it?</label>
+            <input class="form-control" id="ground_rent_amount" type="text" style="width:25%">
+          </div>
+        </div>
+      </fieldset><!-- form-group -->
+
+      <fieldset class="inline form-group">
+        <legend class="form-label mbq">Are there service charges or other charges paid for this property?</legend>
+        <div class="form-group mbh">
+          <label for="service_charges_yes" class="block-label selection-button-radio" data-target="service_charges_message">
+            <input id="service_charges_yes" type="radio" name="service_charges" value="Yes">
+            Yes
+          </label>
+          <label for="service_charges_no" class="block-label selection-button-radio">
+            <input id="service_charges_no" type="radio" name="service_charges" value="No">
+            No
+          </label>
+        </div>
+        <div class="panel panel-indent js-hidden" id="service_charges_message">
+          {# <p>We'll write to you about this</p> #}
+          <div class="form-group">
+            <label class="form-label" for="ground_rent_amount">How much are they?</label>
+            <input class="form-control" id="ground_rent_amount" type="text" style="width:25%">
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="form-group mt1">
+        <input type="submit" class="button" value="Continue" />
+      </div><!-- form-group -->
+
+    </form>
+
+    </div><!-- column -->
+  </div><!-- row -->
+</main>
+
+{% endblock %}

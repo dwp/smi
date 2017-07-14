@@ -1,0 +1,372 @@
+{% extends "application/layout.html" %}
+
+{% block content %}
+
+<main id="content" role="main" class="multi-page">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+    <h2 class="heading-large">Give details of one of the loans you need help paying</h2>
+
+    <p class="panel panel-border-wide alert-default mb1">You'll be able to tell us about other loans after.</p>
+
+    <form method="post" action="loans">
+
+      <div class="form-group">
+        <label class="form-label" for="loan_ref">Loan reference number</label>
+        <input class="form-control" id="loan_ref" type="text">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="lender_name">Name of lender</label>
+        <input class="form-control" id="lender_name" type="text">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="loan_amount">Amount borrowed</label>
+        <input class="form-control form-control-1-4" id="loan_amount" type="
+        text">
+      </div>
+
+      <div class="form-group">
+          <legend class="form-label">When was loan the taken out?</legend>
+          <div class="form-date">
+            <div class="form-group form-group-day">
+              <label class="form-label" for="dob-day">Day</label>
+              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
+            </div>
+            <div class="form-group form-group-month">
+              <label class="form-label" for="dob-month">Month</label>
+              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+            </div>
+            <div class="form-group form-group-year">
+              <label class="form-label" for="dob-year">Year</label>
+              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+            </div>
+          </div>
+      </div>
+
+      <fieldset class="form-group">
+        <legend class="form-label mbq">What kind of loan is it?</legend>
+        <div class="form-group mbh">
+          <label for="mortgage" class="block-label selection-button-radio">
+            <input id="mortgage" type="radio" name="load_type" value="Mortgage">
+            Mortgage
+          </label>
+          <label for="remortgage" class="block-label selection-button-radio">
+            <input id="remortgage" type="radio" name="load_type" value="Remortgage">
+            Remortgage
+          </label>
+          <label for="home_improvement" class="block-label selection-button-radio">
+            <input id="home_improvement" type="radio" name="load_type" value="Home improvement loan">
+            Home improvement loan
+          </label>
+          <label for="other_loan" class="block-label selection-button-radio" data-target="other_loan_reveal">
+            <input id="other_loan" type="radio" name="load_type" value="Other">
+            Other
+          </label>
+        </div>
+        <div class="panel panel-indent js-hidden mth" id="other_loan_reveal" style="clear:both">
+          <div class="form-group">
+            <label class="form-label" for="other_loan_detail">What kind is it?</label>
+            <input class="form-control" id="other_loan_detail" type="text">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="inline form-group">
+        <legend class="form-label mbq">Is the loan secured on the property?</legend>
+        <div class="form-group mbh">
+          <label for="secured_one_prop_yes" class="block-label selection-button-radio">
+            <input id="secured_one_prop_yes" type="radio" name="secured_one_prop" value="Yes">
+            Yes
+          </label>
+          <label for="secured_one_prop_no" class="block-label selection-button-radio">
+            <input id="secured_one_prop_no" type="radio" name="secured_one_prop" value="No">
+            No
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <legend class="form-label mbq">Whose name is the loan in?</legend>
+        <div class="form-group mbh">
+          <label for="yours" class="block-label selection-button-radio">
+            <input id="yours" type="radio" name="whose_name" value="Yours">
+            Yours
+          </label>
+          <label for="partners" class="block-label selection-button-radio">
+            <input id="partners" type="radio" name="whose_name" value="Partners">
+            Your partners
+          </label>
+          <label for="both" class="block-label selection-button-radio">
+            <input id="both" type="radio" name="whose_name" value="Both">
+            Both
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="inline form-group mbh">
+        <legend class="form-label mbq">Is the loan shared with anyone else?</legend>
+        <div class="form-group mbh">
+          <label for="shared_yes" class="block-label selection-button-radio" data-target="shared_reveal">
+            <input id="shared_yes" type="radio" name="loan_shared" value="Yes">
+            Yes
+          </label>
+          <label for="shared_no" class="block-label selection-button-radio">
+            <input id="shared_no" type="radio" name="loan_shared" value="No">
+            No
+          </label>
+        </div>
+        <div class="panel panel-indent js-hidden mth" id="shared_reveal" style="clear:both">
+          <div class="form-group">
+            <label class="form-label" for="others_name">Their name</label>
+            <input class="form-control" id="others_name" type="text">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="others_name">Their relationship to you</label>
+            <input class="form-control" id="others_name" type="text">
+          </div>
+          <div class="form-group mbh">
+            <legend class="form-label mbq">Do they still contribute towards repayments?</legend>
+            <label for="contribute_yes" class="block-label selection-button-radio" data-target="percent_reveal">
+              <input id="contribute_yes" type="radio" name="loan_contribute" value="Yes">
+              Yes
+            </label>
+            <label for="contribute_no" class="block-label selection-button-radio">
+              <input id="contribute_no" type="radio" name="loan_contribute" value="No">
+              No
+            </label>
+          </div>
+          <div class="panel panel-indent js-hidden mth" id="percent_reveal" style="clear:both">
+            <div class="form-group">
+              <label class="form-label" for="percentage">What percentage of the repayments are you responsible for?</label>
+              <p class="form-hint mb0">For example, 50%</p>
+              <input class="form-control form-control-1-4" id="percentage" type="text">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="inline form-group mbh">
+        <div class="form-group mbh">
+          <legend class="form-label mbq">Is this the original loan that was first used  to purchase the property?</legend>
+          <label for="original_loan_yes" class="block-label selection-button-radio">
+            <input id="original_loan_yes" type="radio" name="original_loan" value="Yes">
+            Yes
+          </label>
+          <label for="original_loan_no" class="block-label selection-button-radio" data-target="original_reveal">
+            <input id="original_loan_no" type="radio" name="original_loan" value="No">
+            No
+          </label>
+        </div><!-- form-group -->
+        <div class="panel panel-indent js-hidden mt0" id="original_reveal" style="clear:both">
+          <div class="form-group">
+            <label class="form-label" for="original_amount">What was the amount originally borrowed to buy your house?</label>
+            <input class="form-control form-control-1-4" id="original_amount" type="text">
+          </div>
+          <div class="form-group">
+            <legend class="form-label">When was original loan the taken out?</legend>
+            <div class="form-group form-date">
+              <div class="form-group form-group-day">
+                <label class="form-label" for="original_loan_day">Day</label>
+                <input class="form-control" id="original_loan_day" name="original_loan_day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="original_loan_hint">
+              </div>
+              <div class="form-group form-group-month">
+                <label class="form-label" for="original_loan_month">Month</label>
+                <input class="form-control" id="original_loan_month" name="original_loan_month" type="number" pattern="[0-9]*" min="0" max="12">
+              </div>
+              <div class="form-group form-group-year">
+                <label class="form-label" for="original_loan_year">Year</label>
+                <input class="form-control" id="original_loan_year" name="original_loan_year" type="number" pattern="[0-9]*" min="0" max="2016">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="original_lender">Who was the original lender?</label>
+              <input class="form-control" id="original_lender" type="text">
+            </div><!-- form-group -->
+            <div class="form-group">
+              <label class="form-label" for="original_lender">How much was outstanding on the original loan when you remortgaged?</label>
+              <input class="form-control form-control-1-4" id="original_lender" type="text">
+            </div><!-- form-group -->
+          </div>
+        </div><!-- .panel -->
+      </div>
+
+      <fieldset class="inline mbh">
+        <div class="form-group mbh">
+          <legend class="form-label mbq">Is there an insurance policy that pays out if you or your partner become sick or unemployed?</legend>
+          <label for="insurance_policy_yes" class="block-label selection-button-radio" data-target="insurance_reveal">
+            <input id="insurance_policy_yes" type="radio" name="insurance_policy" value="Yes">
+            Yes
+          </label>
+          <label for="insurance_policy_no" class="block-label selection-button-radio" >
+            <input id="insurance_policy_no" type="radio" name="insurance_policy" value="No">
+            No
+          </label>
+        </div><!-- form-group -->
+        <div class="panel panel-indent js-hidden" id="insurance_reveal">
+          <div class="form-group mbh">
+            <legend class="form-label mbq">Have you or your partner made a claim on this insurance policy?</legend>
+            <label for="claim_made_yes" class="block-label selection-button-radio" data-target="claim_reveal">
+              <input id="claim_made_yes" type="radio" name="claim_made" value="Yes">
+              Yes
+            </label>
+            <label for="claim_made_no" class="block-label selection-button-radio" >
+              <input id="claim_made_no" type="radio" name="claim_made" value="No">
+              No
+            </label>
+          </div><!-- form-group -->
+          <div class="panel panel-indent js-hidden" id="claim_reveal">
+            <legend class="form-label">When will you get the first payment?</legend>
+            <div class="form-group form-date">
+              <div class="form-group form-group-day">
+                <label class="form-label" for="first_payment_day">Day</label>
+                <input class="form-control" id="first_payment_day" name="first_payment_day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="first_payment_hint">
+              </div>
+              <div class="form-group form-group-month">
+                <label class="form-label" for="first_payment_month">Month</label>
+                <input class="form-control" id="first_payment_month" name="first_payment_month" type="number" pattern="[0-9]*" min="0" max="12">
+              </div>
+              <div class="form-group form-group-year">
+                <label class="form-label" for="first_payment_year">Year</label>
+                <input class="form-control" id="first_payment_year" name="first_payment_year" type="number" pattern="[0-9]*" min="0" max="2016">
+              </div>
+            </div>
+            <div class="form-group">
+              <legend class="form-label mbq">Will the insurance cover your payments to the lender?</legend>
+              <label for="cover_payments_yes" class="block-label selection-button-radio" data-target="claim_reveal">
+                <input id="cover_payments_yes" type="radio" name="cover_payments" value="Yes">
+                Yes
+              </label>
+              <label for="cover_payments_no" class="block-label selection-button-radio" >
+                <input id="cover_payments_no" type="radio" name="cover_payments" value="No">
+                No
+              </label>
+            </div><!-- form-group -->
+          </div><!-- panel -->
+        </div><!-- panel -->
+      </fieldset>
+
+      <fieldset>
+        <div class="form-group inline">
+          <legend class="form-label mbq">Is the loan for anything except buying the property?</legend>
+          <label for="other_purpose_yes" class="block-label selection-button-radio" data-target="other_purpose_reveal">
+            <input id="other_purpose_yes" type="radio" name="other_purpose" value="Yes">
+            Yes
+          </label>
+          <label for="other_purpose_no" class="block-label selection-button-radio" >
+            <input id="other_purpose_no" type="radio" name="other_purpose" value="No">
+            No
+          </label>
+        </div><!-- form-group -->
+        <div class="panel panel-indent js-hidden" id="other_purpose_reveal">
+          <fieldset class="form-group">
+            <legend class="form-label mbq">What kind of loan is it?</legend>
+            <div class="form-group mbh">
+              <label for="home_improvements" class="block-label selection-button-radio">
+                <input id="home_improvements" type="radio" name="other_purpose_type" value="Home improvements">
+                Home improvements
+              </label>
+              <label for="repairs" class="block-label selection-button-radio">
+                <input id="repairs" type="radio" name="other_purpose_type" value="Repairs">
+                Repairs
+              </label>
+              <label for="other_purpose_other" class="block-label selection-button-radio" data-target="other_purpose_other_reveal">
+                <input id="other_purpose_other" type="radio" name="other_purpose_type" value="Other">
+                Other
+              </label>
+            </div>
+            <div class="panel panel-indent js-hidden mth" id="other_purpose_other_reveal" style="clear:both">
+              <div class="form-group">
+                <label class="form-label" for="other_loan_detail">What was done with the rest of the loan?</label>
+                <textarea class="form-control" id="other_loan_detail"></textarea>
+              </div>
+            </div>
+          </fieldset>
+        </div><!-- panel -->
+      </fieldset>
+
+      <fieldset>
+        <div class="form-group inline mbh">
+          <legend class="form-label mbq">Was the loan for transfer of equity?</legend>
+          <label for="equity_trans_yes" class="block-label selection-button-radio" data-target="equity_trans_reveal">
+            <input id="equity_trans_yes" type="radio" name="equity_trans" value="Yes">
+            Yes
+          </label>
+          <label for="equity_trans_no" class="block-label selection-button-radio" >
+            <input id="equity_trans_no" type="radio" name="equity_trans" value="No">
+            No
+          </label>
+        </div><!-- form-group -->
+        <div class="panel panel-indent js-hidden" id="equity_trans_reveal">
+          <div class="form-group">
+            <label class="form-label" for="original_lender">How much for?</label>
+            <input class="form-control form-control-1-4" id="original_lender" type="text">
+          </div><!-- form-group -->
+        </div><!-- panel -->
+      </fieldset>
+
+      <fieldset>
+        <div class="form-group inline mbh">
+          <legend class="form-label mbq">Was the loan used for debt consolidation?</legend>
+          <label for="debt_consol_yes" class="block-label selection-button-radio" data-target="debt_consol_reveal">
+            <input id="debt_consol_yes" type="radio" name="debt_consol" value="Yes">
+            Yes
+          </label>
+          <label for="debt_consol_no" class="block-label selection-button-radio" >
+            <input id="debt_consol_no" type="radio" name="debt_consol" value="No">
+            No
+          </label>
+        </div><!-- form-group -->
+        <div class="panel panel-indent js-hidden" id="debt_consol_reveal">
+          <div class="form-group">
+            <label class="form-label" for="original_lender">How much for?</label>
+            <input class="form-control form-control-1-4" id="original_lender" type="text">
+          </div><!-- form-group -->
+          <div class="form-group inline mbh">
+            <legend class="form-label mbq">Did this amounnt include any redemption fees?</legend>
+            <label for="redempt_yes" class="block-label selection-button-radio" data-target="redempt_reveal">
+              <input id="redempt_yes" type="radio" name="redempt" value="Yes">
+              Yes
+            </label>
+            <label for="redempt_no" class="block-label selection-button-radio" >
+              <input id="redempt_no" type="radio" name="redempt" value="No">
+              No
+            </label>
+          </div><!-- form-group -->
+          <div class="panel panel-indent js-hidden" id="redempt_reveal">
+            <div class="form-group">
+              <label class="form-label" for="original_lender">How much for?</label>
+              <input class="form-control form-control-1-4" id="original_lender" type="text">
+            </div><!-- form-group -->
+          </div><!-- panel -->
+        </div><!-- panel -->
+      </fieldset>
+
+      <fieldset>
+        <div class="form-group inline mbh">
+          <legend class="form-label mbq">Is this an equity release product?</legend>
+          <p class="form-hint mbq">For example, a lifetime mortgage</p>
+          <label for="equity_release_yes" class="block-label selection-button-radio" data-target="equity_release_reveal">
+            <input id="equity_release_yes" type="radio" name="equity_release" value="Yes">
+            Yes
+          </label>
+          <label for="equity_release_no" class="block-label selection-button-radio" >
+            <input id="equity_release_no" type="radio" name="equity_release" value="No">
+            No
+          </label>
+        </div><!-- form-group -->
+      </fieldset>
+
+      <div class="form-group mt1">
+        <input type="submit" class="button" value="Continue" />
+      </div><!-- form-group -->
+
+    </form>
+
+    </div><!-- column -->
+  </div><!-- row -->
+</main>
+
+{% endblock %}

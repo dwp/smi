@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="index">
+
+<div class="index-page-banner">
+  <div class="index-heading-wrapper">
+    <h1 class="heading-xlarge index-heading-xlarge">Support for Mortgage Interest Application Form</h1>
+    <h2 class="heading-large index-heading-large">Prototypes</h2>
+  </div>
+</div>
+
+<main id="content" role="main">
+
+    {% include "includes/phase_banner_alpha.html" %}
+
+    <div class="latest_version">
+      {% include "application/12/inc_index.html" %}
+    </div>
+
+    <div class="grid-row">
+      <div class="column-full">
+
+        <h2 class="heading-medium">Older versions</h2>
+
+        <details>
+          <summary><span class="summary">View older prototypes</span></summary>
+          <div>
+
+            <!--- START OF VERSIONS --->
+            {# {% include "v1/inc_index.html" %} #}
+
+            <!--- END OF VERSIONS --->
+          </div>
+        </details>
+
+      </div><!-- column -->
+    </div><!-- row -->
+
+</main>
+
+</><!-- .index -->
+{% endblock %}

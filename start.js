@@ -3,19 +3,9 @@
 var path = require('path')
 var fs = require('fs')
 
-// Check if node_modules folder exists
-const nodeModulesExists = fs.existsSync(path.join(__dirname, '/node_modules'))
-if (!nodeModulesExists) {
+if (!fs.existsSync(path.join(__dirname, '/node_modules'))) {
   console.error('ERROR: Node module folder missing. Try running `npm install`')
   process.exit(0)
-}
-
-// Create template .env file if it doesn't exist
-const envExists = fs.existsSync(path.join(__dirname, '/.env'))
-if (!envExists) {
-  console.log('Creating template .env file')
-  fs.createReadStream(path.join(__dirname, '/lib/template.env'))
-  .pipe(fs.createWriteStream(path.join(__dirname, '/.env')))
 }
 
 // run gulp

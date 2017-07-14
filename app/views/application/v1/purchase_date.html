@@ -1,0 +1,42 @@
+{% extends "application/layout.html" %}
+
+{% block content %}
+
+<main id="content" role="main" class="multi-page">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+    <h2 class="heading-large">What date was the property purchased?</h2>
+
+    <form method="post" action="loans_num">
+
+      <div class="form-group">
+        <fieldset>
+          <div class="form-date">
+            <div class="form-group form-group-day">
+              <label class="form-label" for="dob-day">Day</label>
+              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
+            </div>
+            <div class="form-group form-group-month">
+              <label class="form-label" for="dob-month">Month</label>
+              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+            </div>
+            <div class="form-group form-group-year">
+              <label class="form-label" for="dob-year">Year</label>
+              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="form-group mt1">
+        <input type="submit" class="button" value="Continue" />
+      </div><!-- form-group -->
+
+    </form>
+
+    </div><!-- column -->
+  </div><!-- row -->
+</main>
+
+{% endblock %}

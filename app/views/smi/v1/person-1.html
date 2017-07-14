@@ -1,0 +1,119 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'claimant' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <h1 class="heading-xlarge" style="margin-bottom:30px">
+          Kris Kelsey Shaw
+          <span class="heading-secondary">{{ nino | default('QQ123456C',true) }}</span>
+        </h1>
+
+          <h2 class="heading-medium">Homeowner details</h2>
+            <table class="homeowner-details">
+                <tbody>
+                    <tr>
+                        <td>
+                            Benefit
+                        </td>
+                        <td>
+                            Pension Credit
+                        </td>
+                    </tr>
+                    <tr>                        
+                        <td>
+                            Date of birth
+                        </td>
+                        <td>
+                            24 Jan 1949
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Address
+                        </td>
+                        <td>
+                            1 The Street<br />
+                            Kingston-upon-hull<br />
+                            KD12 9FT
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Phone number
+                        </td>
+                        <td>
+                            0777 555 008
+                        </td>
+                  </tr>      
+                </tbody>
+            </table>
+
+          <h2 class="heading-medium">Appointee details</h2>
+            <table class="appointee-details">
+                <tbody>
+                    <tr>
+                        <td>
+                            Name
+                        </td>
+                        <td>
+                            William Wilberforce
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Phone number
+                        </td>
+                        <td>
+                            0777 555 008
+                        </td>
+                  </tr>      
+                </tbody>
+            </table>    
+
+          <h2 class="heading-medium">Partner details</h2>
+            <table class="partner-details">
+                <tbody>
+                    <tr>
+                        <td>
+                            Name
+                        </td>
+                        <td>
+                            William Wilberforce
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Phone number
+                        </td>
+                        <td>
+                            0777 555 008
+                        </td>
+                  </tr>      
+                </tbody>
+            </table>                        
+
+      </div><!-- column -->
+
+      <!--<div class="column-third">
+        <div class="left-aside">
+          <h3 class="heading-small">Date of birth</h3> <p>24 Jan 1949</p>
+          <h3 class="heading-small">Address</h3> <p>1 The Street<br />Kingston-upon-hull</br >KD12 9FT</p>
+          <h3 class="heading-small">Phone number</h3> <p>0777 555 008</p>
+          <hr  style="width:50%;margin:0"/>
+          <h3 class="heading-small">Appointee</h3> <p>William Wilberforce</p>
+          <hr  style="width:50%;margin:0"/>
+          <h3 class="heading-small">Benefit</h3> <p>Universal Credit</p>
+        </div>
+      </div>--><!-- column -->
+
+    </div><!-- row -->
+  </div>
+</main>
+{% endblock %}

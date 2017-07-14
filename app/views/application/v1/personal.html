@@ -1,0 +1,67 @@
+{% extends "application/v1/layout.html" %}
+
+{% block content %}
+
+<main id="content" role="main" class="multi-page">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+    <h2 class="heading-large">Your details</h2>
+
+    <form method="post" action="charges">
+
+      <div class="form-group">
+        <label class="form-label" for="fullname">Full name</label>
+        <input class="form-control" name="fullname" id="fullname" type="text">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="nino">National Insurance Number</label>
+        <input class="form-control" name="nino" id="nino" type="text">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="address_1">Address</label>
+        <input class="form-control mbh" name="address_1" id="address_1" type="text">
+        <input class="form-control mbh" name="address_2" id="address_2" type="text">
+        <input class="form-control mbh" name="address_3" id="address_3" type="text">
+        <label class="form-label" for="postcode">Postcode</label>
+        <input class="form-control mbh" name="postcode" id="postcode" type="text">
+      </div>
+
+      <fieldset class="inline form-group">
+        <legend class="form-label mbq">Is this the property you pay the mortgage on?</legend>
+        <div class="form-group mbh">
+          <label for="same-property-yes" class="block-label selection-button-radio">
+            <input id="same-property-yes" type="radio" name="same-property" value="Yes">
+            Yes
+          </label>
+          <label for="same-property-no" class="block-label selection-button-radio" data-target="other_address">
+            <input id="same-property-no" type="radio" name="same-property" value="No">
+            No
+          </label>
+        </div>
+        <div class="panel panel-indent js-hidden" id="other_address">
+          <div class="form-group">
+            <p class="form-label">Enter the address of the property you pay the remortgage or home improvement loan on</p>
+            <label class="form-label" for="other_address_1">Address</label>
+            <input class="form-control mbh" name="other_address_1" id="other_address_1" type="text">
+            <input class="form-control mbh" name="other_address_2" id="other_address_2" type="text">
+            <input class="form-control mbh" name="other_address_3" id="other_address_3" type="text">
+            <label class="form-label" for="postcode">Postcode</label>
+            <input class="form-control mbh" name="other_postcode" id="other_postcode" type="text">
+          </div>
+        </div>
+      </fieldset><!-- form-group -->
+
+      <div class="form-group">
+        <input type="submit" class="button" value="Continue" />
+      </div><!-- form-group -->
+
+    </form>
+
+    </div><!-- column -->
+  </div><!-- row -->
+</main>
+
+{% endblock %}
