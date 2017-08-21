@@ -15,25 +15,33 @@
           <span class="heading-secondary">{{ nino | default('QQ123456C',true) }}</span>
         </h1>
 
-          <h2 class="heading-medium">Homeowner details</h2>
-            <table class="homeowner-details">
+          <h2 class="heading-medium">Borrower details</h2>
+            <table class="borrower-details">
                 <tbody>
                     <tr>
                         <td>
-                            Benefit
+                            First date of claim
                         </td>
                         <td>
-                            Pension Credit
+                            <a href="add-claim-date">Add date</a>
                         </td>
-                    </tr>
-                    <tr>                        
+                  </tr>   
+                    <tr>
                         <td>
-                            Date of birth
+                            Qualifying date
                         </td>
                         <td>
-                            24 Jan 1949
+                            <a href="add-qualifying-date">Add date</a>
                         </td>
-                    </tr>
+                  </tr>
+                    <tr>
+                        <td>
+                            Mortgage review date
+                        </td>
+                        <td>
+                            <a href="add-mortgage-review-date">Add date</a>
+                        </td>
+                  </tr>                                                                  
                     <tr>
                         <td>
                             Address
@@ -43,59 +51,49 @@
                             Kingston-upon-hull<br />
                             KD12 9FT
                         </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Phone number
-                        </td>
-                        <td>
-                            0777 555 008
-                        </td>
-                  </tr>      
+                    </tr>                  
                 </tbody>
             </table>
 
-          <h2 class="heading-medium">Appointee details</h2>
-            <table class="appointee-details">
-                <tbody>
-                    <tr>
-                        <td>
-                            Name
-                        </td>
-                        <td>
-                            William Wilberforce
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Phone number
-                        </td>
-                        <td>
-                            0777 555 008
-                        </td>
-                  </tr>      
-                </tbody>
-            </table>    
+          <h2 class="heading-medium">Lender details</h2>
 
-          <h2 class="heading-medium">Partner details</h2>
-            <table class="partner-details">
+          <h3 class="heading-small">Bank of United Kingdom</h3>
+            <table class="lender-details">
                 <tbody>
                     <tr>
                         <td>
-                            Name
+                            Lender code
                         </td>
                         <td>
-                            William Wilberforce
+                            <a href="lender-code">Add lender code</a>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            Phone number
+                            Lender address
                         </td>
                         <td>
-                            0777 555 008
+                            1 The Street<br />
+                            Kingston-upon-hull<br />
+                            KD12 9FT
                         </td>
-                  </tr>      
+                    </tr>                    
+                    <tr>
+                        <td>
+                            Date of loan
+                        </td>
+                        <td>
+                            23 September 1995
+                        </td>
+                   </tr>
+                   <tr>
+                        <td>
+                            Outstanding balance
+                        </td>
+                        <td>
+                            £83,231
+                        </td>
+                   </tr>                                                     
                 </tbody>
             </table>                        
 
@@ -103,15 +101,13 @@
 
       <!--<div class="column-third">
         <div class="left-aside">
-          <h3 class="heading-small">Date of birth</h3> <p>24 Jan 1949</p>
-          <h3 class="heading-small">Address</h3> <p>1 The Street<br />Kingston-upon-hull</br >KD12 9FT</p>
-          <h3 class="heading-small">Phone number</h3> <p>0777 555 008</p>
+          <h3 class="heading-small">Date of birth</h3> <p>24 January 1949</p>
+          <hr  style="width:50%;margin:0"/>
+          <h3 class="heading-small">Benefit</h3> <p>Pension Credit</p>
           <hr  style="width:50%;margin:0"/>
           <h3 class="heading-small">Appointee</h3> <p>William Wilberforce</p>
-          <hr  style="width:50%;margin:0"/>
-          <h3 class="heading-small">Benefit</h3> <p>Universal Credit</p>
         </div>
-      </div>--><!-- column -->
+      </div>--> <!-- column -->
 
     </div><!-- row -->
   </div>
