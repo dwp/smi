@@ -14,40 +14,35 @@
           Kris Kelsey Shaw
           <span class="heading-secondary">{{ nino | default('QQ123456C',true) }}</span>
         </h1>
-      </div>  
 
-  <div class="column-two-thirds">      
     <div class="horizontal-admin-secondary-wrapper">
       <div class="admin-column-wrapper">
         <div class="admin-content-wrapper">
           <div class="admin-content">
             <div class="admin-submenu-container">
             
-
             <div class="admin-submenu">
               <ul>
                 <li><a href="#">Overview</a></li>
+                <li><a href="#">Personal details</a></li>
                 <li><a href="#">Loan details</a></li>
-                <li><a href="#">Make payments</a></li>
-                <li><a href="#">Section 4</a></li>
-                <li><a href="#">Section 5</a></li>
+                <li><a href="#">Payments</a></li>
+                <li><a href="#">Notes</a></li>
               </ul>
             </div>
 
-            <!--<h1 class="heading-xlarge">Section 1</h1>-->
+            <!-- <h1 class="heading-medium mb0">Section 1</h1> -->
 
             <div class="admin-panes">
               <div class="admin-pane">
-             <table class="borrower-details">
+               <table class="borrower-details">
                 <tbody>
                 <tr>
                   <td>
-                   <h2 class="heading-small">Borrower details</h2>
+                   <h2 class="heading-small">Overview</h2>
                   </td>
                   <td></td>
-                  <td>
-                    <p class="heading-small"><a href="person-1-details">Change<span class="visuallyhidden">borrower details</span></a></p>
-                  </td>
+                  <td><p class="heading-small"><a href="change-details">Change<span class="visuallyhidden">overview details</span></a></p></td>
                 </tr>
 
                     <tr>
@@ -76,7 +71,10 @@
                             </div>
                           </form>
                         </td>
-                        <td><p class="heading-small"><a href="change-details">Add<span class="visuallyhidden"> first date of claim</span></a></p></td>
+                        <td>                        
+                        <div class="add">
+                          <input type="button" class="button button-secondary" value="Add" /><span class="visuallyhidden">Add First Claim date</span>
+                         </div></td>
                   </tr>   
                     <tr>
                         <td>
@@ -104,7 +102,10 @@
                             </div>
                           </form>
                         </td>
-                        <td><p class="heading-small"><a href="change-details">Add<span class="visuallyhidden"> qualifying date</span></a></p></td>
+                        <td>
+                        <div class="add">
+                          <input type="button" class="button button-secondary" value="Add" /><span class="visuallyhidden">Add qualifying date</span>
+                         </div></td>
                   </tr>
                     <tr>
                         <td>
@@ -132,7 +133,10 @@
                             </div>
                           </form>
                         </td>
-                        <td><p class="heading-small"><a href="change-details">Add<span class="visuallyhidden"> Mortgage dreview date</span></a></p></td>
+                        <td>
+                        <div class="add">
+                          <input type="button" class="button button-secondary" value="Add" /><span class="visuallyhidden">Add Mortgage Review date</span>
+                         </div></td>
                   </tr>  
 
                     <tr>
@@ -145,7 +149,266 @@
                             KD12 9FT
                         </td>
                         <td></td>
+                    </tr>       
+
+                    <tr>
+                        <td>
+                            Lived in property since
+                        </td>
+                        <td>
+                            3 March 1990
+                        </td>
+                        <td></td>
+                    </tr>                      
+ 
+                    <tr>
+                        <td>
+                            Benefit type
+                        </td>
+                        <td>
+                            Pension Credit
+                        </td>
+                        <td></td>
+                    </tr>                               
+                </tbody>
+            </table>       
+
+            <br /><br />
+
+                <table class="loan-details-1">
+                <tbody>
+                <tr>
+                  <td>
+                   <h2 class="heading-small">Loan 1 details</h2>
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                    <p class="heading-small"><a href="change-details">Change<span class="visuallyhidden">loan 1 details</span></a></p>
+                  </td>
+                </tr>  
+                <tr>
+                  <td>
+                    Lender name
+                  </td>
+                  <td>
+                  Bank of United Kingdom
+                  </td>
+                  <td>
+                  </td> 
+                </tr>   
+                    <tr>
+                        <td>
+                            Lender address
+                        </td>
+                        <td>
+                            1 The Street<br />
+                            Kingston-upon-hull<br />
+                            KD12 9FT
+                        </td>
+                        <td></td>
+                    </tr>                    
+                    <tr>
+                        <td>
+                            Date of loan
+                        </td>
+                        <td>
+                            23 September 1995
+                        </td>
+                        <td></td>
+                   </tr>
+                   <tr>
+                        <td>
+                            Outstanding balance
+                        </td>
+                        <td>
+                            £83,231
+                        </td>
+                        <td></td>
+                   </tr>      
+                   <tr>
+                   <tr>
+                        <td>
+                            Type of loan
+                        </td>
+                        <td>
+                  <fieldset class="mb0" id="loan_types">
+                      <select class="form-select mb0" >
+                          <option>---</option>
+                          <option>Original mortgage</option>
+                          <option>Remortgage</option>
+                          <option>Home improvement</option>
+                        </select>
+                  </fieldset>
+                        </td>
+                      <td>
+                        <div class="add">
+                          <input type="button" class="button button-secondary" value="Add" /><span class="visuallyhidden">Add loan type</span>
+                         </div></td>
+                   </tr>                                                                     
+                </tbody>
+            </table>      
+
+            <br /><br /> 
+
+            <table class="loan-details-2">
+                <tbody>
+                <tr>
+                  <td>
+                   <h2 class="heading-small">Loan 2 details</h2>
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                    <p class="heading-small"><a href="change-details">Change<span class="visuallyhidden">loan 2 details</span></a></p>
+                  </td>
+                </tr>  
+                <tr>
+                  <td>
+                    Lender name
+                  </td>
+                  <td>
+                  Bank of North Yorkshire
+                  </td>
+                  <td>
+                  </td> 
+                </tr>   
+                    <tr>
+                        <td>
+                            Lender address
+                        </td>
+                        <td>
+                            2 Mark Street<br />
+                            Kingston-upon-hull<br />
+                            KP6 7MS
+                        </td>
+                        <td></td>
+                    </tr>                    
+                    <tr>
+                        <td>
+                            Date of loan
+                        </td>
+                        <td>
+                            2 December 2001
+                        </td>
+                        <td></td>
+                   </tr>
+                   <tr>
+                        <td>
+                            Outstanding balance
+                        </td>
+                        <td>
+                            £20,200
+                        </td>
+                        <td></td>
+                   </tr>
+                   <tr>
+                        <td>
+                            Type of loan
+                        </td>
+                        <td>
+                  <fieldset class="mb0" id="loan_types">
+                      <select class="form-select mb0" >
+                          <option>---</option>
+                          <option>Original mortgage</option>
+                          <option>Remortgage</option>
+                          <option>Home improvement</option>
+                        </select>
+                  </fieldset>
+                        </td>
+                      <td>
+                        <div class="add">
+                          <input type="button" class="button button-secondary" value="Add" /><span class="visuallyhidden">Add loan type</span>
+                         </div></td>
+                   </tr>                                                                               
+                </tbody>
+            </table>  
+
+            <br /><br />
+
+              <div class="form-group mb0">
+                <input type="submit" class="button" value="Save all details">
+              </div>            
+
+              </div>
+
+              <!-- PERSONAL DETAILS -->
+
+              <div class="admin-pane">
+             <table class="borrower-details">
+                <tbody>
+                <tr>
+                  <td>
+                   <h2 class="heading-small">Personal details</h2>
+                  </td>
+                  <td></td>
+                  <td>
+                    <p class="heading-small"><a href="person-1-details">Change<span class="visuallyhidden">borrower details</span></a></p>
+                  </td>
+                </tr>
+
+                    <tr>
+                        <td>
+                            First date of claim
+                        </td>
+                        <td>
+                          4 July 2017
+                        </td>
+                        <td></td>
+                  </tr>   
+                    <tr>
+                        <td>
+                            Qualifying date
+                        </td>
+                         <td>
+                          3 April 2018
+                        </td>
+                        <td></td>
+                  </tr>
+                    <tr>
+                        <td>
+                            Mortgage review date
+                        </td>
+                        <td>
+                          3 April 2018
+                        </td>
+                        <td></td>
+                  </tr>  
+
+                    <tr>
+                        <td>
+                            Address 1
+                        </td>
+                        <td>
+                            1 The Street<br />
+                            Kingston-upon-hull<br />
+                            KD12 9FT
+                        </td>
+                        <td></td>
                     </tr>        
+
+                    <tr>
+                        <td>
+                            Address 2
+                        </td>
+                        <td>
+                            12 Town Street<br />
+                            Pudsey<br />
+                            Leeds<br />
+                            LS28 7RQ
+                        </td>
+                        <td></td>
+                    </tr>      
+
+                     <tr>
+                        <td>
+                            Phone number
+                        </td>
+                        <td>
+                            01234 567 890
+                        </td>
+                        <td></td>
+                    </tr>                                         
 
                     <tr>
                         <td>
@@ -163,7 +426,10 @@
               
 
               <div class="admin-pane">
-                            <table class="loan-details-1">
+
+              <!-- LOAN DETAILS -->
+
+                <table class="loan-details-1">
                 <tbody>
                 <tr>
                   <td>
@@ -174,6 +440,7 @@
                   <td>
                     <p class="heading-small"><a href="change-details">Change<span class="visuallyhidden">loan 1 details</span></a></p>
                   </td>
+                </tr>  
                 <tr>
                   <td>
                     Lender name
@@ -193,6 +460,17 @@
                         </td>
                         <td></td>
                     </tr>
+
+                    <tr>
+                        <td>
+                            Loan reference number
+                        </td>
+                        <td>
+                            584 423 629 88
+                        </td>
+                        <td></td>
+                    </tr>
+
                     <tr>
                         <td>
                             Lender address
@@ -238,12 +516,13 @@
                   <td>
                     <p class="heading-small"><a href="change-details">Change<span class="visuallyhidden">loan 2 details</span></a></p>
                   </td>
+                 </tr> 
                 <tr>
                   <td>
                     Lender name
                   </td>
                   <td>
-                  Bank of Yorkshire Wide
+                  Bank of North Yorkshire
                   </td>
                   <td>
                   </td> 
@@ -257,6 +536,17 @@
                         </td>
                         <td></td>
                     </tr>
+
+                    <tr>
+                        <td>
+                            Loan reference number
+                        </td>
+                        <td>
+                            584 423 629 38
+                        </td>
+                        <td></td>
+                    </tr>
+
                     <tr>
                         <td>
                             Lender address
@@ -289,27 +579,98 @@
                 </tbody>
             </table>  
 
+              </div>
 
+              <!-- PAYMENTS -->
+
+              <div class="admin-pane">
+
+              <h2 class="heading-medium">Payments set</h2>
+
+              <h3 class="heading-small">Loan 1</h3>
+              <p>We are paying £70.10 every 4 weeks to Bank of United Kingdom</p>
+              <div class="add">
+                <p class="mth mb0"><a href="pay-loan-2" class="button button-secondary">Update payment details<span class="visuallyhidden">for loan 1</span></a></p>    
+              </div>       
+
+              <br />
+
+              <h3 class="heading-small">Loan 2</h3>
+              <p>Regular payments are not set</p>
+              <div class="add">
+                <p class="mth mb0"><a href="pay-loan-2" class="button button-secondary">Update payment details<span class="visuallyhidden">for loan 1</span></a></p>  
+              </div>       
+
+              <br />
+               
+              <h2 class="heading-medium mb0">Payment history</h2>   
+               <table class="payment-history">
+                <tbody>              
+                <tr>
+                  <td>
+                   <h2 class="heading-small">Date</h2>
+                  </td>
+                  <td>
+                  <h2 class="heading-small">Amount</h2>
+                  </td>
+                  <td>
+                  <h2 class="heading-small">Loan number</h2>
+                  </td>
+                  <td>
+                  <h2 class="heading-small">To</h2>
+                  </td>                  
+                 </tr> 
+                <tr>
+                  <td>
+                    3 April 2018
+                  </td>
+                  <td>
+                  £70.10
+                  </td>
+                  <td>
+                  1
+                  </td> 
+                  <td>
+                  Lender
+                  </td>
+                </tr>  
+
+                <tr>
+                  <td>
+                    3 April 2018
+                  </td>
+                  <td>
+                  £10.25
+                  </td>
+                  <td>
+                  2
+                  </td> 
+                  <td>
+                  Borrower
+                  </td>                  
+                </tr>                                                                 
+                </tbody>
+            </table>    
               </div>
 
               <div class="admin-pane">
-                <a href="pay-loan-1">Set payments for Loan 1</a>
+                <h2 class="heading-medium">Notes</h2>
               </div>
 
-              <div class="admin-pane">
-                Section 4
-              </div>
-
-              <div class="admin-pane">
-                Section 5
-              </div>
             </div>
           </div>
           </div>
         </div>
-      </div>
+      </div> 
 
-        <!--<div class="column-third">
+    </div>
+  </div><!-- row -->
+
+      <div class="column-third">
+         <div class="panel panel-border-wide alert-default">
+            <p class="heading-small">Next thing to do:</p> Send out MI12 reminder
+            <p><a href="#">View to do list</a></p>
+          </div>     
         <div class="left-aside">
           <h3 class="heading-small">Date of birth</h3> <p>24 January 1949</p>
           <hr  style="width:50%;margin:0"/>
@@ -317,9 +678,8 @@
           <hr  style="width:50%;margin:0"/>
           <h3 class="heading-small">Appointee</h3> <p>William Wilberforce</p>
         </div>
-      </div> <!-- column -->    
-
-    </div><!-- row -->
-  </div>
+      </div><!-- column --> 
+</div>
+</div>
 </main>
 {% endblock %}
