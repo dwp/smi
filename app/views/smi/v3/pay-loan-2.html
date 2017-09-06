@@ -1,0 +1,224 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'claimant' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <h1 class="heading-xlarge mb0" style="margin-bottom:30px">
+          Kris Kelsey Shaw
+          <span class="heading-secondary">{{ nino | default('QQ123456C',true) }}</span>
+        </h1>
+      </div>  
+
+  <div class="column-two-thirds"> 
+    <a class="link-back mb0" href="person-1">Back</a>     
+              <table class="payment-details">
+                <tbody>
+                <h2 class="heading-medium">Payments details for Loan 2</h2>
+
+                    <tr>
+                        <td>
+                            Start date
+                        </td>
+                        <td>
+                          <form>
+                            <div class="form-group">
+                              <fieldset>
+                                <div class="form-date">
+                                  <div class="form-group form-group-day">
+                                    <label class="form-label" for="dob-day">Day</label>
+                                    <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" value="23">
+                                  </div>
+                                  <div class="form-group form-group-month">
+                                    <label class="form-label" for="dob-month">Month</label>
+                                    <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="5">
+                                  </div>
+                                  <div class="form-group form-group-year">
+                                    <label class="form-label" for="dob-year">Year</label>
+                                    <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016" value="2018">
+                                  </div>
+                                </div>
+                              </fieldset>
+                            </div>
+                          </form>
+                        </td>
+                        <td></td>
+                  </tr>
+
+                        <td>
+                            Loan reference
+                        </td>
+                        <td>
+                          <form>
+                            <div class="form-group">
+                              <fieldset>
+                                <div class="form-reference">
+                                    <input class="form-control" id="loan-ref" name="loan-ref" type="text" value="584 423 629 88">
+                                </div>
+                              </fieldset>
+                            </div>
+                          </form>
+                        </td>
+                        <td></td>
+                  </tr>                  
+
+                   <tr>
+                        <td>
+                            Outstanding balance
+                        </td>
+                        <td>
+                          <div class="u-1/4-lap-and-up">
+                            <span class="c-form-input-denote">£</span>
+                            <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="20,200" data-parsley-id="9">
+                          </div>       
+                        </td>
+                        <td></td>
+                   </tr>  
+
+                   <tr>
+                        <td>
+                            Shared housing costs
+                        </td>
+                        <td>
+                          <form>
+                            <div class="form-group">
+                              <fieldset>
+                                <div class="form-date">
+                                  <div class="form-group form-group-day">
+                                    <input class="form-control" id="fraction" name="fraction" type="number" value="1">
+                                  </div>
+                                   <div class="form-group"> / </div>
+                                  <div class="form-group">
+                                    <input class="form-control" id="fraction" name="fraction" type="number" value="3">
+                                  </div>
+                                </div>
+                              </fieldset>
+                            </div>
+                          </form>     
+                        </td>
+                        <td></td>
+                   </tr>    
+
+                   <tr>
+                        <td>
+                            Loan exempt amount
+                        </td>
+                        <td>
+                          <div class="u-1/4-lap-and-up">
+                            <span class="c-form-input-denote">£</span>
+                            <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="0" data-parsley-id="9">
+                          </div>       
+                        </td>
+                        <td></td>
+                   </tr>     
+
+                   <tr>
+                        <td>
+                            Override Weekly Interest                    
+                        </td>
+                        <td>
+                          <div class="u-1/4-lap-and-up">
+                            <span class="c-form-input-denote">£</span>
+                            <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="0" data-parsley-id="9">
+                          </div>       
+                        </td>
+                        <td></td>
+                   </tr>    
+
+                   <tr>
+                        <td>
+                            Upper limit amount
+                        </td>
+                        <td>
+                          £202,000      
+                        </td>
+                        <td></td>
+                   </tr>                                                                                           
+                    
+                </tbody>
+            </table> 
+
+              <table class="deductions">
+                <tbody>
+                <h2 class="heading-medium">Deductions</h2>
+
+                   <tr>
+                        <td>
+                            Mortgage Protection Policy
+                            <span class="form-hint">Weekly deduction</span>
+                        </td>
+                        <td>
+                          <div class="u-1/4-lap-and-up">
+                            <span class="c-form-input-denote">£</span>
+                            <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="0" data-parsley-id="9">
+                          </div>       
+                        </td>
+                        <td></td>
+                   </tr>    
+
+                   <tr>
+                        <td>
+                            Ground/rent service charge
+                        </td>
+                        <td>
+                          £0      
+                        </td>
+                        <td></td>
+                   </tr> 
+
+                   <tr>
+                        <td>
+                            Non-dependent deductions
+                        </td>
+                        <td>
+                          £14      
+                        </td>
+                        <td></td>
+                   </tr>                                                                                                                             
+                    
+                </tbody>
+            </table>      
+
+            <div class="form-group">
+                 <form>
+                    <div class="form-group mb0"><h2 class="heading-medium">Total weekly amount: £70.10</h2> </div>
+                    <div class="form-group mb0">                          
+                      <input type="submit" class="button button-secondary" value="Calculate">
+                    </div>
+                 </form>   
+            </div>
+
+              <div class="form-group">
+                <input type="submit" class="button" value="Submit payment">
+              </div>
+              <a href="#">Cancel</a>  
+
+
+      </div><!-- column -->
+              
+
+          </div>
+          </div>
+        </div>
+      </div>
+
+        <!--<div class="column-third">
+        <div class="left-aside">
+          <h3 class="heading-small">Date of birth</h3> <p>24 January 1949</p>
+          <hr  style="width:50%;margin:0"/>
+          <h3 class="heading-small">Benefit</h3> <p>Pension Credit</p>
+          <hr  style="width:50%;margin:0"/>
+          <h3 class="heading-small">Appointee</h3> <p>William Wilberforce</p>
+        </div>
+      </div> <!-- column -->    
+
+    </div><!-- row -->
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,233 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'claimant' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <h1 class="heading-xlarge" style="margin-bottom:30px">
+          Kris Kelsey Shaw
+          <span class="heading-secondary">{{ nino | default('QQ123456C',true) }}</span>
+        </h1>
+      </div>  
+
+  <div class="column-two-thirds"> 
+    <a class="link-back" href="person-1">Back</a>     
+              <table class="borrower-details">
+                <tbody>
+                <tr>
+                  <td>
+                   <h2 class="heading-small">Borrower details</h2>
+                  </td>
+                  <td></td>
+                  <td>
+                  </td>
+                </tr>
+
+                    <tr>
+                        <td>
+                            First date of claim
+                        </td>
+                        <td>
+                          <form>
+                            <div class="form-group">
+                              <fieldset>
+                                <div class="form-date">
+                                  <div class="form-group form-group-day">
+                                    <label class="form-label" for="dob-day">Day</label>
+                                    <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                                  </div>
+                                  <div class="form-group form-group-month">
+                                    <label class="form-label" for="dob-month">Month</label>
+                                    <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                                  </div>
+                                  <div class="form-group form-group-year">
+                                    <label class="form-label" for="dob-year">Year</label>
+                                    <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                                  </div>
+                                </div>
+                              </fieldset>
+                            </div>
+                          </form>
+                        </td>
+                        <td></td>
+                  </tr>   
+                    <tr>
+                        <td>
+                            Qualifying date
+                        </td>
+                        <td>
+                          <form>
+                            <div class="form-group">
+                              <fieldset>
+                                <div class="form-date">
+                                  <div class="form-group form-group-day">
+                                    <label class="form-label" for="dob-day">Day</label>
+                                    <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                                  </div>
+                                  <div class="form-group form-group-month">
+                                    <label class="form-label" for="dob-month">Month</label>
+                                    <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                                  </div>
+                                  <div class="form-group form-group-year">
+                                    <label class="form-label" for="dob-year">Year</label>
+                                    <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                                  </div>
+                                </div>
+                              </fieldset>
+                            </div>
+                          </form>
+                        </td>
+                        <td></td>
+                  </tr>
+                    <tr>
+                        <td>
+                            Mortgage review date
+                        </td>
+                        <td>
+                          <form>
+                            <div class="form-group">
+                              <fieldset>
+                                <div class="form-date">
+                                  <div class="form-group form-group-day">
+                                    <label class="form-label" for="dob-day">Day</label>
+                                    <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                                  </div>
+                                  <div class="form-group form-group-month">
+                                    <label class="form-label" for="dob-month">Month</label>
+                                    <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                                  </div>
+                                  <div class="form-group form-group-year">
+                                    <label class="form-label" for="dob-year">Year</label>
+                                    <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                                  </div>
+                                </div>
+                              </fieldset>
+                            </div>
+                          </form>
+                        </td>
+                        <td></td>
+                  </tr>  
+
+                    <tr>
+                        <td>
+                            Address 1
+                        </td>
+                        <td>
+                        <div class="form-group">
+                          <label class="form-label" for="address-a">House or flat number and street</label>
+                          <input type="text" name="address" id="address-a" class="form-control" value="1 The Street">
+                      </div>
+                      <div class="form-group-compound">
+                          <input type="text" name="address" id="address-a" class="form-control" value="">
+                      </div>
+                      <div class="form-group-compound" data-required data-error="Enter your town or city">
+                          <label for="town" class="form-label">Town or city</label>
+                          <input type="text" name="town" id="town" class="form-control" value="Kingston-upon-hull">
+                      </div>
+                      <div class="form-group-compound">
+                          <label for="county" class="form-label">County</label>
+                          <input type="text" name="county" id="county" class="form-control" value="">
+                      </div>
+                      <div data-required data-error="Enter your postcode">
+                          <label for="postCode" class="form-label">Postcode</label>
+                          <input type="text" name="postCode" id="postCode" class="form-control form-control-1-4" value="KD12 9FT">
+                      </div>
+                      </td>
+                        </td>
+                        <td></td>
+                    </tr>  
+
+                    <tr>
+                        <td>
+                            Address 2
+                        </td>
+                        <td>
+                        <div class="form-group">
+                          <label class="form-label" for="address-a">House or flat number and street</label>
+                          <input type="text" name="address" id="address-a" class="form-control" value="12 Town Street">
+                      </div>
+                      <div class="form-group-compound">
+                          <input type="text" name="address" id="address-a" class="form-control" value="Pudsey">
+                      </div>
+                      <div class="form-group-compound" data-required data-error="Enter your town or city">
+                          <label for="town" class="form-label">Town or city</label>
+                          <input type="text" name="town" id="town" class="form-control" value="Leeds">
+                      </div>
+                      <div class="form-group-compound">
+                          <label for="county" class="form-label">County</label>
+                          <input type="text" name="county" id="county" class="form-control" value="">
+                      </div>
+                      <div data-required data-error="Enter your postcode">
+                          <label for="postCode" class="form-label">Postcode</label>
+                          <input type="text" name="postCode" id="postCode" class="form-control form-control-1-4" value="LS28 7RQ">
+                      </div>
+                      </td>
+                        </td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Date of birth
+                        </td>
+                        <td>
+                          <form>
+                            <div class="form-group">
+                              <fieldset>
+                                <div class="form-date">
+                                  <div class="form-group form-group-day">
+                                    <label class="form-label" for="dob-day">Day</label>
+                                    <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" value="24">
+                                  </div>
+                                  <div class="form-group form-group-month">
+                                    <label class="form-label" for="dob-month">Month</label>
+                                    <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="1">
+                                  </div>
+                                  <div class="form-group form-group-year">
+                                    <label class="form-label" for="dob-year">Year</label>
+                                    <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016" value="1949">
+                                  </div>
+                                </div>
+                              </fieldset>
+                            </div>
+                          </form>
+                        </td>
+                        <td></td>
+                  </tr>                                        
+                </tbody>
+            </table>     
+
+            <br /><br />
+
+              <div class="form-group">
+                <input type="submit" class="button" value="Save and continue">
+              </div>
+
+      </div><!-- column -->
+              
+
+          </div>
+          </div>
+        </div>
+      </div>
+
+        <!--<div class="column-third">
+        <div class="left-aside">
+          <h3 class="heading-small">Date of birth</h3> <p>24 January 1949</p>
+          <hr  style="width:50%;margin:0"/>
+          <h3 class="heading-small">Benefit</h3> <p>Pension Credit</p>
+          <hr  style="width:50%;margin:0"/>
+          <h3 class="heading-small">Appointee</h3> <p>William Wilberforce</p>
+        </div>
+      </div> <!-- column -->    
+
+    </div><!-- row -->
+  </div>
+</main>
+{% endblock %}
