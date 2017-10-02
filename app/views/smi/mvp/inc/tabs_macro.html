@@ -28,6 +28,12 @@
       <li><a href="/{{ PATH }}/mvp/limit_and_deductions">Limit and dedutions</a></li>
     {% endif %}
 
+    {% if "Payees" == selected %}
+      <li class="active"><a href="/{{ PATH }}/mvp/payees">Payees</a></li>
+    {% else %}
+      <li><a href="/{{ PATH }}/mvp/payees">Payees</a></li>
+    {% endif %}
+
     {% if "notes" == selected %}
       <li class="active"><a href="/{{ PATH }}/mvp/notes">Notes</a></li>
     {% else %}
