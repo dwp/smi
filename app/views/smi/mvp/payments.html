@@ -16,11 +16,13 @@
           <span class="heading-secondary">{{ nino | default('QQ123456C',true) }}</span>
         </h1>
      
-            <h1 class="heading-medium mb0">Payments</h1> 
+           
 
             <div class="panel panel-border-wide alert-default">
-			  <strong class="bold-small">Success.</strong> Payment has been calculated. Now authorise the payment
+			  <strong class="bold-small">Success.</strong> Payment has been calculated and is ready to be authorised.
 			</div>
+
+			 <h1 class="heading-medium mb0">Authorise payment</h1> 
 
 			<div class="admin-panes">
 	          <div class="admin-pane">	            
@@ -29,16 +31,16 @@
 	                <tbody>
 	                    <tr class="bold-small">
 	                      <td>
-	                          Mortgage or home loan ref
+	                          <h2 class="heading-small">Mortgage or home loan ref</h2>
 	                      </td>
 	                      <td>	                         
-	                      	  Gross weekely amount
+	                      	  <h2 class="heading-small">Gross weekly amount</h2>
 	                      </td>
 	                      <td>  
-	                      	  Net weekly payment	                      
+	                      	   <h2 class="heading-small">Net weekly payment</h2>	                      
 	                      </td>
 	                      <td>
-	                      	  Payment start date
+	                      	  <h2 class="heading-small">Payment start date</h2>
 	                      </td>	  	
 	                    </tr>
 	                    <tr>
@@ -73,7 +75,7 @@
 
 	                    <tr>
 	                      <td>
-	                          Total
+	                          <h2 class="heading-small">Total</h2>
 	                      </td>
 	                      <td>
 	                          £20.00
