@@ -45,12 +45,12 @@ $(document).ready(function () {
     });
 
     // Tab Panes
-    $('.admin-panes').each(function() {
-      $(this).children('div').hide();
-      $(this).children('.admin-pane:first').show();
-      $(this).parent().find('li:first').addClass('active');
-      $(this).parents('.admin-submenu-container').find('h1').text($('.active').find('a').text());
-    });
+    // $('.admin-panes').each(function() {
+    //   $(this).children('div').hide();
+    //   $(this).children('.admin-pane:first').show();
+    //   $(this).parent().find('li:first').addClass('active');
+    //   $(this).parents('.admin-submenu-container').find('h1').text($('.active').find('a').text());
+    // });
 
     // $(document).on('click', '.admin-submenu a', function(e) {
     //   e.preventDefault();
