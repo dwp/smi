@@ -1,0 +1,144 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+	{% set currentPage = 'claimant' %}
+	{% include path+"/inc/main_nav.html" %}
+
+	
+  <div class="main-content"> <!-- MAIN CONTENT -->
+     <div class="grid-row">	 <!-- GRID ROW -->
+
+     <div class="column-two-thirds"> <!-- COLUMN 2 THRIDS -->
+        <h1 class="heading-xlarge" style="margin-bottom:30px">
+          Kris Kelsey Shaw
+          <span class="heading-secondary">{{ nino | default('QQ123456C',true) }}</span>
+        </h1>
+     
+			<div class="admin-panes">
+		        <div class="admin-pane">
+		            <table class="borrower-details">
+		                <tbody>
+		                	<tr>
+			                  	<td>
+			                   		<h2 class="heading-medium mb0">Summary</h2>
+			                  	</td>
+			                  	<td></td>
+			                  	<td></td>
+			                  	<td></td>
+		                    </tr>
+
+		                    <tr>
+		                        <td>
+		                            Allowable limit
+		                        </td>
+		                        <td>
+		                            £200,000
+		                        </td>
+		                        
+		                        <td></td>
+		                        <td><p class="heading-small"><a href="../mvp-v2/edit_limit_and_deductions">Edit<span class="visuallyhidden">overview details</span></a></p></td>
+		                    </tr> 
+
+		                    <tr>
+		                        <td>
+		                            Ground rent and service charges
+		                        </td>
+		                        <td>
+		                            £XX.XX
+		                        </td>
+		                        <td></td>
+		                        <td><p class="heading-small"><a href="../mvp-v2/edit_limit_and_deductions">Edit<span class="visuallyhidden">overview details</span></a></p></td>
+		                    </tr>  
+
+		                    <tr>
+		                        <td>
+		                            Non-dependant deductions 
+		                        </td>
+		                        <td>
+		                            £XX.XX
+		                        </td>
+		                        <td></td>
+		                        <td><p class="heading-small"><a href="../mvp-v2/edit_limit_and_deductions">Edit<span class="visuallyhidden">overview details</span></a></p></td>
+		                    </tr>                                                  
+		                </tbody>
+		            </table>  
+
+		            <h2 class="heading-medium mb0">Mortgages and loans</h2>    
+
+	                <table class="loan-details">
+	                	<tbody>              
+			                <tr>
+			                  <td>
+			                   <h2 class="heading-small">Mortgage or home loan ref</h2>
+			                  </td>
+			                  <td>
+			                  <h2 class="heading-small">Weekly payment with deductions</h2>
+			                  </td>
+			                  <td></td>                  
+			                </tr> 
+			                <tr>
+			                  <td>
+			                    12345678
+			                  </td>
+			                  <td>
+			                  	£XX.XX
+			                  </td> 
+			                  <td>
+			                    <p class="heading-small mth"><a href="../mvp-v2/edit-mortgage-1">Edit<span class="visuallyhidden"> mortgage or home loan details</span></a></p> 
+			                    </td>                           
+			                </tr>  
+
+			                <tr>
+			                  <td>
+			                    23456789
+			                  </td>
+			                  <td>
+			                  	£XX.XX
+			                  </td>
+			                  <td>
+			                    <p class="heading-small mth"><a href="../mvp-v2/edit-mortgage-2">Edit<span class="visuallyhidden"> mortgage or home loan details</span></a></p>                
+			                  </td>
+			                </tr>                                                              
+	                	</tbody>
+	            	</table>         
+		        </div> <!-- ADMIN PANE -->
+		    </div> <!-- ADMIN PANES -->
+
+            <br />
+            
+            <p><a href="../mvp-v2/mortgage">Add another loan</a><br /><br /></p>
+
+	        <p class="mth mb0"><a href="../mvp-v2/payments" class="button">Proceed to authorise payments</a></p>
+      </div>     <!-- COLUMN 2 THRIDS -->
+         
+      <div class="column-one-third"> <!-- COLUMN 1 THIRD -->
+
+	   <!-- <div class="panel panel-border-wide alert-default">
+	        <p class="heading-small">Next thing to do:</p> Send out MI12 reminder
+	        <p><a href="#">View to do list</a></p>
+	    </div>  -->   
+	    <div class="left-aside">
+     	  <h3 class="heading-small">Date of birth</h3> <p>14 July 1981</p>
+	      <hr  style="width:50%;margin:0"/>
+     	  <h3 class="heading-small">Address</h3> <p>321 Highstreet<br />Bolton<br />UK<br />BL1 2AB</p>
+	      <hr  style="width:50%;margin:0"/>
+     	  <h3 class="heading-small">Phone number</h3> <p>Home &nbsp;&nbsp;&nbsp; 01234 567890</p> <p>Mobile &nbsp;&nbsp; 07912 345678</p>
+	      <hr  style="width:50%;margin:0"/>
+	      <h3 class="heading-small">Benefit</h3> <p>Jobseeker's Allowance</p>
+	      <hr  style="width:50%;margin:0"/>
+	      <h3 class="heading-small">Representative appointee </h3> <p>Neil Murphy</p>
+	      <hr  style="width:50%;margin:0"/>
+		  <h3 class="heading-small">Case notes</h3> <p><a href="../mvp-v2/notes" class="heading-small">View and add case notes</a></p>
+	    </div> 
+
+	  </div> <!-- COLUMN 1 THIRD -->
+
+          
+    </div> <!-- GRID ROW -->
+  </div> <!-- MAIN CONTENT -->
+</main>     
+          
+
+{% endblock %}         
