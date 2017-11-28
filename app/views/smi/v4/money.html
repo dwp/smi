@@ -8,13 +8,13 @@
   <div class="main-content">
     <div class="grid-row">
 
-<form>
-
       <div class="column-two-thirds">
 
             <div class="admin-panes">
               <div class="admin-pane">
-                <h1 class="heading-large">HOME ASSOCIATED FINANCES BECAUSE EM HATES IT</h1>
+                <h1 class="heading-large">Financial information</h1>
+
+                <form action="account-details" method="get" class="form" id="account-details-form">
 
                 <h2 class="heading-medium">Mortgage or home loan details</h2>
 
@@ -160,11 +160,11 @@
                           <td colspan=2>
   <div class="form-group">
   <div class="multiple-choice">
-    <input id="radio-inline-1" type="radio" name="payingTo" value="Yes">
+    <input id="radio-inline-1" type="radio" name="payingTo" value="lender">
     <label for="radio-inline-1">The lender</label>
   </div>
   <div class="multiple-choice">
-    <input id="radio-inline-2" type="radio" name="payingTo" value="No">
+    <input id="radio-inline-2" type="radio" name="payingTo" value="applicant">
     <label for="radio-inline-2">The applicant</label>
   </div>
 </div>
@@ -192,15 +192,18 @@
                </tbody>
              </table>
 
+             <p class="mth mb0"><input class="button" type="submit" value="Save and continue"><br /><br /></p>
+             <p class="mth mb0"><a href="summary">Cancel and view summary</a></p>
 
-</form>
+
+           </form>
+
+
 
               </div> <!-- ADMIN PANE -->
             </div>  <!-- ADMIN PANES -->
           <br> </br>
 
-         <p class="mth mb0"><a href="account-details-applicant" class="button">Save and continue</a><br /><br /></p>
-         <p class="mth mb0"><a href="summary">Cancel and view summary</a></p>
 
 
       </div> <!-- COLUMN 2 THRIDS -->
