@@ -1,0 +1,22 @@
+<div class="nav-horizontal">
+  <div class="main-nav-wrapper">
+    <ul class="main-nav">
+
+      {# <li id="nav-home" {% if currentPage === "upload" %}class="selected"{% endif %}>
+        <a href="../../mvp-v2/upload">Upload</a>
+      </li> #}
+      <li id="nav-home" {% if currentPage === "search" %}class="selected"{% endif %}>
+        <a href="../mvp-v2/search">Find someone</a>
+      </li>
+
+      {# {% if sessionData.user.role === 'manager'%}
+        <li id="nav-perf" {% if currentPage === "mangerView" %}class="selected"{% endif %}><a href="../../mvp-v2/inc/manager_performance">Performance</a></li>
+      {%else%}
+        <li id="nav-off" {% if currentPage === "mangerView" %}class="selected"{% endif %}><a href="../../mvp-v2/inc/workcoach_performance_view_onflow">Performance</a></li>
+      {%endif%} #}
+
+    </ul>
+
+    
+  </div>
+</div>

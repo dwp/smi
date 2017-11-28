@@ -1,0 +1,126 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+          <div class="column-two-thirds">
+              <h1 class="heading-large">Upper limit and deductions</h1>
+
+        <div class="admin-panes">
+            <div class="admin-pane">
+                         <table class="borrower-details">
+                           <tbody>
+                             <tr>
+                                <td>
+                                    <b>Upper limit</b><br />
+                                    The maximum eligible amount of the applicant's mortgage. For Jobseeker Allowance this is &pound;200,000.
+                                </td>
+                                <td>
+                                  <div class="u-1/4-lap-and-up">
+                                    <span class="c-form-input-denote">£</span>
+                                    <input class="c-form-input-denote__input form-control form-control-2-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+
+
+                                  </div>
+                                </td>
+                                <td>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                      Ground rent and service charge per week
+                                  </td>
+                                  <td>
+                                    <div class="u-1/4-lap-and-up">
+                                      <span class="c-form-input-denote">£</span>
+                                      <input class="c-form-input-denote__input form-control form-control-2-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                                    </div>
+                                  </td>
+                                  <td>
+                                   </div></td>
+                               </tr>
+
+                              <tr>
+                                  <td>
+                                      Total contributions from non-dependants per week
+                                  </td>
+                                  <td>
+                                    <div class="u-1/4-lap-and-up">
+                                      <span class="c-form-input-denote">£</span>
+                                      <input class="c-form-input-denote__input form-control form-control-2-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                                    </div>
+                                  </td>
+                              </tr>
+
+                            </tbody>
+                          </table>
+
+
+                              <h2 class="heading-medium">Related notes</h2>
+
+                              <table class="notes">
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                  <!--<label class="form-label" for="textarea">
+                                      Label
+                                  </label>-->
+                                  <textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea>
+                                </td>
+                              </tr>
+
+                           </tbody>
+                         </table>
+            </div>  <!-- ADMIN PANE -->
+        </div> <!-- ADMIN PANES -->
+
+        <br> </br>
+
+        <p class="mth mb0"><a href="mortgage" class="button">Save and continue</a><br /><br /></p>
+        <p class="mth mb0"><a href="summary.html">Cancel and view summary</a></p>
+
+      </div> <!-- COLUMN 2 THIRDS -->
+      <div class="column-one-third">
+
+      <!--<div class="panel panel-border-wide alert-default">
+          <p class="heading-small">Next thing to do:</p> Send out MI12 reminder
+          <p><a href="#">View to do list</a></p>
+      </div>-->
+      <div class="left-aside">
+        <h1 class="heading-medium">
+        Applicant details
+      </h1>
+        <div class="panel panel-border-wide">
+        <h2 class="heading-small">
+          Kris Kelsey Shaw<br />
+          <span class="heading-secondary">{{ nino | default('QQ123456C',true) }}</span>
+        </h1>
+        </div>
+
+     	  <h3 class="heading-small">Date of birth</h3> <p>14 July 1981</p>
+	      <hr  style="width:50%;margin:0"/>
+     	  <h3 class="heading-small">Address</h3> <p>321 Highstreet<br />Bolton<br />UK<br />BL1 2AB</p>
+	      <hr  style="width:50%;margin:0"/>
+     	  <h3 class="heading-small">Phone number</h3> <p>Home &nbsp;&nbsp;&nbsp; 01234 567890<br />
+          Mobile &nbsp;&nbsp; 07912 345678</p>
+	      <hr  style="width:50%;margin:0"/>
+	      <h3 class="heading-small">Benefit</h3> <p>Jobseeker's Allowance</p>
+	      <hr  style="width:50%;margin:0"/>
+	      <h3 class="heading-small">Representative appointee </h3> <p>Neil Murphy</p>
+	      <hr  style="width:50%;margin:0"/>
+	    </div>
+
+      </div> <!-- COLUMN 1 THIRD -->
+
+    </div> <!-- GRID ROW-->
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

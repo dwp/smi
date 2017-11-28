@@ -1,0 +1,134 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+            <div class="admin-panes">
+              <div class="admin-pane">
+                <h1 class="heading-large">Payee account details</h1>
+
+              <div class="panel panel-border-wide">
+                <p>This payment is going to the applicant.</p>
+              </div>
+
+                  <table class="lender-details-1">
+                    <tbody>
+                        <tr>
+                        <td>
+                            Account name
+                        </td>
+                        <td>
+                            <div class="u-1/4-lap-and-up">
+                              <span class="c-form-input-denote"></span>
+                              <input class= "form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                            Sort code
+                        </td>
+                        <td>
+                            <div class="form-date form-group">
+                    <fieldset>
+                      <div class="form-group form-group-day">
+                        <label for="ba-sort1"></label>
+                        <input class="form-control" id="ba-sort1" maxlength="2" name="ba-sort1" value="" type="text">
+                      </div>
+
+                      <div class="form-group form-group-month">
+                        <label for="ba-sort2"></label>
+                        <input class="form-control" id="ba-sort2" maxlength="2" name="ba-sort2" value="" type="text">
+                      </div>
+
+                      <div class="form-group form-group-month">
+                        <label for="ba-sort3"></label>
+                        <input class="form-control" id="ba-sort3" maxlength="2" name="ba-sort3" value="" type="text">
+                      </div>
+                    </fieldset>
+                  </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                            Account number
+                        </td>
+                        <td>
+                            <div class="u-1/4-lap-and-up">
+                              <span class="c-form-input-denote"></span>
+                              <input class= "form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                            Building society roll number
+                        </td>
+                        <td>
+                            <div class="u-1/4-lap-and-up">
+                              <span class="c-form-input-denote"></span>
+                              <input class= "form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                          </div>
+                        </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+
+              </div> <!-- ADMIN PANE -->
+            </div>  <!-- ADMIN PANES -->
+          <br> </br>
+
+         <p class="mth mb0"><a href="summary" class="button">Save and continue</a><br /><br /></p>
+         <p class="mth mb0"><a href="summary">Cancel and view summary</a></p>
+
+
+      </div> <!-- COLUMN 2 THRIDS -->
+
+      <div class="column-one-third"> <!-- COLUMN 1 THIRD -->
+
+      <!--<div class="panel panel-border-wide alert-default">
+          <p class="heading-small">Next thing to do:</p> Send out MI12 reminder
+          <p><a href="#">View to do list</a></p>
+      </div>-->
+      <div class="left-aside">
+        <h1 class="heading-medium">
+        Applicant details
+      </h1>
+        <div class="panel panel-border-wide">
+        <h2 class="heading-small">
+          Kris Kelsey Shaw<br />
+          <span class="heading-secondary">{{ nino | default('QQ123456C',true) }}</span>
+        </h1>
+        </div>
+
+     	  <h3 class="heading-small">Date of birth</h3> <p>14 July 1981</p>
+	      <hr  style="width:50%;margin:0"/>
+     	  <h3 class="heading-small">Address</h3> <p>321 Highstreet<br />Bolton<br />UK<br />BL1 2AB</p>
+	      <hr  style="width:50%;margin:0"/>
+     	  <h3 class="heading-small">Phone number</h3> <p>Home &nbsp;&nbsp;&nbsp; 01234 567890<br />Mobile &nbsp;&nbsp; 07912 345678</p>
+	      <hr  style="width:50%;margin:0"/>
+	      <h3 class="heading-small">Benefit</h3> <p>Jobseeker's Allowance</p>
+	      <hr  style="width:50%;margin:0"/>
+	      <h3 class="heading-small">Representative appointee </h3> <p>Neil Murphy</p>
+	      <hr  style="width:50%;margin:0"/>
+	    </div>
+
+    </div> <!-- COLUMN 1 THIRD -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <h1 class="heading-xlarge" style="margin-bottom:30px">
+          Kris Kelsey Shaw
+          <span class="heading-secondary">{{ nino | default('QQ123456C',true) }}</span>
+        </h1>          
+
+        <div class="admin-panes">
+            <div class="admin-pane">
+              <h2 class="heading-medium">Upper limit and deductions</h2>
+
+                         <table class="borrower-details">
+                           <tbody>
+                             <tr>
+                                <td>
+                                    Upper limit
+                                </td>
+                                <td>
+                                  <div class="u-1/4-lap-and-up">
+                                    <span class="c-form-input-denote">£</span>
+                                    <input class="c-form-input-denote__input form-control form-control-1-6" id="regpay01" type="text" name="regpay01" value="200,000" data-parsley-id="9">
+                                  </div>       
+                                </td>
+                                <td>                        
+                                 </div></td>
+                              </tr>                         
+
+                              <tr>
+                                  <td>
+                                      Ground rent and service charge per week
+                                  </td>
+                                  <td>
+                                    <div class="u-1/4-lap-and-up">
+                                      <span class="c-form-input-denote">£</span>
+                                      <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="10.00" data-parsley-id="9">
+                                    </div>       
+                                  </td>
+                                  <td>                        
+                                   </div></td>
+                               </tr>         
+
+                              <tr>
+                                  <td>
+                                      Total non-dependant deductions per week
+                                  </td>
+                                  <td>
+                                    <div class="u-1/4-lap-and-up">
+                                      <span class="c-form-input-denote">£</span>
+                                      <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="20.00" data-parsley-id="9">
+                                    </div>       
+                                  </td>
+                              </tr>             
+                           </tbody>
+                         </table> 
+            </div>  <!-- ADMIN PANE -->
+        </div> <!-- ADMIN PANES -->
+
+        <br> </br>
+
+        <p class="mth mb0"><a href="../mvp-v2/summary" class="button">Save</a><br /><br /></p>
+        <p class="mth mb0"><a href="../mvp-v2/summary" class="">Cancel</a></p>
+
+      </div> <!-- COLUMN 2 THIRDS -->
+      <div class="column-one-third"> 
+
+      <!--<div class="panel panel-border-wide alert-default">
+          <p class="heading-small">Next thing to do:</p> Send out MI12 reminder
+          <p><a href="#">View to do list</a></p>
+      </div>-->    
+       <div class="left-aside">
+     	  <h3 class="heading-small">Date of birth</h3> <p>14 July 1981</p>
+	      <hr  style="width:50%;margin:0"/>
+     	  <h3 class="heading-small">Address</h3> <p>321 Highstreet<br />Bolton<br />UK<br />BL1 2AB</p>
+	      <hr  style="width:50%;margin:0"/>
+     	  <h3 class="heading-small">Phone number</h3> <p>Home &nbsp;&nbsp;&nbsp; 01234 567890</p> <p>Mobile &nbsp;&nbsp; 07912 345678</p>
+	      <hr  style="width:50%;margin:0"/>
+	      <h3 class="heading-small">Benefit</h3> <p>Jobseeker's Allowance</p>
+	      <hr  style="width:50%;margin:0"/>
+	      <h3 class="heading-small">Representative appointee </h3> <p>Neil Murphy</p>
+	      <hr  style="width:50%;margin:0"/>
+		  <h3 class="heading-small">Case notes</h3> <p><a href="../mvp-v2/notes" class="heading-small">View and add case notes</a></p>
+	    </div> 
+
+      </div> <!-- COLUMN 1 THIRD -->
+
+    </div> <!-- GRID ROW-->
+  </div> <!-- MAIN CONTENT -->
+
+</main>  
+
+{% endblock %}
