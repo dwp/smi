@@ -1,0 +1,27 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'search' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <div class="search-box-container">
+
+          <h1 class="heading-large">Find someone</h1>
+
+            <h2 class="heading-medium" id="info">The National Insurance number {{nino}}
+has no qualifying benefits</h2>
+          </div>
+
+          <a href="search">Search again</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
