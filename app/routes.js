@@ -46,9 +46,13 @@ router.get('/smi/v*/search-nino/',function(req,res,next)
   if (req.query.nino == '') {
     res.redirect('/smi/v'+v+"/search-nino-no-entry")
   }
-  else if (req.query.nino == 'GB654321C' || req.query.nino == 'ZZ918273C') {
-    res.redirect('/smi/v'+v+"/search-nino-found?nino="+nino)
+  else if (req.query.nino == 'GB654321C') {
+    res.redirect('/smi/v'+v+"/search-nino-found-start?nino="+nino)
   }
+  else if (req.query.nino == 'ZZ918273C') {
+    res.redirect('/smi/v'+v+"/search-nino-found-continue?nino="+nino)
+  }
+
   else {
     res.redirect('/smi/v'+v+"/search-nino-none?nino="+nino)
   }
