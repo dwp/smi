@@ -1,0 +1,42 @@
+.nav-tabbed {
+  border-bottom: 1px solid #bfc1c3;
+  margin-bottom: 20px;
+}
+
+.nav-tabbed ul {
+  display: block;
+}
+
+.nav-tabbed ul ol {
+  list-style-type: none;
+}
+
+.nav-tabbed ul li {
+  background: #fff;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #dee0e2;
+  background-color: #dee0e2;
+  color: #005ea5;
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.nav-tabbed ul li.current {
+  color: #0b0c0c;
+  text-decoration: none;
+  border: 1px solid #bfc1c3;
+  background-color: #fff;
+  border-bottom: none;
+  position: relative;
+  bottom: -1px;
+  padding: 10px 15px;
+  padding-bottom: 16px;
+  padding-top: 12px;
+}
+
+.nav-tabbed ul li a{
+  display: inline-block;
+  padding: 10px 15px;
+}

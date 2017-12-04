@@ -1,0 +1,82 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+          <div class="column-full">
+              <h1 class="heading-large">To do</h1>
+
+              <div class="form-group">
+                <label>Office code <input type="search" class="" placeholder="" aria-controls="searchable-table" value="101111"></label>
+              </div>
+
+              <div class="nav-tabbed">
+
+                      <ul>
+                        <li><a href="to-do-list-all"><span>All claims (2)</span></a></li>
+                        <li class="current"><span>Not in progress (1)</span/></li>
+                      </ul>
+
+                      <div class="clear"></div>
+
+                    </div>
+
+              <table id="searchable-table" class="available m-b-l truncate display">
+                <thead>
+                  <tr>
+                    <th class="col-1">&nbsp;</th>
+
+                    <th class="col-2">Name</th>
+                    <th class="col-3">NINO</th>
+                    <th class="col-4">Office code</th>
+                    <th class="col-5">Benefit type</th>
+                    <th class="col-6">Date</th>
+                    <th class="col-7">Reason</th>
+                    <th class="col-8">&nbsp;</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong class="task-completed" id="authorised" style="background-color:#F47738;">In progress</strong>
+                    </td>
+
+                    <td class="name">
+                      <a href="to-do-summary">Frank Jones</a>
+                    </td>
+                    <td>
+                      <small class="small-grey">AA 87 65 43 D &nbsp;</small>
+                    </td>
+                    <td>
+                      <small class="small-grey">101111</small>
+                    </td>
+                    <td>
+                      Pension Credit
+                    </td>
+                    <td>
+                      28/6/2017
+                    </td>
+                    <td>
+                       Change of address
+                    </td>
+                    <td>
+                      <a href="to-do-summary" class="button" id="testing">View</a>
+                    </td>
+                  </tr>
+
+                </tbody>
+                </table>
+      </div> <!-- COLUMN 2 THIRDS -->
+ <!-- GRID ROW-->
+  </div> <!-- MAIN CONTENT -->
+</div>
+
+</main>
+
+{% endblock %}
