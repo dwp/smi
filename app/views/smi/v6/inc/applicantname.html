@@ -1,0 +1,16 @@
+
+{% if nino == "GB654321C" %}
+  {% set applicantname = "Tony Gallimore" %}
+{% elif nino == "BG112233N" %}
+  {% set applicantname = "David Smith" %}
+{% elif nino == "DD445566X" %}
+  {% set applicantname = "Paul Groves" %}
+{% elif nino == "ZZ918273C" %}
+  {% set applicantname = "Andy Parkinson" %}
+{% elif nino == "AA11111Z" %}
+  {% set applicantname = "Martin Gritton" %}
+{% else %}
+  {% set applicantname = "No name set" %}
+{% endif %}
+
+{{ applicantname }}

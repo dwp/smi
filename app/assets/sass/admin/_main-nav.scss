@@ -25,16 +25,16 @@
         }
         &:focus {
           background-color:$focus-colour;
-        }        
+        }
       }
       &.selected a, &.selected a:hover {
-        background-color: $turquoise;
+        background-color: $govuk-blue;
         font-weight: bold;
         color: $white;
       }
       &.selected a:focus {
           background-color:$focus-colour;
-        }        
+        }
     }
   }
 

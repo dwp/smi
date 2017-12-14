@@ -14,24 +14,63 @@
 
 			 <h1 class="heading-large">Summary</h1>
 
-			 <div class="admin-submenu">
-				 <ul>
-					 <li class="active"><a href="summary">Summary</a></li>
-					 <li><a href="personal_details">Personal details</a></li>
-					 <li><a href="edit_limit_and_deductions">Upper limit and deductions</a></li>
-					 <li><a href="edit-money">Mortage details, exemptions and overrides</a></li>
-					 <li><a href="notes">Notes</a></li>
-				 </ul>
-			 </div>
+			 {% set navactive = "summary" %}
+			 {% if not newapplication %}
+			 {% include path+"/inc/admin_submenu.html" %}
+			 {% endif %}
 
 
 			<div class="admin-panes">
 		        <div class="admin-pane">
 
-							<h2 class="heading-medium mb0">Upper limit and deductions</h2>
+							{% if smitsstatus %}
+
+							<p>&nbsp;</p>
+
+							<div class="panel panel-border-wide" style="border-color: #F47738; border-left-style: solid; background-color: #FABB9C;">
+
+								{% if smitsstatus == "sent" %}
+
+			 				 <h2 class="heading-small">This application has been sent to SMITS</h2>
+			 				 <ul>
+			 					 <li>No action needed at this time. You will be informed when any action is needed.</li>
+			 				 </ul>
+
+							 {% endif %}
+
+			 			 </div>
+
+						 {% endif %}
+
+						 {% if payments == "suspended"%}
+
+
+						 <p>&nbsp;</p>
+
+						 <div class="panel panel-border-wide" style="border-color: #F47738; border-left-style: solid; background-color: #FABB9C;">
+
+							 <h2 class="heading-small">Payment suspended</h2>
+							 <ul>
+								 <li>Payment to this claimant was suspended on 20 October 2017.</li>
+							 </ul>
+
+						</div>
+
+
+						 {% endif %}
+
 
 		            <table class="borrower-details">
 		                <tbody>
+
+											<tr>
+												<td valign=bottom>
+													<h2 class="heading-medium">Upper limit and deductions</h2>
+												</td>
+												<td valign=bottom align=right>
+													<a style="align:right;" href="limit_and_deductions?nino={{ nino }}">Edit<span class="visuallyhidden">overview details</span></a>
+												</td>
+												</tr>
 
 		                    <tr>
 		                        <td>
@@ -41,8 +80,6 @@
 		                            £200,000
 		                        </td>
 
-		                        <td></td>
-		                        <td><p class="heading-small"><a href="edit_limit_and_deductions">Edit<span class="visuallyhidden">overview details</span></a></p></td>
 		                    </tr>
 
 		                    <tr>
@@ -52,8 +89,6 @@
 		                        <td>
 		                            Nothing entered
 		                        </td>
-		                        <td></td>
-		                        <td><p class="heading-small"><a href="edit_limit_and_deductions">Edit<span class="visuallyhidden">overview details</span></a></p></td>
 		                    </tr>
 
 		                    <tr>
@@ -63,8 +98,6 @@
 		                        <td>
 		                            Nothing entered
 		                        </td>
-		                        <td></td>
-		                        <td><p class="heading-small"><a href="edit_limit_and_deductions">Edit<span class="visuallyhidden">overview details</span></a></p></td>
 		                    </tr>
 		                </tbody>
 		            </table>
@@ -72,8 +105,9 @@
 								<br /><br />
 
 
+		            <h2 class="heading-medium mb0">Payments for mortgages and loans</h2>
 
-		            <h2 class="heading-medium mb0">Mortgages and loans</h2>
+								{% if mortgagesloans == "yes" %}
 
 	                <table class="loan-details">
 	                	<tbody>
@@ -84,18 +118,10 @@
 			                  <td>
 			                  <h2 class="heading-small">Weekly payment with deductions</h2>
 			                  </td>
+												<td>
+												<h2 class="heading-small">Last paid</h2>
+												</td>
 			                  <td></td>
-			                </tr>
-			                <tr>
-			                  <td>
-			                    12345678
-			                  </td>
-			                  <td>
-			                  	£50.00 
-			                  </td>
-			                  <td>
-			                    <p class="heading-small mth"><a href="edit-mortgage-1">Edit<span class="visuallyhidden"> mortgage or home loan details</span></a></p>
-			                    </td>
 			                </tr>
 
 			                <tr>
@@ -103,10 +129,13 @@
 			                    23456789
 			                  </td>
 			                  <td>
-			                  	£10.00
+													{% if payments == "yes" %}£50.00{% elif payments == "suspended" %}Payment suspended{% else %}No payment set up{% endif %}
 			                  </td>
+												<td>
+													11/12/2017
+												</td>
 			                  <td>
-			                    <p class="heading-small mth"><a href="edit-mortgage-2">Edit<span class="visuallyhidden"> mortgage or home loan details</span></a></p>
+			                    <p class="heading-small mth"><a href="payment-detail?nino=BG112233N&showdata=yes&lendercode=1111">Edit<span class="visuallyhidden"> mortgage or home loan details</span></a></p>
 			                  </td>
 			                </tr>
 	                	</tbody>
@@ -114,7 +143,19 @@
 
 								<br />
 
-								<p><a href="money">Add another mortgage or loan</a><br /><br /></p>
+								<p><a href="money?nino={{ nino }}">Add another mortgage or loan</a></p>
+								<p><a href="payments-list?nino={{ nino }}">View payment history</a></p>
+
+								{% else %}
+
+								<p></p>
+								<p>No mortgages or loans information provided.</p>
+								<p><a href="money">Add a mortgage or loan</a><br /><br /></p>
+
+								{% endif %}
+
+								<p class="mth mb0"><a href="calculate_award?nino={{ nino }}" class="button">Calculate award</a><br /><br /></p>
+
 
 
 								<h2 class="heading-medium mb0">Notes</h2>
@@ -164,36 +205,38 @@
 	        <!--<p class="mth mb0"><a href="payments" class="button">Proceed to authorise payments</a></p>-->
       </div>     <!-- COLUMN 2 THRIDS -->
 
-      <div class="column-one-third"> <!-- COLUMN 1 THIRD -->
 
-	   <!-- <div class="panel panel-border-wide alert-default">
-	        <p class="heading-small">Next thing to do:</p> Send out MI12 reminder
-	        <p><a href="#">View to do list</a></p>
-	    </div>  -->
-	    <div class="left-aside">
-				<h1 class="heading-medium">
-				Applicant details
-			</h1>
-				<div class="panel panel-border-wide">
-				<h2 class="heading-small">
-					Kris Kelsey Shaw<br />
-					<span class="heading-secondary">{{ nino | default('QQ123456C',true) }}</span>
-				</h1>
-				</div>
+			<!-- COLUMN 1 THIRD -->
+			<div class="column-one-third">
+			 <!--<div class="panel panel-border-wide alert-default">
+					 <p class="heading-small">Next thing to do:</p> Send out MI12 reminder
+					 <p><a href="#">View to do list</a></p>
+			 </div>-->
+			 <div class="left-aside">
+				 <h1 class="heading-medium">
+				 Applicant details
+			 </h1>
+				 <div class="panel panel-border-wide">
+				 <h2 class="heading-small">
+					 {% include path+"/inc/applicantname.html" %}<br />
+					 <span class="heading-secondary">{{ nino }}</span>
+				 </h1>
+				 </div>
 
-     	  <h3 class="heading-small">Date of birth</h3> <p>14 July 1981</p>
-	      <hr  style="width:50%;margin:0"/>
-     	  <h3 class="heading-small">Address</h3> <p>321 Highstreet<br />Bolton<br />UK<br />BL1 2AB</p>
-	      <hr  style="width:50%;margin:0"/>
-     	  <h3 class="heading-small">Phone number</h3> <p>Home &nbsp;&nbsp;&nbsp; 01234 567890<br/>Mobile &nbsp;&nbsp; 07912 345678</p>
-	      <hr  style="width:50%;margin:0"/>
-	      <h3 class="heading-small">Benefit</h3> <p>Jobseeker's Allowance</p>
-	      <hr  style="width:50%;margin:0"/>
-	      <h3 class="heading-small">Representative appointee </h3> <p>Neil Murphy</p>
-	      <hr  style="width:50%;margin:0"/>
-	    </div>
+				 <h3 class="heading-small">Date of birth</h3> <p>{% include path+"/inc/applicantDOB.html" %}</p>
+				 <hr  style="width:50%;margin:0"/>
+				 <h3 class="heading-small">Address</h3> <p>{% include path+"/inc/applicantaddress.html" %}</p>
+				 <hr  style="width:50%;margin:0"/>
+				 <h3 class="heading-small">Phone number</h3> <p>{% include path+"/inc/applicantphonenumber.html" %}</p>
+				 <hr  style="width:50%;margin:0"/>
+				 <h3 class="heading-small">Benefit</h3> <p>{% include path+"/inc/applicantbenefits.html" %}</p>
+				 <hr  style="width:50%;margin:0"/>
+				 <h3 class="heading-small">Representative appointee </h3> <p>{% include path+"/inc/applicantappointee.html" %}
+				 </p>
+				 <hr  style="width:50%;margin:0"/>
+			 </div>
 
-	  </div> <!-- COLUMN 1 THIRD -->
+			 </div> <!-- COLUMN 1 THIRD -->
 
 
     </div> <!-- GRID ROW -->
