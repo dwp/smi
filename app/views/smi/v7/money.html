@@ -10,7 +10,7 @@
     <div class="grid-row">
 
       <div class="column-two-thirds">
-        <h1 class="heading-large">Mortgage details, exemptions and overrides</h1>
+        <h1 class="heading-large">Mortgage details and exemptions</h1>
 
 
             <div class="admin-panes">
@@ -24,7 +24,7 @@
                 {% endif %}
 
 
-                <h2 class="heading-medium">Mortgage or home loan details</h2>
+                <h2 class="heading-medium">Mortgage details</h2>
 
 
                   <table class="lender-details-1">
@@ -48,7 +48,7 @@
                         </tr>
 
                         {% if newapplication %}
-                        <form action="account-details" method="get" class="form" id="account-details-form">
+                        <form action="limit_and_deductions" method="get" class="form" id="account-details-form">
                         {% else %}
                         <form action="summary" method="get" class="form" id="account-details-form">
                         {% endif %}
@@ -222,59 +222,9 @@
                                </td>
                             </tr>
 
-
-                        <tr>
-                          <td>
-                              <span class="bold-small">Weekly override amount</span>
-                          </td>
-                          <td>
-                            <div class="u-1/4-lap-and-up">
-                              <span class="c-form-input-denote">£</span>
-                              <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
-                            </div>
-                          </td>
-                          <td>
-                           </td>
-                        </tr>
-
-                        <tr>
-                          <td valign=top>
-                            <span class="bold-small">Paying to (payee)</span>
-                          </td>
-                          <td colspan=2>
-  <div class="form-group">
-  <div class="multiple-choice">
-    <input id="radio-inline-1" type="radio" name="payingTo" value="lender">
-    <label for="radio-inline-1">The lender</label>
-  </div>
-  <div class="multiple-choice">
-    <input id="radio-inline-2" type="radio" name="payingTo" value="applicant">
-    <label for="radio-inline-2">The applicant</label>
-  </div>
-</div>
-</td>
-</tr>
-
-
                     </tbody>
                   </table>
 
-
-                  <h2 class="heading-medium">Related notes</h2>
-
-                  <table class="notes">
-                    <tbody>
-                      <tr>
-                        <td>
-                      <!--<label class="form-label" for="textarea">
-                          Label
-                      </label>-->
-                      <textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea>
-                    </td>
-                  </tr>
-
-               </tbody>
-             </table>
 
              <input type="hidden" name="nino" value="{{ nino }}">
              <input type="hidden" name="newapplication" value="{{ newapplication }}">
@@ -285,6 +235,8 @@
 
                {% if newapplication %}
                <input class="button" type="submit" value="Save and continue">
+               <a href="money-additional?nino={{ nino }}&newapplication=yes" class="button-secondary" type="submit" value="Save and add another">Save and add another</a>
+
                {% else %}
                <input class="button" type="submit" value="Save and done">
                {% endif %}

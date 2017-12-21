@@ -10,20 +10,10 @@
     <div class="grid-row">
       <div class="column-two-thirds">
 
-          <h1 class="heading-large">Confirm details
-</h1>
+          <h1 class="heading-large">Confirm details</h1>
 
 <div class="panel panel-border-wide">
-
-  {% if customer == "yes" %}
-  <p>This person has a Support for Mortgage Interest loan already.</p>
-  {% endif %}
-
-  {% if existingapplication == "yes" %}
-  <p>This is an existing applicant.</p>
-  {% else %}
-  <p>This would be a new applicant.</p>
-  {% endif %}
+  <p>This would be a continuing claim.</p>
 </div>
 
 
@@ -34,7 +24,7 @@
                             Full name
                         </td>
                         <td>
-                          {% include path+"/inc/applicantname.html" %}
+                            Kris Kelsey Shaw
                         </td>
                     </tr>
                     <tr>
@@ -50,12 +40,15 @@
                             Date of birth
                         </td>
                         <td>
-                          {% include path+"/inc/applicantDOB.html" %}
+                            14 July 1981
                           </tr>
                           <tr>
                             <td valign="top">Address</td>
                             <td>
-                              {% include path+"/inc/applicantaddress.html" %}
+                              321 Highstreet<br />
+                              Bolton<br />
+                              UK<br />
+                              BL1 2AB</p>
                             </td>
                           </tr>
                     <tr>
@@ -63,13 +56,13 @@
                             Qualifying benefit
                         </td>
                         <td>
-                            {% include path+"/inc/applicantbenefits.html" %}
+                            Jobseeker's Allowance
                         </td>
                     </tr>
                 </tbody>
             </table>
 
-            <p class="mth mb0"><br /><a href="limit_and_deductions?nino={{ nino }}&newapplication=yes" class="button">Start application</a><br /><br /></p>
+            <p class="mth mb0"><br /><a href="summary" class="button">View applicant's claim summary</a><br /><br /></p>
             <p class="mth mb0"><a href="search">Cancel and find someone else</a></p>
          </div><!-- column -->
     </div>

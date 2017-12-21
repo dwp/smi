@@ -32,3 +32,9 @@ details {
     border-top:none;
   }
 }
+
+/* Hide for both screenreaders and browsers */
+.hidden,
+.js-enabled .js-hidden {
+  display: none;
+  visibility: hidden; }

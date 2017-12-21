@@ -120,6 +120,24 @@ router.get('/smi/v*/money',function(req,res,next)
   next();
 });
 
+router.get('/smi/v*/money-additional',function(req,res,next)
+{
+  var v = req.params[0];
+  req.data = req.data || { };
+
+  req.data.nino = req.query.nino;
+  const nino = req.data.nino;
+
+  req.data.newapplication = req.query.newapplication;
+  const newapplication = req.data.newapplication;
+
+  req.data.lendercode = req.query.lendercode;
+  const lendercode = req.data.lendercode;
+
+
+  next();
+});
+
 
 router.get('/smi/v*/summary',function(req,res,next)
 {
