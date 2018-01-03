@@ -55,54 +55,10 @@
         </table>
 
 
-          <div class="form-group">
-            <fieldset>
-
-              <legend>
-                <h1 class="heading-medium">
-                  How do you want to be contacted?
-                </h1>
-              </legend>
-
-              <div class="multiple-choice" data-target="contact-by-email">
-                <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
-                <label for="example-contact-by-email">Email</label>
-              </div>
-              <div class="panel panel-border-narrow" id="contact-by-email">
-                <label class="form-label" for="contact-email">Email address</label>
-                <input class="form-control" name="contact-email" type="text" id="contact-email">
-              </div>
-
-              <div class="multiple-choice" data-target="contact-by-phone">
-                <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
-                <label for="example-contact-by-phone">Phone</label>
-              </div>
-              <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
-                <label class="form-label" for="contact-phone">Phone number</label>
-                <input class="form-control" name="contact-phone" type="text" id="contact-phone">
-              </div>
-
-              <div class="multiple-choice" data-target="contact-by-text">
-                <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
-                <label for="example-contact-by-text">Text message</label>
-              </div>
-              <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
-                <label class="form-label" for="contact-text-message">Mobile phone number</label>
-                <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
-              </div>
-
-            </fieldset>
-          </div>
-        
-
-Contributions from non-dependants per week
-
-
-                <p>Do you want to ovveride the weekly amount?</p>
 
                 <form>
                   <div class="form-group">
-                    <fieldset>
+                    <fieldset class="inline">
 
                       <legend>
                         <h1 class="heading-medium">
@@ -114,40 +70,22 @@ Contributions from non-dependants per week
                         <input id="override-yes" name="override" type="radio" value="Yes">
                         <label for="override-yes">Yes</label>
                       </div>
-                      <div class="panel panel-border-narrow js-hidden" id="override-amount">
-                        <label class="form-label" for="override-amount">Amount</label>
-                        <input class="form-control" type="text" id="override-amount" name="override-amount">
-                      </div>
 
                       <div class="multiple-choice">
                         <input id="override-no" name="override" type="radio" value="No">
                         <label for="override-no">No</label>
                       </div>
+                      <div class="panel panel-border-narrow js-hidden" id="override-amount">
+                        <label class="form-label" for="override-amount">Amount</label>
+                        <span class="c-form-input-denote">£</span>
+</label>
+                        <input class="form-control" type="text" id="override-amount" name="override-amount">
+                      </div>
+
 
                     </fieldset>
                   </div>
                 </form>
-
-
-
-                <table>
-                <tr>
-                  <td>
-                      <span class="bold-small">Weekly override amount</span>
-                  </td>
-                  <td>
-                    <div class="u-1/4-lap-and-up">
-                      <span class="c-form-input-denote">£</span>
-                      <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
-                    </div>
-                  </td>
-                  <td></td>
-
-                </tr>
-              </table>
-
-
-
 
 
               <p class="mth mb0"><a href="send-to-smits?nino={{ nino }}" class="button">Submit</a><br /></p>
