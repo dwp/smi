@@ -33,47 +33,28 @@
                         <td valign=top>
                           <span class="bold-small">Loan type</span>
                         </td>
-                        <td colspan=2>
-<div class="form-group">
-<div class="multiple-choice">
-  <input id="radio-inline-1" type="radio" name="payingTo" value="lender">
-  <label for="radio-inline-1">Second mortgage</label>
-</div>
-<div class="multiple-choice">
-  <input id="radio-inline-2" type="radio" name="payingTo" value="lender">
-  <label for="radio-inline-2">Remortgage</label>
-</div>
+                        <td>
+                          Second mortgage
+                        </td>
+                        <td>
+                          <a href="#">Change</a>
+                      </tr>
 
-<div class="multiple-choice">
-  <input id="radio-inline-3" type="radio" name="payingTo" value="applicant">
-  <label for="radio-inline-3">Loan type 1</label>
-</div>
-<div class="multiple-choice">
-  <input id="radio-inline-4" type="radio" name="payingTo" value="applicant">
-  <label for="radio-inline-4">Loan type 2</label>
-</div>
+                      <tr>
+                        <td>
+                            <span class="bold-small">Lender</span><br />
+                            Short code
+                        </td>
+                        <td>
+                          <div class="u-1/4-lap-and-up">
+                          {{ lendercode }}
+                          </div>
+                        </td>
+                        <td>
 
-</div>
-</td>
-</tr>
-
-                        <tr>
-                          <td>
-                              <span class="bold-small">Lender</span><br />
-                              Enter a short code
-                          </td>
-                          <td>
-                            <div class="u-1/4-lap-and-up">
-                              <span class="c-form-input-denote"></span>
-                              <form action="money" method="get" class="form" id="lendercode">
-<input class="form-control" id="lendercode" type="text" name="lendercode" value="{{ lendercode }}">             <input type="hidden" name="nino" value="{{ nino }}">
-
-                            <input class="button" type="submit" value="Look up"></form>
-                            </div>
-                          </td>
-                          <td>
-                           </div></td>
-                        </tr>
+                        <a href="#">Change</a>
+                        </td>
+                      </tr>
 
                         {% if newapplication %}
                         <form action="limit_and_deductions" method="get" class="form" id="account-details-form">
@@ -83,53 +64,62 @@
 
 {% if lendercode %}
 
-      <tr>
-      <td>
-          Account name
-      </td>
-      <td>
-          <div class="u-1/4-lap-and-up">
-            <span class="c-form-input-denote"></span>
-            <input class= "form-control" id="regpay01" type="text" name="regpay01"  value="Yorkshire Bank" data-parsley-id="9">
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-          Sort code
-      </td>
-      <td>
-          <div class="form-date form-group">
-  <fieldset>
-    <div class="form-group form-group-day">
-      <label for="ba-sort1"></label>
-      <input class="form-control" id="ba-sort1" maxlength="2" name="ba-sort1" value="12" type="text">
-    </div>
+<tr>
+<td>
+    Account name
+</td>
+<td>
+    <div class="u-1/4-lap-and-up">
+      <span class="c-form-input-denote"></span>
+      <input class= "form-control" id="regpay01" type="text" name="regpay01"  value="Cheltenham and Gloucester" data-parsley-id="9">
+  </div>
+</td>
+<td>
+</td>
 
-    <div class="form-group form-group-month">
-      <label for="ba-sort2"></label>
-      <input class="form-control" id="ba-sort2" maxlength="2" name="ba-sort2" value="34" type="text">
-    </div>
-
-    <div class="form-group form-group-month">
-      <label for="ba-sort3"></label>
-      <input class="form-control" id="ba-sort3" maxlength="2" name="ba-sort3" value="56" type="text">
-    </div>
-  </fieldset>
+</tr>
+<tr>
+<td>
+    Sort code
+</td>
+<td>
+    <div class="form-date form-group">
+<fieldset>
+<div class="form-group form-group-day">
+<label for="ba-sort1"></label>
+<input class="form-control" id="ba-sort1" maxlength="2" name="ba-sort1" value="07" type="text">
 </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-          Account number
-      </td>
-      <td>
-          <div class="u-1/4-lap-and-up">
-            <span class="c-form-input-denote"></span>
-            <input class= "form-control" id="regpay01" type="text" name="regpay01" value="8765432" data-parsley-id="9">
-        </div>
-      </td>
-    </tr>
+
+<div class="form-group form-group-month">
+<label for="ba-sort2"></label>
+<input class="form-control" id="ba-sort2" maxlength="2" name="ba-sort2" value="01" type="text">
+</div>
+
+<div class="form-group form-group-month">
+<label for="ba-sort3"></label>
+<input class="form-control" id="ba-sort3" maxlength="2" name="ba-sort3" value="16" type="text">
+</div>
+</fieldset>
+</div>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+    Account number
+</td>
+<td>
+    <div class="u-1/4-lap-and-up">
+      <span class="c-form-input-denote"></span>
+      <input class= "form-control" id="regpay01" type="text" name="regpay01" value="26173770217" data-parsley-id="9">
+  </div>
+</td>
+<td>
+</td>
+
+
+</tr>
 
     <tr>
       <td>
@@ -251,7 +241,7 @@
                             </tr>
 
 
-
+<!--
                         <tr>
                           <td valign=top>
                             <span class="bold-small">Paying to (payee)</span>
@@ -269,6 +259,7 @@
 </div>
 </td>
 </tr>
+-->
 
 
                     </tbody>

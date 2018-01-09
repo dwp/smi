@@ -32,19 +32,17 @@
                         <tr>
                           <td>
                               <span class="bold-small">Lender</span><br />
-                              Enter a short code
+                              Short code
                           </td>
                           <td>
                             <div class="u-1/4-lap-and-up">
-                              <span class="c-form-input-denote"></span>
-                              <form action="money" method="get" class="form" id="lendercode">
-<input class="form-control" id="lendercode" type="text" name="lendercode" value="{{ lendercode }}">             <input type="hidden" name="nino" value="{{ nino }}">
-
-                            <input class="button" type="submit" value="Look up"></form>
+                            {{ lendercode }}
                             </div>
                           </td>
                           <td>
-                           </div></td>
+
+                          <a href="#">Change</a>
+                          </td>
                         </tr>
 
                         {% if newapplication %}
@@ -62,9 +60,12 @@
       <td>
           <div class="u-1/4-lap-and-up">
             <span class="c-form-input-denote"></span>
-            <input class= "form-control" id="regpay01" type="text" name="regpay01"  value="Yorkshire Bank" data-parsley-id="9">
+            <input class= "form-control" id="regpay01" type="text" name="regpay01"  value="Cheltenham and Gloucester" data-parsley-id="9">
         </div>
       </td>
+      <td>
+      </td>
+
     </tr>
     <tr>
       <td>
@@ -75,20 +76,22 @@
   <fieldset>
     <div class="form-group form-group-day">
       <label for="ba-sort1"></label>
-      <input class="form-control" id="ba-sort1" maxlength="2" name="ba-sort1" value="12" type="text">
+      <input class="form-control" id="ba-sort1" maxlength="2" name="ba-sort1" value="07" type="text">
     </div>
 
     <div class="form-group form-group-month">
       <label for="ba-sort2"></label>
-      <input class="form-control" id="ba-sort2" maxlength="2" name="ba-sort2" value="34" type="text">
+      <input class="form-control" id="ba-sort2" maxlength="2" name="ba-sort2" value="01" type="text">
     </div>
 
     <div class="form-group form-group-month">
       <label for="ba-sort3"></label>
-      <input class="form-control" id="ba-sort3" maxlength="2" name="ba-sort3" value="56" type="text">
+      <input class="form-control" id="ba-sort3" maxlength="2" name="ba-sort3" value="16" type="text">
     </div>
   </fieldset>
 </div>
+      </td>
+      <td>
       </td>
     </tr>
     <tr>
@@ -98,9 +101,13 @@
       <td>
           <div class="u-1/4-lap-and-up">
             <span class="c-form-input-denote"></span>
-            <input class= "form-control" id="regpay01" type="text" name="regpay01" value="8765432" data-parsley-id="9">
+            <input class= "form-control" id="regpay01" type="text" name="regpay01" value="71207737" data-parsley-id="9">
         </div>
       </td>
+      <td>
+      </td>
+
+
     </tr>
 
     <tr>
@@ -113,6 +120,10 @@
             <input class= "form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
         </div>
       </td>
+      <td>
+      </td>
+
+
     </tr>
 
 {% endif %}
@@ -128,7 +139,7 @@
                             </div>
                          </td>
                          <td>
-                          </div></td>
+                        </td>
                         </tr>
 
                         <tr>
@@ -153,6 +164,8 @@
                               </div>
                             </div>
                           </td>
+                          <td>
+                          </td>
                         </tr>
 
                         <tr>
@@ -166,7 +179,7 @@
                             </div>
                           </td>
                           <td>
-                           </td>
+                          </td>
                         </tr>
 
                         <tr>
@@ -181,7 +194,7 @@
                             </div>
                           </td>
                           <td>
-                           </td>
+                          </td>
                         </tr>
 
                         <tr>
@@ -195,7 +208,7 @@
                             </div>
                           </td>
                           <td>
-                           </td>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -219,7 +232,7 @@
                                 </div>
                               </td>
                               <td>
-                               </td>
+                              </td>
                             </tr>
 
                     </tbody>
@@ -235,7 +248,7 @@
 
                {% if newapplication %}
                <input class="button" type="submit" value="Save and continue">
-               <a href="money-additional?nino={{ nino }}&newapplication=yes" class="button-secondary" type="submit" value="Save and add another">Save and add another</a>
+               <a href="money-additional-lookup?nino={{ nino }}&newapplication=yes" class="button-secondary" type="submit" value="Save and add another">Save and add another</a>
 
                {% else %}
                <input class="button" type="submit" value="Save and done">

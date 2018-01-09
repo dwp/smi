@@ -13,6 +13,9 @@
 {% elif nino == "AA11111Z" %}
   {% set benefit = "none" %}
   {% set benefitname = "No qualifying benefit" %}
+{% elif nino == "QF082262D" %}
+  {% set benefit = "pc" %}
+  {% set benefitname = "Pension Credit" %}
 {% else %}
 No name address set.
 {% endif %}

@@ -85,10 +85,11 @@
         <br> </br>
 
         <input type="hidden" name="nino" value="{{ nino }}">
+        <input type="hidden" name="mortgagesloans" value="yes">
 
         <p class="mth mb0">
           {% if newapplication %}
-          <a href="summary?nino={{ nino }}&newapplication=yes" class="button">Save and continue</a>
+          <a href="summary?nino={{ nino }}&newapplication=yes&mortgagesloans=yes" class="button">Save and continue</a>
           {% else %}
           <a href="summary?nino={{ nino }}" class="button">Save and done</a>
           {% endif %}

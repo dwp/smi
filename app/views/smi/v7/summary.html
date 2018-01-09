@@ -77,7 +77,7 @@
 		                            Upper limit
 		                        </td>
 		                        <td>
-		                            £200,000
+		                            £100,000
 		                        </td>
 
 		                    </tr>
@@ -126,25 +126,41 @@
 
 			                <tr>
 			                  <td>
-			                    23456789
+			                    71207737
 			                  </td>
 			                  <td>
 													{% if payments == "yes" %}£50.00{% elif payments == "suspended" %}Payment suspended{% else %}No payment set up{% endif %}
 			                  </td>
 												<td>
-													11/12/2017
+													{% if payments == "yes" %}Date{% elif payments == "suspended" %}-{% else %}-{% endif %}
 												</td>
 			                  <td>
 			                    <p class="heading-small mth"><a href="payment-detail?nino={{ nino }}&showdata=yes&lendercode=1111">Edit<span class="visuallyhidden"> mortgage or home loan details</span></a></p>
 			                  </td>
 			                </tr>
+
+											<tr>
+												<td>
+													26173770217
+												</td>
+												<td>
+													{% if payments == "yes" %}£50.00{% elif payments == "suspended" %}Payment suspended{% else %}No payment set up{% endif %}
+												</td>
+												<td>
+													{% if payments == "yes" %}Date{% elif payments == "suspended" %}-{% else %}-{% endif %}
+												</td>
+												<td>
+													<p class="heading-small mth"><a href="payment-detail?nino={{ nino }}&showdata=yes&lendercode=1111">Edit<span class="visuallyhidden"> mortgage or home loan details</span></a></p>
+												</td>
+											</tr>
+
 	                	</tbody>
 	            	</table>
 
 								<br />
 
-								<p><a href="money?nino={{ nino }}">Add another mortgage or loan</a></p>
-								<p><a href="payments-list?nino={{ nino }}">View payment history</a></p>
+								<p><a href="money-lookup?nino={{ nino }}">Add another mortgage or loan</a></p>
+								<!--<p><a href="payments-list?nino={{ nino }}">View payment history</a></p>-->
 
 								{% else %}
 

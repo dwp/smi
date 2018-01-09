@@ -39,19 +39,21 @@
                     </tr>
                     <tr>
                         <td>
-                            National Insurance Number
-                        </td>
-                        <td>
-                            {{nino}}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
                             Date of birth
                         </td>
                         <td>
                           {% include path+"/inc/applicantDOB.html" %}
-                          </tr>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              National Insurance Number
+                          </td>
+                          <td>
+                              {{nino}}
+                          </td>
+                      </tr>
+
                           <tr>
                             <td valign="top">Address</td>
                             <td>
@@ -69,7 +71,7 @@
                 </tbody>
             </table>
 
-            <p class="mth mb0"><br /><a href="money?nino={{ nino }}&newapplication=yes" class="button">Start application</a><br /><br /></p>
+            <p class="mth mb0"><br /><a href="money-lookup?nino={{ nino }}&newapplication=yes" class="button">Start application</a><br /><br /></p>
             <p class="mth mb0"><a href="search">Cancel and find someone else</a></p>
          </div><!-- column -->
     </div>

@@ -63,11 +63,27 @@ router.get('/smi/v*/search-nino/',function(req,res,next)
   else if (req.query.nino == 'AA11111Z') {
     res.redirect('/smi/v'+v+"/search-nino-found-no-qualifying-benefit?nino="+nino)
   }
+  else if (req.query.nino == 'QF082262D') {
+    res.redirect('/smi/v'+v+"/search-nino-found-start?nino="+nino)
+  }
   else {
     res.redirect('/smi/v'+v+"/search-nino-none?nino="+nino)
   }
 
 });
+
+
+router.get('/smi/v*/search',function(req,res,next)
+{
+  var v = req.params[0];
+  req.data = req.data || { };
+
+  req.data.nino = req.query.nino;
+  const nino = req.data.nino;
+
+  next();
+});
+
 
 router.get('/smi/v*/search-nino-*/',function(req,res,next)
 {
@@ -102,6 +118,25 @@ router.get('/smi/v*/limit_and_deductions',function(req,res,next)
   next();
 });
 
+
+router.get('/smi/v*/money-lookup',function(req,res,next)
+{
+  var v = req.params[0];
+  req.data = req.data || { };
+
+  req.data.nino = req.query.nino;
+  const nino = req.data.nino;
+
+  req.data.newapplication = req.query.newapplication;
+  const newapplication = req.data.newapplication;
+
+  req.data.lendercode = req.query.lendercode;
+  const lendercode = req.data.lendercode;
+
+
+  next();
+});
+
 router.get('/smi/v*/money',function(req,res,next)
 {
   var v = req.params[0];
@@ -119,6 +154,25 @@ router.get('/smi/v*/money',function(req,res,next)
 
   next();
 });
+
+router.get('/smi/v*/money-additional-lookup',function(req,res,next)
+{
+  var v = req.params[0];
+  req.data = req.data || { };
+
+  req.data.nino = req.query.nino;
+  const nino = req.data.nino;
+
+  req.data.newapplication = req.query.newapplication;
+  const newapplication = req.data.newapplication;
+
+  req.data.lendercode = req.query.lendercode;
+  const lendercode = req.data.lendercode;
+
+
+  next();
+});
+
 
 router.get('/smi/v*/money-additional',function(req,res,next)
 {
@@ -195,6 +249,19 @@ router.get('/smi/v*/calculate_award',function(req,res,next)
 
   next();
 });
+
+router.get('/smi/v*/submit_for_processing',function(req,res,next)
+{
+  var v = req.params[0];
+  req.data = req.data || { };
+
+  req.data.nino = req.query.nino;
+  const nino = req.data.nino;
+
+
+  next();
+});
+
 
 router.get('/smi/v*/send-to-smits',function(req,res,next)
 {
