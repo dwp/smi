@@ -1,0 +1,23 @@
+{% if nino == "GB654321C" %}
+  {% set benefit = "jsa" %}
+  {% set benefitname = "Jobseeker's Allowance" %}
+{% elif nino == "BG112233N" %}
+  {% set benefit = "pc" %}
+  {% set benefitname = "Pension Credit" %}
+{% elif nino == "DD445566X" %}
+  {% set benefit = "esa" %}
+  {% set benefitname = "Employment and Support Allowance" %}
+{% elif nino == "ZZ918273C" %}
+  {% set benefit = "esa" %}
+  {% set benefitname = "Employment and Support Allowance" %}
+{% elif nino == "AA11111Z" %}
+  {% set benefit = "none" %}
+  {% set benefitname = "No qualifying benefit" %}
+{% elif nino == "QF082262D" %}
+  {% set benefit = "pc" %}
+  {% set benefitname = "Pension Credit" %}
+{% else %}
+No name address set.
+{% endif %}
+
+{{ benefitname }}

@@ -12,37 +12,29 @@
 
     <div class="column-third">
       <p class="mb0">Date of release</p>
-      <h3 class="heading-medium mt0 mb0">In draft</h3>
+      <h3 class="heading-medium mt0 mb0">9 January 2018</h3>
+      <p>For user research in Seaham on 9 January 2018</p>
     </div>
 
     <div class="column-third">
-      <details>
-        <summary><span class="summary">Quick links</span></summary>
-        <div class="quicklinks">
-          <ul>
-            <a href="/smi/v{{ n }}/search">Search</a><br />
-            <a href="/smi/v{{ n }}/search-add">Search (add person)</a><br />
-            <a href="/smi/v{{ n }}/search-none">Search (none found)</a><br />
-            <a href="/smi/v{{ n }}/person-1?nino=QQ122334C">Person found</a><br />
-            <a href="/smi/v{{ n }}/summary">View summary and calculate payment</a><br />
-            <a href="/smi/v{{ n }}/personal_details">View Personal details</a><br />
-            <a href="/smi/v{{ n }}/limit_and_deductions">Enter limit and deductions</a><br />
-            <a href="/smi/v{{ n }}/edit_limit_and_deductions">Edit limit and deductions</a><br />
-            <a href="/smi/v{{ n }}/payments">Authorise payment</a><br />
-            <a href="/smi/v{{ n }}/mortgage">Enter mortgage and home loan details</a><br />
-            <a href="/smi/v{{ n }}/edit-mortgage-1">Edit mortgage and home loans (example 1)</a><br />
-            <a href="/smi/v{{ n }}/edit-mortgage-2">Edit mortgage and home loans (example 2)</a><br />
-            <a href="/smi/v{{ n }}/notes">Notes</a><br />
-          </ul>
-        </div>
-      </details>
     </div>
 
     <div class="column-two-thirds">
       <a href="/smi/v{{ n }}/index" class="button button-start mth mb1">Launch prototype</a>
       <h3 class="heading-small mth">Changes made</h3>
       <ul class="list list-bullet changes mb1">
-      	<li>Compile at end of sprint: Tuesday 2 January 2018</li>
+        <li>Moved the "short cut links" with </li>
+        <li>Created a new fake profile to reflect the fake MI12 taking to Seaham. NINo is QF082262D. (<a href="search?nino=QF082262D">Start search with this profile</a>)
+        <li>Changed order of the <a href="search-nino-found-start?nino=QF082262D">confirm details page</a> to match the MI12 to help users scan both sets of information, so now is Full name / National Insurance Number / Date of birth	/ Address	/ Qualifying benefit.</li>
+      	<li>Look-up lender code on the enter a mortgage/loan page split into <a href="money-lookup?nino=QF082262D&newapplication=yes">an initial stage now</a>. User sees just the lender look-up, clicks button, and then sees the rest of the screen.</li>
+        <li><a href="money?lendercode=5651&nino=QF082262D&newapplication=yes">Bank details pre-populated</a> represent accompanying MI12 form, so user feels they have entered that information into the prototype from the form.</li>
+        <li>Moved <a href="limit_and_deductions">upper limits and deductions page</a> further along the user's journey. Now sits after they have entered mortage/loan information.</li>
+        <li>Removed related notes from every screen. Assumption: an easy-to-read-for-users system generated log of notes would be more benenficial for consistency of messages and saving of time.</li>
+        <li>Removed list of payments from the <a href="payments-list?nino=QF082262D">payments page</a> (commented out) to reflect journey for research session (no payments will have been set up yet).</li>
+
+
+        <li>Summary page </li>
+
       </ul>
     </div>
 

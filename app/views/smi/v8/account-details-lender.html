@@ -1,0 +1,69 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+            <div class="admin-panes">
+              <div class="admin-pane">
+                <h1 class="heading-large">Payee account details</h1>
+
+              <div class="panel panel-border-wide">
+                <p>This payment is going to the lender, Yorkshire Bank.</p>
+              </div>
+
+
+                  <p class="mth mb0"><a href="summary?nino={{ nino }}" class="button">Save and continue</a><br /><br /></p>
+
+              </div> <!-- ADMIN PANE -->
+            </div>  <!-- ADMIN PANES -->
+
+
+
+      </div> <!-- COLUMN 2 THRIDS -->
+
+        <!-- COLUMN 1 THIRD -->
+        <div class="column-one-third">
+         <!--<div class="panel panel-border-wide alert-default">
+             <p class="heading-small">Next thing to do:</p> Send out MI12 reminder
+             <p><a href="#">View to do list</a></p>
+         </div>-->
+         <div class="left-aside">
+           <h1 class="heading-medium">
+           Applicant details
+         </h1>
+           <div class="panel panel-border-wide">
+           <h2 class="heading-small">
+             {% include path+"/inc/applicantname.html" %}<br />
+             <span class="heading-secondary">{{ nino }}</span>
+           </h1>
+           </div>
+
+           <h3 class="heading-small">Date of birth</h3> <p>{% include path+"/inc/applicantDOB.html" %}</p>
+           <hr  style="width:50%;margin:0"/>
+           <h3 class="heading-small">Address</h3> <p>{% include path+"/inc/applicantaddress.html" %}</p>
+           <hr  style="width:50%;margin:0"/>
+           <h3 class="heading-small">Phone number</h3> <p>{% include path+"/inc/applicantphonenumber.html" %}</p>
+           <hr  style="width:50%;margin:0"/>
+           <h3 class="heading-small">Benefit</h3> <p>{% include path+"/inc/applicantbenefits.html" %}</p>
+           <hr  style="width:50%;margin:0"/>
+           <h3 class="heading-small">Representative appointee </h3> <p>{% include path+"/inc/applicantappointee.html" %}
+           </p>
+           <hr  style="width:50%;margin:0"/>
+         </div>
+
+         </div> <!-- COLUMN 1 THIRD -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}
