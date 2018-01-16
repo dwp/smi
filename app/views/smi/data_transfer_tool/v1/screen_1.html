@@ -77,24 +77,25 @@
           Date of birth
         </td>
         <td>
-          <div class="form-date form-group">
+          <div class="form-group">
             <fieldset>
-              <div class="form-group form-group-day">
-                <label for="ba-sort1"></label>
-                <input class="form-control" id="ba-sort1" maxlength="2" name="ba-sort1" value="" type="text">
-              </div>
-
-              <div class="form-group form-group-month">
-                <label for="ba-sort2"></label>
-                <input class="form-control" id="ba-sort2" maxlength="2" name="ba-sort2" value="" type="text">
-              </div>
-
-              <div class="form-group form-group-month">
-                <label for="ba-sort3"></label>
-                <input class="form-control" id="ba-sort3" maxlength="2" name="ba-sort3" value="" type="text">
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="dob-day">Day</label>
+                  <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" value="">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="dob-month">Month</label>
+                  <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="dob-year">Year</label>
+                  <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2018" value="">
+                </div>
               </div>
             </fieldset>
           </div>
+
         </td>
         <td>
         </td>
@@ -138,16 +139,28 @@
   </td>
   <td>
     <div class="form-group">
-      <label class="form-label" for="select-box"></label>
-      <select class="form-control" id="select-box" name="select-box">
-        <option>EN</option>
-        <option>SC</option>
-        <option>WA</option>
-        <option>NI</option>
+      <fieldset>
 
-      </select>
+    <div class="multiple-choice">
+      <input id="radio-inline-1" type="radio" name="radio-inline-group-2" value="Yes">
+      <label for="radio-inline-1">EN</label>
     </div>
+    <div class="multiple-choice">
+      <input id="radio-inline-2" type="radio" name="radio-inline-group-2" value="No">
+      <label for="radio-inline-2">SC</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="radio-inline-3" type="radio" name="radio-inline-group-2" value="No">
+      <label for="radio-inline-3">WA</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="radio-inline-4" type="radio" name="radio-inline-group-2" value="No">
+      <label for="radio-inline-4">NI</label>
+    </div>
+
+  </fieldset>
 </div>
+
 </td>
 <td>
 </td>
@@ -200,7 +213,7 @@
   </td>
   <td>
     <div class="form-group">
-      <fieldset class="inline">
+      <fieldset>
 
     <div class="multiple-choice">
       <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
