@@ -11,7 +11,7 @@
           <div class="column-two-thirds">
 
 
-              <h1 class="heading-large">Eligibility</h1>
+              <h1 class="heading-large">Property charges and income</h1>
 
               {% set navactive = "limit_deductions" %}
               {% if not newapplication %}
@@ -21,56 +21,45 @@
 
         <div class="admin-panes">
             <div class="admin-pane">
-
-              <table class="borrower-details">
-                <tbody>
-
-
-                            <tr>
-                               <td>
-                                   <span class="bold-small">Upper limit</span><br />
-                                   The maximum eligible amount of the applicant's mortgage. {% include path+"/inc/applicantbenefitslimitguidance.html" %} {{ benefit}}
-                               </td>
-                               <td>
-                                 <div class="u-1/4-lap-and-up">
-                                   <span class="c-form-input-denote">£</span>
-                                   <input class="c-form-input-denote__input form-control form-control-2-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
-
-
-                                 </div>
-                               </td>
-                             </tr>
-
+                         <table class="borrower-details">
+                           <tbody>
 
                              <tr>
-                                <td>
-                                    <span class="bold-small">Date claim eligible from</span>
-                                </td>
-                                <td>
-
-                                  <div class="form-date form-group">
-                          <fieldset>
-                            <div class="form-group form-group-day">
-                              <label for="ba-sort1"></label>
-                              <input class="form-control" id="ba-sort1" maxlength="2" name="ba-sort1" value="" type="text">
-                            </div>
-
-                            <div class="form-group form-group-month">
-                              <label for="ba-sort2"></label>
-                              <input class="form-control" id="ba-sort2" maxlength="2" name="ba-sort2" value="" type="text">
-                            </div>
-
-                            <div class="form-group form-group-month">
-                              <label for="ba-sort3"></label>
-                              <input class="form-control" id="ba-sort3" maxlength="2" name="ba-sort3" value="" type="text">
-                            </div>
-                          </fieldset>
-                        </div>
-
-                                </td>
+                                 <td>
+                                     <span class="bold-small">Ground rent per week</span>
+                                 </td>
+                                 <td>
+                                   <div class="u-1/4-lap-and-up">
+                                     <span class="c-form-input-denote">£</span>
+                                     <input class="c-form-input-denote__input form-control form-control-2-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                                   </div>
+                                 </td>
                               </tr>
 
+                              <tr>
+                                  <td>
+                                      <span class="bold-small">Service charge per week</span>
+                                  </td>
+                                  <td>
+                                    <div class="u-1/4-lap-and-up">
+                                      <span class="c-form-input-denote">£</span>
+                                      <input class="c-form-input-denote__input form-control form-control-2-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                                    </div>
+                                  </td>
+                               </tr>
 
+
+                              <tr>
+                                  <td>
+                                      <span class="bold-small">Non-dependant deductions per week</span>
+                                  </td>
+                                  <td>
+                                    <div class="u-1/4-lap-and-up">
+                                      <span class="c-form-input-denote">£</span>
+                                      <input class="c-form-input-denote__input form-control form-control-2-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                                    </div>
+                                  </td>
+                              </tr>
                             </tbody>
                           </table>
 
@@ -85,7 +74,7 @@
 
         <p class="mth mb0">
           {% if newapplication %}
-          <a href="property-money?nino={{ nino }}&newapplication=yes&mortgagesloans=yes" class="button">Continue</a>
+          <a href="summary?nino={{ nino }}&newapplication=yes&mortgagesloans=yes" class="button">Continue</a>
           {% else %}
           <a href="summary?nino={{ nino }}" class="button">Done</a>
           {% endif %}

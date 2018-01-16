@@ -12,7 +12,7 @@
 
      <div class="column-two-thirds"> <!-- COLUMN 2 THRIDS -->
 
-			 <h1 class="heading-large">Summary</h1>
+			 <h1 class="heading-large">Mortgage or loans eligible for Support for Mortgage Interest</h1>
 
 			 {% set navactive = "summary" %}
 			 {% if not newapplication %}
@@ -65,7 +65,7 @@
 
 											<tr>
 												<td valign=bottom>
-													<h2 class="heading-medium">Upper limit and deductions</h2>
+													<h2 class="heading-medium">Eligibility</h2>
 												</td>
 												<td valign=bottom align=right>
 													<a style="align:right;" href="limit_and_deductions?nino={{ nino }}">Edit<span class="visuallyhidden">overview details</span></a>
@@ -84,10 +84,10 @@
 
 		                    <tr>
 		                        <td>
-		                            Ground rent and service charges
+		                            Date claim eligible from
 		                        </td>
 		                        <td>
-		                            Nothing entered
+		                            7 March 2018
 		                        </td>
 		                    </tr>
 
@@ -102,10 +102,50 @@
 		                </tbody>
 		            </table>
 
+								<table class="borrower-details">
+		                <tbody>
+								<tr>
+									<td valign=bottom>
+										<h2 class="heading-medium">Property charges and income</h2>
+									</td>
+									<td valign=bottom align=right>
+										<a style="align:right;" href="limit_and_deductions?nino={{ nino }}">Edit<span class="visuallyhidden">overview details</span></a>
+									</td>
+									</tr>
+
+									<tr>
+											<td>
+													Ground rent per week
+											</td>
+											<td>
+													Nothing entered
+											</td>
+									</tr>
+
+									<tr>
+											<td>
+													Service charge per week
+											</td>
+											<td>
+													Nothing entered
+											</td>
+									</tr>
+									<tr>
+											<td>
+													Non-dependant deductions per week
+											</td>
+											<td>
+													Nothing entered
+											</td>
+									</tr>
+
+							</tbody>
+					</table>
+
 								<br /><br />
 
 
-		            <h2 class="heading-medium mb0">Payments for mortgages and loans</h2>
+		            <h2 class="heading-medium mb0">Mortgage and loans entered for {% include path+"/inc/applicantname.html" %}</h2>
 
 								{% if mortgagesloans == "yes" %}
 
@@ -113,14 +153,11 @@
 	                	<tbody>
 			                <tr>
 			                  <td>
-			                   <h2 class="heading-small">Mortgage or home loan ref</h2>
+			                   <h2 class="heading-small">Mortgage or home loan reference</h2>
 			                  </td>
 			                  <td>
-			                  <h2 class="heading-small">Weekly payment with deductions</h2>
+			                  <h2 class="heading-small">Type of loan</h2>
 			                  </td>
-												<td>
-												<h2 class="heading-small">Last paid</h2>
-												</td>
 			                  <td></td>
 			                </tr>
 
@@ -128,14 +165,17 @@
 			                  <td>
 			                    712077371
 			                  </td>
-			                  <td>
-													{% if payments == "yes" %}£50.00{% elif payments == "suspended" %}Payment suspended{% else %}No payment set up{% endif %}
-			                  </td>
 												<td>
-													{% if payments == "yes" %}Date{% elif payments == "suspended" %}-{% else %}-{% endif %}
+													Mortgage
 												</td>
+	<!--		                  <td>
+													{% if payments == "yes" %}£50.00{% elif payments == "suspended" %}Payment suspended{% else %}No payment set up{% endif %}
+			                  </td>-->
+<!--												<td>
+													{% if payments == "yes" %}Date{% elif payments == "suspended" %}-{% else %}-{% endif %}
+												</td>-->
 			                  <td>
-			                    <p class="heading-small mth"><a href="payment-detail?nino={{ nino }}&showdata=yes&lendercode=1111">Edit<span class="visuallyhidden"> mortgage or home loan details</span></a></p>
+			                    <p class="heading-small mth"><a href="payment-detail?nino={{ nino }}&showdata=yes&lendercode=1111">View<span class="visuallyhidden"> mortgage or home loan details</span></a></p>
 			                  </td>
 			                </tr>
 
@@ -144,13 +184,16 @@
 													26173770217
 												</td>
 												<td>
+													Home improvement loan
+												</td>
+<!--												<td>
 													{% if payments == "yes" %}£50.00{% elif payments == "suspended" %}Payment suspended{% else %}No payment set up{% endif %}
-												</td>
-												<td>
+												</td>-->
+<!--												<td>
 													{% if payments == "yes" %}Date{% elif payments == "suspended" %}-{% else %}-{% endif %}
-												</td>
+												</td>-->
 												<td>
-													<p class="heading-small mth"><a href="payment-detail?nino={{ nino }}&showdata=yes&lendercode=1111">Edit<span class="visuallyhidden"> mortgage or home loan details</span></a></p>
+													<p class="heading-small mth"><a href="payment-detail?nino={{ nino }}&showdata=yes&lendercode=1111">View<span class="visuallyhidden"> mortgage or home loan details</span></a></p>
 												</td>
 											</tr>
 
@@ -170,7 +213,7 @@
 
 								{% endif %}
 
-								<p class="mth mb0"><a href="calculate_award?nino={{ nino }}" class="button">Calculate award</a><br /><br /></p>
+								<p class="mth mb0"><a href="calculate_award?nino={{ nino }}" class="button">Confirm loan details</a><br /><br /></p>
 
 
 

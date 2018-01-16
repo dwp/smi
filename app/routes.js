@@ -119,6 +119,21 @@ router.get('/smi/v*/limit_and_deductions',function(req,res,next)
 });
 
 
+router.get('/smi/v*/property-money',function(req,res,next)
+{
+  var v = req.params[0];
+  req.data = req.data || { };
+
+  req.data.nino = req.query.nino;
+  const nino = req.data.nino;
+
+  req.data.newapplication = req.query.newapplication;
+  const newapplication = req.data.newapplication;
+
+  next();
+});
+
+
 router.get('/smi/v*/money-lookup',function(req,res,next)
 {
   var v = req.params[0];
