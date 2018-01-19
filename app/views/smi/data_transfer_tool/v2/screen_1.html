@@ -1,0 +1,297 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <h2 class="heading-large" style="margin-bottom:30px">
+          Claimant name
+          <span class="heading-secondary">Claimant NINo</span>
+        </h2>
+
+        <h1 class="heading-medium">Screen 1 [needs descriptor]</h1>
+
+
+        <table class="lender-details-1">
+          <tbody>
+            <form action="screen_2" method="get" class="form" id="form">
+
+              <tr>
+                <td>
+                  National Insurance number
+                </td>
+                <td>
+                  <input class="form-control" id="regpay01" type="text" name="regpay01" value="QF082262D" data-parsley-id="9">
+      </div>
+      </td>
+      <td>
+      </td>
+
+      </tr>
+
+      <tr>
+        <td>
+          Title
+        </td>
+        <td>
+          <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+</div>
+</td>
+<td>
+</td>
+
+</tr>
+
+
+<tr>
+  <td>
+    First name(s)
+  </td>
+  <td>
+    <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+</div>
+</td>
+<td>
+</td>
+
+</tr>
+
+<tr>
+  <td>
+    Last name
+  </td>
+  <td>
+    <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+</div>
+</td>
+<td>
+</td>
+
+</tr>
+
+
+      <tr>
+        <td>
+          Date of birth
+        </td>
+        <td>
+          <div class="form-group">
+            <fieldset>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="dob-day">Day</label>
+                  <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" value="">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="dob-month">Month</label>
+                  <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="dob-year">Year</label>
+                  <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2018" value="">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+        </td>
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Claimant/residential address
+        </td>
+        <td>
+          <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                    <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                              <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                                        <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9"><br />
+                                        Postcode           <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+</td>
+<td>
+</td>
+
+</tr>
+
+<tr>
+  <td>
+    Correspondance address
+  </td>
+  <td>
+    <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+              <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9"><br />
+                                  Postcode           <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+</div>
+</td>
+<td>
+</td>
+
+</tr>
+
+
+<tr>
+  <td>
+    Country code
+  </td>
+  <td>
+    <div class="form-group">
+      <fieldset>
+
+    <div class="multiple-choice">
+      <input id="radio-inline-1" type="radio" name="radio-inline-group-2" value="EN">
+      <label for="radio-inline-1">England</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="radio-inline-2" type="radio" name="radio-inline-group-2" value="SC">
+      <label for="radio-inline-2">Scotland</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="radio-inline-3" type="radio" name="radio-inline-group-2" value="WA">
+      <label for="radio-inline-3">Wales</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="radio-inline-4" type="radio" name="radio-inline-group-2" value="NI">
+      <label for="radio-inline-4">Northern Ireland</label>
+    </div>
+
+  </fieldset>
+</div>
+
+</td>
+<td>
+</td>
+
+</tr>
+
+<tr>
+  <td>Alternative format required</td>
+  <td>
+    <div class="form-group">
+      <fieldset>
+
+        <legend>
+
+        </legend>
+
+        <div class="multiple-choice" data-target="contact-by-alternative">
+          <input id="contact-by-alternative" type="radio" name="radio-contact-group" value="Yes">
+          <label for="contact-by-alternative">Yes</label>
+        </div>
+        <div class="panel panel-border-narrow js-hidden" id="contact-by-alternative">
+          <label class="form-label" for="contact-notes">Notes</label>
+          <textarea class="form-control form-control-3-4" name="contact-notes" id="contact-notes" rows="5"></textarea>
+        </div>
+
+        <div class="multiple-choice">
+          <input id="contact-by-alternative" type="radio" name="radio-contact-group" value="No">
+          <label for="contact-by-alternative">No</label>
+        </div>
+
+      </fieldset>
+    </div>
+
+
+  </td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>
+    Home telephone number
+  </td>
+  <td>
+    <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+</div>
+</td>
+<td>
+</td>
+
+</tr>
+
+<tr>
+  <td>
+    Mobile telephone number
+  </td>
+  <td>
+    <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+</div>
+</td>
+<td>
+</td>
+
+</tr>
+
+<tr>
+  <td>
+    Textphone number
+  </td>
+  <td>
+    <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+</div>
+</td>
+<td>
+</td>
+
+</tr>
+
+
+<tr>
+  <td>
+   Partner
+  </td>
+  <td>
+    <div class="form-group">
+      <fieldset>
+
+    <div class="multiple-choice">
+      <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+      <label for="radio-inline-1">Yes</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+      <label for="radio-inline-2">No</label>
+    </div>
+  </fieldset>
+</div>
+</div>
+</td>
+<td>
+</td>
+
+</tr>
+
+
+      </tbody>
+      </table>
+
+
+
+      <p class="mth mb0">
+        <input class="button" type="submit" value="Save and continue">
+      </p>
+      <p class="mth mb0">
+        <a href="">Cancel</a>
+      </p>
+
+
+      </form>
+
+
+
+    </div>
+    <!-- COLUMN 2 THRIDS -->
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

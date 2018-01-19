@@ -1,0 +1,332 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <h2 class="heading-large" style="margin-bottom:30px">
+          Claimant name
+          <span class="heading-secondary">Claimant NINo</span>
+        </h2>
+
+
+
+        <h1 class="heading-medium">Screen 4: Add a new mortgage or loan</h1>
+
+
+        <table class="lender-details-1">
+          <tbody>
+            <form action="screen_5" method="get" class="form" id="form">
+
+
+
+                            <tr>
+                              <td>
+                                Loan reference
+                              </td>
+                              <td>
+                                <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                    </td>
+                    <td>
+                    </td>
+
+                    </tr>
+
+
+                                  <tr>
+                                    <td>
+                                      Loan type
+                                    </td>
+                                    <td>
+
+                                      <div class="form-group">
+                                        <fieldset>
+
+                                      <div class="multiple-choice">
+                                        <input id="radio-inline-1" type="radio" name="radio-inline-group-2" value="Yes">
+                                        <label for="radio-inline-1">Mortgage</label>
+                                      </div>
+                                      <div class="multiple-choice">
+                                        <input id="radio-inline-2" type="radio" name="radio-inline-group-2" value="No">
+                                        <label for="radio-inline-2">Loan</label>
+                                      </div>
+                                    </fieldset>
+                                  </div>
+
+
+                          </td>
+                          <td>
+                          </td>
+
+                          </tr>
+
+
+
+                                        <tr>
+                                          <td>
+                                            Outstanding balance
+                                          </td>
+                                          <td>
+                                            &pound; <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                                </td>
+                                <td>
+                                </td>
+
+                                </tr>
+
+
+
+
+              <tr>
+                <td>
+                  Shared housing costs
+                </td>
+                <td>
+                  &pound; <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+      </td>
+      <td>
+      </td>
+
+      </tr>
+
+
+                    <tr>
+                      <td>
+                        Loan exempt amount
+                      </td>
+                      <td>
+                        &pound; <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+            </td>
+            <td>
+            </td>
+
+            </tr>
+
+
+                          <tr>
+                            <td>
+                              Override weekly interest
+                            </td>
+                            <td>
+                              &pound; <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                  </td>
+                  <td>
+                  </td>
+
+                  </tr>
+
+
+
+                                <tr>
+                                  <td>
+                                    Review MI12 date input
+                                  </td>
+                                  <td>
+
+                                    <div class="form-group">
+                                      <fieldset>
+                                        <div class="form-date">
+                                          <div class="form-group form-group-day">
+                                            <label class="form-label" for="dob-day">Day</label>
+                                            <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" value="">
+                                          </div>
+                                          <div class="form-group form-group-month">
+                                            <label class="form-label" for="dob-month">Month</label>
+                                            <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="">
+                                          </div>
+                                          <div class="form-group form-group-year">
+                                            <label class="form-label" for="dob-year">Year</label>
+                                            <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016" value="">
+                                          </div>
+                                        </div>
+                                      </fieldset>
+                                    </div>
+
+                                </td>
+                                <td>
+                                </td>
+
+                                </tr>
+
+
+                                <tr>
+                                  <td>
+                                    Loan status
+                                  </td>
+                                  <td>
+
+                                    <div class="form-group">
+                                      <fieldset>
+
+                                    <div class="multiple-choice">
+                                      <input id="radio-inline-1" type="radio" name="radio-inline-group" value="live">
+                                      <label for="radio-inline-1">Live</label>
+                                    </div>
+                                    <div class="multiple-choice">
+                                      <input id="radio-inline-2" type="radio" name="radio-inline-group" value="dormant">
+                                      <label for="radio-inline-2">Dormant</label>
+                                    </div>
+                                  </fieldset>
+                                </div>
+
+
+                          </td>
+                          <td>
+                          </td>
+
+                          </tr>
+
+
+
+
+                                                                                                  <tr>
+                                                                                                    <td>
+                                                                                                      Weekly MPPI
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                      &pound; <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                                                                                          </td>
+                                                                                          <td>
+                                                                                          </td>
+
+                                                                                          </tr>
+
+
+                          <tr>
+                            <td>
+                                <span class="bold">Start of SMI loan payment</span><br />
+                                This is not the start of the mortgage payment date
+                            </td>
+                            <td>
+
+                              <div class="form-group">
+                                <fieldset>
+                                  <div class="form-date">
+                                    <div class="form-group form-group-day">
+                                      <label class="form-label" for="dob-day">Day</label>
+                                      <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" value="">
+                                    </div>
+                                    <div class="form-group form-group-month">
+                                      <label class="form-label" for="dob-month">Month</label>
+                                      <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="">
+                                    </div>
+                                    <div class="form-group form-group-year">
+                                      <label class="form-label" for="dob-year">Year</label>
+                                      <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016" value="">
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </div>
+
+
+                          </td>
+                          <td>
+                          </td>
+
+                          </tr>
+
+
+                          <tr>
+                            <td>
+                                <span class="bold">End of SMI loan payment</span>
+                            </td>
+                            <td>
+
+                              <div class="form-group">
+                                <fieldset>
+                                  <div class="form-date">
+                                    <div class="form-group form-group-day">
+                                      <label class="form-label" for="dob-day">Day</label>
+                                      <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" value="">
+                                    </div>
+                                    <div class="form-group form-group-month">
+                                      <label class="form-label" for="dob-month">Month</label>
+                                      <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="">
+                                    </div>
+                                    <div class="form-group form-group-year">
+                                      <label class="form-label" for="dob-year">Year</label>
+                                      <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016" value="">
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </div>
+
+
+                          </td>
+                          <td>
+                          </td>
+
+                          </tr>
+
+
+                          <tr>
+                            <td>
+                              <span class="bold">Adjustments</span>
+
+
+                            </td>
+                            <td>
+
+                              <div class="form-group">
+                                <fieldset>
+
+                                  <legend>
+
+                                  </legend>
+
+                                  <div class="multiple-choice" data-target="adjustments-yes">
+                                    <input id="adjustments" type="radio" name="radio-contact-group" value="Yes">
+                                    <label for="adjustments">Yes</label>
+                                  </div>
+                                  <div class="panel panel-border-narrow js-hidden" id="adjustments-yes">
+                                    <label class="form-label" for="adjustments-notes">Notes</label>
+                                    <textarea class="form-control form-control-3-4" name="contact-notes" id="adjustments-notes" rows="5"></textarea>
+                                  </div>
+
+                                  <div class="multiple-choice">
+                                    <input id="adjustments" type="radio" name="radio-contact-group" value="No">
+                                    <label for="adjustments">No</label>
+                                  </div>
+
+                                </fieldset>
+                              </div>
+
+
+                            </td>
+                          </tr>
+
+
+
+
+      </tbody>
+      </table>
+
+
+
+      <p class="mth mb0">
+        <input class="button" type="submit" value="Save and continue">
+      </p>
+      <p class="mth mb0">
+        <a href="">Cancel</a>
+      </p>
+
+
+      </form>
+
+
+
+    </div>
+    <!-- COLUMN 2 THRIDS -->
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "layout.html" %} {% block content %}
+<div class="index">
+
+<div class="index-page-banner">
+  <div class="index-heading-wrapper">
+    <h1 class="heading-xlarge index-heading-xlarge">Manage a mortgage interest loan</h1>
+    <h2 class="heading-large index-heading-large">Data transfer tool prototypes</h2>
+  </div>
+</div>
+
+<main id="content" role="main">
+
+      <div class="column-two-thirds">
+
+        <h2 class="heading-medium">Version 2: 19 January 2018</h2>
+
+
+        <h3 class="heading-small">Queries</h3>
+
+          <ul class="list list-bullet">
+            <li>What validation is to be done?</li>
+            <li>Screen 0: What is "incorrect" NINo is submitted?</li>
+            <li>Screen 0: What if NINo already "exists" (within this system)?</li>
+            <li>Screen 1: Does this auto-populate with info based on National Insurance number?</li>
+          </ul>
+
+
+        <h3 class="heading-small">To do</h3>
+
+          <ul class="list list-bullet">
+            <li>Navigation: customer info / loans/payment / notes</li>
+            <li>back links</li>
+            <li>notes section?</li>
+            <li>proper titling of screens (just called "screen 1" etc at the moment to help with narrative)</li>
+            <li>Tidy tables across screen</li>
+            <li>Review of <a href-="v2/screen_7">screen 7</a> and <a href="v2/screen_8">screen 8</a></li>
+            <li>Screen 2: Need explanatory content for "on hold"</li>
+            <li>Screen 4: content review of "Start of SMI loan payment" and guidance</li>
+            <li>Screen 4: content review of "End of SMI loan payment"</li>
+            <li>Screen 5: content review of guidance "Do not complete if paying direct to claimant" for Qualified lender code</li>
+            <li>Screen 6: review "Next action due date" - is this new or replacing Date of payment accurancy check?</li>
+
+
+          </ul>
+
+
+        <h3 class="heading-small">Changes</h3>
+
+          <ul class="list list-bullet">
+            <li>Change name of tool to SMICR</li>
+            <li>Screen 1: list countries by name not by shortcode</li>
+            <li>Screen 1: Alternative format required selection added and notes when user clicks yes</li>
+            <li>Screen 2: change "SMI only, eg 10p" to "SMI loan only"</li>
+            <li>Screen 2: added UC to Benefit Types list</li>
+            <li>Screen 2: remove "suspended" from Qualifying benefit status</li>
+            <li>Screen 4: Loan status is live and dormant only</li>
+            <li>Screen 4: Change to "Start of SMI loan payment", and inclusion of guidance</li>
+            <li>Screen 4: Change to "End of SMI loan payment"</li>
+            <li>Screen 4: Inclusion of Adjustments, with yes/no and notes</li>
+            <li>Screen 5: Added guidance "Do not complete if paying direct to claimant" for Qualified lender code</li>
+            <li>Screen 6: Added in "Next action due date"</li>
+          </ul>
+
+
+          <a href="v2/screen_0" class="button button-start mth mb1">Launch prototype</a>
+
+
+
+
+        <h2 class="heading-medium">Version 1: 12 January 2018</h2>
+
+        <a href="v1/screen_0" class="button button-start mth mb1">Launch prototype</a>
+
+
+    </div>
+    <!-- COLUMN 2 THRIDS -->
+
+  </main>
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}
