@@ -1,0 +1,100 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <h2 class="heading-large" style="margin-bottom:30px">
+          Claimant name
+          <span class="heading-secondary">Claimant NINo</span>
+        </h2>
+
+        <h1 class="heading-medium">Viewing all notes</h1>
+
+        <p>
+          <a href="#" class="link-back">Back to [previous page]</a>
+        </p>
+
+
+        <p>
+        <a href="screen_notes_add">Create new note</a>
+      </p>
+
+              <table class="lender-details-1">
+                <tbody>
+                    <tr>
+                      <th>
+                       23 January 2018
+                      </th>
+                      <th>
+                       Name Surname
+                      </th>
+                    </tr>
+                    <tr>
+                      <td colspan=2>
+                       Most recent note. Need more content than this.
+                     </td>
+                    </tr>
+            </table>
+
+
+            <p>&nbsp;</p>
+
+
+                          <table class="lender-details-1">
+                            <tbody>
+                                <tr>
+                                  <th>
+                                   10 January 2018
+                                  </th>
+                                  <th>
+                                   Name Surname
+                                  </th>
+                                </tr>
+                                <tr>
+                                  <td colspan=2>
+                                   Most recent note. Need more content than this.
+                                 </td>
+                                </tr>
+                        </table>
+
+
+      <p>&nbsp;</p>
+
+      <table class="lender-details-1">
+        <tbody>
+            <tr>
+              <th>
+               17 January 2017
+              </th>
+              <th>
+               Name Surname
+              </th>
+            </tr>
+            <tr>
+              <td colspan=2>
+               Most recent note. Need more content than this.
+             </td>
+            </tr>
+    </table>
+
+
+    </div>
+    <!-- COLUMN 2 THIRDS -->
+
+    <div class="column-one-third">
+      {% include path+"/inc/applicantdetails.html" %}
+    </div>
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

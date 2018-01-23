@@ -1,0 +1,131 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <h2 class="heading-large" style="margin-bottom:30px">
+          Claimant name
+          <span class="heading-secondary">Claimant NINo</span>
+        </h2>
+
+        <h1 class="heading-medium">Screen 3: summary view with deductions etc and loan provided</h1>
+
+        <table class="lender-details-1">
+          <tbody>
+
+
+              <tr>
+                <td>
+                 Non-dependants deductions
+                </td>
+                <td>
+                  &pound; 2500
+      </td>
+      <td>
+        <a href="screen_3">Edit</a>
+
+      </td>
+
+      </tr>
+
+      <tr>
+        <td>
+          Override upper limit
+        </td>
+        <td>
+          &pound; 100000
+</td>
+<td>
+  <a href="screen_3">Edit</a>
+
+</td>
+
+</tr>
+
+<tr>
+  <td>
+    Ground rent and service charge
+  </td>
+  <td>
+    &pound; 0
+</td>
+<td>
+  <a href="screen_3">Edit</a>
+
+</td>
+
+</tr>
+
+      </tbody>
+      </table>
+
+      <p>&nbsp;</p>
+
+
+      <table class="lender-details-1">
+        <tbody>
+
+
+            <tr>
+              <th>
+               Mortgage of home loan ref[erence]
+              </th>
+              <th>
+                Applicable loan balance
+              </th>
+
+              <th>
+                Net weekly amount
+              </th>
+              <th>
+                Payee
+              </th>
+              <th>
+              </th>
+            </tr>
+            <tr>
+              <td>
+               Loan 1
+             </td>
+             <td>
+               &pound; 90,000
+             </td>
+
+              <td>
+                &pound; 50.20
+              </td>
+              <td>
+                <a href="#">Add payee</a>
+              </td>
+              <td>
+                <a href="screen_4">Edit</a>
+              </td>
+            </tr>
+    </table>
+
+
+
+      <p class="mth mb0">
+        <a href="screen_4">Add a loan</a>
+      </p>
+    </div>
+    <!-- COLUMN 2 THIRDS -->
+
+    <div class="column-one-third">
+      {% include path+"/inc/applicantdetails-with-notes-link.html" %}
+
+    </div>
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

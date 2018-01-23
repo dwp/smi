@@ -1,0 +1,42 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <h2 class="heading-large" style="margin-bottom:30px">
+          Claimant name
+          <span class="heading-secondary">Claimant NINo</span>
+        </h2>
+
+        <h1 class="heading-medium">Create new note</h1>
+
+        <textarea class="form-control form-control-3-4" name="contact-notes" id="contact-notes" rows="8"></textarea>
+
+
+
+      <p>
+      <a href="#" class="button">Save</a><br />
+        <a href="#" class="link-back">Back to [previous page]</a>
+      </p>
+
+
+    </div>
+    <!-- COLUMN 2 THIRDS -->
+
+    <div class="column-one-third">
+      {% include path+"/inc/applicantdetails.html" %}
+    </div>
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}
