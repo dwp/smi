@@ -348,6 +348,9 @@ const alertshow = req.data.alertshow;
 req.data.alertmessage = req.query.alertmessage;
 const alertmessage = req.data.alertmessage;
 
+req.data.startnino = req.query.startnino;
+const startnino = req.data.startnino;
+
 
 /* Data of claimant to pass through screens */
 
