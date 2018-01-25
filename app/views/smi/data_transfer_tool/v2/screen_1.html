@@ -7,12 +7,10 @@
     <div class="grid-row">
 
       <div class="column-two-thirds">
-        <h2 class="heading-large" style="margin-bottom:30px">
-          Claimant name
-          <span class="heading-secondary">Claimant NINo</span>
-        </h2>
 
-        <h1 class="heading-medium">Screen 1 [needs descriptor]</h1>
+        {% include path+"/inc/name-and-nino.html" %}
+
+        <h1 class="heading-large">Personal details [screen 1]</h1>
 
 
         <table class="lender-details-1">
@@ -24,7 +22,7 @@
                   National Insurance number
                 </td>
                 <td>
-                  <input class="form-control" id="regpay01" type="text" name="regpay01" value="QF082262D" data-parsley-id="9">
+                  <input class="form-control" id="nino" type="text" name="nino" value="{{ nino }}" data-parsley-id="9">
       </div>
       </td>
       <td>
@@ -37,7 +35,7 @@
           Title
         </td>
         <td>
-          <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+          <input class="form-control" id="title" type="text" name="title" value="{{ title }}" data-parsley-id="9">
 </div>
 </td>
 <td>
@@ -51,7 +49,7 @@
     First name(s)
   </td>
   <td>
-    <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+    <input class="form-control" id="firstname" type="text" name="firstname" value="{{ firstname }}" data-parsley-id="9">
 </div>
 </td>
 <td>
@@ -64,7 +62,7 @@
     Last name
   </td>
   <td>
-    <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+    <input class="form-control" id="lastname" type="text" name="lastname" value="{{ lastname }}" data-parsley-id="9">
 </div>
 </td>
 <td>
@@ -82,16 +80,16 @@
             <fieldset>
               <div class="form-date">
                 <div class="form-group form-group-day">
-                  <label class="form-label" for="dob-day">Day</label>
-                  <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" value="">
+                  <label class="form-label" for="dob_dd">Day</label>
+                  <input class="form-control" id="dob_dd" name="dob_dd" type="number" pattern="[0-9]*" min="0" max="31" value="{{ dob_dd }}">
                 </div>
                 <div class="form-group form-group-month">
-                  <label class="form-label" for="dob-month">Month</label>
-                  <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="">
+                  <label class="form-label" for="dob_mm">Month</label>
+                  <input class="form-control" id="dob_mm" name="dob_mm" type="number" pattern="[0-9]*" min="0" max="12" value="{{ dob_mm }}">
                 </div>
                 <div class="form-group form-group-year">
-                  <label class="form-label" for="dob-year">Year</label>
-                  <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2018" value="">
+                  <label class="form-label" for="dob_yy">Year</label>
+                  <input class="form-control" id="dob_yy" name="dob_yy" type="number" pattern="[0-9]*" min="0" max="2018" value="{{ dob_yy }}">
                 </div>
               </div>
             </fieldset>
@@ -104,14 +102,14 @@
 
       <tr>
         <td>
-          Claimant/residential address
+          Home address
         </td>
         <td>
-          <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
-                    <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
-                              <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
-                                        <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9"><br />
-                                        Postcode           <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+          <input class="form-control" id="claimantaddress1" type="text" name="claimantaddress1" value="{{ claimantaddress1 }}" data-parsley-id="9">
+          <input class="form-control" id="claimantaddress2" type="text" name="claimantaddress2" value="{{ claimantaddress2 }}" data-parsley-id="9">
+          <input class="form-control" id="claimantaddress3" type="text" name="claimantaddress3" value="{{ claimantaddress3 }}" data-parsley-id="9">
+          <input class="form-control" id="claimantaddress4" type="text" name="claimantaddress4" value="{{ claimantaddress4 }}" data-parsley-id="9"><br />
+          Postcode           <input class="form-control" id="claimantpostcode" type="text" name="claimantpostcode" value="{{ claimantpostcode }}" data-parsley-id="9">
 </td>
 <td>
 </td>
@@ -120,12 +118,12 @@
 
 <tr>
   <td>
-    Correspondance address
+    Correspondence address
   </td>
   <td>
-    <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
-              <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9"><br />
-                                  Postcode           <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+    <input class="form-control" id="correspondenceaddress1" type="text" name="correspondenceaddress1" value="{{ correspondenceaddress1 }}" data-parsley-id="9">
+    <input class="form-control" id="correspondenceaddress2" type="text" name="correspondenceaddress2" value="{{ correspondenceaddress2 }}" data-parsley-id="9"><br />
+    Postcode           <input class="form-control" id="correspondencepostcode" type="text" name="correspondencepostcode" value="{{ correspondencepostcode }}" data-parsley-id="9">
 </div>
 </td>
 <td>
@@ -143,19 +141,19 @@
       <fieldset>
 
     <div class="multiple-choice">
-      <input id="radio-inline-1" type="radio" name="radio-inline-group-2" value="EN">
+      <input id="radio-inline-1" type="radio" name="country" value="EN">
       <label for="radio-inline-1">England</label>
     </div>
     <div class="multiple-choice">
-      <input id="radio-inline-2" type="radio" name="radio-inline-group-2" value="SC">
+      <input id="radio-inline-2" type="radio" name="country" value="SC">
       <label for="radio-inline-2">Scotland</label>
     </div>
     <div class="multiple-choice">
-      <input id="radio-inline-3" type="radio" name="radio-inline-group-2" value="WA">
+      <input id="radio-inline-3" type="radio" name="country" value="WA">
       <label for="radio-inline-3">Wales</label>
     </div>
     <div class="multiple-choice">
-      <input id="radio-inline-4" type="radio" name="radio-inline-group-2" value="NI">
+      <input id="radio-inline-4" type="radio" name="country" value="NI">
       <label for="radio-inline-4">Northern Ireland</label>
     </div>
 
@@ -178,18 +176,18 @@
 
         </legend>
 
-        <div class="multiple-choice" data-target="contact-notes">
-          <input id="contact-by-alternative" type="radio" name="radio-contact-group" value="Yes">
-          <label for="contact-by-alternative">Yes</label>
+        <div class="multiple-choice" data-target="alternativeformatnotes">
+          <input id="alternativeformat-1" type="radio" name="alternativeformat" value="Yes">
+          <label for="alternativeformat-1">Yes</label>
         </div>
-        <div class="panel panel-border-narrow js-hidden" id="contact-notes">
-          <label class="form-label" for="contact-notes">Notes</label>
-          <textarea class="form-control form-control-3-4" name="contact-notes" id="contact-notes" rows="5"></textarea>
+        <div class="panel panel-border-narrow js-hidden" id="alternativeformatnotes">
+          <label class="form-label" for="alternativeformatnotes">What formats are needed?</label>
+          <textarea class="form-control form-control-3-4" name="alternativeformatnotes" id="alternativeformatnotes" rows="5"></textarea>
         </div>
 
         <div class="multiple-choice">
-          <input id="contact-by-alternative" type="radio" name="radio-contact-group" value="No">
-          <label for="contact-by-alternative">No</label>
+          <input id="alternativeformat" type="radio" name="alternativeformat" value="No">
+          <label for="alternativeformat">No</label>
         </div>
 
       </fieldset>
@@ -205,7 +203,7 @@
     Home telephone number
   </td>
   <td>
-    <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+    <input class="form-control" id="hometelephonenumber" type="text" name="hometelephonenumber" value="{{ hometelephonenumber }}" data-parsley-id="9">
 </div>
 </td>
 <td>
@@ -218,7 +216,7 @@
     Mobile telephone number
   </td>
   <td>
-    <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+    <input class="form-control" id="mobiletelephonenumber" type="text" name="mobiletelephonenumber" value="{{ mobiletelephonenumber }}" data-parsley-id="9">
 </div>
 </td>
 <td>
@@ -231,7 +229,7 @@
     Textphone number
   </td>
   <td>
-    <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+    <input class="form-control" id="textphonenumber" type="text" name="textphonenumber" value="{{ textphonenumber }}" data-parsley-id="9">
 </div>
 </td>
 <td>
@@ -249,12 +247,12 @@
       <fieldset>
 
     <div class="multiple-choice">
-      <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
-      <label for="radio-inline-1">Yes</label>
+      <input id="partner" type="radio" name="partner" value="Yes">
+      <label for="partner">Yes</label>
     </div>
     <div class="multiple-choice">
-      <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
-      <label for="radio-inline-2">No</label>
+      <input id="partner" type="radio" name="partner" value="No">
+      <label for="partner">No</label>
     </div>
   </fieldset>
 </div>

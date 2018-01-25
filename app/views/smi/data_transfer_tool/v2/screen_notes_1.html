@@ -7,34 +7,33 @@
     <div class="grid-row">
 
       <div class="column-two-thirds">
-        <h2 class="heading-large" style="margin-bottom:30px">
-          Claimant name
-          <span class="heading-secondary">Claimant NINo</span>
-        </h2>
 
-        <h1 class="heading-medium">Viewing all notes</h1>
+        {% include path+"/inc/name-and-nino.html" %}
 
         <p>
           <a href="#" class="link-back">Back to [previous page]</a>
         </p>
 
 
+        <h1 class="heading-large" style="margin-bottom:64px">Notes</h1>
+
+
         <p>
-        <a href="screen_notes_add">Create new note</a>
+        <a href="screen_notes_add" class="button-grey">Add note</a>
       </p>
+
+      <p>&nbsp;</p>
 
               <table class="lender-details-1">
                 <tbody>
                     <tr>
                       <th>
-                       23 January 2018
-                      </th>
-                      <th>
-                       Name Surname
+                        Note created: 23 January 2018<br />
+                       Note author: Name Surname
                       </th>
                     </tr>
                     <tr>
-                      <td colspan=2>
+                      <td>
                        Most recent note. Need more content than this.
                      </td>
                     </tr>
@@ -48,14 +47,12 @@
                             <tbody>
                                 <tr>
                                   <th>
-                                   10 January 2018
-                                  </th>
-                                  <th>
-                                   Name Surname
+                                   Note created: 10 January 2018<br />
+                                   Note author: Name Surname
                                   </th>
                                 </tr>
                                 <tr>
-                                  <td colspan=2>
+                                  <td>
                                    Most recent note. Need more content than this.
                                  </td>
                                 </tr>
@@ -68,14 +65,12 @@
         <tbody>
             <tr>
               <th>
-               17 January 2017
-              </th>
-              <th>
-               Name Surname
+               Note created on: 17 January 2017<br />
+               Note author: Name Surname
               </th>
             </tr>
             <tr>
-              <td colspan=2>
+              <td>
                Most recent note. Need more content than this.
              </td>
             </tr>

@@ -1,4 +1,4 @@
-.task-completed {
+.status-in-payment {
 display: -moz-inline-stack;
 display: inline-block;
 margin: 0 8px 0 0;
@@ -11,13 +11,32 @@ text-transform: uppercase;
 letter-spacing: 1px;
 text-decoration: none;
 color: #fff;
-background-color: #005ea5;
+background-color: #00823B;
 // float: left;
 margin-right: 0;
 padding-top: 3px;
 }
 
-.task-not-completed {
+.status-on-hold {
+display: -moz-inline-stack;
+display: inline-block;
+margin: 0 8px 0 0;
+padding: 2px 5px 0;
+font-weight: 700;
+text-transform: none;
+font-size: 14px;
+line-height: 1.14286;
+text-transform: uppercase;
+letter-spacing: 1px;
+text-decoration: none;
+color: #fff;
+background-color: #F47738;
+// float: left;
+margin-right: 0;
+padding-top: 3px;
+}
+
+.status-dormant {
 display: -moz-inline-stack;
 display: inline-block;
 margin: 0 8px 0 0;

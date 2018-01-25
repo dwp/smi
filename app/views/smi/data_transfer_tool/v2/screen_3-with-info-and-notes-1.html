@@ -1,29 +1,36 @@
 {% extends path+"/inc/layout.html" %} {% block content %}
 <main id="content" role="main">
 
-  {% include path+"/inc/main_nav.html" %}
 
   <div class="main-content">
     <div class="grid-row">
 
       <div class="column-two-thirds">
-        <h2 class="heading-large" style="margin-bottom:30px">
-          Claimant name
-          <span class="heading-secondary">Claimant NINo</span>
-        </h2>
 
-        <h1 class="heading-medium">Screen 3: summary view with deductions etc and loan provided</h1>
+        {% include path+"/inc/name-and-nino.html" %}
 
+        {% include path+"/inc/alertbox.html" %}
+
+
+        <h1 class="heading-large" style="margin-bottom:64px;">Overview for {{ firstname }} {{ lastname }} [screen 3]</h1>
+
+
+
+        <h2 class="heading-medium">Notes</h2>
 
               <table class="lender-details-1">
                 <tbody>
 
+                  <tbody>
+                      <tr>
+                        <th>
+                         Note created on: 23 January 2018
+                        </th>
+                        <th>
+                         Note added by: Mark E Smith
+                        </th>
+                      </tr>
 
-                    <tr>
-                      <th colspan=2>
-                       Notes
-                      </th>
-                    </tr>
                     <tr>
                       <td colspan=2>
                        Most recent note. Need more content than this.
@@ -31,10 +38,10 @@
                     </tr>
                     <tr style="border:0;">
                       <td style="border:0;">
-                        <a href="screen_notes_add">Create new note</a>
+                        <a href="screen_notes_add">Add note</a>
                      </td>
                      <td style="border:0;">
-                       <a href="screen_notes_1">View all notes</a>
+                       <a href="screen_notes_1">View notes</a>
 
                      </td>
                     </tr>
@@ -44,16 +51,19 @@
 
 <p>&nbsp;</p>
 
+<h2 class="heading-medium">Deductions, limits, and charges</h2>
+
+
         <table class="lender-details-1">
           <tbody>
 
 
               <tr>
                 <td>
-                 Non-dependants deductions
+                 Non-dependant deductions
                 </td>
                 <td>
-                  &pound; 2500
+                  &pound;2500
       </td>
       <td>
         <a href="screen_3">Edit</a>
@@ -67,7 +77,7 @@
           Override upper limit
         </td>
         <td>
-          &pound; 100000
+          &pound;100000
 </td>
 <td>
   <a href="screen_3">Edit</a>
@@ -81,7 +91,7 @@
     Ground rent and service charge
   </td>
   <td>
-    &pound; 0
+    &pound;0
 </td>
 <td>
   <a href="screen_3">Edit</a>
@@ -96,20 +106,23 @@
       <p>&nbsp;</p>
 
 
+
+      <h2 class="heading-medium">Home loans and SMI payments</h2>
+
       <table class="lender-details-1">
         <tbody>
 
 
             <tr>
               <th>
-               Mortgage of home loan ref[erence]
+               Mortgage or home loan reference
               </th>
               <th>
                 Applicable loan balance
               </th>
 
               <th>
-                Net weekly amount
+                Net weekly SMI payment
               </th>
               <th>
                 Payee
@@ -122,11 +135,11 @@
                Loan 1
              </td>
              <td>
-               &pound; 90,000
+               &pound;90,000
              </td>
 
               <td>
-                &pound; 50.20
+                &pound;50.20
               </td>
               <td>
                 <a href="#">Add payee</a>

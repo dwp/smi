@@ -7,14 +7,12 @@
     <div class="grid-row">
 
       <div class="column-two-thirds">
-        <h2 class="heading-large" style="margin-bottom:30px">
-          Claimant name
-          <span class="heading-secondary">Claimant NINo</span>
-        </h2>
+
+        {% include path+"/inc/name-and-nino.html" %}
 
 
 
-        <h1 class="heading-medium">Screen 4: Add a new mortgage or loan</h1>
+        <h1 class="heading-large">Add a new mortgage or home loan [screen 4]</h1>
 
 
         <table class="lender-details-1">
@@ -85,7 +83,7 @@
                   Shared housing costs
                 </td>
                 <td>
-                                                <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9" style="width:10%"> / <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9" style="width:10%"> 
+                                                <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9" style="width:10%"> / <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9" style="width:10%">
       </td>
       <td>
       </td>
@@ -282,7 +280,7 @@
                                     <label for="adjustments">Yes</label>
                                   </div>
                                   <div class="panel panel-border-narrow js-hidden" id="adjustments-yes">
-                                    <label class="form-label" for="adjustments-notes">Notes</label>
+                                    <label class="form-label" for="adjustments-notes">Details</label>
                                     <textarea class="form-control form-control-3-4" name="contact-notes" id="adjustments-notes" rows="5"></textarea>
                                   </div>
 

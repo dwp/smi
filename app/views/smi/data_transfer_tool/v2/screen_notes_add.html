@@ -7,21 +7,21 @@
     <div class="grid-row">
 
       <div class="column-two-thirds">
-        <h2 class="heading-large" style="margin-bottom:30px">
-          Claimant name
-          <span class="heading-secondary">Claimant NINo</span>
-        </h2>
 
-        <h1 class="heading-medium">Create new note</h1>
+        {% include path+"/inc/name-and-nino.html" %}
 
-        <textarea class="form-control form-control-3-4" name="contact-notes" id="contact-notes" rows="8"></textarea>
+        <h1 class="heading-large" style="margin-bottom:64px">Add note</h1>
+
+        <textarea class="form-control form-control-3-4" name="contact-notes" id="contact-notes" rows="10"></textarea>
 
 
 
-      <p>
-      <a href="#" class="button">Save</a><br />
-        <a href="#" class="link-back">Back to [previous page]</a>
-      </p>
+    <p style="margin-top: 32px;">
+      <a href="#" class="button">Save</a>
+    </p>
+    <p>
+      <a href="screen_notes_1" onclick="window.history.go(-1); return false;">Cancel</a>
+    </p>
 
 
     </div>

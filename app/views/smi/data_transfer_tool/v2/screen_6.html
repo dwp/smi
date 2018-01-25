@@ -7,18 +7,49 @@
     <div class="grid-row">
 
       <div class="column-two-thirds">
-        <h2 class="heading-large" style="margin-bottom:30px">
-          Claimant name
-          <span class="heading-secondary">Claimant NINo</span>
-        </h2>
 
-        <h1 class="heading-medium">Screen 6: Mortgage or loan payment details for loan reference xxxxxxx</h1>
+        {% include path+"/inc/name-and-nino.html" %}
+
+        <h1 class="heading-medium">SMI payment for loan reference xxxxxxx [screen 6]</h1>
 
 
-        <form action="screen_7" method="get" class="form" id="form">
+        <form action="screen_3-with-info-and-notes-1" method="get" class="form" id="form">
 
         <table class="lender-details-1">
           <tbody>
+
+            <tr>
+              <td>
+                Next action due date
+              </td>
+              <td>
+
+
+                <div class="form-group">
+                  <fieldset>
+                    <div class="form-date">
+                      <div class="form-group form-group-day">
+                        <label class="form-label" for="next-action-day">Day</label>
+                        <input class="form-control" id="next-action-day" name="next-action-day" type="number" pattern="[0-9]*" min="0" max="31" value="">
+                      </div>
+                      <div class="form-group form-group-month">
+                        <label class="form-label" for="next-action-month">Month</label>
+                        <input class="form-control" id="next-action-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="">
+                      </div>
+                      <div class="form-group form-group-year">
+                        <label class="form-label" for="next-action-year">Year</label>
+                        <input class="form-control" id="next-action-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016" value="">
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+            </td>
+            <td>
+            </td>
+
+            </tr>
+
 
               <tr>
                 <td>
@@ -41,38 +72,6 @@
                         <div class="form-group form-group-year">
                           <label class="form-label" for="dob-year">Year</label>
                           <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016" value="">
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
-
-              </td>
-              <td>
-              </td>
-
-              </tr>
-
-              <tr>
-                <td>
-                  Next action due date
-                </td>
-                <td>
-
-
-                  <div class="form-group">
-                    <fieldset>
-                      <div class="form-date">
-                        <div class="form-group form-group-day">
-                          <label class="form-label" for="next-action-day">Day</label>
-                          <input class="form-control" id="next-action-day" name="next-action-day" type="number" pattern="[0-9]*" min="0" max="31" value="">
-                        </div>
-                        <div class="form-group form-group-month">
-                          <label class="form-label" for="next-action-month">Month</label>
-                          <input class="form-control" id="next-action-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="">
-                        </div>
-                        <div class="form-group form-group-year">
-                          <label class="form-label" for="next-action-year">Year</label>
-                          <input class="form-control" id="next-action-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016" value="">
                         </div>
                       </div>
                     </fieldset>
@@ -137,7 +136,7 @@
           Payment frequency
         </td>
         <td>
-          <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+          <input class="form-control" id="paymentfrequency" type="text" name="paymentfrequency" value="" data-parsley-id="9">
 </td>
 <td>
 </td>
@@ -147,6 +146,10 @@
 
       </tbody>
       </table>
+
+      <input id="alertshow" type="hidden" name="alertshow" value="yes">
+      <input id="alertmessage" type="hidden" name="alertmessage" value="LOan saved">
+
 
       <p class="mth mb0">
         <input class="button" type="submit" value="Save and continue">

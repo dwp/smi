@@ -7,14 +7,12 @@
     <div class="grid-row">
 
       <div class="column-two-thirds">
-        <h2 class="heading-large" style="margin-bottom:30px">
-          Claimant name
-          <span class="heading-secondary">Claimant NINo</span>
-        </h2>
+
+        {% include path+"/inc/name-and-nino.html" %}
 
 
 
-        <h1 class="heading-medium">Screen 5: Add details for loan reference xxxxxxx</h1>
+        <h1 class="heading-large">Add details for loan reference xxxxxxx [screen 5]</h1>
 
 
         <table class="lender-details-1">
@@ -24,8 +22,8 @@
 
               <tr>
                 <td>
-                  <span class="bold">Qualified lender code</span><br />
-                  Do not complete if paying direct to claimant
+                  <span class="bold">Qualified lender code (QLR)</span><br />
+                  Do not add QLR code if paying direct to claimant
                 </td>
                 <td>
                   <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
@@ -34,6 +32,13 @@
       </td>
 
       </tr>
+
+      <tr>
+        <td>
+          <span class="bold">Payment details</span>
+        </td>
+
+</tr>
 
 
       <tr>
@@ -85,7 +90,7 @@ Account number
               <tr>
                 <td>
                   Lender address<br />
-                  (and correspondance)
+                  (and correspondence)
                 </td>
                 <td>
                   <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">

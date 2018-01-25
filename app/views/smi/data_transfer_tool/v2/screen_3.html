@@ -7,15 +7,36 @@
     <div class="grid-row">
 
       <div class="column-two-thirds">
-        <h2 class="heading-large" style="margin-bottom:30px">
-          Claimant name
-          <span class="heading-secondary">Claimant NINo</span>
-        </h2>
+
+        {% include path+"/inc/name-and-nino.html" %}
 
 
+        <h1 class="heading-large" style="margin-bottom:64px;">Overview for {{ firstname }} {{ lastname }} [screen 3 on first pass]</h1>
 
-        <h2 class="heading-medium">Screen 3: summary view on first pass</h2>
+        <h2 class="heading-medium">Notes</h2>
 
+        No notes for this case.
+
+              <table class="lender-details-1">
+                <tbody>
+
+                  <tbody>
+                    <tr style="border:0;">
+                      <td style="border:0;">
+                        <a href="screen_notes_add">Add note</a>
+                     </td>
+                     <td style="border:0;">
+                       <a href="screen_notes_1">View notes</a>
+
+                     </td>
+                    </tr>
+
+            </table>
+
+
+<p>&nbsp;</p>
+
+<h2 class="heading-medium">Deductions, limits, and charges</h2>
 
         <table class="lender-details-1">
           <tbody>
@@ -68,8 +89,11 @@
         <a href="screen_3-with-award-info" class="button">Save and continue</a>
       </p>
 
+      <p>&nbsp;</p>
 
-<p>&nbsp;</p>
+
+
+      <h2 class="heading-medium">Home loans and SMI payments</h2>
 
     <p>No loan or mortgage information provided.</p>
 

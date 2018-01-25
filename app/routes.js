@@ -335,6 +335,71 @@ router.get('/smi/v*/account-details-*',function(req,res,next)
 });
 
 
+router.get('/smi/data_transfer_tool/*',function(req,res,next)
+{
+  var v = req.params[0];
+  req.data = req.data || { };
+
+/* App actions, like on the next screen show and alert */
+
+req.data.alertshow = req.query.alertshow;
+const alertshow = req.data.alertshow;
+
+req.data.alertmessage = req.query.alertmessage;
+const alertmessage = req.data.alertmessage;
+
+
+/* Data of claimant to pass through screens */
+
+  req.data.nino = req.query.nino;
+  const nino = req.data.nino;
+
+  req.data.title = req.query.title;
+  const title = req.data.title;
+
+  req.data.firstname = req.query.firstname;
+  const firstname = req.data.firstname;
+
+  req.data.lastname = req.query.lastname;
+  const lastname = req.data.lastname;
+
+  req.data.dob_dd = req.query.dob_dd;
+  const dob_dd = req.data.dob_dd;
+
+  req.data.dob_mm = req.query.dob_mm;
+  const dob_mm = req.data.dob_mm;
+
+  req.data.dob_yy = req.query.dob_yy;
+  const dob_yy = req.data.dob_yy;
+
+  req.data.claimantaddress1 = req.query.claimantaddress1;
+  const claimantaddress1 = req.data.claimantaddress1;
+
+  req.data.claimantaddress2 = req.query.claimantaddress2;
+  const claimantaddress2 = req.data.claimantaddress2;
+
+  req.data.claimantaddress3 = req.query.claimantaddress3;
+  const claimantaddress3 = req.data.claimantaddress3;
+
+  req.data.claimantaddress4 = req.query.claimantaddress4;
+  const claimantaddress4 = req.data.claimantaddress4;
+
+  req.data.claimantpostcode = req.query.claimantpostcode;
+  const claimantpostcode = req.data.claimantpostcode;
+
+  req.data.correspondenceaddress1 = req.query.correspondenceaddress1;
+  const correspondenceaddress1 = req.data.correspondenceaddress1;
+
+  req.data.correspondenceaddress2 = req.query.correspondenceaddress2;
+  const correspondenceaddress2 = req.data.correspondenceaddress2;
+
+  req.data.correspondencepostcode = req.query.correspondencepostcode;
+  const correspondencepostcode = req.data.correspondencepostcode;
+
+  next();
+});
+
+
 /*
   Redirect all posts to gets.
 */
