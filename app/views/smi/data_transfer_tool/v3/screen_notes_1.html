@@ -1,0 +1,95 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+        <p>
+          <a href="#" class="link-back">Back to [previous page]</a>
+        </p>
+
+
+        <h1 class="heading-large" style="margin-bottom:64px">Notes</h1>
+
+
+        <p>
+        <a href="screen_notes_add" class="button-grey">Add note</a>
+      </p>
+
+      <p>&nbsp;</p>
+
+              <table class="lender-details-1">
+                <tbody>
+                    <tr>
+                      <th>
+                        Note created: 23 January 2018<br />
+                       Note author: Name Surname
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>
+                       Most recent note. Need more content than this.
+                     </td>
+                    </tr>
+            </table>
+
+
+            <p>&nbsp;</p>
+
+
+                          <table class="lender-details-1">
+                            <tbody>
+                                <tr>
+                                  <th>
+                                   Note created: 10 January 2018<br />
+                                   Note author: Name Surname
+                                  </th>
+                                </tr>
+                                <tr>
+                                  <td>
+                                   Most recent note. Need more content than this.
+                                 </td>
+                                </tr>
+                        </table>
+
+
+      <p>&nbsp;</p>
+
+      <table class="lender-details-1">
+        <tbody>
+            <tr>
+              <th>
+               Note created on: 17 January 2017<br />
+               Note author: Name Surname
+              </th>
+            </tr>
+            <tr>
+              <td>
+               Most recent note. Need more content than this.
+             </td>
+            </tr>
+    </table>
+
+
+    </div>
+    <!-- COLUMN 2 THIRDS -->
+
+    <div class="column-one-third">
+      {% include path+"/inc/applicantdetails.html" %}
+    </div>
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

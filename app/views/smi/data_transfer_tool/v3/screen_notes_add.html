@@ -1,0 +1,42 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+        <h1 class="heading-large" style="margin-bottom:64px">Add note</h1>
+
+        <textarea class="form-control form-control-3-4" name="contact-notes" id="contact-notes" rows="10"></textarea>
+
+
+
+    <p style="margin-top: 32px;">
+      <a href="#" class="button">Save</a>
+    </p>
+    <p>
+      <a href="screen_notes_1" onclick="window.history.go(-1); return false;">Cancel</a>
+    </p>
+
+
+    </div>
+    <!-- COLUMN 2 THIRDS -->
+
+    <div class="column-one-third">
+      {% include path+"/inc/applicantdetails.html" %}
+    </div>
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

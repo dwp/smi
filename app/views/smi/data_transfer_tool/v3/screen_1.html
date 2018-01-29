@@ -1,0 +1,437 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+        <h1 class="heading-large">Personal details, status and benefit details [screens 1 and 2 combined]</h1>
+
+
+        <table class="lender-details-1">
+          <tbody>
+            <form action="screen_3" method="get" class="form" id="form">
+
+              <tr>
+                <td>
+                  National Insurance number
+                </td>
+                <td>
+                  <input class="form-control" id="nino" type="text" name="nino" value="{{ nino }}">
+      </div>
+      </td>
+      <td>
+      </td>
+
+      </tr>
+
+      <tr>
+        <td>
+          Title
+        </td>
+        <td>
+          <input class="form-control" id="title" type="text" name="title" value="{{ title }}" data-parsley-id="9">
+</div>
+</td>
+<td>
+</td>
+
+</tr>
+
+
+<tr>
+  <td>
+    First name(s)
+  </td>
+  <td>
+    <input class="form-control" id="firstname" type="text" name="firstname" value="{{ firstname }}" data-parsley-id="9">
+</div>
+</td>
+<td>
+</td>
+
+</tr>
+
+<tr>
+  <td>
+    Last name
+  </td>
+  <td>
+    <input class="form-control" id="lastname" type="text" name="lastname" value="{{ lastname }}" data-parsley-id="9">
+</div>
+</td>
+<td>
+</td>
+
+</tr>
+
+
+      <tr>
+        <td>
+          Date of birth
+        </td>
+        <td>
+          <div class="form-group">
+            <fieldset>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="dob_dd">Day</label>
+                  <input class="form-control" id="dob_dd" name="dob_dd" type="number" pattern="[0-9]*" min="0" max="31" value="{{ dob_dd }}">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="dob_mm">Month</label>
+                  <input class="form-control" id="dob_mm" name="dob_mm" type="number" pattern="[0-9]*" min="0" max="12" value="{{ dob_mm }}">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="dob_yy">Year</label>
+                  <input class="form-control" id="dob_yy" name="dob_yy" type="number" pattern="[0-9]*" min="0" max="2018" value="{{ dob_yy }}">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+        </td>
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Home address
+        </td>
+        <td>
+          <input class="form-control" id="claimantaddress1" type="text" name="claimantaddress1" value="{{ claimantaddress1 }}" data-parsley-id="9">
+          <input class="form-control" id="claimantaddress2" type="text" name="claimantaddress2" value="{{ claimantaddress2 }}" data-parsley-id="9">
+          <input class="form-control" id="claimantaddress3" type="text" name="claimantaddress3" value="{{ claimantaddress3 }}" data-parsley-id="9">
+          <input class="form-control" id="claimantaddress4" type="text" name="claimantaddress4" value="{{ claimantaddress4 }}" data-parsley-id="9"><br />
+          Postcode           <input class="form-control" id="claimantpostcode" type="text" name="claimantpostcode" value="{{ claimantpostcode }}" data-parsley-id="9">
+</td>
+<td>
+</td>
+
+</tr>
+
+<tr>
+  <td>
+    Correspondence address
+  </td>
+  <td>
+    <input class="form-control" id="correspondenceaddress1" type="text" name="correspondenceaddress1" value="{{ correspondenceaddress1 }}" data-parsley-id="9">
+    <input class="form-control" id="correspondenceaddress2" type="text" name="correspondenceaddress2" value="{{ correspondenceaddress2 }}" data-parsley-id="9"><br />
+    Postcode           <input class="form-control" id="correspondencepostcode" type="text" name="correspondencepostcode" value="{{ correspondencepostcode }}" data-parsley-id="9">
+</div>
+</td>
+<td>
+</td>
+
+</tr>
+
+
+<tr>
+  <td>
+    Country
+  </td>
+  <td>
+    <div class="form-group">
+      <fieldset>
+
+    <div class="multiple-choice">
+      <input id="radio-inline-1" type="radio" name="country" value="EN">
+      <label for="radio-inline-1">England</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="radio-inline-2" type="radio" name="country" value="SC">
+      <label for="radio-inline-2">Scotland</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="radio-inline-3" type="radio" name="country" value="WA">
+      <label for="radio-inline-3">Wales</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="radio-inline-4" type="radio" name="country" value="NI">
+      <label for="radio-inline-4">Northern Ireland</label>
+    </div>
+
+  </fieldset>
+</div>
+
+</td>
+<td>
+</td>
+
+</tr>
+
+<tr>
+  <td>Alternative format required</td>
+  <td>
+    <div class="form-group">
+      <fieldset>
+
+        <legend>
+
+        </legend>
+
+        <div class="multiple-choice" data-target="alternativeformatnotes">
+          <input id="alternativeformat-1" type="radio" name="alternativeformat" value="Yes">
+          <label for="alternativeformat-1">Yes</label>
+        </div>
+        <div class="panel panel-border-narrow js-hidden" id="alternativeformatnotes">
+          <label class="form-label" for="alternativeformatnotes">What formats are needed?</label>
+          <textarea class="form-control form-control-3-4" name="alternativeformatnotes" id="alternativeformatnotes" rows="5"></textarea>
+        </div>
+
+        <div class="multiple-choice">
+          <input id="alternativeformat" type="radio" name="alternativeformat" value="No">
+          <label for="alternativeformat">No</label>
+        </div>
+
+      </fieldset>
+    </div>
+
+
+  </td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>
+    Home telephone number
+  </td>
+  <td>
+    <input class="form-control" id="hometelephonenumber" type="text" name="hometelephonenumber" value="{{ hometelephonenumber }}" data-parsley-id="9">
+</div>
+</td>
+<td>
+</td>
+
+</tr>
+
+<tr>
+  <td>
+    Mobile telephone number
+  </td>
+  <td>
+    <input class="form-control" id="mobiletelephonenumber" type="text" name="mobiletelephonenumber" value="{{ mobiletelephonenumber }}" data-parsley-id="9">
+</div>
+</td>
+<td>
+</td>
+
+</tr>
+
+<tr>
+  <td>
+    Textphone number
+  </td>
+  <td>
+    <input class="form-control" id="textphonenumber" type="text" name="textphonenumber" value="{{ textphonenumber }}" data-parsley-id="9">
+</div>
+</td>
+<td>
+</td>
+
+</tr>
+
+
+<tr>
+  <td>
+   Partner
+  </td>
+  <td>
+    <div class="form-group">
+      <fieldset>
+
+    <div class="multiple-choice">
+      <input id="partner" type="radio" name="partner" value="Yes">
+      <label for="partner">Yes</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="partner" type="radio" name="partner" value="No">
+      <label for="partner">No</label>
+    </div>
+  </fieldset>
+</div>
+</div>
+</td>
+<td>
+</td>
+
+</tr>
+
+
+              <tr>
+                <td>
+                  SMI loan only
+                </td>
+                <td>
+                  <div class="form-group">
+                    <fieldset>
+
+                  <div class="multiple-choice">
+                    <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+                    <label for="radio-inline-1">Yes</label>
+                  </div>
+                  <div class="multiple-choice">
+                    <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+                    <label for="radio-inline-2">No</label>
+                  </div>
+                </fieldset>
+              </div>
+              </td>
+              <td>
+              </td>
+
+              </tr>
+
+              <tr>
+                <td>
+                  Benefit type
+                </td>
+                <td>
+
+                  <div class="form-group">
+                    <fieldset>
+
+                  <div class="multiple-choice">
+                    <input id="radio-inline-1" type="radio" name="radio-inline-group-2" value="PC">
+                    <label for="radio-inline-1">PC</label>
+                  </div>
+                  <div class="multiple-choice">
+                    <input id="radio-inline-2" type="radio" name="radio-inline-group-2" value="JSA">
+                    <label for="radio-inline-2">JSA</label>
+                  </div>
+                  <div class="multiple-choice">
+                    <input id="radio-inline-3" type="radio" name="radio-inline-group-2" value="IS">
+                    <label for="radio-inline-4">IS</label>
+                  </div>
+                  <div class="multiple-choice">
+                    <input id="radio-inline-4" type="radio" name="radio-inline-group-2" value="ESA">
+                    <label for="radio-inline-4">ESA</label>
+                  </div>
+
+                  <div class="multiple-choice">
+                    <input id="radio-inline-5" type="radio" name="radio-inline-group-2" value="UC">
+                    <label for="radio-inline-5">UC</label>
+                  </div>
+
+                </fieldset>
+              </div>
+
+              </td>
+              <td>
+              </td>
+
+              </tr>
+
+              <tr>
+                <td>
+                  Qualifying benefit status
+                </td>
+                <td>
+
+                  <div class="form-group">
+                    <fieldset>
+
+                  <div class="multiple-choice">
+                    <input id="radio-inline-1" type="radio" name="radio-inline-group-3" value="Live">
+                    <label for="radio-inline-1">Live</label>
+                  </div>
+                  <div class="multiple-choice">
+                    <input id="radio-inline-2" type="radio" name="radio-inline-group-3" value="Dormant">
+                    <label for="radio-inline-2">Dormant</label>
+                  </div>
+                </fieldset>
+              </div>
+
+              </td>
+              <td>
+              </td>
+
+              </tr>
+
+
+
+                    <tr>
+                      <td>
+                        SMI status
+                      </td>
+                      <td>
+                        <div class="form-group">
+                          <fieldset>
+
+                        <div class="multiple-choice">
+                          <input id="radio-inline-1" type="radio" name="radio-inline-group-4" value="Yes">
+                          <label for="radio-inline-1">In payment</label>
+                        </div>
+                        <div class="multiple-choice">
+                          <input id="radio-inline-2" type="radio" name="radio-inline-group-4" value="No">
+                          <label for="radio-inline-2">On hold</label>
+                        </div>
+                        <div class="multiple-choice">
+                          <input id="radio-inline-3" type="radio" name="radio-inline-group-4" value="No">
+                          <label for="radio-inline-3">Dormant</label>
+                        </div>
+                      </fieldset>
+                    </div>
+
+                    </td>
+                    <td>
+                    </td>
+
+                    </tr>
+
+
+
+
+
+              <tr>
+                <td>
+                  Office code
+                </td>
+                <td>
+                  <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+      </div>
+      </td>
+      <td>
+      </td>
+
+      </tr>
+
+
+
+
+
+      </tbody>
+      </table>
+
+
+
+      <p class="mth mb0">
+        <input class="button" type="submit" value="Save and continue">
+      </p>
+      <p class="mth mb0">
+        <a href="">Cancel</a>
+      </p>
+
+
+      </form>
+
+
+
+    </div>
+    <!-- COLUMN 2 THRIDS -->
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}
