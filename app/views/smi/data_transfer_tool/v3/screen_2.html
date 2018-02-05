@@ -10,16 +10,59 @@
 
         {% include path+"/inc/name-and-nino.html" %}
 
-        <h1 class="heading-large"> [screen 2]</h1>
+        <h1 class="heading-large">Deductions, limits, and charges [screen 2]</h1>
 
 
-        <table class="lender-details-1">
-          <tbody>
-            <form action="screen_3" method="get" class="form" id="form">
+
+            <form action="screen_3-with-award-info" method="get" class="form" id="form">
 
 
-      </tbody>
-      </table>
+                      <table class="lender-details-1">
+                        <tbody>
+                          <form action="screen_4" method="get" class="form" id="form">
+
+
+                            <tr>
+                              <td>
+                               Non-dependants deductions
+                              </td>
+                              <td>
+                                &pound; <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                    </td>
+                    <td>
+                    </td>
+
+                    </tr>
+
+                    <tr>
+                      <td>
+                        Override upper limit
+                      </td>
+                      <td>
+                        &pound; <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+              </td>
+              <td>
+              </td>
+
+              </tr>
+
+              <tr>
+                <td>
+                  Ground rent and service charge
+                </td>
+                <td>
+                  &pound; <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+              </td>
+              <td>
+              </td>
+
+              </tr>
+
+
+
+                    </tbody>
+                    </table>
+
 
 
 
