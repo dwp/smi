@@ -19,7 +19,7 @@
 
               <tr>
                 <td>
-                  National Insurance number
+                  <span class="bold">National Insurance number</span>
                 </td>
                 <td>
                   <input class="form-control" id="nino" type="text" name="nino" value="{{ nino }}">
@@ -32,7 +32,7 @@
 
       <tr>
         <td>
-          Title
+          <span class="bold">Title</span>
         </td>
         <td>
           <input class="form-control" id="title" type="text" name="title" value="{{ title }}" data-parsley-id="9">
@@ -46,7 +46,7 @@
 
 <tr>
   <td>
-    First name(s)
+    <span class="bold">First name(s)</span>
   </td>
   <td>
     <input class="form-control" id="firstname" type="text" name="firstname" value="{{ firstname }}" data-parsley-id="9">
@@ -59,7 +59,7 @@
 
 <tr>
   <td>
-    Last name
+    <span class="bold">Last name</span>
   </td>
   <td>
     <input class="form-control" id="lastname" type="text" name="lastname" value="{{ lastname }}" data-parsley-id="9">
@@ -73,7 +73,7 @@
 
       <tr>
         <td>
-          Date of birth
+          <span class="bold">Date of birth</span>
         </td>
         <td>
           <div class="form-group">
@@ -169,38 +169,14 @@
 <tr>
   <td>Alternative format required</td>
   <td>
-    <div class="form-group">
-      <fieldset>
-
-        <legend>
-
-        </legend>
-
-        <div class="multiple-choice" data-target="alternativeformatnotes">
-          <input id="alternativeformat-1" type="radio" name="alternativeformat" value="Yes">
-          <label for="alternativeformat-1">Yes</label>
-        </div>
-        <div class="panel panel-border-narrow js-hidden" id="alternativeformatnotes">
-          <label class="form-label" for="alternativeformatnotes">What formats are needed?</label>
-          <textarea class="form-control form-control-3-4" name="alternativeformatnotes" id="alternativeformatnotes" rows="5"></textarea>
-        </div>
-
-        <div class="multiple-choice">
-          <input id="alternativeformat" type="radio" name="alternativeformat" value="No">
-          <label for="alternativeformat">No</label>
-        </div>
-
-      </fieldset>
-    </div>
-
-
+<textarea class="form-control form-control-3-4" name="alternativeformatnotes" id="alternativeformatnotes" rows="3"></textarea>
   </td>
   <td></td>
 </tr>
 
 <tr>
   <td>
-    Home telephone number
+    <span class="bold">Home telephone number</span>
   </td>
   <td>
     <input class="form-control" id="hometelephonenumber" type="text" name="hometelephonenumber" value="{{ hometelephonenumber }}" data-parsley-id="9">
@@ -213,7 +189,7 @@
 
 <tr>
   <td>
-    Mobile telephone number
+    <span class="bold">Mobile telephone number</span>
   </td>
   <td>
     <input class="form-control" id="mobiletelephonenumber" type="text" name="mobiletelephonenumber" value="{{ mobiletelephonenumber }}" data-parsley-id="9">
@@ -226,7 +202,7 @@
 
 <tr>
   <td>
-    Textphone number
+    <span class="bold">Textphone number</span>
   </td>
   <td>
     <input class="form-control" id="textphonenumber" type="text" name="textphonenumber" value="{{ textphonenumber }}" data-parsley-id="9">
@@ -240,7 +216,7 @@
 
 <tr>
   <td>
-   Partner
+  <span class="bold">Partner</span>
   </td>
   <td>
     <div class="form-group">
