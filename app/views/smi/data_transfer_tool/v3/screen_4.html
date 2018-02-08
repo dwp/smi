@@ -49,7 +49,7 @@
                                       </div>
                                       <div class="multiple-choice">
                                         <input id="radio-inline-2" type="radio" name="radio-inline-group-2" value="No">
-                                        <label for="radio-inline-2">Loan</label>
+                                        <label for="radio-inline-2">Home loan</label>
                                       </div>
                                     </fieldset>
                                   </div>
@@ -193,6 +193,40 @@
                                                                                           </tr>
 
 
+
+<tr>
+  <td>
+      <span class="bold">Mortgage/home start date</span>
+  </td>
+  <td>
+
+    <div class="form-group">
+      <fieldset>
+        <div class="form-date">
+          <div class="form-group form-group-day">
+            <label class="form-label" for="dob-day">Day</label>
+            <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" value="">
+          </div>
+          <div class="form-group form-group-month">
+            <label class="form-label" for="dob-month">Month</label>
+            <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="">
+          </div>
+          <div class="form-group form-group-year">
+            <label class="form-label" for="dob-year">Year</label>
+            <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016" value="">
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+
+</td>
+<td>
+</td>
+
+</tr>
+
+
                           <tr>
                             <td>
                                 <span class="bold">Start of SMI loan payment</span><br />
@@ -261,10 +295,23 @@
 
                           <tr>
                             <td>
+                              Applicable loan balance
+                            </td>
+                            <td>
+                              &pound; <input class="form-control" id="paymentfrequency" type="text" name="paymentfrequency" value="" data-parsley-id="9">
+                          </td>
+                          <td>
+                          </td>
+
+                          </tr>
+
+
+                          <tr>
+                            <td>
                               Weekly SMI benefit
                             </td>
                             <td>
-                              <input class="form-control" id="paymentfrequency" type="text" name="paymentfrequency" value="" data-parsley-id="9">
+                              &pound; <input class="form-control" id="paymentfrequency" type="text" name="paymentfrequency" value="" data-parsley-id="9">
                           </td>
                           <td>
                           </td>
