@@ -17,11 +17,18 @@
 {% endif %}
 
 
-<h2 class="heading-large" style="margin-bottom:64px; line-height: 32px;">
+<h2 class="heading-large" style="margin-bottom:64px; line-height: 32px; margin-top: 16px;">
   <span class="heading-secondary" style="margin-bottom:0;">{{ firstname }} {{ lastname }}</span>
   {{ nino }}<br />
+
+  {% if status == "inpayment" %}
   <span class="status-in-payment">In payment</span>
+  {% elif status == "onhold" %}
   <span class="status-on-hold">On hold</span>
+  {% elif status == "dormant" %}
   <span class="status-dormant">Dormant</span>
+  {% else %}
+  <span class="status-in-payment">In payment</span>
+  {% endif %}
 
 </h2>

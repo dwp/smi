@@ -8,28 +8,40 @@
 
       <div class="column-two-thirds">
 
-        {% include path+"/inc/name-and-nino.html" %}
 
-        <p>
-          <a href="#" class="link-back">Back to [previous page]</a>
+        <p style="margin-bottom:0;">
+          <a href="{% if hasnotes %}screen_3-with-info-and-notes-1{% else %}screen_3-with-award-info{% endif %}" class="link-back">Back to overview</a>
         </p>
 
+          {% include path+"/inc/name-and-nino.html" %}
 
-        <h1 class="heading-large" style="margin-bottom:64px">Notes</h1>
+          {% include path+"/inc/alertbox.html" %}
 
+        <h1 class="heading-large" style="margin-bottom:-16px">Notes</h1>
+        <hr>
+
+
+
+        {% if not hasnotes %}
+
+        <p>No notes for this case.</p>
+
+        {% endif %}
 
         <p>
-        <a href="screen_notes_add" class="button-grey">Add note</a>
+        <a href="screen_notes_add?referpage=noteslist{% if hasnotes %}&hasnotes=yes{% endif %}">Add note</a>
+      </p>
+      <p>
+        &nbsp;
       </p>
 
-      <p>&nbsp;</p>
 
+{% if hasnotes %}
               <table class="lender-details-1">
                 <tbody>
                     <tr>
                       <th>
-                        Note created: 23 January 2018<br />
-                       Note author: Name Surname
+                        Note created: 23 January 2018
                       </th>
                     </tr>
                     <tr>
@@ -47,8 +59,7 @@
                             <tbody>
                                 <tr>
                                   <th>
-                                   Note created: 10 January 2018<br />
-                                   Note author: Name Surname
+                                   Note created: 10 January 2018
                                   </th>
                                 </tr>
                                 <tr>
@@ -65,8 +76,7 @@
         <tbody>
             <tr>
               <th>
-               Note created on: 17 January 2017<br />
-               Note author: Name Surname
+               Note created on: 17 January 2017
               </th>
             </tr>
             <tr>
@@ -75,6 +85,10 @@
              </td>
             </tr>
     </table>
+
+{% endif %}
+
+
 
 
     </div>

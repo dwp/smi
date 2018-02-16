@@ -10,7 +10,12 @@
 
         {% include path+"/inc/name-and-nino.html" %}
 
-        <h1 class="heading-large" style="margin-bottom:64px;">Overview for {{ firstname }} {{ lastname }} [screen 3 on first pass]</h1>
+        {% include path+"/inc/alertbox.html" %}
+
+
+        <h1 class="heading-large" style="margin-bottom:-16px;">Overview</h1>
+
+        <hr>
 
         <h2 class="heading-medium">Notes</h2>
 
@@ -22,11 +27,7 @@
                   <tbody>
                     <tr style="border:0;">
                       <td style="border:0;">
-                        <a href="screen_notes_add">Add note</a>
-                     </td>
-                     <td style="border:0;">
-                       <a href="screen_notes_1">View notes</a>
-
+                        <a href="screen_notes_add?referpage=overview">Add note</a>
                      </td>
                     </tr>
 

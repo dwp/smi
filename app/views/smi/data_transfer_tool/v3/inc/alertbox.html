@@ -1,16 +1,47 @@
-{% if alertshow %}
+{% if alert %}
 
-<div class="panel panel-border-wide" style="border-color: #00823B; border-style: solid; border-width: 8px;">
+{% if alert == "loanupdated" %}
 
-  {% if alertmessage  %}
+  {% set alerttitle  = "Loan updated" %}
+  {% set alertmessage = "Message here" %}
 
- <h2 class="heading-small">{{ alertmessage }}</h2>
+{% elif alert == "noteadded" %}
+
+  {% set alerttitle  = "Note added" %}
+
+{% else %}
+
+  {% set alerttitle  = "No title defined" %}
+  {% set alertmessage = "No alert message defined" %}
+
+{% endif %}
+
+<!--
+
+<div class="panel panel-border-wide" style="border-color: #006435; border-style: solid; border-width: 8px; margin-top: 64px; margin-bottom: 64px;">
+
+ <h2 class="heading-medium">{{ alerttitle }}</h2>
  <ul>
-   <li>[content review]</li>
+   <li>{{ alertmessage }}</li>
  </ul>
 
- {% endif %}
+</div>
+-->
+
+<div class="panel panel-border-wide" style="border-color: #00823B; background: #bfe0ce; margin-top: 64px; margin-bottom: 64px; ">
+
+
+ <h2 class="heading-small">{{ alerttitle }}</h2>
+
+ {% if alertmessage %}
+
+ <ul>
+   <li>{{ alertmessage }}</li>
+ </ul>
+
+{% endif %}
 
 </div>
+
 
 {% endif %}

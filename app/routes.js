@@ -342,11 +342,21 @@ router.get('/smi/data_transfer_tool/*',function(req,res,next)
 
 /* App actions, like on the next screen show and alert */
 
-req.data.alertshow = req.query.alertshow;
-const alertshow = req.data.alertshow;
+req.data.alert = req.query.alert;
+const alert = req.data.alert;
 
-req.data.alertmessage = req.query.alertmessage;
-const alertmessage = req.data.alertmessage;
+req.data.referpage = req.query.referpage;
+const referpage = req.data.referpage;
+
+req.data.hasnotes = req.query.hasnotes;
+const hasnotes = req.data.hasnotes;
+
+req.data.newnote = req.query.newnote;
+const newnote  = req.data.newnote;
+
+req.data.warning = req.query.warning;
+const warning = req.data.warning;
+
 
 req.data.startnino = req.query.startnino;
 const startnino = req.data.startnino;
@@ -402,6 +412,23 @@ const startnino = req.data.startnino;
   next();
 });
 
+
+
+router.get('/smi/data_transfer_tool/v*/add_new_note',function(req,res,next)
+{
+
+  req.data.hasnotes = req.query.hasnotes;
+  const hasnotes = req.data.hasnotes;
+
+  req.data.referpage = req.query.referpage;
+  const referpage = req.data.referpage;
+
+
+  if (req.query.newnote == '') {
+    res.redirect('screen_notes_add?warning=nonote&hasnotes='+hasnotes+'&referpage='+referpage)
+  }
+
+});
 
 /*
   Redirect all posts to gets.

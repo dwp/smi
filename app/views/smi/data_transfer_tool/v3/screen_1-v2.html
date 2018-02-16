@@ -1,0 +1,340 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+        <h1 class="heading-large" style="margin-bottom:-16px;">Personal details, status and benefit details [screens 1 and 2 combined]</h1>
+        <hr>
+
+            <form action="screen_2" method="get" class="form" id="form">
+
+              <div class="form-group">
+                <label class="form-label-bold" for="nino">National Insurance number</label>
+                  <input class="form-control  form-control-1-4" id="nino" type="text" name="nino" value="{{ nino }}">
+              </div>
+
+<!--              <div class="form-group form-group-error">
+                <label class="form-label-bold" for="nino-error">
+                  National Insurance number
+                  <span class="error-message">
+                    Error message goes here
+                  </span>
+                </label>
+                <input class="form-control form-control-error" id="nino-error" type="text">
+              </div>-->
+
+              <div class="form-group">
+                <label class="form-label-bold" for="title">Title</label>
+                <input class="form-control" id="title" type="text" name="title" value="{{ title }}">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label-bold" for="title">First name</label>
+                <input class="form-control" id="firstname" type="text" name="firstname" value="{{ firstname }}">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label-bold" for="title">Last name</label>
+                <input class="form-control" id="lastname" type="text" name="lastname" value="{{ lastname }}">
+              </div>
+
+              <div class="form-group">
+                  <fieldset>
+                    <legend>
+                      <span class="form-label-bold">
+                        Date of birth
+                      </span>
+                    </legend>
+                    <div class="form-date">
+                      <div class="form-group form-group-day">
+                        <label class="form-label" for="dob-day">Day</label>
+                        <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" value="{{ dob_dd }}">
+                      </div>
+                      <div class="form-group form-group-month">
+                        <label class="form-label" for="dob-month">Month</label>
+                        <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="{{ dob_mm }}">
+                      </div>
+                      <div class="form-group form-group-year">
+                        <label class="form-label" for="dob-year">Year</label>
+                        <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016" value="{{ dob_yy }}">
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="form-group">
+                  <fieldset>
+                    <legend>
+                      <h3 class="heading-small">
+                        Home address
+                      </h3>
+                    </legend>
+                    <div class="form-group">
+                      <label class="form-label" for="claimantaddress1">
+                        Address line 1
+                      </label>
+                      <input class="form-control" id="claimantaddress1" type="text" name="claimantaddress1" value="{{ claimantaddress1 }}">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="claimantaddress2">
+                        Address line 2
+                      </label>
+                      <input class="form-control" id="claimantaddress2" type="text" name="claimantaddress2" value="{{ claimantaddress2 }}">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="claimantaddress3">
+                        Address line 3
+                      </label>
+                      <input class="form-control" id="claimantaddress3" type="text" name="claimantaddress3" value="{{ claimantaddress3 }}">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="claimantaddress4">
+                        Address line 4
+                      </label>
+                      <input class="form-control" id="claimantaddress4" type="text" name="claimantaddress4" value="{{ claimantaddress4 }}">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="claimantaddresspostcode">
+                        Postcode
+                      </label>
+                      <input class="form-control form-control-1-8" id="claimantpostcode" type="text" name="claimantpostcode" value="{{ claimantpostcode }}">
+                    </div>
+                </fieldset>
+                </div>
+
+                <div class="form-group">
+                  <fieldset>
+                    <legend>
+                      <h3 class="heading-small">
+                        Correspondence address
+                      </h3>
+                    </legend>
+                    <div class="form-group">
+                      <label class="form-label" for="correspondenceaddress1">
+                        Address line 1
+                      </label>
+                          <input class="form-control" id="correspondenceaddress1" type="text" name="correspondenceaddress1" value="{{ correspondenceaddress1 }}">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="correspondenceaddress2">
+                        Address line 2
+                      </label>
+                          <input class="form-control" id="correspondenceaddress2" type="text" name="correspondenceaddress2" value="{{ correspondenceaddress2 }}">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="correspondencepostcode">
+                        Postcode
+                      </label>
+                      <input class="form-control form-control-1-8" id="correspondencepostcode" type="text" name="correspondencepostcode" value="{{ correspondencepostcode }}">
+                    </div>
+                </fieldset>
+                </div>
+
+
+                  <div class="form-group">
+                    <fieldset>
+
+                      <legend>
+                        <h3 class="heading-small">Country</h3>
+                      </legend>
+
+                      <div class="multiple-choice">
+                        <input id="radio-inline-1" type="radio" name="country" value="EN">
+                        <label for="radio-inline-1">England</label>
+                      </div>
+                      <div class="multiple-choice">
+                        <input id="radio-inline-2" type="radio" name="country" value="SC">
+                        <label for="radio-inline-2">Scotland</label>
+                      </div>
+                      <div class="multiple-choice">
+                        <input id="radio-inline-3" type="radio" name="country" value="WA">
+                        <label for="radio-inline-3">Wales</label>
+                      </div>
+                      <div class="multiple-choice">
+                        <input id="radio-inline-4" type="radio" name="country" value="NI">
+                        <label for="radio-inline-4">Northern Ireland</label>
+                      </div>
+
+
+                    </fieldset>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label-bold" for="textarea">
+                      Alternative format required
+                    </label>
+                    <textarea class="form-control form-control-1-2" name="alternativeformatnotes" id="alternativeformatnotes" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label-bold" for="nino">Home telephone number</label>
+                  <input class="form-control" id="hometelephonenumber" type="text" name="hometelephonenumber" value="{{ hometelephonenumber }}">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label-bold" for="nino">Mobile telephone number</label>
+                  <input class="form-control" id="mobiletelephonenumber" type="text" name="mobiletelephonenumber" value="{{ mobiletelephonenumber }}">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label-bold" for="nino">Textphone number</label>
+                  <input class="form-control" id="textphonenumber" type="text" name="textphonenumber" value="{{ textphonenumber }}">
+                </div>
+
+
+                <div class="form-group">
+                  <fieldset>
+
+                    <legend>
+                      <h3 class="heading-small">Partner</h3>
+                    </legend>
+
+                    <div class="multiple-choice">
+                      <input id="partner" type="radio" name="partner" value="Yes">
+                      <label for="partner">Yes</label>
+                    </div>
+                    <div class="multiple-choice">
+                      <input id="partner" type="radio" name="partner" value="No">
+                      <label for="partner">No</label>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="form-group">
+                  <fieldset>
+
+                    <legend>
+                      <h3 class="heading-small">SMI loan only</h3>
+                    </legend>
+
+                    <div class="multiple-choice">
+                      <input id="radio-inline-1" type="radio" name="SMIloanonly" value="Yes">
+                      <label for="radio-inline-1">Yes</label>
+                    </div>
+                    <div class="multiple-choice">
+                      <input id="radio-inline-2" type="radio" name="SMIloanonly" value="No">
+                      <label for="radio-inline-2">No</label>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="form-group">
+                  <fieldset>
+
+                    <legend>
+                      <h3 class="heading-small">Benefit type</h3>
+                    </legend>
+
+                    <div class="multiple-choice">
+                      <input id="radio-inline-1" type="radio" name="benefittype" value="PC">
+                      <label for="radio-inline-1">PC</label>
+                    </div>
+                    <div class="multiple-choice">
+                      <input id="radio-inline-2" type="radio" name="benefittype" value="JSA">
+                      <label for="radio-inline-2">JSA</label>
+                    </div>
+                    <div class="multiple-choice">
+                      <input id="radio-inline-3" type="radio" name="benefittype" value="IS">
+                      <label for="radio-inline-4">IS</label>
+                    </div>
+                    <div class="multiple-choice">
+                      <input id="radio-inline-4" type="radio" name="benefittype" value="ESA">
+                      <label for="radio-inline-4">ESA</label>
+                    </div>
+
+                    <div class="multiple-choice">
+                      <input id="radio-inline-5" type="radio" name="benefittype" value="UC">
+                      <label for="radio-inline-5">UC</label>
+                    </div>
+                  </fieldset>
+                </div>
+
+
+                <div class="form-group">
+                  <label class="form-label-bold" for="officecode">Office code</label>
+                  <input class="form-control form-control-1-8" id="officecode" type="text" name="office" value="">
+                </div>
+
+
+                <div class="form-group">
+                  <fieldset>
+
+                    <legend>
+                      <h3 class="heading-small">Qualifying benefit status</h3>
+                    </legend>
+
+                    <div class="multiple-choice">
+                      <input id="radio-inline-1" type="radio" name="qualbenefitstatus" value="Live">
+                      <label for="radio-inline-1">Live</label>
+                    </div>
+                    <div class="multiple-choice">
+                      <input id="radio-inline-2" type="radio" name="qualbenefitstatus" value="Dormant">
+                      <label for="radio-inline-2">Dormant</label>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+
+                <div class="form-group">
+                  <fieldset>
+
+                    <legend>
+                      <h3 class="heading-small">SMI status</h3>
+                    </legend>
+
+                    <div class="multiple-choice">
+                      <input id="radio-inline-1" type="radio" name="SMIstatus" value="In payment - loan">
+                      <label for="radio-inline-1">In payment - loan</label>
+                    </div>
+                    <div class="multiple-choice">
+                      <input id="radio-inline-2" type="radio" name="SMIstatus" value="In payment - benefit">
+                      <label for="radio-inline-2">In payment - benefit</label>
+                    </div>
+
+                    <div class="multiple-choice">
+                      <input id="radio-inline-3" type="radio" name="SMIstatus" value="On hold">
+                      <label for="radio-inline-3">On hold</label>
+                    </div>
+                    <div class="multiple-choice">
+                      <input id="radio-inline-4" type="radio" name="SMIstatus" value="Dormant">
+                      <label for="radio-inline-4">Dormant</label>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+
+
+      <p class="mth mb0">
+        <input class="button" type="submit" value="Save and continue">
+      </p>
+      <p class="mth mb0">
+        <a href="">Cancel</a>
+      </p>
+
+
+      </form>
+
+
+
+    </div>
+    <!-- COLUMN 2 THRIDS -->
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

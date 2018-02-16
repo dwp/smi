@@ -10,14 +10,34 @@
 
         {% include path+"/inc/name-and-nino.html" %}
 
-        <h1 class="heading-large" style="margin-bottom:64px">Add note</h1>
+        {% include path+"/inc/warnings.html" %}
 
-        <textarea class="form-control form-control-3-4" name="contact-notes" id="contact-notes" rows="10"></textarea>
+        {% include path+"/inc/alertbox.html" %}
+
+        <h1 class="heading-large" style="margin-bottom:-16px">Add note</h1>
+        <hr>
+
+        <form action="add_new_note" method="get" class="form" id="form">
+
+
+        <textarea class="form-control form-control-3-4" name="newnote" id="note" rows="10"></textarea>
+
 
 
 
     <p style="margin-top: 32px;">
-      <a href="#" class="button">Save</a>
+      <input type="hidden" name="alert" value="noteadded">
+      <input type="hidden" name="referpage" value="{{ referpage }}">
+
+
+{% if referpage == "overview" %}
+      <input class="button" type="submit" value="Save">
+{% endif %}
+{% if referpage == "noteslist" %}
+      <input type="hidden" name="hasnotes" value="yes">
+      <input class="button" type="submit" value="Save">
+{% endif %}
+
     </p>
     <p>
       <a href="screen_notes_1" onclick="window.history.go(-1); return false;">Cancel</a>

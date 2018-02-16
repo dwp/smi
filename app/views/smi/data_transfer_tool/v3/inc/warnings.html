@@ -1,0 +1,25 @@
+{% if warning %}
+
+{% if warning == "nonote" %}
+
+  {% set warningtitle  = "No note submitted" %}
+  {% set warningmessage = "If you do not want to add a note you can cancel." %}
+
+{% endif %}
+
+<div class="panel panel-border-wide" style="border-color: #ff0000; border-style: solid; border-width: 8px; margin-top: 64px; margin-bottom: 64px;">
+
+ <h2 class="heading-medium">{{ warningtitle }}</h2>
+ {% if warningmessage %}
+
+ <ul>
+   <li>{{ warningmessage }}</li>
+ </ul>
+
+{% endif %}
+
+</div>
+
+
+
+{% endif %}
