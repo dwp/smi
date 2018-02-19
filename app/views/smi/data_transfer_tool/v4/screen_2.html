@@ -1,0 +1,71 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+        {% include path+"/inc/alertbox.html" %}
+
+
+        <h1 class="heading-large" style="margin-bottom:-16px;">Deductions, limits, and charges</h1>
+        <hr>
+
+
+
+            <form action="screen_3-with-award-info" method="get" class="form" id="form">
+
+              <div id="example-question" class="form-group">
+                <label class="form-label-bold" for="nondependantsdeductions">Non-dependant deductions</label>
+                  <span class="c-form-input-denote">£</span>
+                  <input class="form-control c-form-input-denote__input form-control-1-4" aria-labelledby="legend-heading" type="text" name="nondependantsdeductions">
+              </div>
+
+
+              <div id="example-question" class="form-group">
+                <label class="form-label-bold" for="groundrentservicecharge">Ground rent and service charge</label>
+                  <span class="c-form-input-denote">£</span>
+                  <input class="form-control c-form-input-denote__input form-control-1-4" aria-labelledby="legend-heading" type="text" name="groundrentservicecharge">
+              </div>
+
+              <div id="example-question" class="form-group">
+                <label class="form-label-bold" for="overrideupperlimit">Override upper limit</label>
+                <hint>Possible hint</hint>
+
+                  <span class="c-form-input-denote">£</span>
+                  <input class="form-control c-form-input-denote__input form-control-1-4" aria-labelledby="legend-heading" type="text" name="overrideupperlimit">
+              </div>
+
+
+              <input type="hidden" name="alert" value="detailssaved">
+
+
+      <p class="mth mb0">
+        <input class="button" type="submit" value="Save and continue">
+      </p>
+      <p class="mth mb0">
+        <a href="">Cancel</a>
+      </p>
+
+
+      </form>
+
+
+
+    </div>
+    <!-- COLUMN 2 THRIDS -->
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

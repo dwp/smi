@@ -1,0 +1,27 @@
+{% if warning %}
+
+{% if warning == "nonote" %}
+
+  {% set warningtitle  = "No note submitted" %}
+  {% set warningmessage = "If you do not want to add a note you can cancel." %}
+
+{% endif %}
+
+<div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+<!--
+<div class="panel panel-border-wide" style="border-color: #ff0000; border-style: solid; border-width: 8px; margin-top: 64px; margin-bottom: 64px;">
+-->
+ <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">{{ warningtitle }}</h2>
+ {% if warningmessage %}
+
+ <ul>
+   <li>{{ warningmessage }}</li>
+ </ul>
+
+{% endif %}
+
+</div>
+
+
+
+{% endif %}

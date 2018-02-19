@@ -1,0 +1,116 @@
+{% extends "../inc/layout.html" %}
+
+{% block content %}
+
+
+{% include "../inc/main_nav.html" %}
+
+<main id="content" role="main">
+
+
+  <div class="main-content">
+    <div class="grid-row">
+
+          <div class="column-full">
+              <h1 class="heading-large">Send MI12R reports</h1>
+
+              <h2 class="heading-medium">For offices 1234 and 5678</h2>
+
+
+
+              <div class="nav-tabbed">
+
+                      <ul>
+                        <li class="current"><span>Employment and Support Allowance</span></li>
+                        <li><a href="report-list-send-MI12R-jsa"><span>Jobseeker's Allowance</span></a></li>
+                        <li><a href="#"><span>Income Support</span></a></li>
+                        <li><a href="#"><span>Pension Credit</span></a></li>
+
+                      </ul>
+
+                      <div class="clear"></div>
+
+                    </div>
+
+              <table id="searchable-table" class="available m-b-l truncate display">
+                <thead>
+                  <tr>
+                    <th class="col-1">&nbsp;</th>
+
+                    <th class="col-2">Name</th>
+                    <th class="col-3">NINO</th>
+                    <th class="col-4">Due date</th>
+                    <th class="col-8">&nbsp;</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <tr>
+                    <td>
+                      <a href="to-do-summary" class="button">Assign to me</a>
+
+                    </td>
+
+                    <td class="name">
+                      <a href="#">Jade Smith</a>
+                    </td>
+                    <td>
+                      <small class="small-grey">AA 12 34 56 D &nbsp;</small>
+                    </td>
+                    <td>
+                      1/2/2018
+                    </td>
+                    <td>
+                    </td>
+
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <a href="to-do-summary" class="button">Mark as done</a>
+                    </td>
+
+                    <td class="name">
+                      <a href="to-do-summary">Janet Elizabeth Price</a>
+                    </td>
+                    <td>
+                      <small class="small-grey">QF082262D</small>
+                    </td>
+                    <td>
+                      1/2/2018
+                    </td>
+                    <td>
+                      <a href="../screen_3-with-info-and-notes-1" class="button">View case</a>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="status-dormant">Someone is working on this</span>
+                    </td>
+
+                    <td class="name">
+                      <a href="to-do-summary">Janet Elizabeth Price</a>
+                    </td>
+                    <td>
+                      <small class="small-grey">QF082262D</small>
+                    </td>
+                    <td>
+                      1/2/2018
+                    </td>
+                    <td>
+
+                    </td>
+                  </tr>
+
+                </tbody>
+                </table>
+      </div> <!-- COLUMN 2 THIRDS -->
+ <!-- GRID ROW-->
+  </div> <!-- MAIN CONTENT -->
+</div>
+
+</main>
+
+{% endblock %}
