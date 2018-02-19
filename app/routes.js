@@ -432,6 +432,23 @@ router.get('/smi/data_transfer_tool/v*/add_new_note',function(req,res,next)
 
 });
 
+
+router.get('/smi/data_transfer_tool/v*/check_for_nino',function(req,res,next)
+{
+
+  req.data.nino = req.query.nino;
+  const nino = req.data.nino;
+
+
+  if (req.query.nino == '') {
+    res.redirect('screen_0?warning=nonino')
+  } else {
+    res.redirect('screen_1?nino='+nino)
+  }
+
+});
+
+
 /*
   Redirect all posts to gets.
 */

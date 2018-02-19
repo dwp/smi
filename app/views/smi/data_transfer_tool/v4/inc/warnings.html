@@ -5,6 +5,12 @@
   {% set warningtitle  = "No note submitted" %}
   {% set warningmessage = "If you do not want to add a note you can cancel." %}
 
+{% elseif warning == "nonino" %}
+
+    {% set warningtitle  = "No National Insurance number entered" %}
+    {% set warningmessage = "Need this" %}
+
+
 {% endif %}
 
 <div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
