@@ -7,23 +7,18 @@
 
 {% elseif warning == "nonino" %}
 
-    {% set warningtitle  = "No National Insurance number entered" %}
-    {% set warningmessage = "Need this" %}
+    {% set warningtitle  = "There’s a problem" %}
+    {% set warningmessage = "Enter a National Insurance number like QQ123456C" %}
 
 
 {% endif %}
 
 <div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
-<!--
-<div class="panel panel-border-wide" style="border-color: #ff0000; border-style: solid; border-width: 8px; margin-top: 64px; margin-bottom: 64px;">
--->
  <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">{{ warningtitle }}</h2>
  {% if warningmessage %}
-
  <ul>
    <li>{{ warningmessage }}</li>
  </ul>
-
 {% endif %}
 
 </div>
