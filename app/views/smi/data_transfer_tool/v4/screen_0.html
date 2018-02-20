@@ -22,12 +22,11 @@
 
           <div class="form-group{% if warning %} form-group-error{% endif %}">
             <label class="form-hint" for="nino">
+              Enter a National Insurance number
               {% if warning %}National Insurance number
               <span class="error-message">
                 Enter a National Insurance number like QQ123456C
               </span>
-              {% else %}
-              Enter a National Insurance number
               {% endif %}</label>
             <input class="form-control form-control-1-4" id="nino" autocomplete="off" type="text" name="nino" value="{{ startnino }}">
             <input class="button" type="submit" value="Find">

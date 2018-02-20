@@ -17,32 +17,22 @@
         <h1 class="heading-large" style="margin-bottom:-16px;">Add [payee] details for loan reference xxxxxxx [screen 5]</h1>
         <hr>
 
-
-        <table class="lender-details-1">
-          <tbody>
             <form action="screen_6" method="get" class="form" id="form">
 
+              <div class="form-group">
+                <label class="form-label-bold" for="QLRcode">
+                  <span class="form-label-bold">Qualified lender code (QLR)</span>
+                  <span class="form-hint">Do not add QLR code if paying direct to claimant</span>
+                </label>
+                <input class="form-control form-control-1-4" id="QLRcode" type="text" name="QLRcode" value="{{ QLRcode }}">
+              </div>
 
-              <tr>
-                <td>
-                  <span class="bold">Qualified lender code (QLR)</span><br />
-                  Do not add QLR code if paying direct to claimant
-                </td>
-                <td>
-                  <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
-      </td>
-      <td>
-      </td>
+              <h2 class="heading-medium">Payment details</h1>
 
-      </tr>
-
-      <tr>
-        <td colspan=3>
-          <p>&nbsp;</p>
-          <span class="bold">Payment details</span>
-        </td>
-
-</tr>
+                <div class="form-group">
+                  <label class="form-label-bold" for="accountnumber">Account number</label>
+                  <input class="form-control form-control-1-4" id="accountnumber" type="text" name="accountnumber" value="{{ accountnumber }}">
+                </div>
 
 
       <tr>
@@ -106,71 +96,30 @@ Account number
         </tr>
 
 
+        <div class="form-group">
+          <label class="form-label-bold" for="buildingsocietyrollnumber">Building society roll number</label>
+          <input class="form-control form-control-1-4" id="buildingsocietyrollnumber" type="text" name="buildingsocietyrollnumber" value="{{ buildingsocietyrollnumber }}">
+        </div>
 
-  <tr>
-    <td>
-      Building society roll number
-    </td>
-    <td>
-      <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
-</td>
-<td>
-</td>
+        <div class="form-group">
+          <label class="form-label-bold" for="payeename">Payee name</label>
+          <input class="form-control form-control-1-4" id="payeename" type="text" name="payeename" value="{{ payeename }}">
+        </div>
 
-</tr>
+        <div class="form-group">
+          <label class="form-label-bold" for="otherpayeename">Other payee name</label>
+          <input class="form-control form-control-1-4" id="otherpayeename" type="text" name="otherpayeename" value="{{ otherpayeename }}">
+        </div>
 
-<tr>
-  <td>
-    Payee name
-  </td>
-  <td>
-    <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
-</td>
-<td>
-</td>
+        <div class="form-group">
+          <label class="form-label-bold" for="payeetitle">Payee title</label>
+          <input class="form-control form-control-1-4" id="payeetitle" type="text" name="payeetitle" value="{{ payeetitle }}">
+        </div>
 
-</tr>
-
-<tr>
-  <td>
-    Other payee name
-  </td>
-  <td>
-    <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
-</td>
-<td>
-</td>
-
-</tr>
-
-<tr>
-  <td>
-    Payee title
-  </td>
-  <td>
-    <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
-</td>
-<td>
-</td>
-
-</tr>
-
-<tr>
-  <td>
-  Corporate payee organisation name
-  </td>
-  <td>
-    <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
-</td>
-<td>
-</td>
-
-</tr>
-
-
-
-      </tbody>
-      </table>
+        <div class="form-group">
+          <label class="form-label-bold" for="corporatepayeeorganisationname">Corporate payee organisation name</label>
+          <input class="form-control form-control-1-4" id="corporatepayeeorganisationname" type="text" name="corporatepayeeorganisationname" value="{{ corporatepayeeorganisationname }}">
+        </div>
 
       <input type="hidden" name="alert" value="detailssaved">
 
