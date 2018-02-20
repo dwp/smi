@@ -425,9 +425,21 @@ router.get('/smi/data_transfer_tool/v*/add_new_note',function(req,res,next)
 
 
   if (req.query.newnote == '') {
+
     res.redirect('screen_notes_add?warning=nonote&hasnotes='+hasnotes+'&referpage='+referpage)
+
   } else {
-    res.redirect('screen_3-with-info-and-notes-1?alert=noteadded&hasnotes='+hasnotes+'&referpage='+referpage)
+
+    if (req.query.referpage == 'overview') {
+
+      res.redirect('screen_3-with-info-and-notes-1?alert=noteadded&hasnotes='+hasnotes+'&referpage='+referpage)
+
+    } else if (req.query.referpage == 'noteslist') {
+
+      res.redirect('screen_notes_1?alert=noteadded&hasnotes='+hasnotes+'&referpage='+referpage)
+
+    }
+
   }
 
 });
