@@ -33,15 +33,42 @@
                   <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="groundrentservicecharge">
               </div>
 
-              <div id="overrideupperlimit" class="form-group">
-                <label class="form-label-bold" for="overrideupperlimit">
-                  <span class="form-label-bold">Override upper limit</span>
-                <span class="form-hint">Possible hint</span>
-              </label>
+              <div class="form-group">
+                <fieldset>
 
-                  <span class="c-form-input-denote">£</span>
-                  <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="overrideupperlimit">
+                  <legend>
+                    <h3 class="heading-small">Override upper limit</h3>
+                    <span class="form-hint">Possible hint</span>
+
+                  </legend>
+
+                  <div class="multiple-choice">
+                    <input id="override-upper-limit-1" type="radio" name="override-upper-limit" value="EN">
+                    <label for="override-upper-limit-1">£100,000</label>
+                  </div>
+                  <div class="multiple-choice">
+                    <input id="override-upper-limit-2" type="radio" name="override-upper-limit" value="SC">
+                    <label for="override-upper-limit-2">£200,000</label>
+                  </div>
+                  <div class="multiple-choice" data-target="override-upper-limit-other">
+                    <input id="override-upper-limit-3" type="radio" name="override-upper-limit" value="Other">
+                    <label for="override-upper-limit-3">Other</label>
+                  </div>
+
+                  <div id="override-upper-limit-other" class="panel panel-border-narrow js-hidden">
+                    <label class="form-label-bold" for="override-upper-limit-other">
+                      <span class="form-label-bold">Label</span>
+                  </label>
+
+                      <span class="c-form-input-denote">£</span>
+                      <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="override-upper-limit-other">
+                  </div>
+
+
+                </fieldset>
               </div>
+
+
 
 
               <input type="hidden" name="alert" value="detailssaved">
