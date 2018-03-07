@@ -1,0 +1,24 @@
+{% if warning %}
+
+<div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+  <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">There's a problem</h2>
+ <ul>
+   {% if not nino %}<li>Enter a National Insurance number</li>{% endif %}
+   {% if not loanreference %}<li>Enter a loan reference</li>{% endif %}
+   {% if not benefittype %}<li>Enter a benefit type</li>{% endif %}
+   {% if not overrideupperlimit %}<li>Enter an override upper limit</li>{% endif %}
+   {% if not nondependantdeductions %}<li>Enter non-dependant deductions</li>{% endif %}
+   {% if not groundrentandservicecharge %}<li>Enter ground rent and service charge</li>{% endif %}
+   {% if not outstandingbalance %}<li>Enter an outstanding balance</li>{% endif %}
+   {% if (not sharedhousingcosts1) or (not sharedhousingcosts2) %}<li>Enter shared housing cost</li>{% endif %}
+   {% if not loanexemptamount %}<li>Enter a loan exempt amount</li>{% endif %}
+   {% if not weeklyMPPI %}<li>Enter a weekly MPPI</li>{% endif %}
+
+
+ </ul>
+
+</div>
+
+
+
+{% endif %}

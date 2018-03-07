@@ -3,23 +3,50 @@
 
   {% include path+"/inc/main_nav.html" %}
 
+  <style>
+
+  @media (min-width:641px) {
+    .form-group label,
+    .form-group legend
+    {
+      float: left;
+      padding: 7px 0;
+      width: 50%;
+    }
+
+    .form-group .multiple-choice {
+      float: right;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px #BFC1C3 solid;
+    }
+
+    .form-date .form-group label {
+      padding-top: 0;
+    }
+
+    .form-date .form-group {
+      border-bottom: 0;
+      padding-bottom: 5px;
+    }
+  }
+  </style>
+
 
   <div class="main-content">
     <div class="grid-row">
 
       <div class="column-two-thirds">
 
-        {% if nino %}
         {% include path+"/inc/name-and-nino.html" %}
-        {% endif %}
 
-        <h1 class="heading-large" style="margin-bottom:-16px;">Personal details, status and benefit details</h1>
+        <h1 class="heading-large" style="margin-bottom:-16px;">Personal details, status and benefit details [screens 1 and 2 combined]</h1>
         <hr>
 
             <form action="screen_2" method="get" class="form" id="form">
-
-              <h2 class="heading-medium">Personal details</h1>
-
 
               <div class="form-group">
                 <label class="form-label-bold" for="nino">National Insurance number</label>
@@ -34,16 +61,15 @@
                   </span>
                 </label>
                 <input class="form-control form-control-error" id="nino-error" type="text">
-              </div>
--->
+              </div>-->
 
               <div class="form-group">
-                <label class="form-label-bold" for="firstname">Title</label>
-                <input class="form-control form-control-1-8" id="title" type="text" name="title" value="{{ title }}">
+                <label class="form-label-bold" for="title">Title</label>
+                <input class="form-control" id="title" type="text" name="title" value="{{ title }}">
               </div>
 
               <div class="form-group">
-                <label class="form-label-bold" for="lastname">First name</label>
+                <label class="form-label-bold" for="title">First name</label>
                 <input class="form-control" id="firstname" type="text" name="firstname" value="{{ firstname }}">
               </div>
 
@@ -84,19 +110,25 @@
                       </h3>
                     </legend>
                     <div class="form-group">
-                      <label class="form-label hidden" for="claimantaddress1">
+                      <label class="form-label" for="claimantaddress1">
                         Address line 1
                       </label>
                       <input class="form-control" id="claimantaddress1" type="text" name="claimantaddress1" value="{{ claimantaddress1 }}">
-                      <label class="form-label hidden" for="claimantaddress2">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="claimantaddress2">
                         Address line 2
                       </label>
                       <input class="form-control" id="claimantaddress2" type="text" name="claimantaddress2" value="{{ claimantaddress2 }}">
-                      <label class="form-label hidden" for="claimantaddress3">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="claimantaddress3">
                         Address line 3
                       </label>
                       <input class="form-control" id="claimantaddress3" type="text" name="claimantaddress3" value="{{ claimantaddress3 }}">
-                      <label class="form-label hidden" for="claimantaddress4">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="claimantaddress4">
                         Address line 4
                       </label>
                       <input class="form-control" id="claimantaddress4" type="text" name="claimantaddress4" value="{{ claimantaddress4 }}">
@@ -118,11 +150,13 @@
                       </h3>
                     </legend>
                     <div class="form-group">
-                      <label class="form-label hidden" for="correspondenceaddress1">
+                      <label class="form-label" for="correspondenceaddress1">
                         Address line 1
                       </label>
-                      <input class="form-control" id="correspondenceaddress1" type="text" name="correspondenceaddress1" value="{{ correspondenceaddress1 }}">
-                      <label class="form-label hidden" for="correspondenceaddress2">
+                          <input class="form-control" id="correspondenceaddress1" type="text" name="correspondenceaddress1" value="{{ correspondenceaddress1 }}">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="correspondenceaddress2">
                         Address line 2
                       </label>
                           <input class="form-control" id="correspondenceaddress2" type="text" name="correspondenceaddress2" value="{{ correspondenceaddress2 }}">
@@ -145,20 +179,20 @@
                       </legend>
 
                       <div class="multiple-choice">
-                        <input id="country-1" type="radio" name="country" value="EN">
-                        <label for="country-1">England</label>
+                        <input id="radio-inline-1" type="radio" name="country" value="EN">
+                        <label for="radio-inline-1">England</label>
                       </div>
                       <div class="multiple-choice">
-                        <input id="country-2" type="radio" name="country" value="SC">
-                        <label for="country-2">Scotland</label>
+                        <input id="radio-inline-2" type="radio" name="country" value="SC">
+                        <label for="radio-inline-2">Scotland</label>
                       </div>
                       <div class="multiple-choice">
-                        <input id="country-3" type="radio" name="country" value="WA">
-                        <label for="country-3">Wales</label>
+                        <input id="radio-inline-3" type="radio" name="country" value="WA">
+                        <label for="radio-inline-3">Wales</label>
                       </div>
                       <div class="multiple-choice">
-                        <input id="country-4" type="radio" name="country" value="NI">
-                        <label for="country-4">Northern Ireland</label>
+                        <input id="radio-inline-4" type="radio" name="country" value="NI">
+                        <label for="radio-inline-4">Northern Ireland</label>
                       </div>
 
 
@@ -173,17 +207,17 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="form-label-bold" for="nino">Home telephone</label>
+                  <label class="form-label-bold" for="nino">Home telephone number</label>
                   <input class="form-control" id="hometelephonenumber" type="text" name="hometelephonenumber" value="{{ hometelephonenumber }}">
                 </div>
 
                 <div class="form-group">
-                  <label class="form-label-bold" for="nino">Mobile telephone</label>
+                  <label class="form-label-bold" for="nino">Mobile telephone number</label>
                   <input class="form-control" id="mobiletelephonenumber" type="text" name="mobiletelephonenumber" value="{{ mobiletelephonenumber }}">
                 </div>
 
                 <div class="form-group">
-                  <label class="form-label-bold" for="nino">Textphone</label>
+                  <label class="form-label-bold" for="nino">Textphone number</label>
                   <input class="form-control" id="textphonenumber" type="text" name="textphonenumber" value="{{ textphonenumber }}">
                 </div>
 
@@ -196,18 +230,15 @@
                     </legend>
 
                     <div class="multiple-choice">
-                      <input id="partner-1" type="radio" name="partner" value="Yes">
-                      <label for="partner-1">Yes</label>
+                      <input id="partner" type="radio" name="partner" value="Yes">
+                      <label for="partner">Yes</label>
                     </div>
                     <div class="multiple-choice">
-                      <input id="partner-2" type="radio" name="partner" value="No">
-                      <label for="partner-2">No</label>
+                      <input id="partner" type="radio" name="partner" value="No">
+                      <label for="partner">No</label>
                     </div>
                   </fieldset>
                 </div>
-
-                <h2 class="heading-medium">Benefit details</h1>
-
 
                 <div class="form-group">
                   <fieldset>
@@ -217,12 +248,12 @@
                     </legend>
 
                     <div class="multiple-choice">
-                      <input id="SMIloanonly-1" type="radio" name="SMIloanonly" value="Yes">
-                      <label for="SMIloanonly-1">Yes</label>
+                      <input id="radio-inline-1" type="radio" name="SMIloanonly" value="Yes">
+                      <label for="radio-inline-1">Yes</label>
                     </div>
                     <div class="multiple-choice">
-                      <input id="SMIloanonly-2" type="radio" name="SMIloanonly" value="No">
-                      <label for="SMIloanonly-2">No</label>
+                      <input id="radio-inline-2" type="radio" name="SMIloanonly" value="No">
+                      <label for="radio-inline-2">No</label>
                     </div>
                   </fieldset>
                 </div>
@@ -235,25 +266,25 @@
                     </legend>
 
                     <div class="multiple-choice">
-                      <input id="benefittype-1" type="radio" name="benefittype" value="PC">
-                      <label for="benefittype-1">PC</label>
+                      <input id="radio-inline-1" type="radio" name="benefittype" value="PC">
+                      <label for="radio-inline-1">PC</label>
                     </div>
                     <div class="multiple-choice">
-                      <input id="benefittype-2" type="radio" name="benefittype" value="JSA">
-                      <label for="benefittype-2">JSA</label>
+                      <input id="radio-inline-2" type="radio" name="benefittype" value="JSA">
+                      <label for="radio-inline-2">JSA</label>
                     </div>
                     <div class="multiple-choice">
-                      <input id="benefittype-3" type="radio" name="benefittype" value="IS">
-                      <label for="benefittype-4">IS</label>
+                      <input id="radio-inline-3" type="radio" name="benefittype" value="IS">
+                      <label for="radio-inline-4">IS</label>
                     </div>
                     <div class="multiple-choice">
-                      <input id="benefittype-4" type="radio" name="benefittype" value="ESA">
-                      <label for="benefittype-4">ESA</label>
+                      <input id="radio-inline-4" type="radio" name="benefittype" value="ESA">
+                      <label for="radio-inline-4">ESA</label>
                     </div>
 
                     <div class="multiple-choice">
-                      <input id="benefittype-5" type="radio" name="benefittype" value="UC">
-                      <label for="benefittype-5">UC</label>
+                      <input id="radio-inline-5" type="radio" name="benefittype" value="UC">
+                      <label for="radio-inline-5">UC</label>
                     </div>
                   </fieldset>
                 </div>
@@ -273,12 +304,12 @@
                     </legend>
 
                     <div class="multiple-choice">
-                      <input id="qualbenefitstatus-1" type="radio" name="qualbenefitstatus" value="Live">
-                      <label for="qualbenefitstatus-1">Live</label>
+                      <input id="radio-inline-1" type="radio" name="qualbenefitstatus" value="Live">
+                      <label for="radio-inline-1">Live</label>
                     </div>
                     <div class="multiple-choice">
-                      <input id="qualbenefitstatus-2" type="radio" name="qualbenefitstatus" value="Dormant">
-                      <label for="qualbenefitstatus-2">Dormant</label>
+                      <input id="radio-inline-2" type="radio" name="qualbenefitstatus" value="Dormant">
+                      <label for="radio-inline-2">Dormant</label>
                     </div>
 
                   </fieldset>
@@ -293,32 +324,32 @@
                     </legend>
 
                     <div class="multiple-choice">
-                      <input id="SMIstatus-1" type="radio" name="SMIstatus" value="In payment - loan">
-                      <label for="SMIstatus-1">In payment - loan</label>
+                      <input id="radio-inline-1" type="radio" name="SMIstatus" value="In payment - loan">
+                      <label for="radio-inline-1">In payment - loan</label>
                     </div>
                     <div class="multiple-choice">
-                      <input id="SMIstatus-2" type="radio" name="SMIstatus" value="In payment - benefit">
-                      <label for="SMIstatus-2">In payment - benefit</label>
+                      <input id="radio-inline-2" type="radio" name="SMIstatus" value="In payment - benefit">
+                      <label for="radio-inline-2">In payment - benefit</label>
                     </div>
+
                     <div class="multiple-choice">
-                      <input id="SMIstatus-3" type="radio" name="SMIstatus" value="On hold">
+                      <input id="radio-inline-3" type="radio" name="SMIstatus" value="On hold">
                       <label for="radio-inline-3">On hold</label>
                     </div>
                     <div class="multiple-choice">
-                      <input id="SMIstatus-4" type="radio" name="SMIstatus" value="Dormant">
-                      <label for="SMIstatus-4">Dormant</label>
+                      <input id="radio-inline-4" type="radio" name="SMIstatus" value="Dormant">
+                      <label for="radio-inline-4">Dormant</label>
                     </div>
 
                   </fieldset>
                 </div>
 
 
-        <input type="hidden" name="alert" value="screen1saved">
 
-      <p>
+      <p class="mth mb0">
         <input class="button" type="submit" value="Save and continue">
       </p>
-      <p>
+      <p class="mth mb0">
         <a href="">Cancel</a>
       </p>
 

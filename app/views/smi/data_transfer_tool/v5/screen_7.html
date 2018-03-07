@@ -1,0 +1,46 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <h2 class="heading-large" style="margin-bottom:30px">
+          Claimant name
+          <span class="heading-secondary">Claimant NINo</span>
+        </h2>
+
+        <h1 class="heading-medium">Screen 7: Check details</h1>
+
+
+
+        <form action="screen_8" method="get" class="form" id="form">
+
+          Review submission - is this needed? Can it just jump to another screen, the <a href="screen_8">next one</a> or the <a href="screen_3-with-info">summary view</a>?
+
+      <p class="mth mb0">
+        <input class="button" type="submit" value="Save and continue">
+      </p>
+      <p class="mth mb0">
+        <a href="">Cancel</a>
+      </p>
+
+
+      </form>
+
+
+
+    </div>
+    <!-- COLUMN 2 THRIDS -->
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

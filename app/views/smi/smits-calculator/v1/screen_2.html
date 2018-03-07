@@ -1,0 +1,91 @@
+{% extends path+"/inc/smits-layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        <h1 class="heading-large" style="margin-bottom:32px;">Title</h1>
+
+
+        <table>
+          <tr>
+            <td>Date</td>
+            <td>{{ date }}</td>
+          </tr>
+          <tr>
+            <td>Time</td>
+            <td>{{ time }}</td>
+          </tr>
+          <tr>
+            <td>National Insurance number</td>
+            <td>{{ nino }}</td>
+          </tr>
+          <tr>
+            <td>Loan reference</td>
+            <td>{{ loanreference }}</td>
+          </tr>
+          <tr>
+            <td>Benefit type</td>
+            <td>{{ benefittype }}</td>
+          </tr>
+          <tr>
+            <td>Override upper limit</td>
+            <td>£{{ overrideupperlimit }}</td>
+          </tr>
+          <tr>
+            <td>Non-dependants deductions</td>
+            <td>£{{ nondependantdeductions}}</td>
+          </tr>
+          <tr>
+            <td>Ground rent and service charge</td>
+            <td>£{{ groundrentandservicecharge }}</td>
+          </tr>
+          <tr>
+            <td>Outstanding balance</td>
+            <td>£{{ outstandingbalance }}</td>
+          </tr>
+          <tr>
+            <td>Shared housing costs</td>
+            <td>{{ sharedhousingcosts1 }} / {{ sharedhousingcosts2 }}</td>
+          </tr>
+          <tr>
+            <td>Loan exempt amount</td>
+            <td>£{{ loanexemptamount }}</td>
+          </tr>
+          <tr>
+            <td>Weekly MPPI</td>
+            <td>£{{ weeklyMPPI }}</td>
+          </tr>
+          <tr>
+            <td><div class="bold">Total weekly net interest</div></td>
+            <td><div class="bold">£123.45</div></td>
+          </tr>
+
+
+
+        </table>
+
+
+      <p>
+        <a class="button" type="submit" value="Print" onclick="window.print();return false;">Print</a>
+      </p>
+
+
+
+
+    </div>
+    <!-- COLUMN 2 THRIDS -->
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

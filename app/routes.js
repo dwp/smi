@@ -335,7 +335,124 @@ router.get('/smi/v*/account-details-*',function(req,res,next)
 });
 
 
-router.get('/smi/data_transfer_tool/*',function(req,res,next)
+
+
+router.get('/smi/smits-calculator/*',function(req,res,next)
+{
+  var v = req.params[0];
+  req.data = req.data || { };
+
+
+req.data.warning = req.query.warning;
+const warning = req.data.warning;
+
+const date = new Date().getFullYear();
+
+req.data.nino = req.query.nino;
+const nino = req.data.nino;
+
+req.data.loanreference = req.query.loanreference;
+const loanreference = req.data.loanreference;
+
+req.data.benefittype = req.query.benefittype;
+const benefittype = req.data.benefittype;
+
+req.data.overrideupperlimit = req.query.overrideupperlimit;
+const overrideupperlimit = req.data.overrideupperlimit;
+
+req.data.nondependantdeductions = req.query.nondependantdeductions;
+const nondependantdeductions = req.data.nondependantdeductions;
+
+req.data.groundrentandservicecharge = req.query.groundrentandservicecharge;
+const groundrentandservicecharge = req.data.groundrentandservicecharge;
+
+req.data.outstandingbalance = req.query.outstandingbalance;
+const outstandingbalance = req.data.outstandingbalance;
+
+req.data.sharedhousingcosts1 = req.query.sharedhousingcosts1;
+const sharedhousingcosts1 = req.data.sharedhousingcosts1;
+
+req.data.sharedhousingcosts2 = req.query.sharedhousingcosts2;
+const sharedhousingcosts2 = req.data.sharedhousingcosts2;
+
+req.data.loanexemptamount = req.query.loanexemptamount;
+const loanexemptamount = req.data.loanexemptamount;
+
+req.data.weeklyMPPI = req.query.weeklyMPPI;
+const weeklyMPPI = req.data.weeklyMPPI;
+
+  next();
+});
+
+
+router.get('/smi/smits-calculator/*/check_answers',function(req,res,next)
+{
+
+  req.data.nino = req.query.nino;
+  const nino = req.data.nino;
+
+  req.data.loanreference = req.query.loanreference;
+  const loanreference = req.data.loanreference;
+
+  req.data.benefittype = req.query.benefittype;
+  const benefittype = req.data.benefittype;
+
+  req.data.overrideupperlimit = req.query.overrideupperlimit;
+  const overrideupperlimit = req.data.overrideupperlimit;
+
+  req.data.nondependantdeductions = req.query.nondependantdeductions;
+  const nondependantdeductions = req.data.nondependantdeductions;
+
+  req.data.groundrentandservicecharge = req.query.groundrentandservicecharge;
+  const groundrentandservicecharge = req.data.groundrentandservicecharge;
+
+  req.data.outstandingbalance = req.query.outstandingbalance;
+  const outstandingbalance = req.data.outstandingbalance;
+
+  req.data.sharedhousingcosts1 = req.query.sharedhousingcosts1;
+  const sharedhousingcosts1 = req.data.sharedhousingcosts1;
+
+  req.data.sharedhousingcosts2 = req.query.sharedhousingcosts2;
+  const sharedhousingcosts2 = req.data.sharedhousingcosts2;
+
+  req.data.loanexemptamount = req.query.loanexemptamount;
+  const loanexemptamount = req.data.loanexemptamount;
+
+  req.data.weeklyMPPI = req.query.weeklyMPPI;
+  const weeklyMPPI = req.data.weeklyMPPI;
+
+  if (nino == '' || loanreference == '' || benefittype == '' || overrideupperlimit == '' || nondependantdeductions == '' || groundrentandservicecharge == '' || outstandingbalance == '' || sharedhousingcosts1 == '' || sharedhousingcosts2 == '' || loanexemptamount == '' || weeklyMPPI == '') {
+    res.redirect('screen_1?warning=yes&'+'nino=' + nino + '&' +
+                        'loanreference=' + loanreference + '&' +
+                        'benefittype=' + benefittype + '&' +
+                        'overrideupperlimit=' + overrideupperlimit + '&' +
+                        'nondependantdeductions=' + nondependantdeductions + '&' +
+                        'groundrentandservicecharge=' + groundrentandservicecharge + '&' +
+                        'outstandingbalance=' + outstandingbalance + '&' +
+                        'sharedhousingcosts1=' + sharedhousingcosts1 + '&' +
+                        'sharedhousingcosts2=' + sharedhousingcosts2 + '&' +
+                        'loanexemptamount=' + loanexemptamount + '&' +
+                        'weeklyMPPI=' + weeklyMPPI)
+  } else {
+    res.redirect('screen_2?'+'nino=' + nino + '&' +
+                        'loanreference=' + loanreference + '&' +
+                        'benefittype=' + benefittype + '&' +
+                        'overrideupperlimit=' + overrideupperlimit + '&' +
+                        'nondependantdeductions=' + nondependantdeductions + '&' +
+                        'groundrentandservicecharge=' + groundrentandservicecharge + '&' +
+                        'outstandingbalance=' + outstandingbalance + '&' +
+                        'sharedhousingcosts1=' + sharedhousingcosts1 + '&' +
+                        'sharedhousingcosts2=' + sharedhousingcosts2 + '&' +
+                        'loanexemptamount=' + loanexemptamount + '&' +
+                        'weeklyMPPI=' + weeklyMPPI)
+  }
+
+});
+
+
+
+
+router.get('/smi/data_transfer_tool/*/screen_1',function(req,res,next)
 {
   var v = req.params[0];
   req.data = req.data || { };
