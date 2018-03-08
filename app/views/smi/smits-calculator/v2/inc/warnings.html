@@ -5,8 +5,8 @@
  <ul>
    {% if not nino %}<li>Enter a National Insurance number</li>{% endif %}
    {% if not loanreference %}<li>Enter a loan reference</li>{% endif %}
-   {% if not benefittype %}<li>Enter a benefit type</li>{% endif %}
-   {% if (not benefittype or benefittype == "undefined") %}<li>Enter an outstanding balance</li>{% endif %}
+   {% if (not benefittype or benefittype == "undefined") %}<li>Enter a benefit type</li>{% endif %}
+   {% if not outstandingbalance %}<li>Enter an outstanding balance</li>{% endif %}
  </ul>
 
 </div>

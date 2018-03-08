@@ -3,6 +3,8 @@
 
   {% include path+"/inc/main_nav.html" %}
 
+  {% set passvariables = "nino=" + nino + "&loanreference=" + loanreference + "&benefittype=" + benefittype + "&overrideupperlimit=" + overrideupperlimit + "&nondependantdeductions=" + nondependantdeductions + "&groundrentandservicecharge=" + groundrentandservicecharge + "&outstandingbalance=" + outstandingbalance + "&sharedhousingcosts1=" + sharedhousingcosts1 + "&sharedhousingcosts2=" + sharedhousingcosts2 + "&loanexemptamount=" + loanexemptamount + "&weeklyMPPI=" + weeklyMPPI %}
+
   <div class="main-content">
     <div class="grid-row">
 
@@ -20,46 +22,53 @@
           <tr>
             <td>Loan reference</td>
             <td>{{ loanreference }}</td>
+            <td><a href="screen_1?{{ passvariables }}">Change</a></td>
           </tr>
           <tr>
             <td>Benefit type</td>
             <td>{{ benefittype }}</td>
+            <td><a href="screen_1?{{ passvariables }}">Change</a></td>
           </tr>
           <tr>
             <td>Override upper limit</td>
-            <td>£{{ overrideupperlimit }}</td>
+            <td>{% if not overrideupperlimit %}Not provided{% else %}£{{ overrideupperlimit }}{% endif %}</td>
+            <td><a href="screen_1?{{ passvariables }}">Change</a></td>
           </tr>
           <tr>
             <td>Non-dependants deductions</td>
-            <td>£{{ nondependantdeductions}}</td>
+            <td>{% if not nondependantdeductions %}Not provided{% else %}£{{ nondependantdeductions }}{% endif %}</td>
+            <td><a href="screen_1?{{ passvariables }}">Change</a></td>
           </tr>
           <tr>
             <td>Ground rent and service charge</td>
-            <td>£{{ groundrentandservicecharge }}</td>
+            <td>{% if not groundrentandservicecharge %}Not provided{% else %}£{{ groundrentandservicecharge }}{% endif %}</td>
+            <td><a href="screen_1?{{ passvariables }}">Change</a></td>
           </tr>
           <tr>
             <td>Outstanding balance</td>
             <td>£{{ outstandingbalance }}</td>
+            <td><a href="screen_1?{{ passvariables }}">Change</a></td>
           </tr>
           <tr>
             <td>Shared housing costs</td>
-            <td>{{ sharedhousingcosts1 }} / {{ sharedhousingcosts2 }}</td>
+            <td>{% if not sharedhousingcosts1 %}Not provided{% else %}{{ sharedhousingcosts1 }}{% endif %} / {% if not sharedhousingcosts2 %}Not provided{% else %}{{ sharedhousingcosts2 }}{% endif %}</td>
+            <td><a href="screen_1?{{ passvariables }}">Change</a></td>
           </tr>
           <tr>
             <td>Loan exempt amount</td>
-            <td>£{{ loanexemptamount }}</td>
+            <td>{% if not loanexemptamount %}Not provided{% else %}£{{ loanexemptamount }}{% endif %}</td>
+            <td><a href="screen_1?{{ passvariables }}">Change</a></td>
           </tr>
           <tr>
             <td>Weekly MPPI</td>
-            <td>£{{ weeklyMPPI }}</td>
+            <td>{% if not weeklyMPPI %}Not provided{% else %}£{{ weeklyMPPI }}{% endif %}</td>
+            <td><a href="screen_1?{{ passvariables }}">Change</a></td>
           </tr>
           <tr>
             <td><div class="bold">Total weekly net interest</div></td>
             <td><div class="bold">£123.45</div></td>
+            <td></td>
           </tr>
-
-
-
         </table>
 
         <p>
