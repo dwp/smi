@@ -38,18 +38,6 @@
               </div>
 
 
-<!--              <div class="form-group form-group-error">
-                <label class="form-label-bold" for="nino-error">
-                  National Insurance number
-                  <span class="error-message">
-                    Error message goes here
-                  </span>
-                </label>
-                <input class="form-control form-control-error" id="nino-error" type="text">
-              </div>
--->
-
-
           <div class="form-group{% if warning and (not benefittype or benefittype == "undefined") %} form-group-error{% endif %}">
             <fieldset>
 
@@ -86,33 +74,25 @@
             </fieldset>
           </div>
 
-          <div id="overrideupperlimit" class="form-group{% if warning and (not overrideupperlimit) %} form-group-error{% endif %}">
-            <label class="form-label-bold" for="overrideupperlimit">Override upper limit
-            {% if warning and (not overrideupperlimit) %}<span class="error-message">
-              Enter an override upper limit
-            </span>{% endif %}
+          <div id="overrideupperlimit" class="form-group">
+            <label class="form-label-bold" for="overrideupperlimit">
+              Override upper limit
             </label>
               <span class="c-form-input-denote">£</span>
               <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="overrideupperlimit" value="{{ overrideupperlimit }}">
           </div>
 
-          <div id="nondependantdeductions" class="form-group{% if warning and (not nondependantdeductions) %} form-group-error{% endif %}">
+          <div id="nondependantdeductions" class="form-group">
             <label class="form-label-bold" for="nondependantdeductions">
               Non-dependant deductions
-              {% if warning and (not nondependantdeductions) %}<span class="error-message">
-                Enter non-dependant deductions
-              </span>{% endif %}
             </label>
               <span class="c-form-input-denote">£</span>
               <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="nondependantdeductions" value="{{ nondependantdeductions }}">
           </div>
 
 
-          <div id="groundrentandservicecharge" class="form-group{% if warning and (not groundrentandservicecharge) %} form-group-error{% endif %}">
+          <div id="groundrentandservicecharge" class="form-group">
             <label class="form-label-bold" for="groundrentandservicecharge">Ground rent and service charge
-              {% if warning and (not groundrentandservicecharge) %}<span class="error-message">
-                Enter ground rent and service charge
-              </span>{% endif %}
             </label>
               <span class="c-form-input-denote">£</span>
               <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="groundrentandservicecharge" value="{{ groundrentandservicecharge }}">
@@ -129,31 +109,24 @@
               <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="outstandingbalance" value="{{ outstandingbalance }}">
           </div>
 
-          <div class="form-group{% if warning and ((not sharedhousingcosts1) or (not sharedhousingcosts2)) %} form-group-error{% endif %}">
-            <label class="form-label-bold" for="sharedhousingcosts">Shared housing costs
-              {% if warning and ((not sharedhousingcosts1) or (not sharedhousingcosts2)) %}<span class="error-message">
-                Enter shared housing cost
-              </span>{% endif %}
+          <div class="form-group">
+            <label class="form-label-bold" for="sharedhousingcosts">
+              Shared housing costs
             </label>
             <input class="form-control form-control-1-8" id="sharedhousingcosts" type="text" name="sharedhousingcosts1" value="{{ sharedhousingcosts1 }}"> / <input class="form-control form-control-1-8" id="sharedhousingcosts" type="text" name="sharedhousingcosts2"
               value="{{ sharedhousingcosts2 }}">
           </div>
 
-          <div id="loanexemptamount" class="form-group{% if warning and (not loanexemptamount) %} form-group-error{% endif %}">
+          <div id="loanexemptamount" class="form-group">
             <label class="form-label-bold" for="loanexemptamount">Loan exempt amount
-              {% if warning and (not outstandingbalance) %}<span class="error-message">
-                Enter a loan exempt amount
-              </span>{% endif %}
             </label>
               <span class="c-form-input-denote">£</span>
               <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="loanexemptamount" value="{{ loanexemptamount }}">
           </div>
 
-          <div id="weeklyMPPI" class="form-group{% if warning and (not weeklyMPPI) %} form-group-error{% endif %}">
-            <label class="form-label-bold" for="weeklyMPPI">Weekly MPPI
-              {% if warning and (not weeklyMPPI) %}<span class="error-message">
-                Enter a weekly MPPI
-              </span>{% endif %}
+          <div id="weeklyMPPI" class="form-group">
+            <label class="form-label-bold" for="weeklyMPPI">
+              Weekly MPPI
             </label>
               <span class="c-form-input-denote">£</span>
               <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="weeklyMPPI" value="{{ weeklyMPPI }}">

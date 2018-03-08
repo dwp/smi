@@ -421,7 +421,7 @@ router.get('/smi/smits-calculator/*/check_answers',function(req,res,next)
   req.data.weeklyMPPI = req.query.weeklyMPPI;
   const weeklyMPPI = req.data.weeklyMPPI;
 
-  if (nino == '' || loanreference == '' || benefittype == '' || overrideupperlimit == '' || nondependantdeductions == '' || groundrentandservicecharge == '' || outstandingbalance == '' || sharedhousingcosts1 == '' || sharedhousingcosts2 == '' || loanexemptamount == '' || weeklyMPPI == '') {
+  if (nino == '' || loanreference == '' || benefittype == '' || outstandingbalance == '') {
     res.redirect('screen_1?warning=yes&'+'nino=' + nino + '&' +
                         'loanreference=' + loanreference + '&' +
                         'benefittype=' + benefittype + '&' +
