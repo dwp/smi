@@ -351,6 +351,7 @@ const date = new Date().getFullYear();
 req.data.nino = req.query.nino;
 const nino = req.data.nino;
 
+
 req.data.loanreference = req.query.loanreference;
 const loanreference = req.data.loanreference;
 

@@ -1,0 +1,160 @@
+{% extends path+"/inc/smits-layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+
+
+        <h1 class="heading-large" style="margin-bottom: 32px;">SMI Calculator</h1>
+
+        {% include path+"/inc/warnings.html" %}
+
+
+        <form action="check_answers" method="get" class="form" id="form">
+
+              <div class="form-group{% if warning and (not nino) %} form-group-error{% endif %}">
+                <label class="form-label-bold" for="nino">National Insurance number
+                {% if warning and (not nino) %}<span class="error-message">
+                  Enter a National Insurance number
+                </span>{% endif %}
+                </label>
+                  <input class="form-control  form-control-1-4" id="nino" type="text" name="nino" value="{{ nino }}">
+              </div>
+
+
+              <div class="form-group{% if warning and (not loanreference) %} form-group-error{% endif %}">
+                <label class="form-label-bold" for="loanreference">Loan reference
+                {% if warning and (not loanreference) %}<span class="error-message">
+                  Enter a loan reference
+                </span>{% endif %}
+                </label>
+                  <input class="form-control  form-control-1-4" id="nino" type="text" name="loanreference" value="{{ loanreference }}">
+              </div>
+
+
+          <div class="form-group{% if warning and (not benefittype or benefittype == "undefined") %} form-group-error{% endif %}">
+            <fieldset>
+
+              <legend>
+                <h3 class="heading-small">Benefit type</h3>
+              </legend>
+
+              {% if warning and (not benefittype or benefittype == "undefined") %}<span class="error-message">
+                Select a benefit type
+              </span>{% endif %}
+
+
+              <div class="multiple-choice">
+                <input id="benefittype-1" type="radio" name="benefittype" value="PC" {% if benefittype == "PC" %}checked{% endif %}>
+                <label for="benefittype-1">PC</label>
+              </div>
+              <div class="multiple-choice">
+                <input id="benefittype-2" type="radio" name="benefittype" value="JSA"{% if benefittype == "JSA" %}checked{% endif %}>
+                <label for="benefittype-2">JSA</label>
+              </div>
+              <div class="multiple-choice">
+                <input id="benefittype-3" type="radio" name="benefittype" value="IS"{% if benefittype == "IS" %}checked{% endif %}>
+                <label for="benefittype-3">IS</label>
+              </div>
+              <div class="multiple-choice">
+                <input id="benefittype-4" type="radio" name="benefittype" value="ESA"{% if benefittype == "ESA" %}checked{% endif %}>
+                <label for="benefittype-4">ESA</label>
+              </div>
+
+              <div class="multiple-choice">
+                <input id="benefittype-5" type="radio" name="benefittype" value="UC" {% if benefittype == "UC" %}checked{% endif %}>
+                <label for="benefittype-5">UC</label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div id="overrideupperlimit" class="form-group">
+            <label class="form-label-bold" for="overrideupperlimit">
+              Override upper limit
+            </label>
+              <span class="c-form-input-denote">£</span>
+              <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="overrideupperlimit" value="{{ overrideupperlimit }}">
+          </div>
+
+          <div id="nondependantdeductions" class="form-group">
+            <label class="form-label-bold" for="nondependantdeductions">
+              Weekly non-dependant deductions
+            </label>
+              <span class="c-form-input-denote">£</span>
+              <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="nondependantdeductions" value="{{ nondependantdeductions }}">
+          </div>
+
+
+          <div id="groundrentandservicecharge" class="form-group">
+            <label class="form-label-bold" for="groundrentandservicecharge">Weekly ground rent and service charge
+            </label>
+              <span class="c-form-input-denote">£</span>
+              <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="groundrentandservicecharge" value="{{ groundrentandservicecharge }}">
+          </div>
+
+
+          <div id="outstandingbalance" class="form-group{% if warning and (not outstandingbalance) %} form-group-error{% endif %}">
+            <label class="form-label-bold" for="outstandingbalance">Outstanding balance
+              {% if warning and (not outstandingbalance) %}<span class="error-message">
+                Enter an outstanding balance
+              </span>{% endif %}
+            </label>
+              <span class="c-form-input-denote">£</span>
+              <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="outstandingbalance" value="{{ outstandingbalance }}">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label-bold" for="sharedhousingcosts">
+              Shared housing costs
+            </label>
+            <input class="form-control form-control-1-8" id="sharedhousingcosts" type="text" name="sharedhousingcosts1" value="{{ sharedhousingcosts1 }}"> / <input class="form-control form-control-1-8" id="sharedhousingcosts" type="text" name="sharedhousingcosts2"
+              value="{{ sharedhousingcosts2 }}">
+          </div>
+
+          <div id="loanexemptamount" class="form-group">
+            <label class="form-label-bold" for="loanexemptamount">Loan exempt amount
+            </label>
+              <span class="c-form-input-denote">£</span>
+              <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="loanexemptamount" value="{{ loanexemptamount }}">
+          </div>
+
+          <div id="weeklyMPPI" class="form-group">
+            <label class="form-label-bold" for="weeklyMPPI">
+              Weekly MPPI
+            </label>
+              <span class="c-form-input-denote">£</span>
+              <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="weeklyMPPI" value="{{ weeklyMPPI }}">
+          </div>
+
+
+
+      <p>
+        <input class="button" type="submit" value="Calculate">
+      </p>
+      <p>
+        <a href="">Cancel</a>
+      </p>
+
+
+      </form>
+
+
+
+    </div>
+    <!-- COLUMN 2 THRIDS -->
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}
