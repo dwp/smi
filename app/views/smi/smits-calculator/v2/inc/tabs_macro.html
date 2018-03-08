@@ -1,0 +1,39 @@
+
+
+{% macro case_tabs(selected,num) %}
+<div class="section-tabs js-tabs clearfix">
+  <ul>
+
+    {% if "summary" == selected %}
+      <li class="active"><a href="/{{ PATH }}/mvp/summary">Summary</a></li>
+    {% else %}
+      <li><a href="/{{ PATH }}/mvp/summary">Summary</a></li>
+    {% endif %}
+
+    {% if "personal_details" == selected %}
+      <li class="active"><a href="/{{ PATH }}/mvp/personal_details">Personal details</a></li>
+    {% else %}
+      <li><a href="/{{ PATH }}/mvp/personal_details">Personal Details</a></li>
+    {% endif %}
+
+    {% if "mortgage" == selected %}
+      <li class="active"><a href="/{{ PATH }}/mvp/mortgage">Mortgage/a></li>
+    {% else %}
+      <li><a href="/{{ PATH }}/mvp/mortgage">Mortgage</a></li>
+    {% endif %}
+
+    {% if "limit_and_deductions" == selected %}
+      <li class="active"><a href="/{{ PATH }}/mvp/limit_and_deductions">Limit and deductions</a></li>
+    {% else %}
+      <li><a href="/{{ PATH }}/mvp/limit_and_deductions">Limit and dedutions</a></li>
+    {% endif %}
+
+    {% if "notes" == selected %}
+      <li class="active"><a href="/{{ PATH }}/mvp/notes">Notes</a></li>
+    {% else %}
+      <li><a href="/{{ PATH }}/mvp/notes">Notes</a></li>
+    {% endif %}
+
+  </ul>
+</div>
+{% endmacro %}

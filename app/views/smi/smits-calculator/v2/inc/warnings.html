@@ -1,0 +1,16 @@
+{% if warning %}
+
+<div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+  <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">There's a problem</h2>
+ <ul>
+   {% if not nino %}<li>Enter a National Insurance number</li>{% endif %}
+   {% if not loanreference %}<li>Enter a loan reference</li>{% endif %}
+   {% if not benefittype %}<li>Enter a benefit type</li>{% endif %}
+   {% if (not benefittype or benefittype == "undefined") %}<li>Enter an outstanding balance</li>{% endif %}
+ </ul>
+
+</div>
+
+
+
+{% endif %}
