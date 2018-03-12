@@ -1,0 +1,37 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+            <div class="admin-panes">
+              <div class="admin-pane">
+                <h1 class="heading-large">Application submitted </h1>
+
+              <h2 class="heading-medium">What happens now</h2>
+                <p>{% include path+"/inc/applicantname.html" %} will now be asked if they want to take out a Support for Mortgage Interest (SMI) loan.</p>
+
+
+                <h2 class="heading-medium">What you need to do</h2>
+                <p>You do not have to do anything until you’re told {% include path+"/inc/applicantname.html" %}’s decision.</p>
+
+              </div>
+
+              <p class="mth mb0"><a href="search" class="button">Return to search</a><br /></p>
+
+              </div> <!-- ADMIN PANE -->
+            </div>  <!-- ADMIN PANES -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

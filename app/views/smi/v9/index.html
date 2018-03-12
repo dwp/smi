@@ -1,0 +1,26 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'search' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+      <h1 class="heading-large">Design prototype v7 short cuts</h1>
+
+      <a href="search">Claims</a>
+        {% include path+"/inc/example_ninos.html" %}</li>
+
+
+      <a href="to-do">To do</a>
+
+
+    </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
