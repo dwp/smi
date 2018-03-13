@@ -1,0 +1,181 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %} {% include path+"/inc/alertbox.html" %}
+
+
+        <h1 class="heading-large" style="margin-bottom:-16px;">SMI payment for loan reference [xxxxxxx]</h1>
+        <hr>
+
+
+        <form action="screen_3-with-info-and-notes-1" method="get" class="form" id="form">
+
+
+          <div class="form-group">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">
+                  Date loan paid to
+                </span>
+              </legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="date-loan-paid-to-dd">Day</label>
+                  <input class="form-control" id="date-loan-paid-to-dd" name="date-loan-paid-to-dd" type="number" pattern="[0-9]*" min="0" max="31" value="{{ date_loan_paid_to_dd }}">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="date-loan-paid-to-mm">Month</label>
+                  <input class="form-control" id="date-loan-paid-to-mm" name="date-loan-paid-to-mm" type="number" pattern="[0-9]*" min="0" max="12" value="{{ date_loan_paid_to_mm }}">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="date-loan-paid-to-yy">Year</label>
+                  <input class="form-control" id="date-loan-paid-to-yy" name="date-loan-paid-to-yy" type="number" pattern="[0-9]*" min="0" max="2016" value="{{ date_loan_paid_to_yy }}">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+          <div class="form-group">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">
+                  Date next payment due
+                </span>
+              </legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="date-next-payment-due-dd">Day</label>
+                  <input class="form-control" id="date-next-payment-due-dd" name="date-next-payment-due-dd" type="number" pattern="[0-9]*" min="0" max="31" value="{{ date_next_payment_due_dd }}">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="date-next-payment-due-mm">Month</label>
+                  <input class="form-control" id="date-next-payment-due-mm" name="date-next-payment-due-mm" type="number" pattern="[0-9]*" min="0" max="12" value="{{ date_next_payment_due_mm }}">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="date-next-payment-due-yy">Year</label>
+                  <input class="form-control" id="date-next-payment-due-yy" name="date-next-payment-due-yy" type="number" pattern="[0-9]*" min="0" max="2016" value="{{ date_next_payment_due_yy }}">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">
+                  Date of payment accuracy check
+                </span>
+              </legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="date-of-payment-accuracy-check-dd">Day</label>
+                  <input class="form-control" id="date-of-payment-accuracy-check-dd" name="date-of-payment-accuracy-check-dd" type="number" pattern="[0-9]*" min="0" max="31" value="{{ date_of_payment_accuracy_check_dd }}">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="date-of-payment-accuracy-check-mm">Month</label>
+                  <input class="form-control" id="date-of-payment-accuracy-check-mm" name="date-of-payment-accuracy-check-mm" type="number" pattern="[0-9]*" min="0" max="12" value="{{ date_of_payment_accuracy_check_mm }}">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="date-of-payment-accuracy-check-yy">Year</label>
+                  <input class="form-control" id="date-of-payment-accuracy-check-yy" name="date-of-payment-accuracy-check-yy" type="number" pattern="[0-9]*" min="0" max="2016" value="{{ date_of_payment_accuracy_check_yy }}">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">
+                  Date of next accuracy check due
+                </span>
+              </legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="date-of-next-accuracy-check-due-dd">Day</label>
+                  <input class="form-control" id="date-of-next-accuracy-check-due-dd" name="date-of-next-accuracy-check-due-dd" type="number" pattern="[0-9]*" min="0" max="31" value="{{ date_of_next_accuracy_check_due_dd }}">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="date-of-next-accuracy-check-due-mm">Month</label>
+                  <input class="form-control" id="date-of-next-accuracy-check-due-mm" name="date-of-next-accuracy-check-due-mm" type="number" pattern="[0-9]*" min="0" max="12" value="{{ date_of_next_accuracy_check_due_mm }}">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="date-of-next-accuracy-check-due-yy">Year</label>
+                  <input class="form-control" id="date-of-next-accuracy-check-due-yy" name="date-of-next-accuracy-check-due-yy" type="number" pattern="[0-9]*" min="0" max="2016" value="{{ date_of_next_accuracy_check_due_yy }}">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label-bold" for="numberofCPSpaymentsscheduled">Number of CPS payments scheduled</label>
+            <input class="form-control form-control-1-8" id="numberofCPSpaymentsscheduled" type="text" name="numberofCPSpaymentsscheduled" value="{{ numberofCPSpaymentsscheduled }}">
+          </div>
+
+          <div class="form-group">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">
+                  Date created on CPS
+                </span>
+              </legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="date-created-on-CPS-dd">Day</label>
+                  <input class="form-control" id="date-created-on-CPS-dd" name="date-created-on-CPS-dd" type="number" pattern="[0-9]*" min="0" max="31" value="{{ date_created_on_CPS_dd }}">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="date-created-on-CPS-mm">Month</label>
+                  <input class="form-control" id="date-created-on-CPS-mm" name="date-created-on-CPS-mm" type="number" pattern="[0-9]*" min="0" max="12" value="{{ date_created_on_CPS_mm }}">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="date-created-on-CPS-yy">Year</label>
+                  <input class="form-control" id="date-created-on-CPS-yy" name="date-created-on-CPS-yy" type="number" pattern="[0-9]*" min="0" max="2016" value="{{ date_created_on_CPS_yy }}">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+
+          <div class="form-group">
+            <label class="form-label-bold" for="paymentfrequency">Payment frequency</label>
+            <input class="form-control form-control-1-8" id="paymentfrequency" type="text" name="paymentfrequency" value="{{ paymentfrequency }}">
+          </div>
+
+
+          <input id="alert" type="hidden" name="alert" value="screen6saved">
+
+
+          <p class="mth mb0">
+            <input class="button" type="submit" value="Save and continue">
+          </p>
+          <p class="mth mb0">
+            <a href="">Cancel</a>
+          </p>
+
+
+        </form>
+
+
+
+      </div>
+      <!-- COLUMN 2 THRIDS -->
+
+    </div>
+    <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

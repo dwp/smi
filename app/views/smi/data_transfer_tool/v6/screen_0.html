@@ -1,0 +1,54 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/warnings.html" %}
+
+        <h1 class="heading-large">Find someone</h1>
+
+
+        <div class="search-box-container">
+
+
+        <form action="check_for_nino" method="get" class="form" id="search-form">
+
+          {% include path+"/inc/hidden-form-fields.html" %}
+
+          <div class="form-group{% if warning %} form-group-error{% endif %}">
+            <label class="form-hint" for="nino">
+              Enter a National Insurance number
+              {% if warning %}National Insurance number
+              <span class="error-message">
+                Enter a National Insurance number like QQ123456C
+              </span>
+              {% endif %}</label>
+            <input class="form-control form-control-1-4" id="nino" autocomplete="off" type="text" name="nino" value="{{ startnino }}">
+            <input class="button" type="submit" value="Find">
+        </div>
+        </form>
+
+
+
+      </div>
+
+
+
+
+    </div>
+    <!-- COLUMN 2 THRIDS -->
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

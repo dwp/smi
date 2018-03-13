@@ -337,7 +337,7 @@ router.get('/smi/v*/account-details-*',function(req,res,next)
 
 
 
-router.get('/smi/smits-calculator/*',function(req,res,next)
+router.get('/smi/smits/*',function(req,res,next)
 {
   var v = req.params[0];
   req.data = req.data || { };
@@ -386,7 +386,7 @@ const weeklyMPPI = req.data.weeklyMPPI;
 });
 
 
-router.get('/smi/smits-calculator/*/check_answers',function(req,res,next)
+router.get('/smi/smits/*/check_answers',function(req,res,next)
 {
 
   req.data.nino = req.query.nino;

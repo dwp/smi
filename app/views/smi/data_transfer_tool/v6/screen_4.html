@@ -1,0 +1,273 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %} {% include path+"/inc/alertbox.html" %}
+
+
+        <h1 class="heading-large" style="margin-bottom:-16px;">Add a new mortgage or home loan</h1>
+        <hr>
+
+
+        <form action="screen_5" method="get" class="form" id="form">
+
+          <div class="form-group">
+            <label class="form-label-bold" for="loanreference">Loan reference</label>
+            <input class="form-control form-control-1-4" id="loanreference" type="text" name="loanreference" value="{{ loanreference }}">
+          </div>
+
+
+          <div class="form-group">
+            <fieldset>
+
+              <legend>
+                <span class="form-label-bold">
+                  Loan type
+                </span>
+                <span class="form-hint">
+                  If transferring from legacy this is ‘Outstanding balance without MIRAS’
+                </span>
+
+              </legend>
+
+              <div class="multiple-choice">
+                <input id="loan-type-1" type="radio" name="loan-type" value="Mortgage">
+                <label for="loan-type-1">Mortgage</label>
+              </div>
+              <div class="multiple-choice">
+                <input id="loan-type-2" type="radio" name="loan-type" value="Home loan">
+                <label for="loan-type-2">Home loan</label>
+              </div>
+
+            </fieldset>
+          </div>
+
+
+          <div id="outstandingbalance" class="form-group">
+            <label class="form-label-bold" for="outstandingbalance">Outstanding balance</label>
+            <span class="c-form-input-denote">£</span>
+            <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="outstandingbalance">
+          </div>
+
+
+          <div class="form-group">
+            <label class="form-label-bold" for="sharedhousingcosts">Shared housing costs</label>
+            <input class="form-control form-control-1-8" id="sharedhousingcosts" type="text" name="sharedhousingcosts1" value="{{ sharedhousingcosts1 }}"> / <input class="form-control form-control-1-8" id="sharedhousingcosts" type="text" name="sharedhousingcosts2"
+              value="{{ sharedhousingcosts2 }}">
+          </div>
+
+
+          <div id="exemptloanamount" class="form-group">
+            <label class="form-label-bold" for="exemptloanamount">Exempt loan amount</label>
+            <span class="c-form-input-denote">£</span>
+            <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="exemptloanamount">
+          </div>
+
+
+          <div id="overrideweeklyinterest" class="form-group">
+            <label class="form-label-bold" for="overrideweeklyinterest">
+              <span class="form-label-bold">Weekly interest to be paid</span>
+              <span class="form-hint">Enter an amount here if you need to override the calculated figure</span>
+            </lable>
+            <span class="c-form-input-denote">£</span>
+            <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="overrideweeklyinterest">
+          </div>
+
+
+
+          <div class="form-group">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">
+                  Review MI12 date
+                </span>
+              </legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="review-MI12-dd">Day</label>
+                  <input class="form-control" id="review-MI12-dd" name="review-MI12-dd" type="number" pattern="[0-9]*" min="0" max="31" value="{{ review_MI12_dd }}">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="review-MI12-mm">Month</label>
+                  <input class="form-control" id="review-MI12-mm" name="review-MI12-mm" type="number" pattern="[0-9]*" min="0" max="12" value="{{ review_MI12_mm }}">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="review-MI12-yy">Year</label>
+                  <input class="form-control" id="review-MI12-yy" name="review-MI12-yy" type="number" pattern="[0-9]*" min="0" max="2016" value="{{ review_MI12_yy }}">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+          <div class="form-group">
+            <fieldset>
+
+              <legend>
+                <h3 class="heading-small">Loan status</h3>
+              </legend>
+
+              <div class="multiple-choice">
+                <input id="loan-status-1" type="radio" name="loan-status" value="Live">
+                <label for="loan-status-1">Live</label>
+              </div>
+              <div class="multiple-choice">
+                <input id="loan-status-2" type="radio" name="loan-status" value="Dormant">
+                <label for="loan-status-2">Dormant</label>
+              </div>
+
+            </fieldset>
+          </div>
+
+
+
+
+
+
+          <div id="weeklyMPPI" class="form-group">
+            <label class="form-label-bold" for="weeklyMPPI">Weekly MPPI</label>
+            <span class="c-form-input-denote">£</span>
+            <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="weeklyMPPI">
+          </div>
+
+
+          <div class="form-group">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">
+                  Mortgage/home start date
+                </span>
+              </legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="mortgage-start-dd">Day</label>
+                  <input class="form-control" id="mortgage-start-dd" name="mortgage-start-dd" type="number" pattern="[0-9]*" min="0" max="31" value="{{ mortgage_start_dd }}">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="mortgage-start-mm">Month</label>
+                  <input class="form-control" id="mortgage-start-mm" name="mortgage-start-mm" type="number" pattern="[0-9]*" min="0" max="12" value="{{ mortgage_start_mm }}">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="mortgage-start-yy">Year</label>
+                  <input class="form-control" id="mortgage-start-yy" name="mortgage-start-yy" type="number" pattern="[0-9]*" min="0" max="2016" value="{{ mortgage_start_yy }}">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+
+          <div class="form-group">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">
+                  Start of SMI loan payment
+                </span>
+                <span class="form-hint">
+                  This is not the start of the mortgage payment date
+                </span>
+              </legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="start-of-SMI-loan-payment-dd">Day</label>
+                  <input class="form-control" id="start-of-SMI-loan-payment-dd" name="start-of-SMI-loan-payment-dd" type="number" pattern="[0-9]*" min="0" max="31" value="{{ start_of_SMI_loan_payment_dd }}">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="start-of-SMI-loan-payment-mm">Month</label>
+                  <input class="form-control" id="start-of-SMI-loan-payment-mm" name="start-of-SMI-loan-payment-mm" type="number" pattern="[0-9]*" min="0" max="12" value="{{ start_of_SMI_loan_payment_mm }}">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="start-of-SMI-loan-payment-yy">Year</label>
+                  <input class="form-control" id="start-of-SMI-loan-payment-yy" name="start-of-SMI-loan-payment-yy" type="number" pattern="[0-9]*" min="0" max="2016" value="{{ start_of_SMI_loan_payment_yy }}">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+          <div class="form-group">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">
+                  End of SMI loan payment
+                </span>
+              </legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="end-of-SMI-loan-payment-dd">Day</label>
+                  <input class="form-control" id="end-of-SMI-loan-payment-dd" name="end-of-SMI-loan-payment-dd" type="number" pattern="[0-9]*" min="0" max="31" value="{{ end_of_SMI_loan_payment_dd }}">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="end-of-SMI-loan-payment-mm">Month</label>
+                  <input class="form-control" id="end-of-SMI-loan-payment-mm" name="end-of-SMI-loan-payment-mm" type="number" pattern="[0-9]*" min="0" max="12" value="{{ end_of_SMI_loan_payment_mm }}">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="end-of-SMI-loan-payment-yy">Year</label>
+                  <input class="form-control" id="end-of-SMI-loan-payment-yy" name="end-of-SMI-loan-payment-yy" type="number" pattern="[0-9]*" min="0" max="2016" value="{{ end_of_SMI_loan_payment_yy }}">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+
+
+          <div id="applicableloanbalance" class="form-group">
+            <label class="form-label-bold" for="applicableloanbalance">Applicable loan balance</label>
+            <span class="c-form-input-denote">£</span>
+            <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="applicableloanbalance">
+          </div>
+
+
+          <div id="weeklySMIbenefit" class="form-group">
+            <label class="form-label-bold" for="weeklySMIbenefit">
+              <span class="form-label-bold">Weekly SMI benefit</span>
+              <span class="form-hint">This is the legacy figure</span>
+            </label>
+            <span class="c-form-input-denote">£</span>
+            <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="weeklySMIbenefit">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label-bold" for="adjustments">
+              <span class="form-label-bold">Adjustments</span>
+              <span class="form-hint">Note here any over, under or part-week payments</span>
+            </label>
+            <textarea class="form-control form-control-1-2" name="adjustments" id="adjustments" rows="5"></textarea>
+        </div>
+
+
+          <input type="hidden" name="alert" value="screen4saved">
+
+
+
+          <p class="mth mb0">
+            <input class="button" type="submit" value="Save and continue">
+          </p>
+          <p class="mth mb0">
+            <a href="">Cancel</a>
+          </p>
+
+
+        </form>
+
+
+
+      </div>
+      <!-- COLUMN 2 THRIDS -->
+
+    </div>
+    <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

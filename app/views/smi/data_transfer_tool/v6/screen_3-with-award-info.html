@@ -1,0 +1,119 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+        {% include path+"/inc/alertbox.html" %}
+
+
+        <h1 class="heading-large" style="margin-bottom:-16px;">View summary for [name]{{ firstname }}</h1>
+
+        <hr>
+
+        <h2 class="heading-medium">Notes</h2>
+
+        No notes for this case.
+
+              <table class="lender-details-1">
+                <tbody>
+
+                  <tbody>
+                    <tr style="border:0;">
+                      <td style="border:0;">
+                        <a href="screen_notes_add?referpage=overview">Add notes</a>
+                     </td>
+                    </tr>
+
+            </table>
+
+
+<p>&nbsp;</p>
+
+<h2 class="heading-medium">Deductions, charges, and limit</h2>
+
+
+        <table class="lender-details-1">
+          <tbody>
+
+
+              <tr>
+                <td>
+                 Non-dependant deductions
+                </td>
+                <td>
+                  &pound;2500
+      </td>
+      <td>
+        <a href="screen_2">Change</a>
+
+      </td>
+
+      </tr>
+
+
+<tr>
+  <td>
+    Ground rent and service charge
+  </td>
+  <td>
+    None provided
+</td>
+<td>
+  <a href="screen_2">Change</a>
+
+</td>
+
+</tr>
+
+<tr>
+  <td>
+    Upper limit
+  </td>
+  <td>
+    &pound;100000
+</td>
+<td>
+<a href="screen_2">Change</a>
+
+</td>
+
+</tr>
+
+      </tbody>
+      </table>
+
+      <p>&nbsp;</p>
+
+
+
+            <h2 class="heading-medium">Home loans and SMI payments</h2>
+
+          <p>No loan or mortgage information provided.</p>
+
+
+            <p class="mth mb0">
+              <a href="screen_4">Add a loan</a>
+            </p>
+    </div>
+    <!-- COLUMN 2 THIRDS -->
+
+    <div class="column-one-third">
+      {% include path+"/inc/applicantdetails.html" %}
+    </div>
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

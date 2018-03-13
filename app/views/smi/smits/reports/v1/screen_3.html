@@ -1,0 +1,102 @@
+{% extends path+"/inc/smits-layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-full">
+
+        <h1 class="heading-large">Reports</h1>
+
+        <h2 class="heading-medium">For offices 1234 and 5678</h2>
+
+        <div class="nav-tabbed">
+
+                <ul>
+                  <li{% if benefittype == "ESA" %} class="current"{% endif %}>Employment and Support Allowance</li>
+                  <li{% if benefittype == "JSA" %} class="current"{% endif %}><a href="screen_3?benefittype=JSA">Jobseeker's Allowance</a></li>
+                  <li{% if benefittype == "IS" %} class="current"{% endif %}><a href="screen_3?benefittype=IS">Income Support</a></li>
+                  <li{% if benefittype == "PC" %} class="current"{% endif %}><a href="screen_3?benefittype=PC">Pension Credit</a></li>
+
+                </ul>
+
+                <div class="clear"></div>
+
+              </div>
+
+        <table id="searchable-table" class="available m-b-l truncate display">
+          <thead>
+            <tr>
+              <th class="col-1">&nbsp;</th>
+
+              <th class="col-2">Name</th>
+              <th class="col-3">NINO</th>
+              <th class="col-4">Due date</th>
+              <th class="col-5">Office codes</th>
+              <th class="col-6">&nbsp;</th>
+
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>
+
+              </td>
+
+              <td class="name">
+                <a href="#">Jade Smith</a>
+              </td>
+              <td>
+                <small class="small-grey">AA 12 34 56 D &nbsp;</small>
+              </td>
+              <td>
+                1/4/2018
+              </td>
+              <td>
+                1234, 1235, 1236
+              </td>
+              <td>
+                <a href="">Change</a>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td>
+              </td>
+
+              <td class="name">
+                <a href="to-do-summary">Janet Elizabeth Price</a>
+              </td>
+              <td>
+                <small class="small-grey">QF082262D</small>
+              </td>
+              <td>
+                3/4/2018
+              </td>
+              <td>
+                1234, 1235
+              </td>
+              <td>
+                <a href="">Change</a>
+              </td>
+            </tr>
+          </tbody>
+          </table>
+
+
+      </div>
+    <!-- COLUMN 2 THRIDS -->
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

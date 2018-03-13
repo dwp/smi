@@ -1,0 +1,155 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %} {% include path+"/inc/alertbox.html" %}
+
+
+
+        <h1 class="heading-large" style="margin-bottom:-16px;">Add payee details</h1>
+        <hr>
+
+        <form action="screen_6" method="get" class="form" id="form">
+
+          <div class="form-group">
+            <label class="form-label-bold" for="QLRcode">
+                  <span class="form-label-bold">Qualified lender code (QLR)</span>
+                  <span class="form-hint">Do not add QLR code if paying direct to claimant</span>
+                </label>
+            <input class="form-control form-control-1-4" id="QLRcode" type="text" name="QLRcode" value="{{ QLRcode }}">
+          </div>
+
+          <h2 class="heading-medium">Payment details</h1>
+
+                <div class="form-group">
+                  <label class="form-label-bold" for="accountnumber">Account number</label>
+                  <input class="form-control form-control-1-4" id="accountnumber" type="text" name="accountnumber" value="{{ accountnumber }}">
+                </div>
+
+
+                <div class="form-group">
+                    <fieldset>
+                      <legend>
+                        <span class="form-label-bold">
+                          Sort code
+                        </span>
+                      </legend>
+                      <div class="form-date">
+                        <div class="form-group">
+                          <label class="form-label" for="payee-sort1">Label</label>
+                          <input class="form-control" id="payee-sort1" name="payee-sort1" type="number" pattern="[0-9]*" min="0" max="99" value="{{ payee_sort1 }}">
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label" for="payee-sort2">Label</label>
+                          <input class="form-control" id="payee-sort2" name="payee-sort2" type="number" pattern="[0-9]*" min="0" max="99" value="{{ payee_sort2 }}">
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label" for="payee-sort3">Label</label>
+                          <input class="form-control" id="payee-sort3" name="payee-sort3" type="number" pattern="[0-9]*" min="0" max="99" value="{{ payee_sort3 }}">
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+
+
+
+        <div class="form-group">
+          <fieldset>
+            <legend>
+              <h3 class="heading-small">
+                Lender address (and correspondence)
+              </h3>
+            </legend>
+            <div class="form-group">
+              <label class="form-label hidden" for="lenderaddress1">
+                Address line 1
+              </label>
+              <input class="form-control" id="lenderaddress1" type="text" name="lenderaddress1" value="{{ lenderaddress1 }}">
+            </div>
+            <div class="form-group">
+              <label class="form-label hidden" for="lenderaddress2">
+                Address line 2
+              </label>
+              <input class="form-control" id="lenderaddress2" type="text" name="lenderaddress2" value="{{ lenderaddress2 }}">
+            </div>
+            <div class="form-group">
+              <label class="form-label hidden" for="lenderaddress3">
+                Address line 3
+              </label>
+              <input class="form-control" id="lenderaddress3" type="text" name="lenderaddress3" value="{{ lenderaddress3 }}">
+            </div>
+            <div class="form-group">
+              <label class="form-label hidden" for="lenderaddress4">
+                Address line 4
+              </label>
+              <input class="form-control" id="lenderaddress4" type="text" name="lenderaddress4" value="{{ lenderaddress4 }}">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lenderaddresspostcode">
+                Postcode
+              </label>
+              <input class="form-control form-control-1-8" id="lenderaddresspostcode" type="text" name="lenderaddresspostcode" value="{{ lenderaddresspostcode }}">
+            </div>
+        </fieldset>
+        </div>
+
+
+
+        <div class="form-group">
+          <label class="form-label-bold" for="buildingsocietyrollnumber">Building society roll number</label>
+          <input class="form-control form-control-1-4" id="buildingsocietyrollnumber" type="text" name="buildingsocietyrollnumber" value="{{ buildingsocietyrollnumber }}">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="payeename">Payee name</label>
+          <input class="form-control form-control-1-4" id="payeename" type="text" name="payeename" value="{{ payeename }}">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="otherpayeename">Other payee name</label>
+          <input class="form-control form-control-1-4" id="otherpayeename" type="text" name="otherpayeename" value="{{ otherpayeename }}">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="payeetitle">Payee title</label>
+          <input class="form-control form-control-1-4" id="payeetitle" type="text" name="payeetitle" value="{{ payeetitle }}">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="corporatepayeeorganisationname">Corporate payee organisation name</label>
+          <input class="form-control form-control-1-4" id="corporatepayeeorganisationname" type="text" name="corporatepayeeorganisationname" value="{{ corporatepayeeorganisationname }}">
+        </div>
+
+      <input type="hidden" name="alert" value="screen5saved">
+
+
+      <p class="mth mb0">
+        <input class="button" type="submit" value="Save and continue">
+      </p>
+      <p class="mth mb0">
+        <a href="">Cancel</a>
+      </p>
+
+
+      </form>
+
+
+
+    </div>
+    <!-- COLUMN 2 THRIDS -->
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}
