@@ -358,6 +358,9 @@ const loanreference = req.data.loanreference;
 req.data.benefittype = req.query.benefittype;
 const benefittype = req.data.benefittype;
 
+req.data.report = req.query.report;
+const report = req.data.report;
+
 req.data.overrideupperlimit = req.query.overrideupperlimit;
 const overrideupperlimit = req.data.overrideupperlimit;
 

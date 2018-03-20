@@ -6,28 +6,147 @@
   <div class="main-content">
     <div class="grid-row">
 
-      <div class="column-two-thirds">
+      <div class="column-full">
 
         <h1 class="heading-large">Reports</h1>
 
-        <h2 class="heading-medium">Choose a report</h2>
+        <h2 class="heading-medium">
+          {% if report == "sendMI12R" %}
+          Send MI12R
+          {% endif %}
+          {% if report == "makeSMIpayment" %}
+          Make SMI payment
+          {% endif %}
+          {% if report == "checkeligibility" %}
+          Check current eligibility for SMI
+          {% endif %}
+        </h2>
 
-            <p>Get a list of people who have these actions due:</p>
+        <div class="nav-tabbed">
 
-            <ul class="list-bullet">
-              <li><a href="screen_3?benefittype=ESA">Send MI12R</a></li>
-              <li><a href="#">Make SMI payment</a></li>
-              <li><a href="#">Check current eligibility for SMI</a></li>
-            </ul>
+                <ul>
+                  <li{% if benefittype == "ESA" %} class="current"{% endif %}>{% if benefittype != "ESA" %}<a href="screen_2?benefittype=ESA&report={{ report }}">{% endif %}Employment and Support Allowance{% if benefittype != "ESA" %}</a>{% endif %}</li>
+                  <li{% if benefittype == "JSA" %} class="current"{% endif %}>{% if benefittype != "JSA" %}<a href="screen_2?benefittype=JSA&report={{ report }}">{% endif %}Jobseeker's Allowance{% if benefittype != "JSA" %}</a>{% endif %}</li>
+                  <li{% if benefittype == "IS" %} class="current"{% endif %}>{% if benefittype != "IS" %}<a href="screen_2?benefittype=IS&report={{ report }}">{% endif %}Income Support{% if benefittype != "IS" %}</a>{% endif %}</li>
+                </ul>
 
-            <p>
-              &nbsp;
-            </p>
+                <div class="clear"></div>
 
+              </div>
 
-            <p>
-              <a href="">Cancel</a>
-            </p>
+{% if benefittype == "ESA" %}
+
+        <table>
+          <thead>
+            <tr>
+              <th class="col-1">Name</th>
+              <th class="col-2">NINO</th>
+              <th class="col-3">Due date</th>
+              <th class="col-4">Office code</th>
+              <th class="col-5">&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="#">Jade Smith</a>
+              </td>
+              <td>
+                AA123456D
+              </td>
+              <td>
+                1/4/2018
+              </td>
+              <td>
+                1234
+              </td>
+              <td>
+                <a href="#">Change</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#">Janet Elizabeth Price</a>
+              </td>
+              <td>
+                QF082262D
+              </td>
+              <td>
+                3/4/2018
+              </td>
+              <td>
+                6789
+              </td>
+              <td>
+                <a href="#">Change</a>
+              </td>
+            </tr>
+
+          </tbody>
+          </table>
+
+{% endif %}
+
+{% if benefittype == "JSA" %}
+
+<p>No records something something something.</p>
+
+{% endif %}
+
+{% if benefittype == "IS" %}
+
+        <table>
+          <thead>
+            <tr>
+              <th class="col-1">Name</th>
+              <th class="col-2">NINO</th>
+              <th class="col-3">Due date</th>
+              <th class="col-4">Office code</th>
+              <th class="col-5">&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="#">Harry Jones</a>
+              </td>
+              <td>
+                ZZ123456D
+              </td>
+              <td>
+                12/4/2018
+              </td>
+              <td>
+                2345
+              </td>
+              <td>
+                <a href="#">Change</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#">Frank Williams</a>
+              </td>
+              <td>
+                XX876543A
+              </td>
+              <td>
+                12/4/2018
+              </td>
+              <td>
+                6789
+              </td>
+              <td>
+                <a href="#">Change</a>
+              </td>
+            </tr>
+
+          </tbody>
+          </table>
+
+{% endif %}
 
 
       </div>
