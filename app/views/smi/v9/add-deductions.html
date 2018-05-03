@@ -1,0 +1,206 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'search' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+
+        <h1 class="heading-large">Add details of mortgage or loan 1</h1>
+
+
+
+
+            <div class="admin-panes">
+              <div class="admin-pane">
+
+
+
+                {% set navactive = "money" %}
+                {% if not newapplication %}
+
+                {% endif %}
+
+                <form action="review-application" method="get" class="form">
+
+
+                  <table class="lender-details-1">
+                    <tbody>
+
+                      <tr>
+                        <td>
+                            <span class="bold-small">Lender code</span><br />
+                            From the Qualified Lenders’ Register (QLR)
+                        </td>
+                        <td>
+                          <div class="u-1/2-lap-and-up">
+                            <input class="c-form-input-denote__input form-control form-control-1-2" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                          </div>
+                        </td>
+                        <td>
+                        </td>
+                      </tr>
+
+
+                      <tr>
+                        <td>
+                            <span class="bold-small">Loan account number</span>
+                        </td>
+                        <td>
+                          <div class="u-1/2-lap-and-up">
+                            <input class="c-form-input-denote__input form-control form-control-1-2" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                          </div>
+                        </td>
+                        <td>
+                        </td>
+                      </tr>
+
+
+                        <tr>
+                          <td>
+                              <span class="bold-small">Outstanding balance on mortgage or loan</span>
+                          </td>
+                          <td>
+                            <div class="u-1/4-lap-and-up">
+                              <span class="c-form-input-denote">£</span>
+                              <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                            </div>
+                          </td>
+                          <td>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                              <span class="bold-small">Weekly mortgage protection policy amount</span>
+                          </td>
+                          <td>
+                            <div class="u-1/4-lap-and-up">
+                              <span class="c-form-input-denote">£</span>
+                              <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                            </div>
+                          </td>
+                          <td>
+                          </td>
+                        </tr>
+
+
+                        <tr>
+                          <td>Is the cost of the housing shared?</td>
+                          <td>
+                            <div class="form-group">
+                              <fieldset>
+
+                                <legend>
+
+                                </legend>
+
+                                <div class="multiple-choice" data-target="alternativeformatnotes">
+                                  <input id="alternativeformat-1" type="radio" name="alternativeformat" value="Yes">
+                                  <label for="alternativeformat-1">Yes</label>
+                                </div>
+                                <div class="panel panel-border-narrow js-hidden" id="alternativeformatnotes">
+                                  <label class="form-label" for="alternativeformatnotes">What is the split?</label>
+                              <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9" style="width:10%"> / <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9" style="width:10%">                                </div>
+
+                                <div class="multiple-choice">
+                                  <input id="alternativeformat" type="radio" name="alternativeformat" value="No">
+                                  <label for="alternativeformat">No</label>
+                                </div>
+
+                              </fieldset>
+                            </div>
+
+
+                          </td>
+                          <td></td>
+                        </tr>
+
+
+
+
+
+                            <tr>
+                                <td>
+                                    <span class="bold-small">Ground rent per week</span>
+                                </td>
+                                <td>
+                                  <div class="u-1/4-lap-and-up">
+                                    <span class="c-form-input-denote">£</span>
+                                    <input class="c-form-input-denote__input form-control form-control-2-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                                  </div>
+                                </td>
+                             </tr>
+
+                             <tr>
+                                 <td>
+                                     <span class="bold-small">Service charge per week</span>
+                                 </td>
+                                 <td>
+                                   <div class="u-1/4-lap-and-up">
+                                     <span class="c-form-input-denote">£</span>
+                                     <input class="c-form-input-denote__input form-control form-control-2-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                                   </div>
+                                 </td>
+                              </tr>
+
+
+                             <tr>
+                                 <td>
+                                     <span class="bold-small">Non-dependant deductions per week</span>
+                                 </td>
+                                 <td>
+                                   <div class="u-1/4-lap-and-up">
+                                     <span class="c-form-input-denote">£</span>
+                                     <input class="c-form-input-denote__input form-control form-control-2-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                                   </div>
+                                 </td>
+                             </tr>
+
+
+                    </tbody>
+                  </table>
+
+
+             <input type="hidden" name="nino" value="{{ nino }}">
+             <input type="hidden" name="newapplication" value="{{ newapplication }}">
+
+
+
+             <p class="mth mb0">
+
+               <input class="button" type="submit" value="Add another loan">
+
+               <input class="button" type="submit" value="Finished">
+
+
+               <br /><br /><a href="summary">Cancel and view summary</a></p>
+
+
+           </form>
+
+
+
+              </div> <!-- ADMIN PANE -->
+            </div>  <!-- ADMIN PANES -->
+
+
+
+      </div> <!-- COLUMN 2 THRIDS -->
+
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

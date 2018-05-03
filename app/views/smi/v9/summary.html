@@ -12,200 +12,30 @@
 
      <div class="column-two-thirds"> <!-- COLUMN 2 THRIDS -->
 
-			 <h1 class="heading-large">Mortgage or loans eligible for Support for Mortgage Interest</h1>
+			 {% include path+"/inc/name-and-nino.html" %}
 
-			 {% set navactive = "summary" %}
-			 {% if not newapplication %}
-			 {% include path+"/inc/admin_submenu.html" %}
-			 {% endif %}
 
 
 			<div class="admin-panes">
 		        <div class="admin-pane">
 
-							{% if smitsstatus %}
-
-							<p>&nbsp;</p>
-
-							<div class="panel panel-border-wide" style="border-color: #F47738; border-left-style: solid; background-color: #FABB9C;">
-
-								{% if smitsstatus == "sent" %}
-
-			 				 <h2 class="heading-small">This application has been sent to SMITS</h2>
-			 				 <ul>
-			 					 <li>No action needed at this time. You will be informed when any action is needed.</li>
-			 				 </ul>
-
-							 {% endif %}
-
-			 			 </div>
-
-						 {% endif %}
-
-						 {% if payments == "suspended"%}
-
-
-						 <p>&nbsp;</p>
 
 						 <div class="panel panel-border-wide" style="border-color: #F47738; border-left-style: solid; background-color: #FABB9C;">
 
-							 <h2 class="heading-small">Payment suspended</h2>
+							 <h2 class="heading-small">Loan agreement received</h2>
 							 <ul>
-								 <li>Payment to this claimant was suspended on 20 October 2017.</li>
+								 <li><a href="payments-list?nino=QF 08 22 62 D">Payments need setting up</a></li>
 							 </ul>
 
 						</div>
 
 
-						 {% endif %}
+													<h2 class="heading-medium">Payments</h2>
 
+													<p>No payments set up</p>
 
-		            <table class="borrower-details">
-		                <tbody>
+													<p><a href="payments-list">Set up</a></p>
 
-											<tr>
-												<td valign=bottom>
-													<h2 class="heading-medium">Eligibility</h2>
-												</td>
-												<td valign=bottom align=right>
-													<a style="align:right;" href="limit_and_deductions?nino={{ nino }}">Edit<span class="visuallyhidden">overview details</span></a>
-												</td>
-												</tr>
-
-		                    <tr>
-		                        <td>
-		                            Upper limit
-		                        </td>
-		                        <td>
-		                            {% include path+"/inc/applicantupperlimit.html" %}
-		                        </td>
-
-		                    </tr>
-
-		                    <tr>
-		                        <td>
-		                            Date claim eligible from
-		                        </td>
-		                        <td>
-		                            7 March 2018
-		                        </td>
-		                    </tr>
-
-		                </tbody>
-		            </table>
-
-								<table class="borrower-details">
-		                <tbody>
-								<tr>
-									<td valign=bottom>
-										<h2 class="heading-medium">Property charges and income</h2>
-									</td>
-									<td valign=bottom align=right>
-										<a style="align:right;" href="limit_and_deductions?nino={{ nino }}">Edit<span class="visuallyhidden">overview details</span></a>
-									</td>
-									</tr>
-
-									<tr>
-											<td>
-													Ground rent per week
-											</td>
-											<td>
-													Nothing entered
-											</td>
-									</tr>
-
-									<tr>
-											<td>
-													Service charge per week
-											</td>
-											<td>
-													Nothing entered
-											</td>
-									</tr>
-									<tr>
-											<td>
-													Non-dependant deductions per week
-											</td>
-											<td>
-													Nothing entered
-											</td>
-									</tr>
-
-							</tbody>
-					</table>
-
-								<br /><br />
-
-
-		            <h2 class="heading-medium mb0">Mortgage and loans entered for {% include path+"/inc/applicantname.html" %}</h2>
-
-								{% if mortgagesloans == "yes" %}
-
-	                <table class="loan-details">
-	                	<tbody>
-			                <tr>
-			                  <td>
-			                   <h2 class="heading-small">Mortgage or home loan reference</h2>
-			                  </td>
-			                  <td>
-			                  <h2 class="heading-small">Type of loan</h2>
-			                  </td>
-			                  <td></td>
-			                </tr>
-
-			                <tr>
-			                  <td>
-			                    712077371
-			                  </td>
-												<td>
-													Mortgage
-												</td>
-	<!--		                  <td>
-													{% if payments == "yes" %}£50.00{% elif payments == "suspended" %}Payment suspended{% else %}No payment set up{% endif %}
-			                  </td>-->
-<!--												<td>
-													{% if payments == "yes" %}Date{% elif payments == "suspended" %}-{% else %}-{% endif %}
-												</td>-->
-			                  <td>
-			                    <p class="heading-small mth"><a href="payment-detail?nino={{ nino }}&showdata=yes&lendercode=1111">View<span class="visuallyhidden"> mortgage or home loan details</span></a></p>
-			                  </td>
-			                </tr>
-
-											<tr>
-												<td>
-													26173770217
-												</td>
-												<td>
-													Home improvement loan
-												</td>
-<!--												<td>
-													{% if payments == "yes" %}£50.00{% elif payments == "suspended" %}Payment suspended{% else %}No payment set up{% endif %}
-												</td>-->
-<!--												<td>
-													{% if payments == "yes" %}Date{% elif payments == "suspended" %}-{% else %}-{% endif %}
-												</td>-->
-												<td>
-													<p class="heading-small mth"><a href="payment-detail?nino={{ nino }}&showdata=yes&lendercode=1111">View<span class="visuallyhidden"> mortgage or home loan details</span></a></p>
-												</td>
-											</tr>
-
-	                	</tbody>
-	            	</table>
-
-								<br />
-
-								<p><a href="money-lookup?nino={{ nino }}">Add another mortgage or loan</a></p>
-								<!--<p><a href="payments-list?nino={{ nino }}">View payment history</a></p>-->
-
-								{% else %}
-
-								<p></p>
-								<p>No mortgages or loans information provided.</p>
-								<p><a href="money">Add a mortgage or loan</a><br /><br /></p>
-
-								{% endif %}
-
-								<p class="mth mb0"><a href="calculate_award?nino={{ nino }}" class="button">Confirm loan details</a><br /><br /></p>
 
 
 
@@ -218,36 +48,7 @@
 
 
 			<!-- COLUMN 1 THIRD -->
-			<div class="column-one-third">
-			 <!--<div class="panel panel-border-wide alert-default">
-					 <p class="heading-small">Next thing to do:</p> Send out MI12 reminder
-					 <p><a href="#">View to do list</a></p>
-			 </div>-->
-			 <div class="left-aside">
-				 <h1 class="heading-medium">
-				 Applicant details
-			 </h1>
-				 <div class="panel panel-border-wide">
-				 <h2 class="heading-small">
-					 {% include path+"/inc/applicantname.html" %}<br />
-					 <span class="heading-secondary">{{ nino }}</span>
-				 </h1>
-				 </div>
-
-				 <h3 class="heading-small">Date of birth</h3> <p>{% include path+"/inc/applicantDOB.html" %}</p>
-				 <hr  style="width:50%;margin:0"/>
-				 <h3 class="heading-small">Address</h3> <p>{% include path+"/inc/applicantaddress.html" %}</p>
-				 <hr  style="width:50%;margin:0"/>
-				 <h3 class="heading-small">Phone number</h3> <p>{% include path+"/inc/applicantphonenumber.html" %}</p>
-				 <hr  style="width:50%;margin:0"/>
-				 <h3 class="heading-small">Benefit</h3> <p>{% include path+"/inc/applicantbenefits.html" %}</p>
-				 <hr  style="width:50%;margin:0"/>
-				 <h3 class="heading-small">Representative appointee </h3> <p>{% include path+"/inc/applicantappointee.html" %}
-				 </p>
-				 <hr  style="width:50%;margin:0"/>
-			 </div>
-
-			 </div> <!-- COLUMN 1 THIRD -->
+			<!-- COLUMN 1 THIRD -->
 
 
     </div> <!-- GRID ROW -->

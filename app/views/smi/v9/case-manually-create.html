@@ -1,0 +1,185 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'search' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+          <h1 class="heading-large">Create a new case</h1>
+
+          <form action="additional-personal-details" method="get" class="form">
+
+
+          <div class="form-group">
+            <label class="form-label-bold" for="firstname">National Insurance number</label>
+            <input class="form-control form-control-1-8" id="NINo" type="text" name="NINo" value="{{ NINo }}">
+          </div>
+
+
+          <div class="form-group">
+            <label class="form-label-bold" for="firstname">Title</label>
+            <input class="form-control form-control-1-8" id="title" type="text" name="title" value="{{ title }}">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label-bold" for="lastname">First name</label>
+            <input class="form-control" id="firstname" type="text" name="firstname" value="{{ firstname }}">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label-bold" for="title">Last name</label>
+            <input class="form-control" id="lastname" type="text" name="lastname" value="{{ lastname }}">
+          </div>
+
+          <div class="form-group">
+              <fieldset>
+                <legend>
+                  <span class="form-label-bold">
+                    Date of birth
+                  </span>
+                </legend>
+                <div class="form-date">
+                  <div class="form-group form-group-day">
+                    <label class="form-label" for="dob-day">Day</label>
+                    <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" value="{{ dob_dd }}">
+                  </div>
+                  <div class="form-group form-group-month">
+                    <label class="form-label" for="dob-month">Month</label>
+                    <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="{{ dob_mm }}">
+                  </div>
+                  <div class="form-group form-group-year">
+                    <label class="form-label" for="dob-year">Year</label>
+                    <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016" value="{{ dob_yy }}">
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="form-group">
+              <fieldset>
+                <legend>
+                  <h3 class="heading-small">
+                    Home address
+                  </h3>
+                </legend>
+                <div class="form-group">
+                  <label class="form-label hidden" for="claimantaddress1">
+                    Address line 1
+                  </label>
+                  <input class="form-control" id="claimantaddress1" type="text" name="claimantaddress1" value="{{ claimantaddress1 }}">
+                  <label class="form-label hidden" for="claimantaddress2">
+                    Address line 2
+                  </label>
+                  <input class="form-control" id="claimantaddress2" type="text" name="claimantaddress2" value="{{ claimantaddress2 }}">
+                  <label class="form-label hidden" for="claimantaddress3">
+                    Address line 3
+                  </label>
+                  <input class="form-control" id="claimantaddress3" type="text" name="claimantaddress3" value="{{ claimantaddress3 }}">
+                  <label class="form-label hidden" for="claimantaddress4">
+                    Address line 4
+                  </label>
+                  <input class="form-control" id="claimantaddress4" type="text" name="claimantaddress4" value="{{ claimantaddress4 }}">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="claimantaddresspostcode">
+                    Postcode
+                  </label>
+                  <input class="form-control form-control-1-8" id="claimantpostcode" type="text" name="claimantpostcode" value="{{ claimantpostcode }}">
+                </div>
+            </fieldset>
+            </div>
+
+
+              <div class="form-group">
+                <fieldset>
+
+                  <legend>
+                    <h3 class="heading-small">Country</h3>
+                  </legend>
+
+                  <div class="multiple-choice">
+                    <input id="country-1" type="radio" name="country" value="EN">
+                    <label for="country-1">England</label>
+                  </div>
+                  <div class="multiple-choice">
+                    <input id="country-2" type="radio" name="country" value="SC">
+                    <label for="country-2">Scotland</label>
+                  </div>
+                  <div class="multiple-choice">
+                    <input id="country-3" type="radio" name="country" value="WA">
+                    <label for="country-3">Wales</label>
+                  </div>
+                  <div class="multiple-choice">
+                    <input id="country-4" type="radio" name="country" value="NI">
+                    <label for="country-4">Northern Ireland</label>
+                  </div>
+
+
+                </fieldset>
+              </div>
+
+
+                                      <div class="form-group">
+                                        <label class="form-label-bold" for="telephonenumber">Telephone number</label>
+                                        <input class="form-control  form-control-1-4" id="telephonenumber" type="text" name="telephonenumber" value="{{ telephonenumber }}">
+                                      </div>
+
+                                      <div class="form-group">
+                                        <fieldset>
+
+                                          <legend>
+                                            <h3 class="heading-small">Benefit</h3>
+                                          </legend>
+
+                                          <div class="multiple-choice">
+                                            <input id="country-4" type="radio" name="benefit" value="ESA">
+                                            <label for="country-4">Employment Support Allowance</label>
+                                          </div>
+
+                                          <div class="multiple-choice">
+                                            <input id="benefit-2" type="radio" name="benefit" value="JSA">
+                                            <label for="benefit-2">Job Seeker's Allowance</label>
+                                          </div>
+
+                                          <div class="multiple-choice">
+                                            <input id="country-3" type="radio" name="benefit" value="IS">
+                                            <label for="country-3">Income Support</label>
+                                          </div>
+
+
+                                          <div class="multiple-choice">
+                                            <input id="benefit-5" type="radio" name="benefit" value="PC">
+                                            <label for="benefit-5">Pension Credit</label>
+                                          </div>
+
+                                          <div class="multiple-choice">
+                                            <input id="benefit-1" type="radio" name="benefit" value="UC">
+                                            <label for="benefit-1">Universal Credit</label>
+                                          </div>
+
+
+                                        </fieldset>
+                                      </div>
+
+
+
+            <p>
+            <input class="button" type="submit" value="Continue">
+          </p>
+
+          <p><a href="search">Cancel and find someone else</a></p>
+
+        </form>
+
+
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

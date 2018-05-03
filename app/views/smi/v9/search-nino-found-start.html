@@ -47,7 +47,7 @@
                       </tr>
                       <tr>
                           <td>
-                              National Insurance Number
+                              National Insurance number
                           </td>
                           <td>
                               {{nino}}
@@ -60,18 +60,51 @@
                               {% include path+"/inc/applicantaddress.html" %}
                             </td>
                           </tr>
+                          <tr>
+                              <td>
+                                  Qualifying benefit
+                              </td>
+                              <td>
+                                  {% include path+"/inc/applicantbenefits.html" %}
+                              </td>
+                          </tr>
+
                     <tr>
                         <td>
-                            Qualifying benefit
+                            Telephone
                         </td>
                         <td>
-                            {% include path+"/inc/applicantbenefits.html" %}
+                            {% include path+"/inc/applicantphonenumber.html" %}
                         </td>
                     </tr>
+
+
                 </tbody>
             </table>
 
-            <p class="mth mb0"><br /><a href="money-lookup?nino={{ nino }}&newapplication=yes" class="button">Start application</a><br /><br /></p>
+            <p>&nbsp;</p>
+
+            <div class="form-group">
+              <fieldset>
+
+                <legend>
+                  <h3 class="heading-small">Are these details correct?</h3>
+                </legend>
+
+                <div class="multiple-choice">
+                  <input id="correct-1" type="radio" name="correct" value="Yes">
+                  <label for="correct-1">Yes</label>
+                </div>
+                <div class="multiple-choice">
+                  <input id="correct-2" type="radio" name="correct" value="No">
+                  <label for="correct-2">No, I need to create a new case</label>
+                </div>
+
+              </fieldset>
+            </div>
+
+
+            <p class="mth mb0"><br /><a href="additional-personal-details?nino={{ nino }}&newapplication=yes" class="button">Continue</a><br /><br /></p>
             <p class="mth mb0"><a href="search">Cancel and find someone else</a></p>
          </div><!-- column -->
     </div>
