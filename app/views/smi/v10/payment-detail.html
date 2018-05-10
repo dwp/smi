@@ -1,0 +1,122 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+        <h1 class="heading-large">Set up payment</h1>
+
+                  <table class="lender-details-1">
+                    <tbody>
+
+                      <tr>
+                      <td>
+                          <span class="bold-small">Amount</span>
+                      </td>
+                      <td>
+                            &pound; 157.80
+                      </td>
+                    </tr>
+
+
+                      <tr>
+                        <td>
+                            <span class="bold-small">First payment date</span>
+                        </td>
+                        <td>
+                          <div class="u-1/4-lap-and-up">
+                            <div class="form-date">
+                              <div class="form-group form-group-day">
+                                <label class="form-label" for="dob-day">Day</label>
+                                <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                              </div>
+                              <div class="form-group form-group-month">
+                                <label class="form-label" for="dob-month">Month</label>
+                                <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                              </div>
+                              <div class="form-group form-group-year">
+                                <label class="form-label" for="dob-year">Year</label>
+                                <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                            <span class="bold-small">Subsequent payment date</span>
+                        </td>
+                        <td>
+                          <div class="u-1/4-lap-and-up">
+                            <div class="form-date">
+                              <div class="form-group form-group-day">
+                                <label class="form-label" for="dob-day">Day</label>
+                                <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                              </div>
+                              <div class="form-group form-group-month">
+                                <label class="form-label" for="dob-month">Month</label>
+                                <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                              </div>
+                              <div class="form-group form-group-year">
+                                <label class="form-label" for="dob-year">Year</label>
+                                <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+
+                      <tr>
+                        <td>
+                            <span class="bold-small">Account review date</span>
+                        </td>
+                        <td>
+                          <div class="u-1/4-lap-and-up">
+                            <div class="form-date">
+                              <div class="form-group form-group-day">
+                                <label class="form-label" for="dob-day">Day</label>
+                                <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                              </div>
+                              <div class="form-group form-group-month">
+                                <label class="form-label" for="dob-month">Month</label>
+                                <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                              </div>
+                              <div class="form-group form-group-year">
+                                <label class="form-label" for="dob-year">Year</label>
+                                <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+</table>
+
+             <p class="mth mb0">
+               <a href="payment-summary" class="button" >Continue</a>
+             </p>
+
+
+      </div> <!-- COLUMN 2 THRIDS -->
+
+       <!-- COLUMN 1 THIRD -->
+       <!-- COLUMN 1 THIRD -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

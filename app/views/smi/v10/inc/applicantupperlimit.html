@@ -1,0 +1,14 @@
+
+{% if nino == "GB654321C" %}
+  {% set upperlimit = "£200,000" %}
+
+{% elif nino == "DD445566X" %}
+  {% set upperlimit = "£215,983" %}
+
+{% endif %}
+
+{% if upperlimit %}
+{{ upperlimit }}
+{% else %}
+
+{% endif %}

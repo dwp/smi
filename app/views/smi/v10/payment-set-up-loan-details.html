@@ -1,0 +1,125 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+        <h1 class="heading-large">Set up payment</h1>
+
+
+
+                          <table class="lender-details-1">
+                            <tbody>
+                              <tr>
+                                <td>
+                                    <span class="bold-small">Lender code</span>
+                                </td>
+                                <td>
+                                  <div class="u-1/4-lap-and-up">
+                                  1234
+                                  </div>
+                                </td>
+                                <td>
+
+                                <a href="#">Change</a>
+                                </td>
+                              </tr>
+
+        <tr>
+        <td>
+            Account name
+        </td>
+        <td>
+            <div class="u-1/4-lap-and-up">
+              Cheltenham and Gloucester
+          </div>
+        </td>
+        <td>
+        </td>
+
+        </tr>
+        <tr>
+        <td>
+            Sort code
+        </td>
+        <td>
+        07 01 16
+        </td>
+        <td>
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+            Account number
+        </td>
+        <td>
+        12345678
+        </td>
+        <td>
+        </td>
+
+
+        </tr>
+
+            <tr>
+              <td>
+                  Building society roll number
+              </td>
+              <td>
+                  <div class="u-1/4-lap-and-up">
+                    <input class= "form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                </div>
+              </td>
+              <td>
+              </td>
+            </tr>
+
+                                <tr>
+                                  <td>
+                                    <span class="bold-small">Lender's loan reference</span>
+                                  </td>
+                                  <td>
+                                    <div class="u-1/4-lap-and-up">
+                                      12345678
+                                    </div>
+                                 </td>
+                                 <td>
+                                </td>
+                                </tr>
+
+
+                              </tbody>
+                            </table>
+
+
+             <p class="mth mb0">
+               <a href="payment-detail" class="button" >Continue</a>
+             </p>
+             <p class="mth mb0"><a href="summary">Cancel and view summary</a></p>
+
+
+           </form>
+
+
+      </div> <!-- COLUMN 2 THRIDS -->
+
+       <!-- COLUMN 1 THIRD -->
+       <!-- COLUMN 1 THIRD -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

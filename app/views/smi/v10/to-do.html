@@ -1,0 +1,32 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'toDo' %}
+  {% include path+"/inc/main_nav.html" %}
+
+
+  <div class="main-content">
+    <div class="grid-row">
+
+          <div class="column-two-thirds">
+              <h1 class="heading-large">To do</h1>
+
+                <form class="form">
+
+                <label>Country code</label>
+                <input type="search" placeholder="" aria-controls="searchable-table" value="" class="form-control js-search-focus">   <a href="to-do-list-all" class="button" id="testing">Search</a>
+
+              </form>
+
+
+          </div>
+
+      </div>
+   </div>
+
+
+</main>
+
+{% endblock %}
