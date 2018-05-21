@@ -13,7 +13,9 @@
         {% include path+"/inc/name-and-nino.html" %}
 
 
-                <h1 class="heading-large">Payment summary</h1>
+                <h1 class="heading-large">Review payment</h1>
+
+                <p>The following payment will be set up. Check the information before continuing.</p>
 
                 <table class="lender-details-1">
                   <tbody>
@@ -65,7 +67,7 @@
 
 </table>
 
-              <p class="mth mb0"><a href="list-of-loans-several-one-done" class="button">Continue</a></p>
+              <p class="mth mb0"><a href="payment-confirmed?nino={{ nino }}&smitsstatus=approved&mortgagesloans=yes&payments=yes" class="button">Set up</a></p>
 
             </div>
 
