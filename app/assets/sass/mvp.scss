@@ -9,6 +9,7 @@ $path: "/public/images/";
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 @import "admin";
 @import "inc/timeline";
+@import "inc/timeline-bsp";
 @import "inc/small-checkboxes";
 @import "inc/margins";
 @import "inc/toggler";
@@ -18,6 +19,7 @@ $path: "/public/images/";
 @import "inc/nav-tabbed";
 @import "inc/form-validation";
 @import "inc/form-input-denote";
+@import "inc/task-list";
 
 
 .left-aside {

@@ -25,6 +25,9 @@
                </div>
              -->
 
+            <p>As the combined value of the two loans (£50,000) is less than the upper limit for pension credit (£100,000) no action is needed.</p>
+
+
             <table>
               <tbody>
 
@@ -34,6 +37,22 @@
                   <td><a href="property-money?nino={{ nino }}">Edit</a></td>
                 </tr>
 
+
+                <tr>
+                  <td>Ground rent per week</td>
+                  <td>Nothing entered</td>
+                  <td></td>
+
+                </tr>
+
+                <tr>
+                  <td>Service charges per week</td>
+                  <td>Nothing entered</td>
+                  <td></td>
+
+                </tr>
+
+
                 <tr>
                   <td>Non-dependant deductions</td>
                   <td>Nothing entered</td>
@@ -41,29 +60,11 @@
 
                 </tr>
 
-
-
-                <tr>
-                  <td>Ground rent per week</td>
-                  <td>£20.00</td>
-                  <td></td>
-
-                </tr>
-
-                <tr>
-                  <td>Service charge and others charges per week</td>
-                  <td>£5.00</td>
-                  <td></td>
-
-                </tr>
-
-
-
                 <tr>
                   <td colspan=2>
                     <p>&nbsp;</p>
-                    <h2 class="heading-medium">Loan 1: Mortgage</h2> Loan reference number 71207737</td>
-                  <td valign=bottom><a href="add-loan?nino={{ nino }}">Edit</a></td>
+                    <h2 class="heading-medium">Loan 1: Mortgage</h2> Mortgage or home loan ref 71207737</td>
+                  <td valign=bottom><a href="money?nino={{ nino }}">Edit</a></td>
                 </tr>
 
                 <tr>
@@ -77,49 +78,50 @@
 
                 </tr>
 
+
                 <tr>
                   <td>
-                    Loan account number
+                    Outstanding balance
                   </td>
                   <td>
-                    12345678
+                    £13,983
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    Share of housing cost
+                  </td>
+                  <td>
+                    1/1
                   </td>
                   <td></td>
 
                 </tr>
-
-
-                <tr>
-                  <td>
-                    Allowable loan amount
-                  </td>
-                  <td>
-                    £35,000.00
-                  </td>
-                  <td>
-                  </td>
-                </tr>
-
 
                 <tr>
                   <td>
                     Weekly mortgage protection policy amount
                   </td>
                   <td>
-                    Yes
+                    Nothing entered
                   </td>
                   <td></td>
 
                 </tr>
+
+
                 <tr>
                   <td>
-                    Sharing the payment of mortgage or loan
+                    Loan exempt amount
                   </td>
                   <td>
-                    Yes: 50/50
+                    <input type="text">
                   </td>
-                  <td></td>
-
+                  <td>
+                  </td>
                 </tr>
 
 
@@ -128,13 +130,13 @@
                 <tr>
                   <td colspan=2>
                     <p>&nbsp;</p>
-                    <h2 class="heading-medium">Loan 2: Home improvement loan or home purchase loan</h2> Loan reference number 26173770217</td>
-                  <td valign=bottom><a href="add-loannino={{ nino }}">Edit</a></td>
+                    <h2 class="heading-medium">Loan 2: Home improvement loan</h2>Lender reference 26173770217</td>
+                  <td valign=bottom><a href="money?nino={{ nino }}">Edit</a></td>
                 </tr>
 
                 <tr>
                   <td>
-                    Lender code
+                    Lennder code
                   </td>
                   <td>
                     5678
@@ -146,35 +148,46 @@
 
                 <tr>
                   <td>
-                    Allowable loan amount
+                    Outstanding balance
                   </td>
                   <td>
-                    £20,000.00
+                    £864.12
                   </td>
                   <td>
                   </td>
                 </tr>
 
+                <tr>
+                  <td>
+                    Share of housing cost
+                  </td>
+                  <td>
+                    1/1
+                  </td>
+                  <td></td>
+                </tr>
 
                 <tr>
                   <td>
                     Weekly mortgage protection policy amount
                   </td>
                   <td>
-                    No
+                    Nothing entered
                   </td>
                   <td></td>
 
                 </tr>
 
+
                 <tr>
                   <td>
-                    Sharing the payment of mortgage or loan
+                    Loan exempt amount
                   </td>
                   <td>
-                    No
+                    <input type="text">
                   </td>
-                  <td></td>
+                  <td>
+                  </td>
                 </tr>
 
 
@@ -185,7 +198,8 @@
             <p>&nbsp;</p>
 
 
-            <p class="mth mb0"><a href="submit_for_processing?nino={{ nino }}" class="button">Continue</a><br /></p>
+            <p class="mth mb0"><a href="submit_for_processing?nino={{ nino }}" class="button">Calculate</a><br /></p>
+            <p class="mth mb0"><a href="summary?nino={{ nino }}" class="link-back">Cancel</a></p>
 
           </div>
           <!-- ADMIN PANE -->

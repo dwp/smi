@@ -10,21 +10,44 @@
 
       <div class="column-two-thirds">
 
-        {% include path+"/inc/name-and-nino.html" %}
+            <div class="admin-panes">
+              <div class="admin-pane">
+                <h1 class="heading-large">Payee account details</h1>
+
+              <div class="panel panel-border-wide">
+                <p>No payee selected.</p>
+              </div>
+
+              <h2 class="heading-medium">Related notes</h2>
+
+              <table class="notes">
+                <tbody>
+                  <tr>
+                    <td>
+                  <!--<label class="form-label" for="textarea">
+                      Label
+                  </label>-->
+                  <textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea>
+                </td>
+              </tr>
+
+           </tbody>
+         </table>
 
 
-                <h1 class="heading-large">Payment summary</h1>
-
-<p>What would go here?</p>
-
-              <p class="mth mb0"><a href="payment-confirmed?nino={{ nino }}&smitsstatus=approved&mortgagesloans=yes&payments=yes" class="button">Submit</a></p>
-              <p class="mth mb0"><a href="payment-confirmed?nino={{ nino }}&smitsstatus=approved&mortgagesloans=yes&payments=yes" class="button">Send for approval</a></p>
+              <br> </br>
 
 
+              <p class="mth mb0"><a href="summary?nino={{ nino }}" class="button">Save and view summary</a><br /></p>
+              <p class="mth mb0"><a href="money" class="link-back">Back to enter applicant's financial information</a></p>
+
+              </div> <!-- ADMIN PANE -->
             </div>  <!-- ADMIN PANES -->
+          <br> </br>
 
 
-       <!-- COLUMN 2 THIRDS -->
+
+      </div> <!-- COLUMN 2 THRIDS -->
       <!-- COLUMN 1 THIRD -->
       <div class="column-one-third">
        <!--<div class="panel panel-border-wide alert-default">

@@ -13,15 +13,33 @@
         {% include path+"/inc/name-and-nino.html" %}
 
 
-                <h1 class="heading-large">Payment summary</h1>
+            <div class="admin-panes">
+              <div class="admin-pane">
+                <h1 class="heading-large">Payment confirmed</h1>
 
-<p>What would go here?</p>
+              <h2 class="heading-medium">What the system will do</h2>
+                <ul class="list">
+                  <li>Send a letter to the customer with a breakdown of the payments</li>
+                  <li>Send a letter to the lender with a breakdown of the payments</li>
+                </ul>
 
-              <p class="mth mb0"><a href="payment-confirmed?nino={{ nino }}&smitsstatus=approved&mortgagesloans=yes&payments=yes" class="button">Submit</a></p>
-              <p class="mth mb0"><a href="payment-confirmed?nino={{ nino }}&smitsstatus=approved&mortgagesloans=yes&payments=yes" class="button">Send for approval</a></p>
+
+                <h2 class="heading-medium">What you need to do</h2>
+                <ul class="list">
+                  <li>Nothing. A review will be automatically issued ahead of the 22 May 2019 review date.</li>
+                </ul>
+
+              </div>
 
 
+
+
+              <p class="mth mb0" ><a href="list-of-loans-several-one-done?nino={{ nino }}&smitsstatus=approved&mortgagesloans=yes&payments=yes" class="button">Add another loan</a></p>
+
+              </div> <!-- ADMIN PANE -->
             </div>  <!-- ADMIN PANES -->
+          <br> </br>
+
 
 
        <!-- COLUMN 2 THIRDS -->

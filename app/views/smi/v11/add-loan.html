@@ -14,7 +14,7 @@
         {% include path+"/inc/name-and-nino.html" %}
 
 
-        <h1 class="heading-large">Add details of mortgage or loan 1</h1>
+        <h1 class="heading-large">Add details for mortgage or loan 1</h1>
 
 
 
@@ -40,35 +40,84 @@
 
                       <div class="multiple-choice">
                         <input id="loan-1" type="radio" name="loan" value="mortgage">
-                        <label for="loan-1">Mortgage</label>
+                        <label for="loan-1">Home purchase loan or mortgage</label>
                       </div>
                       <div class="multiple-choice">
                         <input id="loan-2" type="radio" name="loan" value="loan">
-                        <label for="loan-2">Home improvement loan or home purchase loan</label>
+                        <label for="loan-2">Home improvement loan</label>
                       </div>
                     </fieldset>
                   </div>
 
 
                   <div class="form-group">
-                    <span class="form-label-bold">
-                      Lender code
-                    </span>
-                    <!---<span class="form-hint">
-                      From the Qualified Lenders’ Register (QLR)
-                    </span>-->
-                    <input class="form-control form-control-1-8" id="lendercode" type="text" name="lendercode" value="{{ lendercode }}">
+                    <fieldset>
+
+                      <legend>
+                        <h3 class="heading-small">Who are payments for the loan to?</h3>
+                      </legend>
+
+                      <div class="multiple-choice" data-target="loan-payee-bankorBS">
+                        <input id="loan-payee-1" type="radio" name="loan-payee" value="bankorBS">
+                        <label for="loan-payee-1">A bank or building society</label>
+                      </div>
+                      <div class="multiple-choice" data-target="loan-payee-individual">
+                        <input id="loan-payee-2" type="radio" name="loan-payee" value="individual">
+                        <label for="loan-payee-2">An individual</label>
+                      </div>
+                    </fieldset>
+
+                    <div class="panel panel-border-narrow js-hidden" id="loan-payee-bankorBS">
+
+                      <div class="form-group">
+                        <span class="form-label-bold">
+                         Sort code
+                        </span>
+                        <!---<span class="form-hint">
+                          From the Qualified Lenders’ Register (QLR)
+                        </span>-->
+                        <input class="form-control form-control-1-8" id="lendercode" type="text" name="lendercode" value="{{ lendercode }}"> <input class="form-control form-control-1-8" id="lendercode" type="text" name="lendercode" value="{{ lendercode }}"> <input class="form-control form-control-1-8" id="lendercode" type="text" name="lendercode" value="{{ lendercode }}">
+
+                      </div>
+
+                      <div class="form-group">
+                        <label class="form-label-bold" for="loanaccountnumber">Account number</label>
+                        <input class="form-control form-control-1-4" id="loanaccountnumber" type="text" name="loanaccountnumber" value="{{ loanaccountnumber }}">
+                      </div>
+
+                      <div class="form-group">
+                        <label class="form-label-bold" for="loanreferencenumber">Loan reference number</label>
+                        <input class="form-control form-control-1-4" id="loanreferencenumber" type="text" name="loanreferencenumber" value="{{ loanreferencenumber }}">
+                      </div>
+
+
+                    </div>
+
+                    <div class="panel panel-border-narrow js-hidden" id="loan-payee-individual">
+
+                      <div class="form-group">
+                        <span class="form-label-bold">
+                         Sort code
+                        </span>
+                        <!---<span class="form-hint">
+                          From the Qualified Lenders’ Register (QLR)
+                        </span>-->
+                        <input class="form-control form-control-1-8" id="lendercode" type="text" name="lendercode" value="{{ lendercode }}"> <input class="form-control form-control-1-8" id="lendercode" type="text" name="lendercode" value="{{ lendercode }}"> <input class="form-control form-control-1-8" id="lendercode" type="text" name="lendercode" value="{{ lendercode }}">
+
+                      </div>
+
+                      <div class="form-group">
+                        <label class="form-label-bold" for="loanaccountnumber">Account number</label>
+                        <input class="form-control form-control-1-4" id="loanaccountnumber" type="text" name="loanaccountnumber" value="{{ loanaccountnumber }}">
+                      </div>
+
+
+                    </div>
+
+
+
                   </div>
 
-                  <div class="form-group">
-                    <label class="form-label-bold" for="loanaccountnumber">Loan account number</label>
-                    <input class="form-control form-control-1-4" id="loanaccountnumber" type="text" name="loanaccountnumber" value="{{ loanaccountnumber }}">
-                  </div>
-
-                  <div class="form-group">
-                    <label class="form-label-bold" for="loanreferencenumber">Loan reference number</label>
-                    <input class="form-control form-control-1-4" id="loanreferencenumber" type="text" name="loanreferencenumber" value="{{ loanreferencenumber }}">
-                  </div>
 
 
                   <div class="form-group">
@@ -82,7 +131,7 @@
                     <fieldset>
                       <legend>
                         <h3 class="heading-small">
-                          Mortgage protection policy amount per week?
+                          Is there a mortgage protection policy for this loan?
                         </h3>
                       </legend>
                       <div class="multiple-choice" data-target="mpp">
@@ -92,7 +141,7 @@
                       <div class="panel panel-border-narrow js-hidden" id="mpp">
 
                   <div class="form-group">
-                    <label class="form-label-bold" for="allowableloanamount"></label>
+                    <label class="form-label-bold" for="allowableloanamount">Amount per week</label>
                     <span class="c-form-input-denote">£</span>
                     <input class="c-form-input-denote__input form-control form-control-1-4" id="allowableloanamount" type="text" name="allowableloanamount" value="{{ allowableloanamount }}">
                   </div>
@@ -118,15 +167,15 @@
                           </h3>
                             <div class="multiple-choice">
                               <input id="alternativeformatnotes-1" type="radio" name="alternativeformatnotes" value="No">
-                              <label for="alternativeformatnotes-1">1/2</label>
+                              <label for="alternativeformatnotes-1">50%</label>
                             </div>
                             <div class="multiple-choice">
                               <input id="alternativeformatnotes-2" type="radio" name="alternativeformatnotes" value="No">
-                              <label for="alternativeformatnotes-2">1/3</label>
+                              <label for="alternativeformatnotes-2">33%</label>
                             </div>
                             <div class="multiple-choice">
                               <input id="alternativeformatnotes-3" type="radio" name="alternativeformatnotes" value="No">
-                              <label for="alternativeformatnotes-3">1/4</label>
+                              <label for="alternativeformatnotes-3">25%</label>
                             </div>
                             <div class="multiple-choice"  data-target="alternativeformatnotesother">
                               <input id="alternativeformatnotes-4" type="radio" name="alternativeformatnotes" value="No">
@@ -136,7 +185,7 @@
                             <div class="panel panel-border-narrow js-hidden" id="alternativeformatnotesother">
                               <label class="form-label" for="alternativeformatnotesother">Other</label>
                               <div  class="u-1/4-lap-and-up">
-                                <input id="alternativeformatnotesother-1" type="text" name="alternativeformatnotesother-1" class="form-control form-control-1-8"> / <input id="alternativeformatnotesother-2" type="text" name="alternativeformatnotesother-2" class="form-control form-control-1-8">
+                                <input id="alternativeformatnotesother-1" type="text" name="alternativeformatnotesother-1" class="form-control form-control-1-4"> %
                               </div>
                             </div>
 
@@ -160,7 +209,7 @@
 
                <a class="button" href="add-loan">Add another loan</a>
 
-               <a class="button" href="add-deductions">Finished</a>
+               <a class="button" href="smi-payments-outcome">Finished</a>
 
 
 
