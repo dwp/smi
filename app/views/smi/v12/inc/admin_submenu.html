@@ -1,0 +1,10 @@
+<div class="admin-submenu">
+  <ul>
+    <li{% if navactive == "summary" %} class="active"{% endif %}><a href="summary?nino={{ nino }}">Summary</a></li>
+    <li{% if navactive == "personal_details" %} class="active"{% endif %}><a href="personal_details?nino={{ nino }}">Personal details</a></li>
+    <li{% if navactive == "limit_deductions" %} class="active"{% endif %}><a href="limit_and_deductions?nino={{ nino }}">Upper limit and deductions</a></li>
+    <li{% if navactive == "money" %} class="active"{% endif %}><a href="money?nino={{ nino }}">Mortgage details, exemptions and overrides</a></li>
+    <li{% if navactive == "payments" %} class="active"{% endif %}><a href="payments-list?nino={{ nino }}">Payments</a></li>
+    <li{% if navactive == "notes" %} class="active"{% endif %}><a href="notes?nino={{ nino }}">Notes</a></li>
+  </ul>
+</div>

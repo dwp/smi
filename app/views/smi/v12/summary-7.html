@@ -1,0 +1,190 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+	{% set currentPage = 'claimant' %}
+	{% include path+"/inc/main_nav.html" %}
+
+
+  <div class="main-content"> <!-- MAIN CONTENT -->
+     <div class="grid-row">	 <!-- GRID ROW -->
+
+     <div class="column-two-thirds"> <!-- COLUMN 2 THRIDS -->
+
+			 {% include path+"/inc/name-and-nino.html" %}
+
+
+
+
+<div class="panel panel-border-wide" style="border-color: #28a197; border-left-style: solid; background-color: #eaf6f5;">
+
+	<h2 class="heading-small">Loan added</h2>
+</div>
+
+						 <div class="panel panel-border-wide" style="border-color: #005ea5; border-left-style: solid; background-color: #eaf4f9;">
+
+							 <ul>
+								 <li>Review of payments due in 12 months. <a href="list-of-loans-several-all-done">View loans and payments</a></li>
+							 </ul>
+
+						</div>
+
+
+												<h2 class="heading-medium" style="margin-top:64px;">Next payments</h2>
+												<p><span class="bold">29 May 2018</span><br />
+													£23.18 and 15.73<br />
+												<a href="list-of-loans-several-all-done">View loans and payments</a></p>
+
+
+<div id="tasks-content">
+	<ol class="task-list">
+			<ul class="task-list-items">
+				<li class="task-list-item">
+					<a class="task-name" href="claimant-details">
+						    Claimant details
+						  </a>
+
+				<span class="status-complete">Completed</span>
+
+				</li>
+
+				<li class="task-list-item">
+					<a class="task-name" href="send-receive-MI12-pc">
+						    Send and receive MI12
+						  </a>
+							<span class="status-complete">Completed</span>
+				</li>
+				<li class="task-list-item">
+					<a class="task-name" href="smi-loan-decision">
+						    MI12 loan decision
+						  </a>
+							<span class="status-complete">Completed</span>
+				</li>
+				<li class="task-list-item">
+					<a class="task-name" href="list-of-loans-several">
+				Loan details
+			</a>
+			<span class="status-complete">Completed</span>
+				</li>
+				<li class="task-list-item">
+					<a class="task-name" href="add-deductions">
+				Deductions
+			</a>
+			<span class="status-complete">Completed</span>
+				</li>
+
+				<li class="task-list-item">
+					<a class="task-name" href="list-of-loans-several-all-done">
+Payments
+</a>
+<span class="status-complete">Completed</span>
+				</li>
+			</ul>
+	</ol>
+</div>
+
+
+
+
+	        <!--<p class="mth mb0"><a href="payments" class="button">Proceed to authorise payments</a></p>-->
+      </div>
+			<div class="column-one-third">
+				<p>&nbsp;</p>
+				<h2 class="heading-medium">Claim history</h2>
+				<ul class="timeline-bsp">
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold">Payment set up</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+						<p>Loan reference number 26173770217</p>
+
+					</li>
+
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold">Payment set up</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+						<p>Loan reference number 71207737</p>
+
+					</li>
+
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold">Deductions added</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+					</li>
+
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold">Home improvement loan added</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+						<p>Loan reference number 26173770217<br />
+Allowable amount: £20,000.00</p>
+					</li>
+
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold"> Home purchase loan or mortgage
+
+ added</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+						<p>Loan reference number 71207737<br />
+Allowable amount: £35,000.00</p>
+
+					</li>
+
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold">Charge form been received back</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+					</li>
+
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold">Loan agreeement been received back</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+					</li>
+
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold">MI12 returned by the bank or building society</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+					</li>
+
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold">MI12 sent to the claimant</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+					</li>
+
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold">Case created</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+					</li>
+
+				</ul>
+
+				<p>&nbsp;</p>
+
+				<a href="#">Add note</a>
+
+			</div>
+
+    </div> <!-- GRID ROW -->
+  </div> <!-- MAIN CONTENT -->
+</main>
+
+
+{% endblock %}

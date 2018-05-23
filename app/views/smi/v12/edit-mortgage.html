@@ -1,0 +1,188 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <h1 class="heading-xlarge" style="margin-bottom:30px">
+          Kris Kelsey Shaw
+          <span class="heading-secondary">{{ nino | default('QQ123456C',true) }}</span>
+        </h1>
+            
+            <div class="admin-submenu">
+              <ul>
+                <li><a href="../mvp-v2/summary">Summary</a></li>
+                <li><a href="../mvp-v2/personal_details">Personal details</a></li>
+                <li class="active"><a href="../mvp-v2/mortgage">Mortgage and home loans</a></li>
+                <li><a href="../mvp-v2/limit_and_deductions">Upper limit and deductions</a></li>            
+                <li><a href="../mvp-v2/notes">Notes</a></li>
+              </ul>
+            </div>            
+
+
+            <div class="admin-panes">
+              <div class="admin-pane">
+                <h2 class="heading-medium">Edit mortgage or home loan details</h2>
+
+                  <table class="lender-details-1">
+                    <tbody>
+                        <tr>
+                          <td>
+                              Lender
+                          </td>
+                          <td>
+                            <div class="u-1/4-lap-and-up">
+                              <span class="c-form-input-denote"></span>
+                              <input class= "form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                            </div>       
+                          </td>
+                          <td>                        
+                           </div></td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            Lender's loan reference
+                          </td>
+                          <td>
+                            <div class="u-1/4-lap-and-up">
+                              <span class="c-form-input-denote"></span>
+                              <input class="form-control" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                            </div>       
+                         </td>
+                         <td>                        
+                          </div></td>
+                        </tr> 
+
+                        <tr>
+                          <td>
+                              Start date
+                          </td>
+                          <td>
+                            <div class="u-1/4-lap-and-up">
+                              <div class="form-date">
+                                <div class="form-group form-group-day">
+                                  <label class="form-label" for="dob-day">Day</label>
+                                  <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                                </div>
+                                <div class="form-group form-group-month">
+                                  <label class="form-label" for="dob-month">Month</label>
+                                  <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                                </div>
+                                <div class="form-group form-group-year">
+                                  <label class="form-label" for="dob-year">Year</label>
+                                  <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                                </div>
+                              </div>
+                            </div>       
+                          </td>
+                          <td>                        
+                         
+                       
+
+                        <tr>
+                          <td>
+                              Outstanding balance
+                          </td>
+                          <td>
+                            <div class="u-1/4-lap-and-up">
+                              <span class="c-form-input-denote">£</span>
+                              <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                            </div>       
+                          </td>
+                          <td>                        
+                           </div></td>
+                        </tr>   
+
+                        <tr>
+                          <td>
+                              Shared housing cost ratio
+                          </td>
+                          <td>
+                            <div class="u-1/4-lap-and-up">
+                              <span class="c-form-input-denote"></span>
+                              <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9" style="width:10%"> / <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9" style="width:10%">
+                            </div>       
+                          </td>
+                          <td>                        
+                           </div></td>
+                        </tr>  
+
+                        <tr>
+                          <td>
+                              Loan exempt amount
+                          </td>
+                          <td>
+                            <div class="u-1/4-lap-and-up">
+                              <span class="c-form-input-denote">£</span>
+                              <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                            </div>       
+                          </td>
+                          <td>                        
+                           </div></td>
+                        </tr> 
+
+                        <tr>
+                          <td>
+                              Weekly override amount
+                          </td>
+                          <td>
+                            <div class="u-1/4-lap-and-up">
+                              <span class="c-form-input-denote">£</span>
+                              <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                            </div>       
+                          </td>
+                          <td>                        
+                           </div></td>
+                        </tr>   
+
+                        <tr>
+                          <td>
+                              Weekly mortgage protection policy amount
+                          </td>
+                          <td>
+                            <div class="u-1/4-lap-and-up">
+                              <span class="c-form-input-denote">£</span>
+                              <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                            </div>       
+                          </td>
+                          <td>                        
+                           </div></td>
+                        </tr> 
+
+                    </tbody>
+                  </table>     
+              </div> <!-- ADMIN PANE -->
+            </div>  <!-- ADMIN PANES -->
+          <br> </br>
+          
+         <p class="mth mb0"><a href="../mvp-v2/summary" class="button">Save</a></p> 
+
+      </div> <!-- COLUMN 2 THRIDS -->
+
+      <div class="column-one-third"> <!-- COLUMN 1 THIRD -->
+
+      <!--<div class="panel panel-border-wide alert-default">
+          <p class="heading-small">Next thing to do:</p> Send out MI12 reminder
+          <p><a href="#">View to do list</a></p>
+      </div>-->     
+      <div class="left-aside">
+        <h3 class="heading-small">Benefit</h3> <p>Pension Credit</p>
+        <hr  style="width:50%;margin:0"/>
+        <h3 class="heading-small">Representative</h3> <p>Neil Murphy</p>
+      </div>
+
+    </div> <!-- COLUMN 1 THIRD -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}
