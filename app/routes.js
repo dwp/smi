@@ -66,6 +66,12 @@ router.get('/smi/v*/search-nino/',function(req,res,next)
   else if (req.query.nino == 'QF082262D') {
     res.redirect('/smi/v'+v+"/search-nino-found-start?nino="+nino)
   }
+  else if (req.query.nino == 'QU452702A') {
+    res.redirect('/smi/v'+v+"/search-nino-found-start-wa?nino="+nino)
+  }
+  else if (req.query.nino == 'FD340514D') {
+    res.redirect('/smi/v'+v+"/search-nino-found-start-pc?nino="+nino)
+  }
   else {
     res.redirect('/smi/v'+v+"/search-nino-none?nino="+nino)
   }
@@ -80,6 +86,10 @@ router.get('/smi/v*/search',function(req,res,next)
 
   req.data.nino = req.query.nino;
   const nino = req.data.nino;
+
+  req.data.benefitclass = req.query.benefitclass;
+  const benefitclass = req.data.benefitclass;
+
 
   next();
 });
