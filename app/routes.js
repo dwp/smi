@@ -600,6 +600,21 @@ router.get('/smi/data_transfer_tool/v*/check_for_nino',function(req,res,next)
 
 });
 
+router.get('/smi/v13/*',function(req,res,next)
+{
+  var v = req.params[0];
+  req.data = req.data || { };
+
+
+  req.data.casestatus = req.query.casestatus;
+  const casestatus = req.query.casestatus;
+
+  next();
+
+
+});
+
+
 
 /*
   Redirect all posts to gets.

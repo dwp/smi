@@ -1,0 +1,47 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'search' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+          <h1 class="heading-large">Send MI12 (this might be automated)</h1>
+
+          <form action="list-of-MI12s-one" method="get" class="form">
+
+            <div class="form-group">
+              <fieldset>
+                <legend>
+                  <h3 class="heading-small">
+                    Where is the MI12 being sent to?
+                  </h3>
+                </legend>
+                <div class="multiple-choice">
+                    <input id="MI12-sent" name="none" type="radio" value="yes">
+                    <label for="MI12-sent"><div class="bold">Descriptor</div>
+                      Addresss line 1<br />
+                    Addresss line 2<br />
+                  Addresss line 3<br />
+                Addresss line 4</label>
+                </div>
+            </fieldset>
+            </div>
+
+            <p>
+            <input class="button" type="submit" value="Continue">
+          </p>
+
+        </form>
+
+
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

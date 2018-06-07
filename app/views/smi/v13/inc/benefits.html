@@ -1,0 +1,12 @@
+
+{% if benefit == "jsa" %}
+  {% set benefitname = "Jobseekers Allowance" %}
+{% elif benefit == "pc" %}
+  {% set benefitname = "Pension Credit" %}
+{% elif benefit == "esa" %}
+  {% set benefitname = "Employment and Support Allowance" %}
+{% else %}
+  {% set benefitname = "No qualifying benefit" %}
+{% endif %}
+
+{{ benefitname }}

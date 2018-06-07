@@ -1,0 +1,149 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+	{% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <h1 class="heading-xlarge" style="margin-bottom:30px">
+          {% include path+"/inc/applicantname.html" %}
+          <span class="heading-secondary">{{ nino }}</span>
+        </h1>
+
+				{% set navactive = "personal_details" %}
+				{% if not newapplication %}
+				{% include path+"/inc/admin_submenu.html" %}
+				{% endif %}
+
+
+		<div class="admin-panes">
+
+			<div class="admin-pane">
+			<table class="personal-details">
+                <tbody>
+	                <tr>
+	                  <td>
+	                   <h2 class="heading-small">Personal details</h2>
+	                  </td>
+	                  <td></td>
+	                  <td>
+	                  </td>
+	                </tr>
+
+                    <tr>
+                        <td>
+                            Address
+                        </td>
+                        <td>
+													{% include path+"/inc/applicantaddress.html" %}
+                        </td>
+                        <td></td>
+                    </tr>
+
+                     <tr>
+                        <td>
+                            Phone number
+                        </td>
+                        <td>
+                            {% include path+"/inc/applicantphonenumber.html" %}
+                        </td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Benefit type
+                        </td>
+                        <td>
+                            {% include path+"/inc/applicantbenefits.html" %}
+                        </td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Date of birth
+                        </td>
+                        <td>
+                        {% include path+"/inc/applicantDOB.html" %}
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="rep-details">
+                <tbody>
+	                <tr>
+	                  <td>
+	                   <h2 class="heading-small">No representative appointed</h2>
+	                  </td>
+	                  <td></td>
+	                  <td>
+	                  </td>
+	                </tr>
+
+
+<!--
+                    <tr>
+                        <td>
+                            Full name
+                        </td>
+                        <td>
+													{% include path+"/inc/applicantappointee.html" %}
+                        </td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Address
+                        </td>
+                        <td>
+                            1 The Street<br />
+                            Kingston-upon-hull<br />
+                            KD12 9FT
+                        </td>
+                        <td></td>
+                    </tr>
+
+                     <tr>
+                        <td>
+                            Phone number
+                        </td>
+                        <td>
+                            01234 567 890
+                        </td>
+                        <td></td>
+                    </tr>
+
+                      <tr>
+                        <td>
+                            Representative type
+                        </td>
+                        <td>
+                            Lasting power of attorney
+                        </td>
+                        <td></td>
+                    </tr>
+
+									-->
+                </tbody>
+            </table>
+		 </div>  <!-- ADMIN PANE -->
+
+	  </div>  <!-- ADMIN PANES -->
+
+     </div> <!-- COLUMN 2 THRIDS -->
+
+		 <div class="column-one-third">
+
+		 </div> <!-- COLUMN 1 THIRD -->
+    </div> <!-- GRID ROW -->
+  </div> <!-- MAIN CONTENT -->
+</main>
+{% endblock %}
