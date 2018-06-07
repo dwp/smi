@@ -15,19 +15,11 @@
 
 <div class="panel panel-border-wide">
 
-  {% if customer == "yes" %}
-  <p>This person has a Support for Mortgage Interest loan already.</p>
-  {% endif %}
-
-  {% if existingapplication == "yes" %}
-  <p>This is an existing applicant.</p>
-  {% else %}
-  <p>This would be a new applicant.</p>
-  {% endif %}
+  <p>This is a new applicant for a mortgage interest loan.</p>
 </div>
 
 
-            <table >
+            <table>
                 <tbody>
                   <tr>
                       <td>
@@ -37,7 +29,13 @@
                           {{nino}}
                       </td>
                   </tr>
+              </table>
 
+    <h2 class="heading-medium">Benefit</h2>
+
+
+    <table>
+        <tbody>
                   <tr>
                       <td>
                           Qualifying benefit
@@ -46,15 +44,41 @@
                           Employment and Support Allowance (ESA)
                       </td>
                   </tr>
+            </tbody>
+      </table>
 
-                  <tr>
-                      <td>
-                          Qualifying benefit start date
-                      </td>
-                      <td>
-                          6 April 2018
-                      </td>
-                  </tr>
+
+                  <div class="form-group"  style="margin-top:32px;">
+                      <fieldset>
+                        <legend>
+                          <span class="form-label-bold">
+                            First effective day of benefit
+                          </span>
+                        </legend>
+                        <div class="form-date">
+                          <div class="form-group form-group-day">
+                            <label class="form-label" for="fed-day">Day</label>
+                            <input class="form-control" id="fed-day" name="fed-day" type="number" pattern="[0-9]*" min="0" max="31" value="{{ dob_dd }}">
+                          </div>
+                          <div class="form-group form-group-month">
+                            <label class="form-label" for="fed-month">Month</label>
+                            <input class="form-control" id="fed-month" name="fed-month" type="number" pattern="[0-9]*" min="0" max="12" value="{{ dob_mm }}">
+                          </div>
+                          <div class="form-group form-group-year">
+                            <label class="form-label" for="fed-year">Year</label>
+                            <input class="form-control" id="fed-year" name="fed-year" type="number" pattern="[0-9]*" min="0" max="2016" value="{{ dob_yy }}">
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+
+
+
+
+      <h2 class="heading-medium">Personal details</h2>
+
+      <table>
+        <tbody>
 
                   <tr>
                       <td>
@@ -83,7 +107,7 @@
                       </tr>
 
                           <tr>
-                            <td valign="top">Address where applicant lives now</td>
+                            <td valign="top">Address of property that loan is held against</td>
                             <td>
                               {% include path+"/inc/applicantaddress.html" %}
                             </td>
@@ -95,26 +119,49 @@
                             </td>
                           </tr>
 
+
+                    <tr>
+                      <td valign="top">Address where applicant lives now</td>
+                      <td>
+                        {% include path+"/inc/applicantaddress.html" %}
+                      </td>
+                    </tr>
                     <tr>
                         <td>
-                            Telephone numbers
+                            Main phone number
                         </td>
                         <td>
-                            {% include path+"/inc/applicantphonenumber.html" %}
+                            01234 5678901
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Other phone number
+                        </td>
+                        <td>
+                            04321 1098765
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan=2>
+                            This person needs to be contacted using [format].
                         </td>
                     </tr>
 
+                  </tbody>
+            </table>
+
+            <h2 class="heading-medium">Alternative contact details</h2>
+
+            <p>The following person handles correspondence for the applicant.</p>
+
+
+            <table>
+              <tbody>
+
                     <tr>
                         <td>
-                            Is someone else handling correspondence?
-                        </td>
-                        <td>
-                          Yes. Appointee
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Representative's title
+                            Title
                         </td>
                         <td>
                           Mr
@@ -122,15 +169,15 @@
                     </tr>
                     <tr>
                         <td>
-                            Representative's name
+                            Name
                         </td>
                         <td>
                           Mark Bowater
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            Representative's address
+                        <td valign="top">
+                            Address
                         </td>
                         <td>
                           123 Duffy Avenue<br />
@@ -140,12 +187,21 @@
                     </tr>
                     <tr>
                         <td>
-                            Representative's telephone number
+                            Main phone number
                         </td>
                         <td>
                           01432 987654
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            Other phone number
+                        </td>
+                        <td>
+                          01234 654987
+                        </td>
+                    </tr>
+
                     <tr>
                         <td>
                             Does the person need an alternative format?
@@ -222,31 +278,6 @@
             </div>
 
 -->
-
-
-            <div class="form-group"  style="margin-top:32px;">
-                <fieldset>
-                  <legend>
-                    <span class="form-label-bold">
-                      First effective day of benefit
-                    </span>
-                  </legend>
-                  <div class="form-date">
-                    <div class="form-group form-group-day">
-                      <label class="form-label" for="fed-day">Day</label>
-                      <input class="form-control" id="fed-day" name="fed-day" type="number" pattern="[0-9]*" min="0" max="31" value="{{ dob_dd }}">
-                    </div>
-                    <div class="form-group form-group-month">
-                      <label class="form-label" for="fed-month">Month</label>
-                      <input class="form-control" id="fed-month" name="fed-month" type="number" pattern="[0-9]*" min="0" max="12" value="{{ dob_mm }}">
-                    </div>
-                    <div class="form-group form-group-year">
-                      <label class="form-label" for="fed-year">Year</label>
-                      <input class="form-control" id="fed-year" name="fed-year" type="number" pattern="[0-9]*" min="0" max="2016" value="{{ dob_yy }}">
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
 
 
 <!--
