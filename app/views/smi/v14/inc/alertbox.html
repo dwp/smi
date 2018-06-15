@@ -1,0 +1,78 @@
+{% if alert %}
+
+{% if alert == "loanupdated" %}
+
+  {% set alerttitle  = "Loan updated" %}
+  {% set alertmessage = "Message here" %}
+
+{% elif alert == "loansaved" %}
+
+  {% set alerttitle  = "Loan saved" %}
+  {% set alertmessage = "You have entered details for loan reference [xxxx]" %}
+
+{% elif alert == "screen1saved" %}
+
+  {% set alerttitle  = "Personal and benefit details saved" %}
+
+{% elif alert == "screen2saved" %}
+
+  {% set alerttitle  = "Deductions, charges and limit saved" %}
+
+{% elif alert == "screen4saved" %}
+
+  {% set alerttitle  = "Mortgage or home loan saved" %}
+
+{% elif alert == "screen5saved" %}
+
+  {% set alerttitle  = "Payee details saved" %}
+
+{% elif alert == "screen6saved" %}
+
+  {% set alerttitle  = "SMI payment details saved" %}
+
+
+{% elif alert == "noteadded" %}
+
+  {% set alerttitle  = "Note added" %}
+
+  {% elif alert == "detailssaved" %}
+
+    {% set alerttitle  = "Details saved" %}
+
+
+{% else %}
+
+  {% set alerttitle  = "No title defined" %}
+  {% set alertmessage = "No alert message defined" %}
+
+{% endif %}
+
+<!--
+
+<div class="panel panel-border-wide" style="border-color: #006435; border-style: solid; border-width: 8px; margin-top: 64px; margin-bottom: 64px;">
+
+ <h2 class="heading-medium">{{ alerttitle }}</h2>
+ <ul>
+   <li>{{ alertmessage }}</li>
+ </ul>
+
+</div>
+-->
+
+<div class="panel panel-border-wide" style="border-color: #00823B; background: #bfe0ce; margin-top: 64px; margin-bottom: 64px; ">
+
+
+ <h2 class="heading-small">{{ alerttitle }}</h2>
+
+ {% if alertmessage %}
+
+ <ul>
+   <li>{{ alertmessage }}</li>
+ </ul>
+
+{% endif %}
+
+</div>
+
+
+{% endif %}

@@ -1,0 +1,53 @@
+{% extends "../inc/layout.html" %}
+
+{% block content %}
+
+
+{% include "../inc/main_nav.html" %}
+
+
+<main id="content" role="main">
+
+
+  <div class="main-content">
+    <div class="grid-row">
+
+          <div class="column-two-thirds">
+
+
+              <h1 class="heading-large">Reports</h1>
+
+              <hr>
+
+                      <div class="notice">
+                <i class="icon icon-important">
+                  <span class="visually-hidden">Warning</span>
+                </i>
+                <p><strong>These in-browser prototypes are to get across and explore an approach. They're just neater - and easier to understand - than the scribblings we did at the end of yesterday.</strong></p>
+                  <p><strong>Don't get hung up on how it looks - get hung up on how it works, and how it could and will work for the people using it.</strong></p>
+                  <p><strong>There's loads of stuff missing, like labels round the forms and so on. So, this code isn't production ready – don't copy and paste this stuff into a live service.</strong></p>
+                </div>
+
+                <hr>
+
+
+              <h2 class="heading-medium">Start</h2>
+
+
+              <a href="reports/enter-office-codes">Enter office codes</a><br />
+              <a href="choose-office-codes">Choose offices</a>
+
+
+              <div class="column-one-third">
+
+          </div>
+
+
+      </div> <!-- COLUMN 2 THIRDS -->
+ <!-- GRID ROW-->
+  </div> <!-- MAIN CONTENT -->
+</div>
+
+</main>
+
+{% endblock %}

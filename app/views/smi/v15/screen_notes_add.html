@@ -1,0 +1,67 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+        {% include path+"/inc/warnings.html" %}
+
+        {% include path+"/inc/alertbox.html" %}
+
+        <h1 class="heading-large" style="margin-bottom:-16px">Add note</h1>
+        <hr>
+
+        <form action="add_new_note" method="get" class="form" id="form">
+
+          <div class="form-group{% if warning %} form-group-error{% endif %}">
+                      <label class="form-label-bold" for="newnote">
+                        Add any notes to explain adjustments or other relevant factors
+                        {% if warning %}<span class="error-message">
+                          Add a note or select cancel
+                        </span>{% endif %}
+                      </label>
+
+
+
+        <textarea class="form-control form-control-3-4" name="newnote" id="note" rows="10"></textarea>
+      </div>
+
+
+
+    <p style="margin-top: 32px;">
+      <input type="hidden" name="alert" value="noteadded">
+      <input type="hidden" name="referpage" value="{{ referpage }}">
+
+
+{% if referpage == "overview" %}
+      <input class="button" type="submit" value="Save">
+{% endif %}
+{% if referpage == "noteslist" %}
+      <input type="hidden" name="hasnotes" value="yes">
+      <input class="button" type="submit" value="Save">
+{% endif %}
+
+    </p>
+    <p>
+      <a href="screen_notes_1" onclick="window.history.go(-1); return false;">Cancel</a>
+    </p>
+
+
+    </div>
+    <!-- COLUMN 2 THIRDS -->
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

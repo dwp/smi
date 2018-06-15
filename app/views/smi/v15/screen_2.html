@@ -1,0 +1,100 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+        {% include path+"/inc/alertbox.html" %}
+
+
+        <h1 class="heading-large" style="margin-bottom:-16px;"> Add deductions, limits, and charges</h1>
+        <hr>
+
+
+
+            <form action="screen_3-with-award-info" method="get" class="form" id="form">
+
+              <div id="nondependantdeductions" class="form-group">
+                <label class="form-label-bold" for="nondependantdeductions">Non-dependant deductions</label>
+                  <span class="c-form-input-denote">£</span>
+                  <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="nondependantdeductions">
+              </div>
+
+
+              <div id="groundrentservicecharge" class="form-group">
+                <label class="form-label-bold" for="groundrentservicecharge">Ground rent and service charge</label>
+                  <span class="c-form-input-denote">£</span>
+                  <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="groundrentservicecharge">
+              </div>
+
+              <div class="form-group">
+                <fieldset>
+
+                  <legend>
+                    <h3 class="heading-small">Upper limit</h3>
+
+                  </legend>
+
+                  <div class="multiple-choice">
+                    <input id="override-upper-limit-1" type="radio" name="override-upper-limit" value="EN">
+                    <label for="override-upper-limit-1">£100,000</label>
+                  </div>
+                  <div class="multiple-choice">
+                    <input id="override-upper-limit-2" type="radio" name="override-upper-limit" value="SC">
+                    <label for="override-upper-limit-2">£200,000</label>
+                  </div>
+                  <div class="multiple-choice" data-target="override-upper-limit-other">
+                    <input id="override-upper-limit-3" type="radio" name="override-upper-limit" value="Other">
+                    <label for="override-upper-limit-3">Other</label>
+
+                  </div>
+
+                  <div id="override-upper-limit-other" class="panel panel-border-narrow js-hidden">
+                    <label class="form-label-bold" for="override-upper-limit-other">
+                      <span class="form-label-bold">Enter the total amount for example if the total is £230,000.</span>
+                  </label>
+
+                      <span class="c-form-input-denote">£</span>
+                      <input class="form-control c-form-input-denote__input form-control-1-4" type="text" name="override-upper-limit-other">
+                  </div>
+
+
+                </fieldset>
+              </div>
+
+
+
+
+              <input type="hidden" name="alert" value="screen2saved">
+
+
+      <p>
+        <input class="button" type="submit" value="Save and continue">
+      </p>
+      <p>
+        <a href="">Cancel</a>
+      </p>
+
+
+      </form>
+
+
+
+    </div>
+    <!-- COLUMN 2 THRIDS -->
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

@@ -10,34 +10,107 @@
     <div class="grid-row">
       <div class="column-two-thirds">
 
-          <h1 class="heading-large">Send MI12 (this might be automated)</h1>
+          <h1 class="heading-large">MI12 form status</h1>
 
           <form action="list-of-MI12s-one" method="get" class="form">
 
-            <div class="form-group">
-              <fieldset>
-                <legend>
-                  <h3 class="heading-small">
-                    Where is the MI12 being sent to?
-                  </h3>
-                </legend>
-                <div class="multiple-choice">
-                    <input id="MI12-sent" name="none" type="radio" value="yes">
-                    <label for="MI12-sent"><div class="bold">Descriptor</div>
-                      Addresss line 1<br />
-                    Addresss line 2<br />
-                  Addresss line 3<br />
-                Addresss line 4</label>
+            <form action="summary-2" method="get" class="form">
+
+              <div class="form-group">
+                <fieldset>
+                  <legend>
+                    <h3 class="heading-small">
+                      Sent to applicant
+                    </h3>
+                  </legend>
+                  <div class="multiple-choice" data-target="MI12-sent-date">
+                      <input id="MI12-sent" name="none" type="checkbox" value="yes">
+                      <label for="MI12-sent">Yes</label>
+                  </div>
+                  <div class="panel panel-border-narrow js-hidden" id="MI12-sent-date">
+                    <div class="form-group">
+                        <fieldset>
+                          <legend>
+                            <span class="form-label-bold">
+                              Date MI12 sent
+                            </span>
+                          </legend>
+                          <div class="form-date">
+                            <div class="form-group form-group-day">
+                              <label class="form-label" for="dob-day">Day</label>
+                              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" value="{{ dob_dd }}">
+                            </div>
+                            <div class="form-group form-group-month">
+                              <label class="form-label" for="dob-month">Month</label>
+                              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="{{ dob_mm }}">
+                            </div>
+                            <div class="form-group form-group-year">
+                              <label class="form-label" for="dob-year">Year</label>
+                              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016" value="{{ dob_yy }}">
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+
                 </div>
-            </fieldset>
-            </div>
 
-            <p>
-            <input class="button" type="submit" value="Continue">
-          </p>
+              </fieldset>
+              </div>
 
-        </form>
 
+
+              <div class="form-group">
+                <fieldset>
+                  <legend>
+                    <h3 class="heading-small">
+                      Received from lender
+                    </h3>
+                  </legend>
+                  <div class="multiple-choice" data-target="MI12-returned-date">
+                      <input id="MI12-returned" name="none" type="checkbox" value="yes">
+                      <label for="MI12-returned">Yes</label>
+                  </div>
+                  <div class="panel panel-border-narrow js-hidden" id="MI12-returned-date">
+                    <div class="form-group">
+                        <fieldset>
+                          <legend>
+                            <span class="form-label-bold">
+                              Date MI12 received
+                            </span>
+                          </legend>
+                          <div class="form-date">
+                            <div class="form-group form-group-day">
+                              <label class="form-label" for="dob-day">Day</label>
+                              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" value="{{ dob_dd }}">
+                            </div>
+                            <div class="form-group form-group-month">
+                              <label class="form-label" for="dob-month">Month</label>
+                              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="{{ dob_mm }}">
+                            </div>
+                            <div class="form-group form-group-year">
+                              <label class="form-label" for="dob-year">Year</label>
+                              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016" value="{{ dob_yy }}">
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+
+                </div>
+
+              </fieldset>
+              </div>
+
+
+              <p>
+                [add note]
+              </p>
+
+
+              <p>
+              <input class="button" type="submit" value="Continue">
+            </p>
+
+          </form>
 
 
       </div>

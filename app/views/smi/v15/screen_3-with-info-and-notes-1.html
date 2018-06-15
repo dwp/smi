@@ -1,0 +1,184 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+        {% include path+"/inc/alertbox.html" %}
+
+
+        <h1 class="heading-large" style="margin-bottom:-16px;">Overview</h1>
+        <hr>
+
+
+              <h2 class="heading-medium">Home loans and SMI payments</h2>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th class="col-0"></th>
+                    <th class="col-1">Status</th>
+                    <th class="col-2">Loan type</th>
+                    <th class="col-3">Lender</th>
+                    <th class="col-4">Loan reference</th>
+                    <th class="col-5">Amount</th>
+                    <th class="col-6">&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span>1.</span>
+                    </td>
+
+                    <td>
+                      <span class="status-on-hold">No payment set up</span>
+
+                      <!--<span class="status-in-payment">In payment</span>-->
+                    </td>
+                    <td>
+                      Home purchase loan
+                    </td>
+
+                    <td>
+                      Bank of Bananas
+                    </td>
+                    <td>
+                       98765432
+                    </td>
+                    <td>
+                       £23.18
+                    </td>
+
+                    <td>
+                      <a href="screen_4?nino={{ nino }}" >View</a>
+                    </td>
+                  </tr>
+
+                </tbody>
+                </table>
+
+
+
+              <p class="mth mb0">
+                <a href="screen_4">Add a loan</a>
+              </p>
+
+              <p>&nbsp;</p>
+
+
+
+<h2 class="heading-medium">Deductions, charges, and limit</h2>
+
+
+        <table class="lender-details-1">
+          <tbody>
+
+
+              <tr>
+                <td>
+                 Non-dependant deductions
+                </td>
+                <td>
+                  None
+      </td>
+      <td>
+        <a href="screen_2">Change</a>
+
+      </td>
+
+      </tr>
+
+
+
+<tr>
+  <td>
+    Ground rent and service charge
+  </td>
+  <td>
+    None
+</td>
+<td>
+  <a href="screen_2">Change</a>
+
+</td>
+
+</tr>
+
+<tr>
+  <td>
+    Upper limit
+  </td>
+  <td>
+    &pound;100000
+</td>
+<td>
+<a href="screen_2">Change</a>
+
+</td>
+
+</tr>
+      </tbody>
+      </table>
+
+      <p>&nbsp;</p>
+
+
+
+
+      <h2 class="heading-medium">Notes</h2>
+
+            <table class="lender-details-1">
+              <tbody>
+
+                <tbody>
+                    <tr>
+                      <th>
+                       Note created on: 23 January 2018
+                      </th>
+                    </tr>
+
+                  <tr>
+                    <td colspan=2>
+                     Most recent note. Need more content than this.
+                   </td>
+                  </tr>
+                  <tr style="border:0;">
+                    <td style="border:0;">
+                      <a href="screen_notes_add?referpage=overview&hasnotes=yes">Add notes</a>
+                   </td>
+                   <td style="border:0;">
+                     <a href="screen_notes_1?hasnotes=yes">View notes</a>
+
+                   </td>
+                  </tr>
+
+          </table>
+
+
+<p>&nbsp;</p>
+
+    </div>
+    <!-- COLUMN 2 THIRDS -->
+
+    <div class="column-one-third">
+      {% include path+"/inc/applicantdetails.html" %}
+    </div>
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

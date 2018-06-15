@@ -1,0 +1,28 @@
+{% if warning %}
+
+{% if warning == "nonote" %}
+
+  {% set warningtitle  = "There’s a problem" %}
+  {% set warningmessage = "Add a note or select cancel" %}
+
+{% elseif warning == "nonino" %}
+
+    {% set warningtitle  = "There’s a problem" %}
+    {% set warningmessage = "Enter a National Insurance number like QQ123456C" %}
+
+
+{% endif %}
+
+<div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+ <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">{{ warningtitle }}</h2>
+ {% if warningmessage %}
+ <ul>
+   <li>{{ warningmessage }}</li>
+ </ul>
+{% endif %}
+
+</div>
+
+
+
+{% endif %}

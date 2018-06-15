@@ -1,0 +1,47 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+                <h2 class="heading-large" style="margin-bottom:30px">
+                  Claimant name
+                  <span class="heading-secondary">Claimant NINo</span>
+                </h2>
+
+
+                                <h1 class="heading-large">Payment confirmed</h1>
+
+                              <h2 class="heading-medium">What the system will do</h2>
+                                <ul class="list">
+                                  <li>Send a letter to the customer with a breakdown of the payments</li>
+                                  <li>Send a letter to the lender with a breakdown of the payments</li>
+                                </ul>
+
+
+                                <h2 class="heading-medium">What you need to do</h2>
+                                <ul class="list">
+                                  <li>Nothing. A review will be automatically issued ahead of the 22 May 2019 review date.</li>
+                                </ul>
+
+
+                              <p class="mth mb0" ><a href="screen_3-with-info-and-notes-1?nino={{ nino }}&smitsstatus=approved&mortgagesloans=yes&payments=yes" class="button">Return to overview</a></p>
+
+
+
+    </div>
+    <!-- COLUMN 2 THRIDS -->
+
+  </div>
+  <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

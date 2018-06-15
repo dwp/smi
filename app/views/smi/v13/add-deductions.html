@@ -14,14 +14,7 @@
         {% include path+"/inc/name-and-nino.html" %}
 
 
-        <h1 class="heading-large">Deductions and other costs</h1>
-
-
-
-
-            <div class="admin-panes">
-              <div class="admin-pane">
-
+        <h1 class="heading-large">Deductions</h1>
 
 
                 {% set navactive = "money" %}
@@ -44,7 +37,7 @@
                         <label for="dependant-deductions-1">Yes</label>
                       </div>
                       <div class="panel panel-border-narrow js-hidden" id="dependant-deductions-yes">
-                        <label class="form-label" for="deductions-amount">Enter the total, based on the number of non-dependant adults in the household</label>
+                        <label class="form-label" for="deductions-amount">Enter the total per week, based on the number and type of non-dependant adults in the household</label>
                         <span class="c-form-input-denote">£</span>
                         <input class="c-form-input-denote__input form-control form-control-1-4" id="dependant-deductions-amount" type="text" name="dependant-deductions-amount">
                       </div>
@@ -60,21 +53,31 @@
                     <fieldset>
 
                       <legend>
-                        <h3 class="heading-small">Is there any ground rent?</h3>
+                        <h3 class="heading-small">Are there ground rent or service charges?</h3>
                       </legend>
 
-                      <div class="multiple-choice" data-target="ground-rent-amount">
+                      <div class="multiple-choice" data-target="charges">
                         <input id="ground-rent-1" type="radio" name="ground-rent" value="Yes">
                         <label for="ground-rent-1">Yes</label>
                       </div>
 
 
-                  <div class="panel panel-border-narrow js-hidden" id="ground-rent-amount">
+                  <div class="panel panel-border-narrow js-hidden" id="charges">
+                    <div class="form-group">
                     <label class="form-label-bold" for="ground-rent">Ground rent per week</label>
                     <span class="c-form-input-denote">£</span>
 
                     <input class="c-form-input-denote__input form-control form-control-1-4" id="ground-rent" type="text" name="ground-rent" value="{{ groundrent }}">
                   </div>
+
+                  <div class="form-group" id="charges-amount">
+                    <label class="form-label-bold" for="charges-amount">Service and other charges per week</label>
+                    <span class="c-form-input-denote">£</span>
+
+                    <input class="c-form-input-denote__input form-control form-control-1-4" id="charges-amount" type="text" name="charges-amount" value="{{ chargesamount }}">
+                  </div>
+                </div>
+
 
                   <div class="multiple-choice">
                     <input id="ground-rent-2" type="radio" name="ground-rent" value="No">
@@ -83,37 +86,6 @@
 
                 </fieldset>
               </div>
-
-              <div class="form-group">
-                <fieldset>
-
-                  <legend>
-                    <h3 class="heading-small">Is there any service charge or any other charges?</h3>
-                  </legend>
-
-                  <div class="multiple-choice" data-target="charges-amount">
-                    <input id="charges-1" type="radio" name="charges" value="Yes">
-                    <label for="charges-1">Yes</label>
-                  </div>
-
-
-
-                                    <div class="panel panel-border-narrow js-hidden" id="charges-amount">
-                                      <label class="form-label-bold" for="charges-amount">Service charge and others charges per week</label>
-                                      <span class="c-form-input-denote">£</span>
-
-                                      <input class="c-form-input-denote__input form-control form-control-1-4" id="charges-amount" type="text" name="charges-amount" value="{{ chargesamount }}">
-                                    </div>
-
-
-                                    <div class="multiple-choice" data-target="charges-amount">
-                                      <input id="charges-2" type="radio" name="charges" value="No">
-                                      <label for="charges-2">No</label>
-                                    </div>
-
-
-                      </fieldset>
-                    </div>
 
 
              <input type="hidden" name="nino" value="{{ nino }}">
@@ -128,12 +100,6 @@
 
 
            </form>
-
-
-
-              </div> <!-- ADMIN PANE -->
-            </div>  <!-- ADMIN PANES -->
-
 
 
       </div> <!-- COLUMN 2 THRIDS -->

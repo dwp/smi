@@ -1,0 +1,34 @@
+{% if not firstname %}
+  {% set firstname = "Simon" %}
+{% endif %}
+
+{% if not lastname %}
+  {% set lastname = "Wilson" %}
+{% endif %}
+
+{% if not nino %}
+  {% set nino = "DQ314454D" %}
+{% endif %}
+
+{% if startnino %}
+  {% set firstname = "No name" %}
+  {% set lastname = "No name" %}
+  {% set nino = "No NINo" %}
+{% endif %}
+
+
+<h2 class="heading-large" style="margin-bottom:64px; line-height: 32px; margin-top: 64px;">
+  <span class="heading-secondary" style="margin-bottom:0;">{{ firstname }} {{ lastname }}</span>
+  {{ nino }}<br />
+
+  {% if status == "inpayment" %}
+  <span class="status-in-payment">In payment</span>
+  {% elif status == "onhold" %}
+  <span class="status-on-hold">On hold</span>
+  {% elif status == "dormant" %}
+  <span class="status-dormant">Dormant</span>
+  {% else %}
+  <span class="status-in-payment">In payment</span>
+  {% endif %}
+
+</h2>
