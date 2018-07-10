@@ -1,0 +1,35 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'search' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+
+
+          <h1 class="heading-large">MI12s</h1>
+
+          <form action="summary" method="get" class="form">
+
+            <p>No MI12s sent.</p>
+
+            <p><a href="send-MI12">Send new MI12</a></p>
+
+
+
+        </form>
+
+
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
