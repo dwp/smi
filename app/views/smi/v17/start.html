@@ -1,0 +1,29 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'search' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+          <h1 class="heading-large">Start page</h1>
+
+        <p>
+          <ol>
+            <li><a href="search?nino=QU452702A&benefitclass=WA">Use National Insurance number QU4552702A, with Working Age</a></li>
+            <li><a href="search?nino=FD340514D&benefitclass=PC">Use National Insurance number QF 08 22 62 D, with Pension Credit</a></li>
+          </ol>
+        </p>
+        </div>
+
+
+    </div>
+
+    </div>
+  </div>
+</main>
+{% endblock %}

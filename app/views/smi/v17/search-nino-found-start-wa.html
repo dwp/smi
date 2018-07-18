@@ -15,19 +15,11 @@
 
 <div class="panel panel-border-wide">
 
-  {% if customer == "yes" %}
-  <p>This person has a Support for Mortgage Interest loan already.</p>
-  {% endif %}
-
-  {% if existingapplication == "yes" %}
-  <p>This is an existing applicant.</p>
-  {% else %}
-  <p>This would be a new applicant.</p>
-  {% endif %}
+  <p>This is a new applicant for a mortgage interest loan.</p>
 </div>
 
 
-            <table >
+            <table>
                 <tbody>
                   <tr>
                       <td>
@@ -37,50 +29,30 @@
                           {{nino}}
                       </td>
                   </tr>
-              </tbody>
-            </table>
+              </table>
+
+    <h2 class="heading-medium">Benefit</h2>
 
 
-                  <h2 class="heading-medium">Benefit</h2>
-
-                  <table>
-
-                    <tbody>
-
+    <table>
+        <tbody>
                   <tr>
                       <td>
                           Qualifying benefit
                       </td>
                       <td>
-                          Pension credit (PC)
+                          Employment and Support Allowance (ESA)
                       </td>
                   </tr>
+            </tbody>
+      </table>
 
-                  <tr>
-                      <td>
-                          Qualifying benefit start date
-                      </td>
-                      <td>
-                          6 April 2018
-                      </td>
-                  </tr>
 
-                  <tr>
-                      <td>
-                          TAM date
-                      </td>
-                      <td>
-                        14 April 2018
-                      </td>
-                  </tr>
+      <h2 class="heading-medium">Personal details</h2>
 
-                </tbody>
-              </table>
+      <table>
+        <tbody>
 
-              <h2 class="heading-medium">Personal details</h2>
-
-              <table>
-                <tbody>
                   <tr>
                       <td>
                           Title
@@ -108,7 +80,7 @@
                       </tr>
 
                           <tr>
-                            <td valign="top">Address where applicant lives now</td>
+                            <td valign="top">Address of property that loan is held against</td>
                             <td>
                               {% include path+"/inc/applicantaddress.html" %}
                             </td>
@@ -120,12 +92,27 @@
                             </td>
                           </tr>
 
+
+                    <tr>
+                      <td valign="top">Address where applicant lives now</td>
+                      <td>
+                        {% include path+"/inc/applicantaddress.html" %}
+                      </td>
+                    </tr>
                     <tr>
                         <td>
-                            Telephone numbers
+                            Main phone number
                         </td>
                         <td>
-                            {% include path+"/inc/applicantphonenumber.html" %}
+                            01234 5678901
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Other phone number
+                        </td>
+                        <td>
+                            04321 1098765
                         </td>
                     </tr>
                     <tr>
@@ -135,18 +122,16 @@
                     </tr>
 
                   </tbody>
-                </table>
+            </table>
+
+            <h2 class="heading-medium">Alternative contact details</h2>
+
+            <p>The following person handles correspondence for the applicant.</p>
 
 
-                    <h2 class="heading-medium">Alternative contact details</h2>
+            <table>
+              <tbody>
 
-                    <table>
-                      <tbody>
-                    <tr>
-                        <td colspan=2>
-                            The following person handles correspondence for the applicant.
-                        </td>
-                    </tr>
                     <tr>
                         <td>
                             Title
@@ -164,7 +149,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td valign="top">
                             Address
                         </td>
                         <td>
@@ -198,7 +183,6 @@
                           Yes. Large print
                         </td>
                     </tr>
-
 
 
                 </tbody>
@@ -269,8 +253,30 @@
 -->
 
 
+<!--
+            <div class="form-group">
+              <fieldset>
 
-            <p class="mth mb0"><br /><a href="summary?nino={{ nino }}&newapplication=yes" class="button">Continue</a><br /><br /></p>
+                <legend>
+                  <h3 class="heading-small">There is no qualifying benefit. Is this a 10p case?</h3>
+                </legend>
+
+                <div class="multiple-choice">
+                  <input id="TenP-1" type="radio" name="TenP" value="Yes">
+                  <label for="TenP-1">Yes</label>
+                </div>
+                <div class="multiple-choice">
+                  <input id="TenP-2" type="radio" name="TenP" value="No">
+                  <label for="TenP-2">No</label>
+                </div>
+
+              </fieldset>
+            </div>
+
+  -->
+
+
+            <p class="mth mb0"><br /><a href="search-nino-found-start-wa-fed?nino={{ nino }}&newapplication=yes" class="button">Continue</a><br /><br /></p>
             <p class="mth mb0"><a href="search">Cancel and find someone else</a></p>
          </div><!-- column -->
     </div>
