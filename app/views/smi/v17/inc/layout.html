@@ -57,7 +57,7 @@
 
   $('[role="tablist"] a').each(function () {
     $(this).attr(
-      'aria-controls', $(this).attr('href').substring(1)
+      'aria-controls', $(this).attr('href')
     )
   })
 

@@ -78,6 +78,21 @@ router.get('/smi/v*/search-nino/',function(req,res,next)
 
 });
 
+router.get('/smi/v*/service-updates',function(req,res,next)
+{
+  var v = req.params[0];
+  req.data = req.data || { };
+
+  req.data.nino = req.query.nino;
+  const nino = req.data.nino;
+
+  req.data.benefitclass = req.query.benefitclass;
+  const benefitclass = req.data.benefitclass;
+
+
+  next();
+});
+
 
 router.get('/smi/v*/search',function(req,res,next)
 {

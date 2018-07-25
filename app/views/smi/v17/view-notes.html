@@ -1,0 +1,33 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+
+
+          <h1 class="heading-large">All note</h1>
+
+          <form action="summary" method="get" class="form">
+
+            <p>[from from previous version]</p>
+
+         </p>
+
+
+        </form>
+
+
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
