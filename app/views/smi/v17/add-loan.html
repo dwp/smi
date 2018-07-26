@@ -67,8 +67,116 @@
                   <div class="form-group">
                     <label class="form-label-bold" for="nameoflender">QLR code</label>
                     <input class="form-control form-control-1-8" id="QLRcode" type="text" name="QLRcode" value="{{ QLRcode }}">
-                    <a href="add-loan-QLR-found" class="button" value="Look up">Look up</a>
+
                   </div>
+
+
+                                    <div class="form-group">
+                                      <label class="form-label-bold" for="nameoflender">Name of lender</label>
+                                      <input class="form-control form-control-1-4" id="nameoflender" type="text" name="nameoflender" value="">
+                                    </div>
+
+
+                                    <div class="form-group">
+                                      <span class="form-label-bold">
+                                           Sort code
+                                          </span>
+                                      <!---<span class="form-hint">
+                                            From the Qualified Lenders’ Register (QLR)
+                                          </span>-->
+                                          <input class="form-control form-control-1-4" id="nameoflender" type="text" name="nameoflender" value="">
+                                    </div>
+
+
+                                    <div class="form-group">
+                                      <label class="form-label-bold" for="loanaccountnumber">Account number</label>
+                                      <input class="form-control form-control-1-4" id="nameoflender" type="text" name="accountnumber" value="">
+                                    </div>
+
+
+                                    <div class="form-group">
+                                      <fieldset>
+                                        <legend>
+                                          <h3 class="heading-small">
+                                                  Address
+                                                </h3>
+                                        </legend>
+                                        <div class="form-group">
+                                          <input class="form-control form-control-1-2" id="nameoflender" type="text" name="address1" value=""><br />
+                                          <input class="form-control form-control-1-2" id="nameoflender" type="text" name="address2" value=""><br />
+                                          <input class="form-control form-control-1-2" id="nameoflender" type="text" name="address3" value=""><br />
+                                          <input class="form-control form-control-1-2" id="nameoflender" type="text" name="address4" value="">
+
+                                        </div>
+                                      </fieldset>
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label class="form-label-bold" for="loanreferencenumber">Loan reference number</label>
+                                      <input class="form-control form-control-1-4" id="loanreferencenumber" type="text" name="loanreferencenumber" value="{{ loanreferencenumber }}">
+                                    </div>
+
+
+                                  </div>
+
+                                  <div class="panel panel-border-narrow js-hidden" id="loan-payee-individual">
+
+                                    <div class="form-group">
+                                      <label class="form-label-bold" for="nameoflender">Name</label>
+                                      <input class="form-control form-control-1-4" id="nameoflender" type="text" name="nameoflender" value="{{ nameoflender }}">
+                                    </div>
+
+
+                                    <div class="form-group">
+                                      <fieldset>
+                                        <legend>
+                                          <h3 class="heading-small">
+                                                  Address
+                                                </h3>
+                                        </legend>
+                                        <div class="form-group">
+                                          <label class="form-label hidden" for="bankBSaddress1">
+                                                  Address line 1
+                                                </label>
+                                          <input class="form-control" id="bankBSaddress1" type="text" name="bankBSaddress1" value="{{ bankBSaddress1 }}">
+                                          <label class="form-label hidden" for="bankBSaddress2">
+                                                  Address line 2
+                                                </label>
+                                          <input class="form-control" id="bankBSaddress2" type="text" name="bankBSaddress2" value="{{ bankBSaddress2 }}">
+                                          <label class="form-label hidden" for="bankBSaddress3">
+                                                  Address line 3
+                                                </label>
+                                          <input class="form-control" id="bankBSaddress3" type="text" name="bankBSaddress3" value="{{ bankBSaddress3 }}">
+                                          <label class="form-label hidden" for="bankBSaddress4">
+                                                  Address line 4
+                                                </label>
+                                          <input class="form-control" id="bankBSaddress4" type="text" name="bankBSaddress4" value="{{ bankBSaddress4 }}">
+                                        </div>
+                                        <div class="form-group">
+                                          <label class="form-label" for="bankBSaddresspostcode">
+                                                  Postcode
+                                                </label>
+                                          <input class="form-control form-control-1-8" id="bankBSaddresspostcode" type="text" name="bankBSaddresspostcode" value="{{ bankBSaddresspostcode }}">
+                                        </div>
+                                      </fieldset>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                      <span class="form-label-bold">
+                                           Sort code
+                                          </span>
+                                      <!---<span class="form-hint">
+                                            From the Qualified Lenders’ Register (QLR)
+                                          </span>-->
+                                      <input class="form-control form-control-1-8" id="lendercode" type="text" name="lendercode" value="{{ lendercode }}"> <input class="form-control form-control-1-8" id="lendercode" type="text" name="lendercode" value="{{ lendercode }}">                    <input class="form-control form-control-1-8" id="lendercode" type="text" name="lendercode" value="{{ lendercode }}">
+
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label class="form-label-bold" for="loanaccountnumber">Account number</label>
+                                      <input class="form-control form-control-1-4" id="loanaccountnumber" type="text" name="loanaccountnumber" value="{{ loanaccountnumber }}">
+                                    </div>
 
 
                 </div>
