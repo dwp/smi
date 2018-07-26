@@ -1,0 +1,157 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+
+                <h1 class="heading-large">Loan 1 details</h1>
+
+                <div class="tabs">
+                	<div class="tabs-nav">
+                		<ul class="tabs-list">
+                			<li>
+                				<a href="#tab-1">
+                					Lender details
+                				</a>
+                			</li>
+                			<li>
+                				<a href="#tab2">
+                          Payment details
+                				</a>
+                			</li>
+                      <li>
+                        <a href="#tab3">
+                          Payment schedule
+                        </a>
+                      </li>
+
+                		</ul>
+                	</div>
+                </div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+                <table class="lender-details-1">
+                  <tbody>
+
+                    <tr>
+                    <td>
+                        <span class="bold-small">Type of loan</span>
+                    </td>
+                    <td>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <span class="bold-small">Payments for the loan to</span>
+                    </td>
+                    <td>
+                      A bank or building society
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <span class="bold-small">QLR code</span>
+                    </td>
+                    <td>
+                      1234
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                        <span class="bold-small">Name of lender</span>
+                    </td>
+                    <td>
+                      Bank of Bananas
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>
+                        <span class="bold-small">Account number</span>
+                    </td>
+                    <td>
+                      12345678
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                        <span class="bold-small">Account number</span>
+                    </td>
+                    <td>
+                      47 High Street<br />
+                      Birmingham<br />
+                      Staffordshire<br />
+                      B12 7CD
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>
+                        <span class="bold-small">Loan reference number</span>
+                    </td>
+                    <td>
+                      12345678
+                    </td>
+                  </tr>
+
+
+                                                            <tr>
+                                                            <td>
+                                                                <span class="bold-small">Allowable loan amount</span>
+                                                            </td>
+                                                            <td>
+                                                                  &pound;50,000
+                                                            </td>
+                                                          </tr>
+
+
+                                                          <tr>
+                                                          <td>
+                                                              <span class="bold-small">Mortgage protection policy</span>
+                                                          </td>
+                                                          <td>
+                                                                &pound;5.47 per week
+                                                          </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                        <td>
+                                                            <span class="bold-small">Applicant's share of loan payment</span>
+                                                        </td>
+                                                        <td>
+                                                              100%
+                                                        </td>
+                                                      </tr>
+
+
+
+</table>
+
+            </div>
+
+
+       <!-- COLUMN 2 THIRDS -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

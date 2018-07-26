@@ -72,6 +72,9 @@ router.get('/smi/v*/search-nino/',function(req,res,next)
   else if (req.query.nino == 'FD340514D') {
     res.redirect('/smi/v'+v+"/search-nino-found-start-pc?nino="+nino)
   }
+  else if (req.query.nino == 'IV435168B') {
+    res.redirect('/smi/v'+v+"/search-nino-found-start-no-benefit?nino="+nino)
+  }
   else {
     res.redirect('/smi/v'+v+"/search-nino-none?nino="+nino)
   }
