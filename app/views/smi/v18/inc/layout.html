@@ -1,0 +1,121 @@
+{% extends "admin_layout.html" %}
+
+{% block page_title %} Process a mortgage interest loan {% endblock %}
+
+{% block head %}
+  <link href="/public/stylesheets/mvp.css" media="screen" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block proposition_header %}
+  <div class="header-proposition">
+    <div class="content">
+      <nav id="proposition-menu">
+        <a href="/" id="logo" class="content">Manage a mortgage interest loan</a>
+      </nav>
+      <nav id="sign-out-menu">
+        <ul> <li class="bold">Simon Wilson</li> </ul>
+      </nav>
+    </div>
+  </div>
+{% endblock %}
+
+{% block headerClass %} with-proposition{% endblock %}
+
+{% block body_end %}
+  <!-- Javascript -->
+  <script src="/public/javascripts/details.polyfill.js"></script>
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/govuk/selection-buttons.js"></script>
+  <script src="/public/javascripts/govuk/shim-links-with-button-role.js"></script>
+  <script src="/public/javascripts/govuk/show-hide-content.js"></script>
+  <script src="/public/javascripts/application.js"></script>
+
+  <script>
+  // ==========================================================================
+  // Tabs
+  // ==========================================================================
+
+  // Declare some variables
+
+  var $container = '.tabs'
+  var $tablist = '.tabs-list'
+  var $tabpanel = '.tabs-panel'
+
+  // The setup
+
+  $($container + ' ' + $tablist).attr('role', 'tablist')
+
+  $($container + ' [role="tablist"] li').attr('role', 'presentation')
+
+
+  // Make each aria-controls correspond id of targeted section (re href)
+
+  $('[role="tablist"] a').each(function () {
+    $(this).attr(
+      'aria-controls', $(this).attr('href')
+    )
+  })
+
+
+  // Make each section focusable and give it the tabpanel role
+
+  $($container + ' ' + $tabpanel).attr({
+    role: 'tabpanel'
+  })
+
+  // Make first child of each panel focusable programmatically
+
+  $($container + ' ' + $tabpanel + ' > *:first-child').attr({
+    tabindex: '0'
+  })
+
+  // Make all but the first section hidden (ARIA state and display CSS)
+
+  $('[role="tabpanel"]:not(:first-of-type)').attr({
+    'aria-hidden': 'true'
+  })
+
+  // Change focus between tabs with arrow keys
+
+  $('[role="tab"]').on('keydown', function (e) {
+    // Define current, previous and next (possible) tabs
+
+    var $original = $(this)
+    var $prev = $(this).parents('li').prev().children('[role="tab"]')
+    var $next = $(this).parents('li').next().children('[role="tab"]')
+    var $target
+
+
+
+    // Show panel which corresponds to target
+
+    $('#' + $(document.activeElement).attr('href').substring(1))
+      .attr('aria-hidden', false)
+  })
+
+  // Handle click on tab to show + focus tabpanel
+
+  $('[role="tab"]').on('click', function (e) {
+
+    // Remove focusability [sic] and aria-selected
+
+    $('[role="tab"]').attr({
+      tabindex: '-1',
+      'aria-selected': false
+    })
+
+    // Replace above on clicked tab
+
+    $(this).attr({
+      'aria-selected': true,
+      tabindex: '0'
+    })
+
+
+  })
+
+
+  </script>
+
+  {% block page_scripts %}{% endblock %}
+{% endblock %}

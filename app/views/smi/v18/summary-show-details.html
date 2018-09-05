@@ -1,0 +1,80 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+<main id="content" role="main">
+
+	{% set currentPage = 'claimant' %}
+	{% include path+"/inc/main_nav.html" %}
+
+
+<div class="main-content">
+  <!-- MAIN CONTENT -->
+  <div class="grid-row">
+    <!-- GRID ROW -->
+
+    <div class="column-two-thirds">
+      <!-- COLUMN 2 THRIDS -->
+
+      {% include path+"/inc/name-and-nino.html" %}
+
+
+
+
+      <p>&nbsp;</p>
+
+      {% include path+"/inc/summary_tab_details.html" %}
+
+      <div class="tabs-content"  style="border-top: 1px solid #bfc1c3;">
+
+        <div class="tabs-panel" id="tab-1">
+          <div class="tabs-panel-inner">
+            <h2 class="heading-medium">
+        Customer's details
+      </h2>
+
+      {% include path+"/inc/personal_details.html" %}
+
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <!--<p class="mth mb0"><a href="payments" class="button">Proceed to authorise payments</a></p>-->
+    <div class="column-one-third">
+      <p>&nbsp;</p>
+      <h2 class="heading-medium">Claim history</h2>
+
+      <p>
+        <a href="add-note">Add note</a>
+      </p>
+
+
+      <ul class="timeline-bsp">
+        <li>
+          <span class="entry"></span>
+          <h3 class="bold">Case created</h3>
+          <span>by Jo Arthur</span>
+          <span>21 May 2018</span>
+        </li>
+
+      </ul>
+
+      <p style="margin-top: 32px;">
+        <a href="view-notes">View all notes</a>
+      </p>
+
+
+    </div>
+
+  </div>
+  <!-- GRID ROW -->
+</div>
+<!-- MAIN CONTENT --></main>
+
+
+{% endblock %}

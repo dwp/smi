@@ -1,0 +1,49 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+          <h1 class="heading-large">Service update 31 July 2018</h1>
+
+          <p class="bold-regular">&nbsp;</p>
+
+          <div class="notice">
+            <i class="icon icon-important">
+              <span class="visually-hidden">Warning</span>
+            </i>
+            <strong class="bold-medium">
+              You need to set up a new shortcut for Manage a Mortgage Interest loan.
+            </strong>
+          </div>
+
+          <h2 class="heading-medium">Create a shortcut </h2>
+
+          <ol class="list list-number">
+            <li>Right click on your desktop.</li>
+            <li>Select ‘New Shortcut’.</li>
+            <li>Where it says ‘Type the location of the item:’ copy and paste this web address (URL): http://smi-admin.gov.uk/</li>
+            <li>Select ‘Next’.</li>
+            <li>Where it says ‘Type the name for this shortcut’, enter Manage a mortgage interest loan.</li>
+            <li>Select ‘Finish’.</li>
+            <li>The shortcut will appear on your desktop. Double click on it to access the Manage a mortgage interest loan system.</li>
+          </ol>
+
+          <p>
+            You’ve been automatically redirected for now. But on 30 September 2018 the old site will be deleted and any old shortcuts will no longer work.
+          </p>
+
+
+          <p style="margin-top:32px;"><a href="search?benefitclass={{ beenfitclass}}&nino={{ nino }}" class="button">Continue</a></p>
+
+    </div>
+
+    </div>
+  </div>
+</main>
+{% endblock %}

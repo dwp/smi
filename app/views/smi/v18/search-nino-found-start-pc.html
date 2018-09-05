@@ -1,0 +1,245 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'search' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+          <h1 class="heading-large">Confirm details
+</h1>
+
+<div class="panel panel-border-wide">
+
+  {% if customer == "yes" %}
+  <p>This person has a Support for Mortgage Interest loan already.</p>
+  {% endif %}
+
+  {% if existingapplication == "yes" %}
+  <p>This is an existing applicant.</p>
+  {% else %}
+  <p>This would be a new applicant.</p>
+  {% endif %}
+</div>
+
+
+            <table >
+                <tbody>
+                  <tr>
+                      <td>
+                          National Insurance number
+                      </td>
+                      <td>
+                          {{nino}}
+                      </td>
+                  </tr>
+
+                  <tr>
+                      <td>
+                          Qualifying benefit
+                      </td>
+                      <td>
+                          Pension credit (PC)
+                      </td>
+                  </tr>
+
+                  <tr>
+                      <td>
+                          Qualifying benefit start date
+                      </td>
+                      <td>
+                          6 April 2018
+                      </td>
+                  </tr>
+
+                  <tr>
+                      <td>
+                          TAM date
+                      </td>
+                      <td>
+                        14 April 2018
+                      </td>
+                  </tr>
+
+
+                  <tr>
+                      <td>
+                          Title
+                      </td>
+                      <td>
+                        Mrs
+                      </td>
+                  </tr>
+
+                    <tr>
+                        <td>
+                            Full name
+                        </td>
+                        <td>
+                          {% include path+"/inc/applicantname.html" %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Date of birth
+                        </td>
+                        <td>
+                          {% include path+"/inc/applicantDOB.html" %}
+                        </td>
+                      </tr>
+
+                          <tr>
+                            <td valign="top">Address where applicant lives now</td>
+                            <td>
+                              {% include path+"/inc/applicantaddress.html" %}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td valign="top">Country where property is</td>
+                            <td>
+                              England
+                            </td>
+                          </tr>
+
+                    <tr>
+                        <td>
+                            Telephone numbers
+                        </td>
+                        <td>
+                            {% include path+"/inc/applicantphonenumber.html" %}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Is someone else handling correspondence?
+                        </td>
+                        <td>
+                          Yes. Appointee
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Representative's title
+                        </td>
+                        <td>
+                          Mr
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Representative's name
+                        </td>
+                        <td>
+                          Mark Bowater
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Representative's address
+                        </td>
+                        <td>
+                          123 Duffy Avenue<br />
+                          Newcastle<br />
+                          N1 9WD
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Representative's telephone number
+                        </td>
+                        <td>
+                          01432 987654
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Does the person need an alternative format?
+                        </td>
+                        <td>
+                          Yes. Large print
+                        </td>
+                    </tr>
+
+
+
+                </tbody>
+            </table>
+<!--
+            <div class="form-group" style="margin-top:32px;">
+              <fieldset>
+                <legend>
+                  <h3 class="heading-small">
+                    Do you want to add alternative representative contact details?
+                  </h3>
+                </legend>
+                <div class="multiple-choice" data-target="repaddress">
+                    <input id="different-address" name="none" type="checkbox" value="yes">
+                    <label for="different-address">Yes</label>
+                </div>
+                <div class="panel panel-border-narrow js-hidden" id="repaddress">
+                  <div class="form-group">
+                    <label class="form-label" for="reptitle">
+                      Title
+                    </label>
+                    <input class="form-control form-control-1-8 " id="reptitle" type="text" name="reptitle" value="{{ reptitle }}">
+                  <label class="form-label" for="repfirstname">
+                    First name
+                  </label>
+                  <input class="form-control" id="repfirstname" type="text" name="repfirstname" value="{{ repfirstname }}">
+                  <label class="form-label" for="replastname">
+                    Last name
+                  </label>
+                  <input class="form-control" id="replastname" type="text" name="replastname" value="{{ replastname }}">
+
+                </div>
+
+                  <legend>
+                    <h3 class="heading-small">
+                      Address
+                    </h3>
+                  </legend>
+                <div class="form-group">
+
+                  <label class="form-label hidden" for="otheraddress1">
+                    Address line 1
+                  </label>
+                  <input class="form-control" id="otheraddress1" type="text" name="otheraddress1" value="{{ otheraddress1 }}">
+                  <label class="form-label hidden" for="otheraddress2">
+                    Address line 2
+                  </label>
+                  <input class="form-control" id="otheraddress2" type="text" name="otheraddress2" value="{{ otheraddress2 }}">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="otheraddresspostcode">
+                    Postcode
+                  </label>
+                  <input class="form-control form-control-1-8" id="otherpostcode" type="text" name="otherpostcode" value="{{ otherpostcode }}">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="othertelephonenumber">
+                    Telephone number
+                  </label>
+                  <input class="form-control form-control-1-4" id="othertelephonenumber" type="text" name="othertelephonenumber" value="{{ othertelephone }}">
+                </div>
+
+              </div>
+
+            </fieldset>
+            </div>
+
+-->
+
+
+
+            <p class="mth mb0"><br /><a href="summary?nino={{ nino }}&newapplication=yes" class="button">Continue</a><br /><br /></p>
+            <p class="mth mb0"><a href="search">Cancel and find someone else</a></p>
+         </div><!-- column -->
+    </div>
+  </div>
+</main>
+{% endblock %}
