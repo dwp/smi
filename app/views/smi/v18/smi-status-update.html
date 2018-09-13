@@ -16,38 +16,40 @@
 			 {% include path+"/inc/name-and-nino.html" %}
 
 
+       <h1 class="heading-large">Change case status</h1>
 
-
-<p>&nbsp;</p>
-
-{% include path+"/inc/summary_tab_case_management.html" %}
-
-
-<div class="tabs-content"  style="border-top: 1px solid #bfc1c3;">
-
-  <div class="tabs-panel" id="tab-1">
-    <div class="tabs-panel-inner">
-
-      <h2 class="heading-medium">
-  Case management
-</h2>
+       <form class="form" id="formname">
 
 
 
-<table>
-  <tr>
-    <td>SMI status</td>
-    <td><span class="status-on-hold">On hold</span></td>
-    <td><a href="smi-status-update">Change</a></td>
-  </tr>
-</table>
+
+    <div class="form-group">
+      <fieldset>
+        <legend>
+          <h3 class="heading-small">
+            SMI status
+          </h3>
+        </legend>
+        <div class="multiple-choice">
+            <input id="SMI-status" name="SMI-status" type="radio" value="">
+            <label for="SMI-status">Status 1</label>
+        </div>
+
+        <div class="multiple-choice">
+            <input id="SMI-status" name="SMI-status" type="radio" value="">
+            <label for="SMI-status">Status 2</label>
+        </div>
+
+    </fieldset>
+    </div>
+
+    <p class="mth mb0"><br /><a href="#" class="button">Update</a></p>
 
 
-	</div>
-</div>
+  </form>
 
 
-</div>
+
 </div>
 
 
