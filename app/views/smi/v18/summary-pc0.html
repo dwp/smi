@@ -1,6 +1,7 @@
 {% extends path+"/inc/layout.html" %}
 
 {% block content %}
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 <main id="content" role="main">
 
 	{% set currentPage = 'claimant' %}
@@ -19,18 +20,32 @@
 
 <div class="panel panel-border-wide" style="border-color: #28a197; border-left-style: solid; background-color: #eaf6f5;">
 
-	<h2 class="heading-small">Deductions added</h2>
+	<h2 class="heading-small">Case created</h2>
 </div>
+
 
 <!--
 						 <div class="panel panel-border-wide" style="border-color: #005ea5; border-left-style: solid; background-color: #eaf4f9;">
-
 							 <h2 class="heading-small">Next task</h2>
 							 <ul>
-								 <li><a href="payments-list?nino=QF 08 22 62 D">Send MI12</a></li>
+								 <li><a href="list-of-MI12s-blank?nino=QF 08 22 62 D">Send MI12</a></li>
 							 </ul>
 
 						</div>
+-->
+
+<!--
+<nav class="navigation-secondary">
+        <ul>
+          <li>
+            <a href="#" class="active" aria-current="section">Case overview</a>
+          </li>
+          <li>
+            <a href="#">Customer's details</a>
+          </li>
+        </ul>
+</nav>
+
 -->
 
 <p>&nbsp;</p>
@@ -48,24 +63,17 @@
 <div id="tasks-content">
 	<ol class="task-list">
 			<ul class="task-list-items">
-
-				<li class="task-list-item">
-					<a class="task-name" href="send-receive-MI12-pc">
-						    Send and receive MI12
-						  </a>
-							<span class="status-complete">Completed</span>
-				</li>
 				<li class="task-list-item">
 					<a class="task-name" href="smi-loan-decision">
 						    Loan agreement and charge form
 						  </a>
-							<span class="status-complete">Completed</span>
+							<span class="status-on-hold">TO DO</span>
 				</li>
 				<li class="task-list-item">
 					<a class="task-name" href="add-deductions">
-				Deductions
+				Deductions and charges
 			</a>
-			<span class="status-complete">Completed</span>
+			<span class="status-on-hold">TO DO</span>
 				</li>
 
 				<li class="task-list-item">
@@ -74,8 +82,7 @@
 			</a>
 			<span class="status-on-hold">TO DO</span>
 				</li>
-
-			</ul>
+		</ul>
 	</ol>
 </div>
 
@@ -105,61 +112,11 @@
 				<p>&nbsp;</p>
 				<h2 class="heading-medium">Claim history</h2>
 
-				<p>
-				<a href="add-note">Add note</a>
-			</p>
+        <p>
+        <a href="add-note">Add note</a>
+      </p>
 
-			<ul class="timeline-bsp">
-
-					<li>
-						<span class="entry"></span>
-						<h3 class="bold">Home improvement loan added</h3>
-						<span>by Jo Arthur</span>
-						<span>21 May 2018</span>
-						<p>Loan reference number 26173770217<br />
-Allowable amount: £20,000.00</p>
-					</li>
-
-					<li>
-						<span class="entry"></span>
-						<h3 class="bold"> Home purchase loan or mortgage
-
- added</h3>
-						<span>by Jo Arthur</span>
-						<span>21 May 2018</span>
-						<p>Loan reference number 71207737<br />
-Allowable amount: £35,000.00</p>
-
-					</li>
-
-					<li>
-						<span class="entry"></span>
-						<h3 class="bold">Charge form been received back</h3>
-						<span>by Jo Arthur</span>
-						<span>21 May 2018</span>
-					</li>
-
-					<li>
-						<span class="entry"></span>
-						<h3 class="bold">Loan agreeement been received back</h3>
-						<span>by Jo Arthur</span>
-						<span>21 May 2018</span>
-					</li>
-
-					<li>
-						<span class="entry"></span>
-						<h3 class="bold">MI12 returned by the bank or building society</h3>
-						<span>by Jo Arthur</span>
-						<span>21 May 2018</span>
-					</li>
-
-					<li>
-						<span class="entry"></span>
-						<h3 class="bold">MI12 sent to the claimant</h3>
-						<span>by Jo Arthur</span>
-						<span>21 May 2018</span>
-					</li>
-
+				<ul class="timeline-bsp">
 					<li>
 						<span class="entry"></span>
 						<h3 class="bold">Case created</h3>
@@ -169,9 +126,9 @@ Allowable amount: £35,000.00</p>
 
 				</ul>
 
-				<!--<p style="margin-top: 32px;">
+        <p style="margin-top: 32px;">
           <a href="view-notes">View all notes</a>
-        </p>-->
+        </p>
 
 			</div>
 

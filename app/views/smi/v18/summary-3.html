@@ -35,22 +35,7 @@
 
 <p>&nbsp;</p>
 
-<div class="tabs">
-	<div class="tabs-nav">
-		<ul class="tabs-list">
-			<li>
-				<a href="#tab-1">
-					Case overview
-				</a>
-			</li>
-			<li>
-				<a href="#tab-2">
-					Customer's details
-				</a>
-			</li>
-		</ul>
-	</div>
-</div>
+{% include path+"/inc/summary_tab_overview.html" %}
 
 <div class="tabs-content">
           <div class="tabs-panel" id="tab-1">
@@ -64,12 +49,6 @@
 	<ol class="task-list">
 			<ul class="task-list-items">
 
-				<li class="task-list-item">
-					<a class="task-name" href="send-receive-MI12-pc">
-						    Send and receive MI12
-						  </a>
-							<span class="status-complete">Completed</span>
-				</li>
 				<li class="task-list-item">
 					<a class="task-name" href="smi-loan-decision">
 						    Loan agreement and charge form
@@ -163,9 +142,9 @@
 
 				</ul>
 
-				<p style="margin-top: 32px;">
+				<!--<p style="margin-top: 32px;">
           <a href="view-notes">View all notes</a>
-        </p>
+        </p>-->
 
 			</div>
 

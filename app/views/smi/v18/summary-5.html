@@ -22,6 +22,7 @@
 	<h2 class="heading-small">Loan added</h2>
 </div>
 
+<!--
 						 <div class="panel panel-border-wide" style="border-color: #005ea5; border-left-style: solid; background-color: #eaf4f9;">
 
 							 <h2 class="heading-small">Next task</h2>
@@ -30,25 +31,11 @@
 							 </ul>
 
 						</div>
+					-->
 
 						<p>&nbsp;</p>
 
-						<div class="tabs">
-							<div class="tabs-nav">
-								<ul class="tabs-list">
-									<li>
-										<a href="#tab-1">
-											Case overview
-										</a>
-									</li>
-									<li>
-										<a href="#tab-2">
-											Customer's details
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
+						{% include path+"/inc/summary_tab_overview.html" %}
 
 						<div class="tabs-content">
 						          <div class="tabs-panel" id="tab-1">
@@ -188,9 +175,9 @@ Allowable amount: £35,000.00</p>
 
 				</ul>
 
-				<p style="margin-top: 32px;">
+				<!--<p style="margin-top: 32px;">
           <a href="view-notes">View all notes</a>
-        </p>
+        </p>-->
 
 			</div>
 

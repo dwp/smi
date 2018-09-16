@@ -12,7 +12,7 @@
 
      <div class="column-two-thirds"> <!-- COLUMN 2 THRIDS -->
 
-			 {% include path+"/inc/name-and-nino.html" %}
+			 {% include path+"/inc/name-and-nino_in-payment.html" %}
 
 
 
@@ -22,13 +22,13 @@
 	<h2 class="heading-small">Loan added</h2>
 </div>
 
-						 <div class="panel panel-border-wide" style="border-color: #005ea5; border-left-style: solid; background-color: #eaf4f9;">
+<!--						 <div class="panel panel-border-wide" style="border-color: #005ea5; border-left-style: solid; background-color: #eaf4f9;">
 
 							 <ul>
 								 <li>Review of payments due in 12 months.</li>
 							 </ul>
 
-						</div>
+						</div>-->
 
 
 												<h2 class="heading-medium" style="margin-top:64px;">Next payments</h2>
@@ -38,22 +38,7 @@
 
 												<p>&nbsp;</p>
 
-												<div class="tabs">
-													<div class="tabs-nav">
-														<ul class="tabs-list">
-															<li>
-																<a href="#tab-1">
-																	Case overview
-																</a>
-															</li>
-															<li>
-																<a href="#tab-2">
-																	Customer's details
-																</a>
-															</li>
-														</ul>
-													</div>
-												</div>
+												{% include path+"/inc/summary_tab_overview.html" %}
 
 												<div class="tabs-content">
 												          <div class="tabs-panel" id="tab-1">
@@ -68,12 +53,6 @@
 			<ul class="task-list-items">
 
 				<li class="task-list-item">
-					<a class="task-name" href="send-receive-MI12-pc">
-						    Send and receive MI12
-						  </a>
-							<span class="status-complete">Completed</span>
-				</li>
-				<li class="task-list-item">
 					<a class="task-name" href="smi-loan-decision">
 						    Loan agreement and charge form
 						  </a>
@@ -87,7 +66,7 @@
 				</li>
 
 				<li class="task-list-item">
-					<a class="task-name" href="list-of-loans-several">
+					<a class="task-name" href="list-of-loans-several-all-done">
 				Loans and payments
 			</a>
 			<span class="status-complete">Completed</span>
@@ -210,9 +189,9 @@ Allowable amount: £35,000.00</p>
 
 				</ul>
 
-				<p style="margin-top: 32px;">
+				<!--<p style="margin-top: 32px;">
           <a href="view-notes">View all notes</a>
-        </p>
+        </p>-->
 
 			</div>
 

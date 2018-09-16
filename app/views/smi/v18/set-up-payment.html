@@ -63,7 +63,7 @@
                             </div>
                             <div class="form-group form-group-year">
                               <label class="form-label" for="dob-year">Year</label>
-                              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0">
                             </div>
                           </div>
                         </div>
@@ -97,6 +97,40 @@
 
 
 </table>
+
+<div class="form-group" style="margin-top:32px;">
+  <fieldset>
+
+    <legend>
+      <h3 class="heading-small">Are there arrears for this loan?</h3>
+    </legend>
+
+    <div class="multiple-choice" data-target="has-arrears">
+      <input id="loan-payee-1" type="radio" name="loan-payee" value="bankorBS">
+      <label for="loan-payee-1">Yes</label>
+    </div>
+
+    <div class="panel panel-border-narrow js-hidden" id="has-arrears">
+
+      <div class="form-group">
+        <label class="form-label-bold" for="arrears-amount">Amount of arrears</label>
+        <span class="c-form-input-denote">£</span>
+
+        <input class="c-form-input-denote__input form-control form-control-1-4" id="arrears-amount" type="text" name="arrears-amount" value="">
+      </div>
+
+    </div>
+
+
+    <div class="multiple-choice">
+      <input id="loan-payee-2" type="radio" name="loan-payee" value="individual">
+      <label for="loan-payee-2">No</label>
+    </div>
+  </fieldset>
+
+
+</div>
+
 
 
              <p class="mth mb0">

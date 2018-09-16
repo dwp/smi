@@ -45,6 +45,54 @@
               </div>
 
 
+
+                            <div class="form-group">
+                              <fieldset>
+
+                                <legend>
+                                  <h3 class="heading-small">Is this mortgage for this address?</h3>
+                                </legend>
+
+                                <p>Address line 1<br />
+                                  Address line 2<br />
+                                  Address line 3<br />
+                                  Address line 4
+                                </p>
+
+                                <div class="multiple-choice">
+                                  <input id="correct-address-1" type="radio" name="correct-address" value="Yes">
+                                  <label for="correct-address-1">Yes</label>
+                                </div>
+                                <div class="multiple-choice" data-target="correct-address-enter">
+                                  <input id="correct-address-2" type="radio" name="correct-address" value="No">
+                                  <label for="correct-address-2">No</label>
+                                </div>
+                              </fieldset>
+
+                              <div class="panel panel-border-narrow js-hidden" id="correct-address-enter">
+
+
+
+                                <div class="form-group">
+                                  <fieldset>
+                                    <legend>
+                                      <h3 class="heading-small">
+                                              Address of mortgage property address
+                                            </h3>
+                                    </legend>
+                                  </fieldset>
+
+                                  <input class="form-control form-control-1-2" id="address1" type="text" name="address1" value=""><br />
+                                  <input class="form-control form-control-1-2" id="address2" type="text" name="address2" value=""><br />
+                                  <input class="form-control form-control-1-2" id="address3" type="text" name="address3" value=""><br />
+                                  <input class="form-control form-control-1-2" id="address4" type="text" name="address4" value="">
+
+                                </div>
+
+                              </div>
+
+                            </div>
+
               <div class="form-group">
                 <fieldset>
 
@@ -102,10 +150,10 @@
                                                 </h3>
                                         </legend>
                                         <div class="form-group">
-                                          <input class="form-control form-control-1-2" id="nameoflender" type="text" name="address1" value=""><br />
-                                          <input class="form-control form-control-1-2" id="nameoflender" type="text" name="address2" value=""><br />
-                                          <input class="form-control form-control-1-2" id="nameoflender" type="text" name="address3" value=""><br />
-                                          <input class="form-control form-control-1-2" id="nameoflender" type="text" name="address4" value="">
+                                          <input class="form-control form-control-1-2" id="address1" type="text" name="address1" value=""><br />
+                                          <input class="form-control form-control-1-2" id="address2" type="text" name="address2" value=""><br />
+                                          <input class="form-control form-control-1-2" id="address3" type="text" name="address3" value=""><br />
+                                          <input class="form-control form-control-1-2" id="address4" type="text" name="address4" value="">
 
                                         </div>
                                       </fieldset>
@@ -253,7 +301,8 @@
                 <label class="form-label-bold" for="allowableloanamount">Allowable loan amount</label>
                 <span class="c-form-input-denote">£</span>
 
-                <input class="c-form-input-denote__input form-control form-control-1-4" id="allowableloanamount" type="text" name="allowableloanamount" value="{{ allowableloanamount }}">
+                <input class="c-form-input-denote__input form-control form-c
+                ontrol-1-4" id="allowableloanamount" type="text" name="allowableloanamount" value="{{ allowableloanamount }}">
               </div>
 
               <div class="form-group">
