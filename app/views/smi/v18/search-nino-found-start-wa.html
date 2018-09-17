@@ -83,7 +83,7 @@
                       </tr>
 
                           <tr>
-                            <td valign="top">Address of property that loan is held against</td>
+                            <td valign="top">Address 1</td>
                             <td>
                               {% include path+"/inc/applicantaddress.html" %}
                             </td>
@@ -97,7 +97,7 @@
 
 
                     <tr>
-                      <td valign="top">Address where applicant lives now</td>
+                      <td valign="top">Address 2</td>
                       <td>
                         {% include path+"/inc/applicantaddress.html" %}
                       </td>
@@ -119,25 +119,41 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan=2>
-                            This person needs to be contacted using [format].
+                        <td colspan=2 style="padding-top: 24px; border-bottom: 0;">
+                          <div class="notice">
+                            <i class="icon icon-important">
+                              <span class="visually-hidden">Warning</span>
+                            </i>
+                            <strong class="bold-small">
+                            This person needs to be contacted using large print.
+                          </strong>
+                          </div>
+
                         </td>
                     </tr>
 
                   </tbody>
             </table>
 
-            <h2 class="heading-medium">Alternative contact details</h2>
+            <h2 class="heading-medium">Representative details</h2>
 
             <p>The following person handles correspondence for the applicant.</p>
 
 
             <table>
               <tbody>
+                <tr>
+                    <td>
+                        Type of appointee
+                    </td>
+                    <td>
+                      [type of representative here]
+                    </td>
+                </tr>
 
                     <tr>
                         <td>
-                            Title
+                            Representative's title
                         </td>
                         <td>
                           Mr

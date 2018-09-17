@@ -27,27 +27,35 @@
 </div>
 
 
-            <table >
-                <tbody>
-                  <tr>
-                      <td>
-                          National Insurance number
-                      </td>
-                      <td>
-                          {{nino}}
+<table>
+    <tbody>
+      <tr>
+          <td width=50%>
+              National Insurance number
+          </td>
+          <td width=50%>
+              {{nino}}
+          </td>
+      </tr>
+  </table>
+
+
+  <h2 class="heading-medium">Benefit</h2>
+
+
+  <table>
+      <tbody>
+                <tr>
+                    <td width=50%>
+                        Qualifying benefit
+                    </td>
+                      <td width=50%>
+                          Pension credit
                       </td>
                   </tr>
+                </table>
 
-                  <tr>
-                      <td>
-                          Qualifying benefit
-                      </td>
-                      <td>
-                          Pension credit (PC)
-                      </td>
-                  </tr>
-
-                  <tr>
+<!--                  <tr>
                       <td>
                           Qualifying benefit start date
                       </td>
@@ -63,14 +71,17 @@
                       <td>
                         14 April 2018
                       </td>
-                  </tr>
+                  </tr>-->
+
+                  <h2 class="heading-medium">Personal details</h2>
 
 
+                  <table>
                   <tr>
-                      <td>
+                      <td width=50%>
                           Title
                       </td>
-                      <td>
+                      <td width=50%>
                         Mrs
                       </td>
                   </tr>
@@ -93,33 +104,70 @@
                       </tr>
 
                           <tr>
-                            <td valign="top">Address where applicant lives now</td>
+                            <td valign="top">Address 1</td>
                             <td>
                               {% include path+"/inc/applicantaddress.html" %}
                             </td>
                           </tr>
                           <tr>
-                            <td valign="top">Country where property is</td>
+                            <td valign="top">Country</td>
                             <td>
                               England
                             </td>
                           </tr>
+                          <tr>
+                            <td valign="top">Address 2</td>
+                            <td>
+                              {% include path+"/inc/applicantaddress.html" %}
+                            </td>
+                          </tr>
 
+
+                          <tr>
+                              <td>
+                                  Main phone number
+                              </td>
+                              <td>
+                                  01234 5678901
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  Other phone number
+                              </td>
+                              <td>
+                                  04321 1098765
+                              </td>
+                          </tr>
+                        <tr>
+                            <td colspan=2 style="padding-top: 24px; border-bottom: 0;">
+                              <div class="notice">
+                                <i class="icon icon-important">
+                                  <span class="visually-hidden">Warning</span>
+                                </i>
+                                <strong class="bold-small">
+                                This person needs to be contacted using large print.
+                              </strong>
+                              </div>
+
+                            </td>
+                        </tr>
+
+                    </table>
+
+
+                    <h2 class="heading-medium">Representative details</h2>
+
+                    <p>The following person handles correspondence for the applicant.</p>
+
+
+                    <table>
                     <tr>
                         <td>
-                            Telephone numbers
+                            Type of appointee
                         </td>
                         <td>
-                            {% include path+"/inc/applicantphonenumber.html" %}
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            Is someone else handling correspondence?
-                        </td>
-                        <td>
-                          Yes. Appointee
+                          [type of representative here]
                         </td>
                     </tr>
                     <tr>
