@@ -1,0 +1,46 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+
+                <h1 class="heading-large">Payment sent for confirmation</h1>
+
+              <h2 class="heading-medium">What the system will do</h2>
+                <ul class="list">
+                  <li>Inform your payment authoriser this payment needs approval</li>
+                  <li>If the payment is authorised, payments will be automatically set up</li>
+                  <li>If the payment is not authorised, you will be contacted</li>
+                </ul>
+
+
+                <h2 class="heading-medium">What you need to do</h2>
+                <ul class="list">
+                  <li>Nothing.</li>
+                </ul>
+
+
+              <p><a href="list-of-loans-several-one-waiting?nino={{ nino }}&smitsstatus=approved&mortgagesloans=yes&payments=yes" class="button">Return to loans and payments overview</a></p>
+
+
+
+</div>
+
+       <!-- COLUMN 2 THIRDS -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

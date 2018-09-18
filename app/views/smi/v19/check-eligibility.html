@@ -1,0 +1,188 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'search' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+
+        <h1 class="heading-large">Check applicant eligibility</h1>
+
+
+
+
+            <div class="admin-panes">
+              <div class="admin-pane">
+
+
+
+                {% set navactive = "money" %}
+                {% if not newapplication %}
+
+                {% endif %}
+
+                <form action="add-additional-mortgage-info" method="get" class="form">
+
+                  <div class="form-group">
+                    <fieldset>
+
+                      <legend>
+                        <h3 class="heading-small">Does the applicant apy towards a home purchase loan or home improvement loan?</h3>
+                      </legend>
+
+                      <div class="multiple-choice">
+                        <input id="loan-1" type="radio" name="loan" value="mortgage">
+                        <label for="loan-1">Yes</label>
+                      </div>
+                      <div class="multiple-choice">
+                        <input id="loan-2" type="radio" name="loan" value="loan">
+                        <label for="loan-2">No</label>
+                      </div>
+                    </fieldset>
+                  </div>
+
+
+                  <div class="form-group">
+                    <span class="form-label-bold">
+                      Lender code
+                    </span>
+                    <!---<span class="form-hint">
+                      From the Qualified Lenders’ Register (QLR)
+                    </span>-->
+                    <input class="form-control form-control-1-8" id="lendercode" type="text" name="lendercode" value="{{ lendercode }}">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label-bold" for="loanaccountnumber">Loan account number</label>
+                    <input class="form-control form-control-1-4" id="loanaccountnumber" type="text" name="loanaccountnumber" value="{{ loanaccountnumber }}">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label-bold" for="loanreferencenumber">Loan reference number</label>
+                    <input class="form-control form-control-1-4" id="loanreferencenumber" type="text" name="loanreferencenumber" value="{{ loanreferencenumber }}">
+                  </div>
+
+
+                  <div class="form-group">
+                    <label class="form-label-bold" for="allowableloanamount">Allowable loan amount</label>
+                    <span class="c-form-input-denote">£</span>
+
+                    <input class="c-form-input-denote__input form-control form-control-1-4" id="allowableloanamount" type="text" name="allowableloanamount" value="{{ allowableloanamount }}">
+                  </div>
+
+                  <div class="form-group">
+                    <fieldset>
+                      <legend>
+                        <h3 class="heading-small">
+                          Mortgage protection policy amount per week?
+                        </h3>
+                      </legend>
+                      <div class="multiple-choice" data-target="mpp">
+                          <input id="different-address" name="none" type="checkbox" value="yes">
+                          <label for="different-address">Yes</label>
+                      </div>
+                      <div class="panel panel-border-narrow js-hidden" id="mpp">
+
+                  <div class="form-group">
+                    <label class="form-label-bold" for="allowableloanamount"></label>
+                    <span class="c-form-input-denote">£</span>
+                    <input class="c-form-input-denote__input form-control form-control-1-4" id="allowableloanamount" type="text" name="allowableloanamount" value="{{ allowableloanamount }}">
+                  </div>
+                </fieldset>
+              </div>
+
+
+                  <div class="form-group">
+                    <fieldset>
+                      <legend>
+                        <h3 class="heading-small">
+                          Is the claimant sharing the payment of mortgage or loan?
+                        </h3>
+                      </legend>
+                      <div class="multiple-choice" data-target="splitloan">
+                          <input id="different-address" name="none" type="checkbox" value="yes">
+                          <label for="different-address">Yes</label>
+                      </div>
+                      <div class="panel panel-border-narrow js-hidden" id="splitloan">
+                        <legend>
+                          <h3 class="heading-small">
+                            The claimant is paying:
+                          </h3>
+                            <div class="multiple-choice">
+                              <input id="alternativeformatnotes-1" type="radio" name="alternativeformatnotes" value="No">
+                              <label for="alternativeformatnotes-1">1/2</label>
+                            </div>
+                            <div class="multiple-choice">
+                              <input id="alternativeformatnotes-2" type="radio" name="alternativeformatnotes" value="No">
+                              <label for="alternativeformatnotes-2">1/3</label>
+                            </div>
+                            <div class="multiple-choice">
+                              <input id="alternativeformatnotes-3" type="radio" name="alternativeformatnotes" value="No">
+                              <label for="alternativeformatnotes-3">1/4</label>
+                            </div>
+                            <div class="multiple-choice"  data-target="alternativeformatnotesother">
+                              <input id="alternativeformatnotes-4" type="radio" name="alternativeformatnotes" value="No">
+                              <label for="alternativeformatnotes-4">Other</label>
+                            </div>
+
+                            <div class="panel panel-border-narrow js-hidden" id="alternativeformatnotesother">
+                              <label class="form-label" for="alternativeformatnotesother">Other</label>
+                              <div  class="u-1/4-lap-and-up">
+                                <input id="alternativeformatnotesother-1" type="text" name="alternativeformatnotesother-1" class="form-control form-control-1-8"> / <input id="alternativeformatnotesother-2" type="text" name="alternativeformatnotesother-2" class="form-control form-control-1-8">
+                              </div>
+                            </div>
+
+
+                          </div>
+
+
+
+                        </fieldset>
+                      </div>
+
+
+
+
+             <input type="hidden" name="nino" value="{{ nino }}">
+             <input type="hidden" name="newapplication" value="{{ newapplication }}">
+
+
+
+             <p class="mth mb0">
+
+               <a class="button" href="add-loan">Add another loan</a>
+
+               <a class="button" href="add-deductions">Finished</a>
+
+
+
+            </p>
+
+
+           </form>
+
+
+
+              </div> <!-- ADMIN PANE -->
+            </div>  <!-- ADMIN PANES -->
+
+
+
+      </div> <!-- COLUMN 2 THRIDS -->
+
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}
