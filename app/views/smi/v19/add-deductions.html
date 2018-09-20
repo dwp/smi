@@ -28,7 +28,7 @@
                     <fieldset>
 
                       <legend>
-                        <h3 class="heading-small">Are there non-dependant deductions per week?</h3>
+                        <h3 class="heading-small">Are there any non-dependant deductions?</h3>
                       </legend>
 
                       <div class="multiple-choice" data-target="dependant-deductions-yes">
@@ -91,12 +91,39 @@
                 </fieldset>
               </div>
 
+
+
+              <div class="form-group">
+                <fieldset>
+
+                  <legend>
+                    <h3 class="heading-small">Does the person receive Pension Savings Credit?</h3>
+                  </legend>
+
+                  <div class="multiple-choice" data-target="has-pension-savings">
+                    <input id="has-pension-savings-yes" type="radio" name="has-pension-savings" value="Yes">
+                    <label for="has-pension-savings-yes">Yes</label>
+                  </div>
+
+                  <div class="panel panel-border-narrow js-hidden" id="has-pension-savings">
+
               <div class="form-group">
                 <label class="form-label-bold" for="PSC">Pension savings credit</label>
                 <span class="c-form-input-denote">£</span>
                 <input class="c-form-input-denote__input form-control form-control-1-4" id="PSC" type="text" name="PSC">
 
               </div>
+
+            </div>
+
+            <div class="multiple-choice" data-target="has-pension-savings">
+              <input id="has-pension-savings-no" type="radio" name="has-pension-savings" value="No">
+              <label for="has-pension-savings-no">No</label>
+            </div>
+
+
+          </fieldset>
+        </div>
 
 
 

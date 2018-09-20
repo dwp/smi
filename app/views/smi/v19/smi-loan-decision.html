@@ -9,7 +9,7 @@
     <div class="grid-row">
       <div class="column-two-thirds">
 
-          <h1 class="heading-large">Loan agreement and change form</h1>
+          <h1 class="heading-large">Loan agreement and charge form</h1>
 
           <form action="summary-3" method="get" class="form">
 
@@ -20,10 +20,55 @@
                   <h3 class="heading-small">Does the applicant want to take the loan?</h3>
                 </legend>
 
-                <div class="multiple-choice">
+                <div class="multiple-choice" data-target="take-out-loan">
                   <input id="loan-wanted-1" type="radio" name="loan-wanted" value="Yes">
                   <label for="loan-wanted--1">Yes</label>
                 </div>
+
+                <div class="panel panel-border-narrow js-hidden" id="take-out-loan">
+
+                  <div class="form-group">
+                    <fieldset>
+                      <legend>
+                        <h3 class="heading-small">
+                          Has the loan agreeement been received back?
+                        </h3>
+                      </legend>
+                      <div class="multiple-choice">
+                          <input id="different-address" name="none" type="checkbox" value="yes">
+                          <label for="different-address">Yes</label>
+                      </div>
+
+                  </fieldset>
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <fieldset>
+
+                      <legend>
+                        <h3 class="heading-small">Has the charge form been received back?</h3>
+                      </legend>
+
+                      <div class="multiple-choice">
+                        <input id="charge-form-1" type="radio" name="charge-form" value="Yes">
+                        <label for="charge-form-1">Yes</label>
+                      </div>
+
+                      <div class="multiple-choice">
+                        <input id="charge-form-3" type="radio" name="charge-form" value="No">
+                        <label for="charge-form-3">Not needed</label>
+                      </div>
+
+
+
+                    </fieldset>
+                  </div>
+
+
+                </div>
+
                 <div class="multiple-choice">
                   <input id="loan-wanted--2" type="radio" name="loan-wanted" value="No">
                   <label for="loan-wanted--2">No</label>
@@ -36,44 +81,6 @@
 
 
 
-            <div class="form-group">
-              <fieldset>
-                <legend>
-                  <h3 class="heading-small">
-                    Has the loan agreeement been received back?
-                  </h3>
-                </legend>
-                <div class="multiple-choice">
-                    <input id="different-address" name="none" type="checkbox" value="yes">
-                    <label for="different-address">Yes</label>
-                </div>
-
-            </fieldset>
-            </div>
-
-
-
-            <div class="form-group">
-              <fieldset>
-
-                <legend>
-                  <h3 class="heading-small">Has the charge form been received back?</h3>
-                </legend>
-
-                <div class="multiple-choice">
-                  <input id="charge-form-1" type="radio" name="charge-form" value="Yes">
-                  <label for="charge-form-1">Yes</label>
-                </div>
-
-                <div class="multiple-choice">
-                  <input id="charge-form-3" type="radio" name="charge-form" value="No">
-                  <label for="charge-form-3">Not needed</label>
-                </div>
-
-
-
-              </fieldset>
-            </div>
 
 
             <p>
