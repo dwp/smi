@@ -1,0 +1,387 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'search' %} {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+
+        <h1 class="heading-large">Add loan 1</h1>
+
+
+
+
+        <div class="admin-panes">
+          <div class="admin-pane">
+
+
+
+            {% set navactive = "money" %} {% if not newapplication %} {% endif %}
+
+            <form action="add-additional-mortgage-info" method="get" class="form">
+
+              <div class="form-group">
+                <fieldset>
+
+                  <legend>
+                    <h3 class="heading-small">What type of loan is it?</h3>
+                  </legend>
+
+                  <div class="multiple-choice">
+                    <input id="loan-1" type="radio" name="loan" value="mortgage">
+                    <label for="loan-1">Mortgage (home purchase loan)</label>
+                  </div>
+                  <p class="form-block">or</p>
+                  <div class="multiple-choice">
+                    <input id="loan-2" type="radio" name="loan" value="loan">
+                    <label for="loan-2">Home improvement loan</label>
+                  </div>
+                </fieldset>
+              </div>
+
+
+
+                            <div class="form-group">
+                              <fieldset>
+
+                                <legend>
+                                  <h3 class="heading-small">Is the loan for this address?</h3>
+                                </legend>
+
+                                <p>Address line 1<br />
+                                  Address line 2<br />
+                                  Address line 3<br />
+                                  Address line 4                                  </p>
+
+                                <div class="multiple-choice">
+                                  <input id="correct-address-1" type="radio" name="correct-address" value="Yes">
+                                  <label for="correct-address-1">Yes</label>
+                                </div>
+                                <div class="multiple-choice" data-target="correct-address-enter">
+                                  <input id="correct-address-2" type="radio" name="correct-address" value="No">
+                                  <label for="correct-address-2">No</label>
+                                </div>
+                              </fieldset>
+
+                              <div class="panel panel-border-narrow js-hidden" id="correct-address-enter">
+
+
+
+                                <div class="form-group">
+                                  <fieldset>
+                                    <legend>
+                                      <h3 class="heading-small">
+                                              Address of mortgaged property
+                                            </h3>
+                                    </legend>
+                                  </fieldset>
+
+                                  <input class="form-control form-control-1-2" id="address1" type="text" name="address1" value=""><br />
+                                  <input class="form-control form-control-1-2" id="address2" type="text" name="address2" value=""><br />
+                                  <input class="form-control form-control-1-2" id="address3" type="text" name="address3" value=""><br />
+                                  <input class="form-control form-control-1-2" id="address4" type="text" name="address4" value="">
+
+                                </div>
+
+                              </div>
+
+                            </div>
+
+              <div class="form-group">
+                <fieldset>
+
+                  <legend>
+                    <h3 class="heading-small">Who will the SMI payments go to?</h3>
+                  </legend>
+
+                  <div class="multiple-choice" data-target="loan-payee-bankorBS">
+                    <input id="loan-payee-1" type="radio" name="loan-payee" value="bankorBS">
+                    <label for="loan-payee-1">A bank or building society</label>
+                  </div>
+                  <div class="multiple-choice" data-target="loan-payee-individual">
+                    <input id="loan-payee-2" type="radio" name="loan-payee" value="individual">
+                    <label for="loan-payee-2">An individual</label>
+                  </div>
+                </fieldset>
+
+                <div class="panel panel-border-narrow js-hidden" id="loan-payee-bankorBS">
+
+                  <div class="form-group">
+                    <label class="form-label-bold" for="nameoflender">QLR (Qualified Lenders Register) code</label>
+                    <input class="form-control form-control-1-8" id="QLRcode" type="text" name="QLRcode" value="{{ QLRcode }}">
+
+                  </div>
+
+
+                                    <div class="form-group">
+                                      <label class="form-label-bold" for="nameoflender">Name of lender</label>
+                                      <input class="form-control form-control-1-4" id="nameoflender" type="text" name="nameoflender" value="">
+                                    </div>
+
+
+                                    <div class="form-group">
+                                      <span class="form-label-bold">
+                                           Sort code
+                                          </span>
+                                      <!---<span class="form-hint">
+                                            From the Qualified Lenders’ Register (QLR)
+                                          </span>-->
+                                          <input class="form-control form-control-1-4" id="nameoflender" type="text" name="nameoflender" value="">
+                                    </div>
+
+
+                                    <div class="form-group">
+                                      <label class="form-label-bold" for="loanaccountnumber">Account number</label>
+                                      <input class="form-control form-control-1-4" id="nameoflender" type="text" name="accountnumber" value="">
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label class="form-label-bold" for="rollnumber">Roll number</label>
+                                      <input class="form-control form-control-1-4" id="rollnumber" type="text" name="rollnumber" value="">
+                                    </div>
+
+
+                                    <div class="form-group">
+                                      <fieldset>
+                                        <legend>
+                                          <h3 class="heading-small">
+                                                  Address
+                                                </h3>
+                                        </legend>
+                                        <div class="form-group">
+                                          <input class="form-control form-control-1-2" id="address1" type="text" name="address1" value=""><br />
+                                          <input class="form-control form-control-1-2" id="address2" type="text" name="address2" value=""><br />
+                                          <input class="form-control form-control-1-2" id="address3" type="text" name="address3" value=""><br />
+                                          <input class="form-control form-control-1-2" id="address4" type="text" name="address4" value=""><br />
+                                          Postcode                                           <input class="form-control form-control-1-4" id="postcode" type="text" name="postcode" value="">
+
+
+                                        </div>
+                                      </fieldset>
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label class="form-label-bold" for="loanreferencenumber">Loan reference number</label>
+                                      <input class="form-control form-control-1-4" id="loanreferencenumber" type="text" name="loanreferencenumber" value="{{ loanreferencenumber }}">
+                                    </div>
+
+
+                                  </div>
+
+                                  <div class="panel panel-border-narrow js-hidden" id="loan-payee-individual">
+
+                                    <div class="form-group">
+                                      <label class="form-label-bold" for="nameoflender">Name</label>
+                                      <input class="form-control form-control-1-4" id="nameoflender" type="text" name="nameoflender" value="{{ nameoflender }}">
+                                    </div>
+
+                                    <div class="form-group">
+                                      <span class="form-label-bold">
+                                           Sort code
+                                          </span>
+                                      <!---<span class="form-hint">
+                                            From the Qualified Lenders’ Register (QLR)
+                                          </span>-->
+                                      <input class="form-control form-control-1-8" id="lendercode" type="text" name="lendercode" value="{{ lendercode }}"> <input class="form-control form-control-1-8" id="lendercode" type="text" name="lendercode" value="{{ lendercode }}">                    <input class="form-control form-control-1-8" id="lendercode" type="text" name="lendercode" value="{{ lendercode }}">
+
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label class="form-label-bold" for="loanaccountnumber">Account number</label>
+                                      <input class="form-control form-control-1-4" id="loanaccountnumber" type="text" name="loanaccountnumber" value="{{ loanaccountnumber }}">
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label class="form-label-bold" for="rollnumber">Roll number</label>
+                                      <input class="form-control form-control-1-4" id="rollnumber" type="text" name="rollnumber" value="{{ rollnumber }}">
+                                    </div>
+
+                                    <div class="form-group">
+                                      <fieldset>
+                                        <legend>
+                                          <h3 class="heading-small">
+                                                  Address
+                                                </h3>
+                                        </legend>
+                                        <div class="form-group">
+                                          <label class="form-label hidden" for="bankBSaddress1">
+                                                  Address line 1
+                                                </label>
+                                          <input class="form-control" id="bankBSaddress1" type="text" name="bankBSaddress1" value="{{ bankBSaddress1 }}">
+                                          <label class="form-label hidden" for="bankBSaddress2">
+                                                  Address line 2
+                                                </label>
+                                          <input class="form-control" id="bankBSaddress2" type="text" name="bankBSaddress2" value="{{ bankBSaddress2 }}">
+                                          <label class="form-label hidden" for="bankBSaddress3">
+                                                  Address line 3
+                                                </label>
+                                          <input class="form-control" id="bankBSaddress3" type="text" name="bankBSaddress3" value="{{ bankBSaddress3 }}">
+                                          <label class="form-label hidden" for="bankBSaddress4">
+                                                  Address line 4
+                                                </label>
+                                          <input class="form-control" id="bankBSaddress4" type="text" name="bankBSaddress4" value="{{ bankBSaddress4 }}">
+                                        </div>
+                                        <div class="form-group">
+                                          <label class="form-label" for="bankBSaddresspostcode">
+                                                  Postcode
+                                                </label>
+                                          <input class="form-control form-control-1-8" id="bankBSaddresspostcode" type="text" name="bankBSaddresspostcode" value="{{ bankBSaddresspostcode }}">
+                                        </div>
+                                      </fieldset>
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="form-label-bold" for="loanrefnumber">Loan reference number</label>
+                                      <input class="form-control form-control-1-4" id="loanrefnumber" type="text" name="loanrefnumber" value="{{ loanrefnumber }}">
+                                    </div>
+
+
+
+
+                </div>
+
+
+
+
+
+
+              <div class="form-group" style="margin-top:32px;"">
+                <label class="form-label-bold" for="allowableloanamount">The amount of the loan that SMI can be paid on.</label>
+                <span class="c-form-input-denote">£</span>
+
+                <input class="c-form-input-denote__input form-control form-c
+                ontrol-1-4" id="allowableloanamount" type="text" name="allowableloanamount" value="{{ allowableloanamount }}">
+              </div>
+
+              <div class="form-group">
+                <fieldset>
+                  <legend>
+                    <h3 class="heading-small">
+                          Is there a mortgage protection policy for this loan?
+                        </h3>
+                  </legend>
+                  <div class="multiple-choice" data-target="mpp">
+                    <input id="different-address-1" name="different-address" type="radio" value="yes">
+                    <label for="different-address-1">Yes</label>
+                  </div>
+                  <div class="panel panel-border-narrow js-hidden" id="mpp">
+
+                    <div class="form-group">
+                      <label class="form-label-bold" for="allowableloanamount">Amount per week</label>
+                      <span class="c-form-input-denote">£</span>
+                      <input class="c-form-input-denote__input form-control form-control-1-4" id="allowableloanamount" type="text" name="allowableloanamount" value="{{ allowableloanamount }}">
+                    </div>
+                  </div>
+
+                  <div class="multiple-choice">
+                    <input id="different-address-2" name="different-address" type="radio" value="no">
+                    <label for="different-address-2">No</label>
+                  </div>
+
+                </fieldset>
+                </div>
+
+
+
+
+                <div class="form-group">
+                  <fieldset>
+                    <legend>
+                      <h3 class="heading-small">
+                          Is the person sharing the payment of the loan?
+                        </h3>
+                    </legend>
+                    <div class="multiple-choice" data-target="splitloan">
+                      <input id="sharing-payment-1" name="sharing-payment" type="radio" value="yes">
+                      <label for="sharing-payment-1">Yes</label>
+                    </div>
+                    <div class="panel panel-border-narrow js-hidden" id="splitloan">
+                      <legend>
+                        <h3 class="heading-small">
+                            The claimant is paying:
+                          </h3>
+                        <div class="multiple-choice">
+                          <input id="alternativeformatnotes-1" type="radio" name="alternativeformatnotes" value="No">
+                          <label for="alternativeformatnotes-1">50%</label>
+                        </div>
+                        <div class="multiple-choice">
+                          <input id="alternativeformatnotes-2" type="radio" name="alternativeformatnotes" value="No">
+                          <label for="alternativeformatnotes-2">33%</label>
+                        </div>
+                        <div class="multiple-choice">
+                          <input id="alternativeformatnotes-3" type="radio" name="alternativeformatnotes" value="No">
+                          <label for="alternativeformatnotes-3">25%</label>
+                        </div>
+                        <div class="multiple-choice" data-target="alternativeformatnotesother">
+                          <input id="alternativeformatnotes-4" type="radio" name="alternativeformatnotes" value="No">
+                          <label for="alternativeformatnotes-4">Other</label>
+                        </div>
+
+                        <div class="panel panel-border-narrow js-hidden" id="alternativeformatnotesother">
+                          <label class="form-label" for="alternativeformatnotesother">Other</label>
+                          <div class="u-1/4-lap-and-up">
+                            <input id="alternativeformatnotesother-1" type="text" name="alternativeformatnotesother-1" class="form-control form-control-1-4"> %
+                          </div>
+                        </div>
+
+
+                    </div>
+                    <div class="multiple-choice">
+                      <input id="sharing-payment-2" name="sharing-payment" type="radio" value="no">
+                      <label for="sharing-payment-2">No</label>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+
+
+
+                <input type="hidden" name="nino" value="{{ nino }}">
+                <input type="hidden" name="newapplication" value="{{ newapplication }}">
+
+
+
+                <p class="mth mb0">
+
+                  <a class="button" href="add-loan">Add another loan</a>
+
+                  <a class="button" href="smi-payments-outcome-2">Finished</a><br />
+
+                  <br />
+
+                  <a href="">Cancel</a>
+
+
+
+                </p>
+
+
+            </form>
+
+
+
+            </div>
+            <!-- ADMIN PANE -->
+          </div>
+          <!-- ADMIN PANES -->
+
+
+
+        </div>
+        <!-- COLUMN 2 THRIDS -->
+
+
+      </div>
+      <!-- GRID ROM -->
+
+    </div>
+    <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

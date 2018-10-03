@@ -1,0 +1,155 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+
+        <h1 class="heading-large">Deductions and charges</h1>
+
+
+                {% set navactive = "money" %}
+                {% if not newapplication %}
+
+                {% endif %}
+
+                <form action="summary-4" method="get" class="form">
+
+
+                  <div class="form-group">
+                    <fieldset>
+
+                      <legend>
+                        <h3 class="heading-small">Are there any non-dependant deductions?</h3>
+                      </legend>
+
+                      <div class="multiple-choice" data-target="dependant-deductions-yes">
+                        <input id="dependant-deductions-1" type="radio" name="dependant-deductions" value="Yes">
+                        <label for="dependant-deductions-1">Yes</label>
+                      </div>
+                      <div class="panel panel-border-narrow js-hidden" id="dependant-deductions-yes">
+                        <label class="form-label" for="deductions-amount">Enter the total per week, based on the number and type of non-dependant adults in the household</label>
+                        <span class="c-form-input-denote">£</span>
+                        <input class="c-form-input-denote__input form-control form-control-1-4" id="dependant-deductions-amount" type="text" name="dependant-deductions-amount">
+                      </div>
+                      <div class="multiple-choice">
+                        <input id="dependant-deductions-2" type="radio" name="dependant-deductions" value="No">
+                        <label for="dependant-deductions-2">No</label>
+                      </div>
+                      <div class="multiple-choice">
+                        <input id="dependant-deductions-3" type="radio" name="dependant-deductions" value="Not needed">
+                        <label for="dependant-deductions-3">Not needed</label>
+                      </div>
+
+
+                    </fieldset>
+                  </div>
+
+                  <div class="form-group">
+                    <fieldset>
+
+                      <legend>
+                        <h3 class="heading-small">Are there ground rent or service charges?</h3>
+                      </legend>
+
+                      <div class="multiple-choice" data-target="charges">
+                        <input id="ground-rent-1" type="radio" name="ground-rent" value="Yes">
+                        <label for="ground-rent-1">Yes</label>
+                      </div>
+
+
+                  <div class="panel panel-border-narrow js-hidden" id="charges">
+                    <div class="form-group">
+                    <label class="form-label-bold" for="ground-rent">Ground rent per week</label>
+                    <span class="c-form-input-denote">£</span>
+
+                    <input class="c-form-input-denote__input form-control form-control-1-4" id="ground-rent" type="text" name="ground-rent" value="{{ groundrent }}">
+                  </div>
+
+                  <div class="form-group" id="charges-amount">
+                    <label class="form-label-bold" for="charges-amount">Service and other charges per week</label>
+                    <span class="c-form-input-denote">£</span>
+
+                    <input class="c-form-input-denote__input form-control form-control-1-4" id="charges-amount" type="text" name="charges-amount" value="{{ chargesamount }}">
+                  </div>
+                </div>
+
+
+                  <div class="multiple-choice">
+                    <input id="ground-rent-2" type="radio" name="ground-rent" value="No">
+                    <label for="ground-rent-2">No</label>
+                  </div>
+
+                </fieldset>
+              </div>
+
+
+
+              <div class="form-group">
+                <fieldset>
+
+                  <legend>
+                    <h3 class="heading-small">Do you need to deduct anything because of excess income?</h3>
+                  </legend>
+
+                  <div class="multiple-choice" data-target="has-pension-savings">
+                    <input id="has-pension-savings-yes" type="radio" name="has-pension-savings" value="Yes">
+                    <label for="has-pension-savings-yes">Yes</label>
+                  </div>
+
+                  <div class="panel panel-border-narrow js-hidden" id="has-pension-savings">
+
+              <div class="form-group">
+                <label class="form-label-bold" for="PSC">Amount of deduction</label>
+                <span class="c-form-input-denote">£</span>
+                <input class="c-form-input-denote__input form-control form-control-1-4" id="PSC" type="text" name="PSC">
+
+              </div>
+
+            </div>
+
+            <div class="multiple-choice" data-target="has-pension-savings">
+              <input id="has-pension-savings-no" type="radio" name="has-pension-savings" value="No">
+              <label for="has-pension-savings-no">No</label>
+            </div>
+
+
+          </fieldset>
+        </div>
+
+
+
+             <input type="hidden" name="nino" value="{{ nino }}">
+             <input type="hidden" name="newapplication" value="{{ newapplication }}">
+
+
+
+             <p class="mth mb0">
+
+               <input class="button" type="submit" value="Save"><br />
+               <br />
+               <a href="">Cancel</a>
+            </p>
+
+
+           </form>
+
+
+      </div> <!-- COLUMN 2 THRIDS -->
+
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

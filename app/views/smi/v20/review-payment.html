@@ -1,0 +1,150 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+
+                <h1 class="heading-large">Review payment for loan 1</h1>
+
+                <h2 class="heading-medium">Amount</h2>
+
+
+                <table>
+                  <tbody>
+                    <tr>
+                    <td width=50%>
+                        <span class="bold-small">Weekly amount</span>
+                    </td>
+                    <td width=50%>
+                          &pound;23.18
+                    </td>
+                  </tr>
+                  <tr>
+                  <td>
+                      <span class="bold-small">Amount to be paid every 4 weeks</span>
+                  </td>
+                  <td>
+                        &pound;92.72
+                  </td>
+                </tr>
+
+                </table>
+
+
+                <h2 class="heading-medium">Paid to</h2>
+
+                <table>
+                  <tr>
+                    <td width=50%>
+                        <span class="bold-small">Lender name</span>
+                    </td>
+                    <td width=50%>
+                      Bank of Bananas
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                        <span class="bold-small">Loan reference number</span>
+                    </td>
+                    <td>
+                      123456
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>
+                        <span class="bold-small">Sort code</span>
+                    </td>
+                    <td>
+                      01-44-99
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <span class="bold-small">Account number</span>
+                    </td>
+                    <td>
+                      12345678
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <span class="bold-small">QLR</span>
+                    </td>
+                    <td>
+                      9999
+                    </td>
+                  </tr>
+                </table>
+
+
+                <h2 class="heading-medium">Arrears to be paid</h2>
+
+                <table>
+                  <tr>
+                    <td width=50%><span class="bold-small">Amount</span></td>
+                    <td width=50%>£47.50</td>
+                  </tr>
+                </table>
+
+
+
+                <h2 class="heading-medium">Payments</h2>
+
+
+                <table>
+                  <tr>
+                    <td width=50%>
+                        <span class="bold-small">First payment</span>
+                    </td>
+                    <td width=50%>
+                      &pound;140.22 on 29 May 2018 (including arrears)
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                        <span class="bold-small">Next payment</span>
+                    </td>
+                    <td>
+                      &pound;92.72 on 29 June 2018 every 4 weeks from 29 June 2018
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                        <span class="bold-small">Final payment</span>
+                    </td>
+                    <td>
+                        29 May 2019
+                    </td>
+                  </tr>
+</table>
+
+              <p class="mth mb0"><a href="payment-sent-for-confirmation?nino={{ nino }}&smitsstatus=approved&mortgagesloans=yes&payments=yes" class="button">Set up payment</a><br />
+                <br />
+              <a href="#">Cancel</a></p>
+
+            </div>
+
+
+       <!-- COLUMN 2 THIRDS -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}
