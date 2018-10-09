@@ -1,0 +1,122 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'search' %}
+  {% include path+"/inc/main_nav.html" %}
+
+
+    <div class="main-content">
+      <div class="grid-row">
+
+        <div class="column-two-thirds">
+
+          {% include path+"/inc/name-and-nino.html" %}
+
+          <h1 class="heading-large">Payments</h1>
+
+
+                          <div class="panel panel-border-wide" style="margin-top: 64px;margin-bottom: 64px;">
+                            <!--
+                            <p>Last payment: 11 December 2017<br />
+                            Next payment: 18 December 2017</p>
+                          -->
+                          <p>No payments set up.<br />
+                          </p>
+                          </div>
+
+
+
+              <div class="nav-tabbed">
+
+                      <ul>
+                        <li class="current"><span>All loans</span></li>
+                        <!--<li><a href="#"><span>Automated payments (0)</span></a></li>
+                        <li><a href="#"><span>Manual payments (0)</span></a></li>-->
+                      </ul>
+
+                      <div class="clear"></div>
+
+                    </div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th class="col-1">&nbsp;</th>
+                    <th class="col-2">Lender code</th>
+                    <th class="col-3">Loan reference</th>
+                    <th class="col-4">Amount weekly</th>
+                    <th class="col-5">Amount monthly</th>
+                    <th class="col-6">&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong class="task-completed" id="authorised" style="background-color:#F47738;">Payment needs setting up</strong>
+                    </td>
+                    <td>
+                      1234
+                    </td>
+                    <td>
+                      12345678
+                    </td>
+                    <td>
+                       -
+                    </td>
+                    <td>
+                       -
+                    </td>
+
+                    <td>
+                      <a href="payment-set-up-loan-details?nino={{ nino }}" class="button" id="testing">Set up</a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <strong class="task-completed" id="authorised" style="background-color:#F47738;">Payment needs setting up</strong>
+                    </td>
+                    <td>
+                      1234
+                    </td>
+                    <td>
+                      12345699
+                    </td>
+                    <td>
+                       -
+                    </td>
+                    <td>
+                       -
+                    </td>
+
+                    <td>
+                      <a href="payment-set-up-loan-details?nino={{ nino }}" class="button" id="testing">Set up</a>
+                    </td>
+                  </tr>
+
+                </tbody>
+                </table>
+
+                <p>
+                  &nbsp;
+                </p>
+
+                <p>
+                  <a href="#">Make manual payment</a>
+                </p>
+
+      </div><!-- COLUMN 2 THIRDS -->
+
+      <!-- COLUMN 1 THIRD -->
+      <!-- COLUMN 1 THIRD -->
+
+
+ <!-- GRID ROW-->
+  </div> <!-- MAIN CONTENT -->
+</div>
+
+</main>
+
+{% endblock %}
