@@ -21,7 +21,7 @@
 
                 {% endif %}
 
-                <form action="summary-4" method="get" class="form">
+                <form action="smi-payments-outcome-edited" method="get" class="form">
 
 
                   <div class="form-group">
@@ -41,7 +41,7 @@
                         <input class="c-form-input-denote__input form-control form-control-1-4" id="dependant-deductions-amount" type="text" name="dependant-deductions-amount">
                       </div>
                       <div class="multiple-choice">
-                        <input id="dependant-deductions-2" type="radio" name="dependant-deductions" value="No">
+                        <input id="dependant-deductions-2" type="radio" name="dependant-deductions" value="No" checked>
                         <label for="dependant-deductions-2">No</label>
                       </div>
                       <div class="multiple-choice">
@@ -61,7 +61,7 @@
                       </legend>
 
                       <div class="multiple-choice" data-target="charges">
-                        <input id="ground-rent-1" type="radio" name="ground-rent" value="Yes">
+                        <input id="ground-rent-1" type="radio" name="ground-rent" value="Yes" checked>
                         <label for="ground-rent-1">Yes</label>
                       </div>
 
@@ -71,14 +71,14 @@
                     <label class="form-label-bold" for="ground-rent">Ground rent per week</label>
                     <span class="c-form-input-denote">£</span>
 
-                    <input class="c-form-input-denote__input form-control form-control-1-4" id="ground-rent" type="text" name="ground-rent" value="{{ groundrent }}">
+                    <input class="c-form-input-denote__input form-control form-control-1-4" id="ground-rent" type="text" name="ground-rent" value="43.23">
                   </div>
 
                   <div class="form-group" id="charges-amount">
                     <label class="form-label-bold" for="charges-amount">Service and other charges per week</label>
                     <span class="c-form-input-denote">£</span>
 
-                    <input class="c-form-input-denote__input form-control form-control-1-4" id="charges-amount" type="text" name="charges-amount" value="{{ chargesamount }}">
+                    <input class="c-form-input-denote__input form-control form-control-1-4" id="charges-amount" type="text" name="charges-amount" value="22.45">
                   </div>
                 </div>
 
@@ -118,12 +118,16 @@
             </div>
 
             <div class="multiple-choice">
-              <input id="has-pension-savings-no" type="radio" name="has-pension-savings" value="No">
+              <input id="has-pension-savings-no" type="radio" name="has-pension-savings" value="No" checked>
               <label for="has-pension-savings-no">No</label>
             </div>
 
 
           </fieldset>
+        </div>
+
+        <div class="panel panel-border-narrow" id="warning" style="margin-top: 128px;">
+          <p>Any changes will force a recalculation of SMI payments.</p>
         </div>
 
 
