@@ -1,0 +1,190 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+        <h1 class="heading-large">Set up payment for loan 1</h1>
+
+
+                  <table class="lender-details-1">
+                    <tbody>
+                      <tr>
+                      <td width=50%>
+                          <span class="bold-small">Amount</span>
+                      </td>
+                      <td width=50%>
+                            &pound;15.73 every week
+                      </td>
+                    </tr>
+                    <tr>
+                    <td>
+                        <span class="bold-small">Name of lender</span>
+                    </td>
+                    <td>
+                      Bank of Bananas
+                    </td>
+                  </tr>
+                      <tr>
+                      <td>
+                          <span class="bold-small">Sort code</span>
+                      </td>
+                      <td>
+                            01-44-99
+                      </td>
+                    </tr>
+
+                    <tr>
+                    <td>
+                        <span class="bold-small">Account number</span>
+                    </td>
+                    <td>
+                          26173770217
+                    </td>
+                  </tr>
+
+
+                                      <tr>
+                                        <td>
+                                            <span class="bold-small">SMI entitlement date</span>
+                                        </td>
+                                        <td>
+                                          <div class="u-1/4-lap-and-up">
+                                            <div class="form-date">
+
+24 August 2018
+
+                                            </div>
+                                          </div>
+                                        </td>
+                                      </tr>
+
+</table>
+
+<div class="form-group" style="margin-top:32px;">
+
+    <fieldset>
+            <legend>
+              <h3 class="heading-small">Payment from</h3>
+              <span class="form-hint" style="margin-bottom:16px">Use the format 9 5 2016.</span>
+
+            </legend>
+
+
+      <div class="form-date">
+        <div class="form-group form-group-day">
+          <label class="form-label" for="fed-day">Day</label>
+          <input class="form-control" id="fed-day" name="fed-day" type="number" pattern="[0-9]*" min="0" max="31" value="{{ dob_dd }}">
+        </div>
+        <div class="form-group form-group-month">
+          <label class="form-label" for="fed-month">Month</label>
+          <input class="form-control" id="fed-month" name="fed-month" type="number" pattern="[0-9]*" min="0" max="12" value="{{ dob_mm }}">
+        </div>
+        <div class="form-group form-group-year">
+          <label class="form-label" for="fed-year">Year</label>
+          <input class="form-control" id="fed-year" name="fed-year" type="number" pattern="[0-9]*" min="0" value="{{ dob_yy }}">
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+
+<div class="form-group">
+
+    <fieldset>
+
+      <legend>
+        <h3 class="heading-small">First payment due</h3>
+        <span class="form-hint" style="margin-bottom:16px">This will include any backdated payments to the lender.</span>
+
+      </legend>
+
+      <div class="form-date">
+        <div class="form-group form-group-day">
+          <label class="form-label" for="fed-day">Day</label>
+          <input class="form-control" id="fed-day" name="fed-day" type="number" pattern="[0-9]*" min="0" max="31" value="{{ dob_dd }}">
+        </div>
+        <div class="form-group form-group-month">
+          <label class="form-label" for="fed-month">Month</label>
+          <input class="form-control" id="fed-month" name="fed-month" type="number" pattern="[0-9]*" min="0" max="12" value="{{ dob_mm }}">
+        </div>
+        <div class="form-group form-group-year">
+          <label class="form-label" for="fed-year">Year</label>
+          <input class="form-control" id="fed-year" name="fed-year" type="number" pattern="[0-9]*" min="0" value="{{ dob_yy }}">
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+
+
+
+<div class="form-group">
+  <fieldset>
+
+    <legend>
+      <h3 class="heading-small">Do you need to make an extra one-off payment?</h3>
+    </legend>
+
+    <div class="multiple-choice" data-target="has-arrears">
+      <input id="loan-payee-1" type="radio" name="loan-payee" value="bankorBS">
+      <label for="loan-payee-1">Yes</label>
+    </div>
+
+    <div class="panel panel-border-narrow js-hidden" id="has-arrears">
+
+      <div class="form-group">
+        <label class="form-label-bold" for="arrears-amount">Amount of arrears</label>
+        <span class="c-form-input-denote">£</span>
+
+        <input class="c-form-input-denote__input form-control form-control-1-4" id="arrears-amount" type="text" name="arrears-amount" value="">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label-bold" for="reason">Reason for payment and dates covered</label>
+        <input class="form-control form-control-1-2" id="reason" type="text" name="reason" value="{{ loanaccountnumber }}">
+      </div>
+
+
+    </div>
+
+
+    <div class="multiple-choice">
+      <input id="loan-payee-2" type="radio" name="loan-payee" value="individual">
+      <label for="loan-payee-2">No</label>
+    </div>
+  </fieldset>
+
+
+</div>
+
+
+
+             <p class="mth mb0">
+               <a href="review-payment" class="button" >Review payment</a><br />
+               <br />
+               <a href="">Cancel</a>
+             </p>
+
+
+      </div> <!-- COLUMN 2 THRIDS -->
+
+       <!-- COLUMN 1 THIRD -->
+       <!-- COLUMN 1 THIRD -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

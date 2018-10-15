@@ -1,0 +1,123 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'toDo' %}
+  {% include path+"/inc/main_nav.html" %}
+
+
+  <div class="main-content">
+    <div class="grid-row">
+
+          <div class="column-full">
+              <h1 class="heading-large">To do</h1>
+
+              <div class="grid-row">
+
+              <div class="column-one-third">
+              <form class="form">
+
+              <div class="form-group">
+                <label>Office code <input type="search" placeholder="" aria-controls="searchable-table" value="101111" class="form-control js-search-focus"></label>   <a href="to-do-list-all" class="button" id="testing">Search</a>
+              </div>
+
+            </form>
+          </div>
+          </div>
+
+
+
+              <div class="nav-tabbed">
+
+                      <ul>
+                        <li class="current"><span>All claims (2)</span></li>
+                        <li><a href="to-do-list-not-in-progress"><span>Not in progress (1)</span></a></li>
+                      </ul>
+
+                      <div class="clear"></div>
+
+                    </div>
+
+              <table id="searchable-table" class="available m-b-l truncate display">
+                <thead>
+                  <tr>
+                    <th class="col-1">&nbsp;</th>
+
+                    <th class="col-2">Name</th>
+                    <th class="col-3">NINO</th>
+                    <th class="col-4">Office code</th>
+                    <th class="col-5">Benefit type</th>
+                    <th class="col-6">Date</th>
+                    <th class="col-7">Reason</th>
+                    <th class="col-8">&nbsp;</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong class="task-completed" id="authorised" style="background-color:#F47738;">In progress</strong>
+                    </td>
+
+                    <td class="name">
+                      <a href="to-do-summary">Janet Elizabeth Price</a>
+                    </td>
+                    <td>
+                      <small class="small-grey">QF082262D</small>
+                    </td>
+                    <td>
+                      <small class="small-grey">101111</small>
+                    </td>
+                    <td>
+                      Pension Credit
+                    </td>
+                    <td>
+                      15/2/2018
+                    </td>
+                    <td>
+                        Loan approved - payment set up needed
+                    </td>
+                    <td>
+                      <a href="to-do-summary" class="button" id="testing">View</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong class="task-completed" id="authorised">On hold</strong>
+                    </td>
+
+                    <td class="name">
+                      <a href="#">Jade Smith</a>
+                    </td>
+                    <td>
+                      <small class="small-grey">AA 12 34 56 D &nbsp;</small>
+                    </td>
+                    <td>
+                      <small class="small-grey">101111</small>
+                    </td>
+                    <td>
+                      Pension Credit
+                    </td>
+                    <td>
+                      11/11/2017
+                    </td>
+                    <td>
+                      End of Qualifying Benefit
+                    </td>
+                    <td>
+                      <a href="to-do-summary" class="button" id="testing">View</a>
+                    </td>
+
+                  </tr>
+
+                </tbody>
+                </table>
+      </div> <!-- COLUMN 2 THIRDS -->
+ <!-- GRID ROW-->
+  </div> <!-- MAIN CONTENT -->
+</div>
+
+</main>
+
+{% endblock %}

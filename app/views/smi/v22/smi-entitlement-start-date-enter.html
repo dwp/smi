@@ -1,0 +1,64 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'search' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        <h2 class="heading-large" style="margin-bottom:64px; line-height: 32px;">
+          <span class="heading-secondary" style="margin-bottom:0;">Simon Wilson</span>
+          DQ314454D
+
+        </h2>
+
+
+
+        <div class="panel panel-border-wide" style="border-color: #28a197; border-left-style: solid; background-color: #eaf6f5;">
+        <h2 class="heading-small">
+          Customer details confirmed
+        </h2>
+        </div>
+
+
+
+        <h1 class="heading-large">SMI entitlement start date</h1>
+        <p>
+          This is the date the person is eligible to be paid from.</p>
+          <p>
+            For Pension Credit, this is the TAM date.
+        </p>
+        <span class="form-hint" style="margin-bottom:16px">Use the format 9 5 2016.</span>
+
+
+                  <div class="form-group">
+                      <fieldset>
+                        <div class="form-date">
+                          <div class="form-group form-group-day">
+                            <label class="form-label" for="fed-day">Day</label>
+                            <input class="form-control" id="fed-day" name="fed-day" type="number" pattern="[0-9]*" min="0" max="31" value="{{ dob_dd }}">
+                          </div>
+                          <div class="form-group form-group-month">
+                            <label class="form-label" for="fed-month">Month</label>
+                            <input class="form-control" id="fed-month" name="fed-month" type="number" pattern="[0-9]*" min="0" max="12" value="{{ dob_mm }}">
+                          </div>
+                          <div class="form-group form-group-year">
+                            <label class="form-label" for="fed-year">Year</label>
+                            <input class="form-control" id="fed-year" name="fed-year" type="number" pattern="[0-9]*" min="0" value="{{ dob_yy }}">
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+
+
+            <p class="mth mb0"><br /><a href="summary-wa?nino={{ nino }}&newapplication=yes" class="button">Create case</a><br />
+            <div  style="margin-top:8px;"><a href="search">Cancel</a></div></p>
+         </div><!-- column -->
+    </div>
+  </div>
+</main>
+{% endblock %}
