@@ -1,0 +1,28 @@
+{% if not firstname %}
+  {% set firstname = "Simon" %}
+{% endif %}
+
+{% if not lastname %}
+  {% set lastname = "Wilson" %}
+{% endif %}
+
+{% if not nino %}
+  {% set nino = "DQ314454D" %}
+{% endif %}
+
+{% if startnino %}
+  {% set firstname = "No name" %}
+  {% set lastname = "No name" %}
+  {% set nino = "No NINo" %}
+{% endif %}
+
+  {% set casestatusdescription = "Dormant" %}
+
+
+
+<h2 class="heading-large" style="margin-bottom:64px; line-height: 32px;">
+  <span class="heading-secondary" style="margin-bottom:0;">{{ firstname }} {{ lastname }}</span>
+  {{ nino }}<br />
+  <span class="status-dormant">{{ casestatusdescription }}</span>
+
+</h2>
