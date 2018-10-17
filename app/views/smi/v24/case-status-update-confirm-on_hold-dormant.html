@@ -1,0 +1,61 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+<main id="content" role="main">
+
+	{% set currentPage = 'claimant' %}
+	{% include path+"/inc/main_nav.html" %}
+
+
+  <div class="main-content"> <!-- MAIN CONTENT -->
+     <div class="grid-row">	 <!-- GRID ROW -->
+
+     <div class="column-two-thirds"> <!-- COLUMN 2 THRIDS -->
+
+			 {% include path+"/inc/name-and-nino.html" %}
+
+
+       <h1 class="heading-large">Make case dormant</h1>
+
+     <h2 class="heading-medium">What happens next</h2>
+       <ul class="list list-bullet">
+         <li>You will no longer be able to edit this case.</li>
+         <li>You will be able to add a note or reopen the case by changing its status to ‘on hold’.
+</li>
+  <li>?? anything else</li>
+       </ul>
+
+
+       <h2 class="heading-medium">What you need to do next</h2>
+       <ul class="list list-bullet">
+         <li>Send letters to the customer and the lender to tell them their SMI case has closed. [not sure if this is correct - need to check if this is true with BAs]
+</li>
+         <li>?? anything else</li>
+       </ul>
+
+
+     <p><a href="summary-on_hold-dormant" class="button">Confirm</a><br />
+     <br />
+   <a href="">Cancel</a></p>
+
+
+
+
+</div>
+
+
+
+
+	        <!--<p class="mth mb0"><a href="payments" class="button">Proceed to authorise payments</a></p>-->
+			<div class="column-one-third">
+
+
+			</div>
+
+    </div> <!-- GRID ROW -->
+  </div> <!-- MAIN CONTENT -->
+</main>
+
+
+{% endblock %}
