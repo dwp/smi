@@ -1,0 +1,311 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino_in-payment.html" %}
+
+        </div>
+
+        <div class="grid-row">
+          <div class="column-two-thirds">
+
+                <h1 class="heading-large">Loan 1 details</h1>
+
+                <table>
+                  <tr>
+                    <td width=45%>
+                      <span class="bold-small">Loan status</span>
+                    </td>
+                    <td width=45%>
+                      <span class="status-dormant">Closed</span>
+                    </td>
+                    <td width=10%></td>
+                  </tr>
+                  <tr>
+                    <td width=45%>
+                      <span class="bold-small">Type of loan</span>
+                    </td>
+                    <td width=45%>
+                      Mortgage
+                    </td>
+                    <td width=10%></td>
+                  </tr>
+                </table>
+
+
+                  <h2 class="heading-medium">Lender details</h2>
+
+
+
+                <table class="lender-details-1">
+                  <tbody>
+                    <tr>
+                      <td width=45%>
+                          <span class="bold-small">Name of lender</span>
+                      </td>
+                      <td width=45%>
+                        Yorkshire Building Society
+                      </td>
+                      <td width=10%>
+                        <a href="edit-loan">Change</a>
+                      </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                    <td>
+                        <span class="bold-small">Payments for the loan to</span>
+                    </td>
+                    <td>
+                      A bank
+                    </td>
+                    <td width=10%>
+                      <a href="edit-loan">Change</a>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                        <span class="bold-small">Sort code</span>
+                    </td>
+                    <td>
+                      56-00-36
+                    </td>
+                    <td width=10%>
+                      <!--<a href="edit-loan">Change</a>-->
+                    </td>
+
+                  </tr>
+
+
+
+                  <tr>
+                    <td>
+                        <span class="bold-small">Account number</span>
+                    </td>
+                    <td>
+                      5600360011
+                    </td>
+                    <td width=10%>
+                      <a href="edit-loan">Change</a>
+                    </td>
+
+                  </tr>
+
+                  <tr>
+                    <td>
+                        <span class="bold-small">QLR code</span>
+                    </td>
+                    <td>
+                      6003
+                    </td>
+                    <td width=10%>
+                      <a href="edit-loan">Change</a>
+                    </td>
+
+                  </tr>
+
+
+
+                  <tr>
+                    <td  valign="top">
+                        <span class="bold-small">Address</span>
+                    </td>
+                    <td>
+                      47 High Street<br />
+                      Birmingham<br />
+                      Staffordshire<br />
+                      B12 7CD
+                    </td>
+                    <td width=10% valign="top">
+                      <a href="edit-loan">Change</a>
+                    </td>
+
+                  </tr>
+
+
+
+                </table>
+
+                <h2 class="heading-medium">Loan details</h2>
+
+
+
+                <table>
+
+                  <tr>
+                    <td width=45%>
+                        <span class="bold-small">Loan reference number</span>
+                    </td>
+                    <td width=45%>
+                      12345678
+                    </td>
+                    <td width=10%>
+                      <a href="edit-loan">Change</a>
+                    </td>
+                  </tr>
+
+
+
+                  <tr>
+                  <td>
+                      <span class="bold-small">Allowable loan amount</span>
+                  </td>
+                  <td>
+                        &pound;6,688.84
+                  </td>
+                  <td>
+                    <a href="edit-loan">Change</a>
+                  </td>
+                </tr>
+
+                <tr>
+                <td>
+                    <span class="bold-small">Weekly amount</span>
+                </td>
+                <td>
+                      &pound;3.36
+                </td>
+                <td width=10%>
+                </td>
+
+              </tr>
+
+              <tr>
+              <td>
+                  <span class="bold-small">Amount every 4 weeks</span>
+              </td>
+              <td>
+                    &pound;13.43
+              </td>
+              <td width=10%>
+              </td>
+
+            </tr>
+
+
+                                                          <tr>
+                                                          <td>
+                                                              <span class="bold-small">Mortgage protection policy</span>
+                                                          </td>
+                                                          <td>
+                                                                None
+                                                          </td>
+                                                          <td>
+                                                            <a href="edit-loan">Change</a>
+                                                          </td>
+
+                                                        </tr>
+
+                                                        <tr>
+                                                        <td>
+                                                            <span class="bold-small">Applicant's share of loan payment</span>
+                                                        </td>
+                                                        <td>
+                                                              100%
+                                                        </td>
+                                                        <td>
+                                                          <a href="edit-loan">Change</a>
+                                                        </td>
+
+                                                      </tr>
+                                                      <tr>
+                                                        <td>
+                                                            <span class="bold-small">Loan end date</span>
+                                                        </td>
+                                                        <td>
+                                                          None
+                                                        </td>
+                                                        <td width=10%>
+                                                          <a href="edit-loan">Change</a>
+                                                        </td>
+
+                                                      </tr>
+
+
+
+
+</table>
+
+<h2 class="heading-medium">Payment details</h2>
+
+  <table>
+
+    <tr>
+      <td width=45%>
+          <span class="bold-small">Arrears at set up</span>
+      </td>
+      <td width=45%>
+        None
+      </td>
+      <td width=10%>
+      </td>
+
+    </tr>
+
+
+    <tr>
+      <td>
+          <span class="bold-small">Payment from</span>
+      </td>
+      <td>
+        24 February 2018
+      </td>
+      <td width=10%>
+      </td>
+
+    </tr>
+
+    <tr>
+      <td valign="top">
+          <span class="bold-small">First payment</span>
+      </td>
+      <td>
+        £117.12 on 24 October 2018 (including back payment to entitlement date)
+      </td>
+      <td width=10%>
+      </td>
+
+    </tr>
+
+
+
+
+  </table>
+
+<p style="margin-top:32px;">
+<a href="list-of-loans-one-set-up" class="link-back">Back to loans and payments</a>
+</p>
+
+            </div>
+
+<div class="column-third" style="border-top: 2px solid #005ea5;">
+
+<h2 class="heading-medium" style="margin:16px 0;">Case actions</h2>
+
+  <p>
+    <a href="suspend-payments">Suspend payments</a><br />
+    <a href="close-loan">Close loan</a>
+  </p>
+
+</div>
+
+       <!-- COLUMN 2 THIRDS -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

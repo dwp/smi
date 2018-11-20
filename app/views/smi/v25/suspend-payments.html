@@ -1,0 +1,39 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino_in-payment.html" %}
+
+
+                <h1 class="heading-large">Suspend payments for loan 1</h1>
+
+
+                                <h2 class="heading-medium">Payments will be suspended from today.</h2>
+
+
+
+
+<p><a href="suspend-payments-confirm" class="button">Confirm date</a></p>
+  <p style="margin-top:32px;">
+  <a href="loan-details">Cancel</a>
+  </p>
+            </div>
+
+
+       <!-- COLUMN 2 THIRDS -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

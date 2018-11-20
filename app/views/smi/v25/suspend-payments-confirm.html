@@ -1,0 +1,52 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+<main id="content" role="main">
+
+	{% set currentPage = 'claimant' %}
+	{% include path+"/inc/main_nav.html" %}
+
+
+  <div class="main-content"> <!-- MAIN CONTENT -->
+     <div class="grid-row">	 <!-- GRID ROW -->
+
+     <div class="column-two-thirds"> <!-- COLUMN 2 THRIDS -->
+
+			 {% include path+"/inc/name-and-nino_in-payment.html" %}
+
+
+       <h1 class="heading-large">Suspend payments for loan 1</h1>
+
+     <h2 class="heading-medium">What happens next</h2>
+       <ul class="list list-bullet">
+         <li>xxxx</li>
+         <li>xxx</li>
+       </ul>
+
+
+       <h2 class="heading-medium">What you need to do next</h2>
+       <ul class="list list-bullet">
+         <li>xxx</li>
+       </ul>
+
+
+     <p><a href="smi-payments-outcome-suspend-payments" class="button">Confirm</a><br />
+     <br />
+   <a href="">Cancel</a></p>
+
+
+
+
+</div>
+
+
+
+
+
+    </div> <!-- GRID ROW -->
+  </div> <!-- MAIN CONTENT -->
+</main>
+
+
+{% endblock %}

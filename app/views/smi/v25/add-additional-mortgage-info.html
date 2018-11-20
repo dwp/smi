@@ -1,0 +1,147 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'search' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+
+        <h1 class="heading-large">Deductions for mortgage or loan</h1>
+
+
+
+
+            <div class="admin-panes">
+              <div class="admin-pane">
+
+
+
+                {% set navactive = "money" %}
+                {% if not newapplication %}
+
+                {% endif %}
+
+
+                  <table class="lender-details-1">
+                    <tbody>
+
+
+                        <tr>
+                          <td>
+                              <span class="bold-small">Mortgage protection policy amount per week</span>
+                          </td>
+                          <td>
+                            <div class="u-1/4-lap-and-up">
+                              <span class="c-form-input-denote">£</span>
+                              <input class="c-form-input-denote__input form-control form-control-1-2" id="regpay01" type="text" name="regpay01" value="" data-parsley-id="9">
+                            </div>
+                          </td>
+                          <td>
+                          </td>
+                        </tr>
+
+
+                        <tr>
+                          <td><span class="bold-small">Is the claimant paying all the mortgage or loan themselves?</span></td>
+                          <td>
+                            <div class="form-group">
+                              <fieldset>
+
+                                <legend>
+
+                                </legend>
+
+                                <div class="multiple-choice">
+                                  <input id="alternativeformat-1" type="radio" name="alternativeformat" value="Yes">
+                                  <label for="alternativeformat-1">Yes</label>
+                                </div>
+
+                                <div class="multiple-choice" data-target="alternativeformatnotes">
+                                  <input id="alternativeformat" type="radio" name="alternativeformat" value="No">
+                                  <label for="alternativeformat">No</label>
+                                </div>
+                                <div class="panel panel-border-narrow js-hidden" id="alternativeformatnotes">
+                                  <label class="form-label" for="alternativeformatnotes">The claimant is paying:</label>
+                                  <div class="multiple-choice">
+                                    <input id="alternativeformatnotes-1" type="radio" name="alternativeformatnotes" value="No">
+                                    <label for="alternativeformatnotes-1">1/2</label>
+                                  </div>
+                                  <div class="multiple-choice">
+                                    <input id="alternativeformatnotes-2" type="radio" name="alternativeformatnotes" value="No">
+                                    <label for="alternativeformatnotes-2">1/3</label>
+                                  </div>
+                                  <div class="multiple-choice">
+                                    <input id="alternativeformatnotes-3" type="radio" name="alternativeformatnotes" value="No">
+                                    <label for="alternativeformatnotes-3">1/4</label>
+                                  </div>
+                                  <div class="multiple-choice"  data-target="alternativeformatnotesother">
+                                    <input id="alternativeformatnotes-4" type="radio" name="alternativeformatnotes" value="No">
+                                    <label for="alternativeformatnotes-4">Other</label>
+                                  </div>
+
+                                  <div class="panel panel-border-narrow js-hidden" id="alternativeformatnotesother">
+                                    <label class="form-label" for="alternativeformatnotesother">Other</label>
+                                    <div  class="u-1/4-lap-and-up">
+                                      <input id="alternativeformatnotesother-1" type="text" name="alternativeformatnotesother-1" class="form-control form-control-1-4"> / <input id="alternativeformatnotesother-2" type="text" name="alternativeformatnotesother-2" class="form-control form-control-1-4">
+                                    </div>
+                                  </div>
+
+
+                                </div>
+
+
+
+                              </fieldset>
+                            </div>
+
+
+                          </td>
+                          <td></td>
+                        </tr>
+
+
+
+                    </tbody>
+                  </table>
+
+
+             <input type="hidden" name="nino" value="{{ nino }}">
+             <input type="hidden" name="newapplication" value="{{ newapplication }}">
+
+
+
+             <p class="mth mb0">
+
+               <a class="button" href="add-loan">Add another loan</a>
+
+               <a class="button" href="add-deductions">Finished</a>
+
+
+               <br /><br /><a href="summary">Cancel and view summary</a></p>
+
+
+
+
+              </div> <!-- ADMIN PANE -->
+            </div>  <!-- ADMIN PANES -->
+
+
+
+      </div> <!-- COLUMN 2 THRIDS -->
+
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}
