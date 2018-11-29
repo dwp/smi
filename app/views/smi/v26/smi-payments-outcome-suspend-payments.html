@@ -1,0 +1,152 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+
+                <h1 class="heading-large">Prospective SMI payment summary</h1>
+
+                <p>&nbsp;</p>
+
+                <div class="panel panel-border-wide"  style="padding-top:4px; padding-bottom:4px;">
+                  <p style="margin-top:0;">This is based on the current standard interest rate (SIR) of 2.45%.</p>
+              </div>
+
+              <h2 class="heading-medium">Loan 1: mortgage</h2>
+
+
+              <div class="panel panel-border-wide" style="border-color: #b10e1e; border-left-style: solid; background-color: #FFDAEA;">
+
+                <p>Payment will be suspended</p>
+              </div>
+
+              <table>
+                <tr>
+                  <td width=66%>Lender</td>
+                  <td width=33%>Yorkshire Building Society</td>
+                </tr>
+                <tr>
+                  <td>Loan reference number</td>
+                  <td>7611448890</td>
+                </tr>
+                <tr>
+                  <td>Allowable amount</td>
+                  <td>£6,688.84</td>
+                </tr>
+                  <tr>
+                    <td>Deductions<br />
+                      - non-dependants<br />
+                      - mortgage protection policy<br />
+                      - Pension Savings Credit<br />
+                    </td>
+                    <td><br />
+                      None<br />
+                    None<br />
+                  None</td>
+                  </tr>
+                  <tr>
+                    <td>Share of mortgage or loan</td>
+                    <td>100%</td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="bold">No weekly SMI payment</span></td>
+                    <td><span class="bold">Payment suspended</span></td>
+                  </tr>
+                </table>
+
+
+
+                <h2 class="heading-medium">Loan 2: home improvement loan</h2>
+
+                <table>
+                  <tr>
+                    <td width=66%>Lender</td>
+                    <td width=33%>Yorkshire Building Society</td>
+                  </tr>
+                  <tr>
+                    <td>Loan reference number</td>
+                    <td>334591445500</td>
+                  </tr>
+                  <tr>
+                    <td>Allowable amount</td>
+                    <td>£8,400.17</td>
+                  </tr>
+                    <tr>
+                      <td>Deductions<br />
+                        - non-dependants<br />
+                        - mortgage protection policy<br />
+                        - Pension Savings Credit<br />
+                      </td>
+                      <td><br />
+                        None<br />
+                      None<br />
+                    None</td>
+                    </tr>
+                    <tr>
+                      <td>Share of mortgage or loan</td>
+                      <td>100%</td>
+                    </tr>
+
+                    <tr>
+                      <td><span class="bold">Weekly SMI payment</span></td>
+                      <td><span class="bold" style="font-size: 26px;">£3.36</span></td>
+                    </tr>
+                  </table>
+
+
+                <h2 class="heading-medium">Charges</h2>
+
+                <table>
+                  <tr>
+                    <td width=66%>Ground rent per week</td>
+                    <td width=33%>None</td>
+                  </tr>
+                  <tr>
+                    <td>Service and other charges per week</td>
+                    <td>None</td>
+                  </tr>
+
+                </table>
+
+
+                  <p>&nbsp;</p>
+
+                  <!--<p>Ground rent: £25</p>
+                  <p>Service charge and other charges: £5</p>
+                  <p class="bold">Benefit support for this rent and charges can be paid every week for:<br />
+                    <span style="font-size: 26px;">£25</span></p>-->
+
+<!--
+                    <div class="panel panel-border-wide"  style="padding-top:4px; padding-bottom:4px; margin-bottom: 32px; margin-top:64px;">
+
+                    <p class="bold">If this outcome looks correct send this information for approval.</p>
+
+                  </div>
+-->
+
+            <!--  <p class="mth mb0"><a href="send-to-smits?nino={{ nino }}" class="button">Continue</a></p>-->
+
+              <p class="mth mb0"><a href="suspend-payments-confirm" class="button">Confirm</a></p>
+
+
+      </div> <!-- COLUMN 2 THRIDS -->
+      <!-- COLUMN 1 THIRD -->
+ <!-- COLUMN 1 THIRD -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}
