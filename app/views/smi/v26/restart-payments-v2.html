@@ -11,7 +11,7 @@
       <div class="column-two-thirds">
 
 
-        {% include path+"/inc/name-and-nino.html" %}
+        {% include path+"/inc/name-and-nino_on-hold.html" %}
 
         <h1 class="heading-large">Restart payments for loan 1</h1>
 
@@ -159,15 +159,15 @@
 
 
                 <div class="multiple-choice"   data-target="underpayment-overpayment-yes">
-                  <input id="is-underpayment-overpayment" type="radio" name="is-underpayment-overpayment">
-                  <label for="is-underpayment-overpayment">Yes</label>
+                  <input id="is-underpayment-overpayment-yes" type="radio" name="is-underpayment-overpayment">
+                  <label for="is-underpayment-overpayment-yes">Yes</label>
                 </div>
 
                 <div class="panel panel-border-narrow js-hidden" id="underpayment-overpayment-yes">
 
                   <div class="multiple-choice"   data-target="underpayment">
-                    <input id="underpayment-overpayment" type="radio" name="underpayment-overpayment">
-                    <label for="underpayment-overpayment">Overpayment</label>
+                    <input id="overpayment-yes" type="radio" name="underpayment-overpayment">
+                    <label for="overpayment-yes">Overpayment</label>
                   </div>
 
                   <div class="panel panel-border-narrow js-hidden" id="underpayment">
@@ -180,8 +180,8 @@
 
 
                   <div class="multiple-choice"   data-target="overpayment">
-                    <input id="underpayment-overpayment" type="radio" name="underpayment-overpayment">
-                    <label for="underpayment-overpayment">Underpayment</label>
+                    <input id="underpayment-yes" type="radio" name="underpayment-overpayment">
+                    <label for="underpayment-yes">Underpayment</label>
                   </div>
 
                   <div class="panel panel-border-narrow js-hidden" id="overpayment">
@@ -200,8 +200,8 @@
 
 
                 <div class="multiple-choice">
-                  <input id="is-underpayment-overpayment-" type="radio" name="is-underpayment-overpayment-" value="no">
-                  <label for="is-underpayment-overpayment">No</label>
+                  <input id="is-underpayment-overpayment-no" type="radio" name="is-underpayment-overpayment" value="no">
+                  <label for="is-underpayment-overpayment-no">No</label>
                 </div>
 
 
