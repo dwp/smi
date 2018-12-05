@@ -1,0 +1,230 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+
+        {% include path+"/inc/name-and-nino_on-hold.html" %}
+
+        <h1 class="heading-large">Restart payments for loan 1</h1>
+
+
+                  <table class="lender-details-1">
+                    <tbody>
+                      <tr>
+                      <td width=50%>
+                          <span class="bold-small">Amount</span>
+                      </td>
+                      <td width=50%>
+                            &pound;3.36 every week
+                      </td>
+                    </tr>
+                    <tr>
+                    <td>
+                        <span class="bold-small">Name of lender</span>
+                    </td>
+                    <td>
+                      Yorkshire Building Society
+                    </td>
+                  </tr>
+                      <tr>
+                      <td>
+                          <span class="bold-small">Sort code</span>
+                      </td>
+                      <td>
+                            50-00-36
+                      </td>
+                    </tr>
+
+                    <tr>
+                    <td>
+                        <span class="bold-small">Account number</span>
+                    </td>
+                    <td>
+                          5600360011
+                    </td>
+                  </tr>
+
+
+                                      <tr>
+                                        <td>
+                                            <span class="bold-small">SMI entitlement date</span>
+                                        </td>
+                                        <td>
+                                          <div class="u-1/4-lap-and-up">
+                                            <div class="form-date">
+
+24 January 2018
+
+                                            </div>
+                                          </div>
+                                        </td>
+                                      </tr>
+
+</table>
+
+<div class="form-group" style="margin-top:48px;">
+
+    <fieldset>
+            <legend>
+              <h3 class="heading-small">The last SMI payment was for this loan 20 November 2018. Do you want payment to restart from this date?</h3>
+            </legend>
+
+
+            <div class="multiple-choice">
+              <input id="continue-from-previous-date-1" type="radio" name="continue-from-previous-date">
+              <label for="continue-from-previous-date-1">Yes</label>
+            </div>
+
+
+
+            <div class="multiple-choice"  data-target="alternative-start-date">
+              <input id="continue-from-previous-date-2" type="radio" name="continue-from-previous-date" value="no">
+              <label for="continue-from-previous-date-2">No</label>
+            </div>
+
+            <div class="panel panel-border-narrow js-hidden" id="alternative-start-date">
+
+              <legend>
+                <h3 class="heading-small">Restart payment from</h3>
+              </legend>
+
+
+              <span class="form-hint" style="margin-bottom:16px">Use the format 9 5 2016.</span>
+
+
+            <div class="form-date">
+              <div class="form-group form-group-day">
+                <label class="form-label" for="last-payment-day">Day</label>
+                <input class="form-control" id="last-payment-day" name="last-payment-day" type="number" pattern="[0-9]*" min="0" max="31">
+              </div>
+              <div class="form-group form-group-month">
+                <label class="form-label" for="last-payment-month">Month</label>
+                <input class="form-control" id="last-payment-month" name="last-payment-month" type="number" pattern="[0-9]*" min="0" max="12">
+              </div>
+              <div class="form-group form-group-year">
+                <label class="form-label" for="last-payment-year">Year</label>
+                <input class="form-control" id="last-payment-year" name="last-payment-year" type="number" pattern="[0-9]*" min="0">
+              </div>
+            </div>
+
+            </div>
+
+
+    </fieldset>
+  </div>
+
+
+  <div class="form-group">
+
+      <fieldset>
+
+        <legend>
+          <h3 class="heading-small">First restart payment due</h3>
+          <!--<span class="form-hint" style="margin-bottom:16px">This will include any backdated payments to the lender.</span>-->
+
+        </legend>
+
+        <div class="form-date">
+          <div class="form-group form-group-day">
+            <label class="form-label" for="fed-day">Day</label>
+            <input class="form-control" id="fed-day" name="fed-day" type="number" pattern="[0-9]*" min="0" max="31" value="{{ dob_dd }}">
+          </div>
+          <div class="form-group form-group-month">
+            <label class="form-label" for="fed-month">Month</label>
+            <input class="form-control" id="fed-month" name="fed-month" type="number" pattern="[0-9]*" min="0" max="12" value="{{ dob_mm }}">
+          </div>
+          <div class="form-group form-group-year">
+            <label class="form-label" for="fed-year">Year</label>
+            <input class="form-control" id="fed-year" name="fed-year" type="number" pattern="[0-9]*" min="0" value="{{ dob_yy }}">
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+
+    <div class="form-group" style="margin-top:16px;">
+
+        <fieldset>
+                <legend>
+                  <h3 class="heading-small">Is there an overpayment or underpayment?</h3>
+                </legend>
+
+
+                <div class="multiple-choice"   data-target="underpayment-overpayment-yes">
+                  <input id="is-underpayment-overpayment-yes" type="radio" name="is-underpayment-overpayment">
+                  <label for="is-underpayment-overpayment-yes">Yes</label>
+                </div>
+
+                <div class="panel panel-border-narrow js-hidden" id="underpayment-overpayment-yes">
+
+                  <div class="multiple-choice"   data-target="underpayment">
+                    <input id="overpayment-yes" type="radio" name="underpayment-overpayment">
+                    <label for="overpayment-yes">Overpayment</label>
+                  </div>
+
+                  <div class="panel panel-border-narrow js-hidden" id="underpayment">
+
+                    <span class="c-form-input-denote">£</span>
+
+                 <input class="c-form-input-denote__input form-control form-control-1-4" id="overpayment-amount" type="text" name="overpayment-amount" value="">
+
+                  </div>
+
+
+                  <div class="multiple-choice"   data-target="overpayment">
+                    <input id="underpayment-yes" type="radio" name="underpayment-overpayment">
+                    <label for="underpayment-yes">Underpayment</label>
+                  </div>
+
+                  <div class="panel panel-border-narrow js-hidden" id="overpayment">
+
+                    <span class="c-form-input-denote">£</span>
+
+                 <input class="c-form-input-denote__input form-control form-control-1-4" id="underpayment-amount" type="text" name="underpayment-amount" value="">
+
+                  </div>
+
+
+
+                </div>
+
+
+
+
+                <div class="multiple-choice">
+                  <input id="is-underpayment-overpayment-no" type="radio" name="is-underpayment-overpayment" value="no">
+                  <label for="is-underpayment-overpayment-no">No</label>
+                </div>
+
+
+        </fieldset>
+      </div>
+
+
+             <p class="mth mb0">
+               <a href="review-payment-restart-v2" class="button" >Continue</a><br />
+               <br />
+               <a href="">Cancel</a>
+             </p>
+
+
+      </div> <!-- COLUMN 2 THRIDS -->
+
+       <!-- COLUMN 1 THIRD -->
+       <!-- COLUMN 1 THIRD -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}
