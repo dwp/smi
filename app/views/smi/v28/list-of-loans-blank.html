@@ -1,0 +1,37 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+
+
+          <h1 class="heading-large">Loans and payments</h1>
+
+          <form action="summary" method="get" class="form">
+
+            <p>No loan or payment details provided.</p>
+
+            <p><a href="add-loan">Add loan</a></p>
+
+            <p style="margin-top:32px;">
+           <a href="summary-4" class="link-back">Back to case overview</a>
+         </p>
+
+
+        </form>
+
+
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

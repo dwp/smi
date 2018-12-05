@@ -6,9 +6,9 @@
   <div class="main-content">
     <div class="grid-row">
 
-      <div class="column-full">
+      <div class="column-two-thirds">
 
-        {% include path+"/inc/name-and-nino_dormant.html" %}
+        {% include path+"/inc/name-and-nino.html" %}
 
 
         <div class="admin-panes">
@@ -38,18 +38,11 @@
                  </tr>
                </thead>
                <tbody>
-
                  <tr>
-                   <td>
-                     <span>1.</span>
-                   </td>
+                   <td>1.</td>
 
                    <td>
-                     <!--<span class="status-on-hold">No payment set up</span>-->
-                     <!--<span class="status-in-payment">In payment</span>-->
-                     <!--<span class="status-dormant">Suspended</span>-->
-                     <span class="status-dormant">Closed</span>
-
+                     <span class="status-on-hold">No payment set up</span>
                    </td>
                    <td>
                      Mortgage
@@ -59,30 +52,21 @@
                      Yorkshire Building Society
                    </td>
                    <td>
-                     7611448890
+                      7611448890
                    </td>
+
                    <td>
                       £3.36
                    </td>
 
                    <td>
-                     <!--<a href="loan-details-live?nino={{ nino }}">View</a>-->
-
-                     <!--<a href="loan-details-suspended?nino={{ nino }}">View</a>-->
-
-                     <a href="loan-details-closed?nino={{ nino }}">View</a>
-
-
+                     <a href="set-up-payment?nino={{ nino }}" >Set up</a>
                    </td>
                  </tr>
-
 
                </tbody>
                </table>
 
-               <p style="margin-top:32px;">
-              <a href="summary-6" class="link-back">Back to case overview</a>
-            </p>
 
 
           </div>

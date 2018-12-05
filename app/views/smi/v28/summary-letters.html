@@ -1,0 +1,58 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+	
+	<main id="content" role="main">
+		{% include path+"/inc/main_nav.html" %}
+
+		<div class="main-content">
+				<div class="grid-row">
+					<div class="column-two-thirds">
+						{% include path+"/inc/name-and-nino.html" %}
+
+						{% include path+"/inc/summary_tab_letters.html" %}
+
+						<div class="tabs-content"  style="border-top: 1px solid #bfc1c3;">
+							<div class="tabs-panel" id="tab-1">
+								<div class="tabs-panel-inner">
+								
+									<h3 class="heading-small">Loan agreements received</h3>
+
+									<ul class="list list-bullet">
+										<li>
+											<a href="#">Customer: loan agreement received (SMIL007B) [pdf]</a>
+										</li>
+										<li>
+											<a href="letters-gather-info">Appointee: loan agreement received (SMIL007A) [pdf]</a>
+										</li>
+										<li>
+											<a href="#">Welsh customer: loan agreement received (SMIL007BW) [pdf]</a>
+										</li>
+										<li>
+											<a href="#¢">Welsh appointee: loan agreement received (SMIL007AW) [pdf] </a>
+										</li>
+									<ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+	  			<div class="column-one-third">
+						<h2 class="heading-medium">Case history</h2>
+
+						<a href="add-note">Add note</a>
+
+						<ul class="timeline-bsp">
+							<li>
+								<span class="entry"></span>
+								<h3 class="bold">Case created</h3>
+								<span>by Jo Arthur</span>
+								<span>21 May 2018</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+		</div>
+	</main>
+{% endblock %}

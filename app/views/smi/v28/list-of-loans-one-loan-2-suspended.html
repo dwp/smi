@@ -8,7 +8,7 @@
 
       <div class="column-full">
 
-        {% include path+"/inc/name-and-nino_dormant.html" %}
+        {% include path+"/inc/name-and-nino_on-hold.html" %}
 
 
         <div class="admin-panes">
@@ -47,8 +47,8 @@
                    <td>
                      <!--<span class="status-on-hold">No payment set up</span>-->
                      <!--<span class="status-in-payment">In payment</span>-->
-                     <!--<span class="status-dormant">Suspended</span>-->
-                     <span class="status-dormant">Closed</span>
+                     <span class="status-dormant">Suspended</span>
+                     <!--<span class="status-dormant">Closed</span>-->
 
                    </td>
                    <td>
@@ -68,9 +68,9 @@
                    <td>
                      <!--<a href="loan-details-live?nino={{ nino }}">View</a>-->
 
-                     <!--<a href="loan-details-suspended?nino={{ nino }}">View</a>-->
+                     <a href="loan-details-suspended?nino={{ nino }}">View</a>
 
-                     <a href="loan-details-closed?nino={{ nino }}">View</a>
+                     <!--<a href="loan-details-closed?nino={{ nino }}">View</a>-->
 
 
                    </td>

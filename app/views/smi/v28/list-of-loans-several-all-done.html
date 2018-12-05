@@ -6,9 +6,9 @@
   <div class="main-content">
     <div class="grid-row">
 
-      <div class="column-full">
+      <div class="column-two-thirds">
 
-        {% include path+"/inc/name-and-nino_dormant.html" %}
+        {% include path+"/inc/name-and-nino_in-payment.html" %}
 
 
         <div class="admin-panes">
@@ -38,50 +38,59 @@
                  </tr>
                </thead>
                <tbody>
-
                  <tr>
                    <td>
                      <span>1.</span>
                    </td>
-
                    <td>
-                     <!--<span class="status-on-hold">No payment set up</span>-->
-                     <!--<span class="status-in-payment">In payment</span>-->
-                     <!--<span class="status-dormant">Suspended</span>-->
-                     <span class="status-dormant">Closed</span>
-
+                     <span class="status-in-payment">In payment</span>
                    </td>
                    <td>
-                     Mortgage
-                   </td>
-
-                   <td>
-                     Yorkshire Building Society
+                     Home purchase loan
                    </td>
                    <td>
-                     7611448890
+                     Bank of Bananas
                    </td>
                    <td>
-                      £3.36
+                      71207737
                    </td>
-
                    <td>
-                     <!--<a href="loan-details-live?nino={{ nino }}">View</a>-->
-
-                     <!--<a href="loan-details-suspended?nino={{ nino }}">View</a>-->
-
-                     <a href="loan-details-closed?nino={{ nino }}">View</a>
-
-
+                      £23.18
+                   </td>
+                   <td>
+                     <a href="loan-details?nino={{ nino }}" >View</a>
                    </td>
                  </tr>
 
+                 <tr>
+                   <td>
+                     <span>2.</span>
+                   </td>
+                   <td>
+                     <span class="status-in-payment">In payment</span>
+                   </td>
+                   <td>
+                     Home improvement loan
+                   </td>
+                   <td>
+                     Bank of Bananas
+                   </td>
+                   <td>
+                     26173770217
+                   </td>
+                   <td>
+                      £15.73
+                   </td>
+                   <td>
+                     <a href="loan-details?nino={{ nino }}" >View</a>
+                   </td>
+                 </tr>
 
                </tbody>
                </table>
 
                <p style="margin-top:32px;">
-              <a href="summary-6" class="link-back">Back to case overview</a>
+              <a href="summary-7" class="link-back">Back to case overview</a>
             </p>
 
 
