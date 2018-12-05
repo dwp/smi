@@ -74,7 +74,7 @@
 
     <fieldset>
             <legend>
-              <h3 class="heading-small">The last SMI payment was for this loan 20 November 2018. Do you want payment to restart from this date?</h3>
+              <h3 class="heading-small">The last SMI payment was for this loan 20 November 2018. Do you want payment to restart from 21 November 2018?</h3>
             </legend>
 
 
@@ -128,7 +128,7 @@
 
         <legend>
           <h3 class="heading-small">First restart payment due</h3>
-          <!--<span class="form-hint" style="margin-bottom:16px">This will include any backdated payments to the lender.</span>-->
+          <span class="form-hint" style="margin-bottom:16px">This is the date CPS sends the payment to the lender.</span>
 
         </legend>
 
@@ -171,10 +171,53 @@
                   </div>
 
                   <div class="panel panel-border-narrow js-hidden" id="underpayment">
+                    <label class="form-label" for="fed-day">Amount</label>
 
                     <span class="c-form-input-denote">£</span>
 
                  <input class="c-form-input-denote__input form-control form-control-1-4" id="overpayment-amount" type="text" name="overpayment-amount" value="">
+
+                 <div class="form-group" style="margin-top: 32px;">
+                   <fieldset>
+                     <legend>
+                       <h3 class="heading-small">
+                         Why are payments being suspended?
+                       </h3>
+                     </legend>
+                     <div class="multiple-choice">
+                         <input id="why-overpayment" name="why-overpayment" type="radio" value="yes">
+                         <label for="why-overpayment">Reason 1</label>
+                     </div>
+                     <div class="multiple-choice">
+                         <input id="why-overpayment" name="why-overpayment" type="radio" value="no">
+                         <label for="why-overpayment">Reason 2</label>
+                     </div>
+                     <div class="multiple-choice" data-target="why-overpayment-other">
+                         <input id="why-overpayment" name="why-overpayment" type="radio" value="no">
+                         <label for="why-overpayment">Other reason</label>
+                     </div>
+
+
+                     <div class="panel panel-border-narrow js-hidden" id="why-overpayment-other">
+
+                       <div class="form-group">
+
+                           <fieldset>
+
+                             <div class="form-group">
+<span class="form-label-bold">
+<span class="hidden">Other reason</span>
+</span>
+<textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea></div>
+
+                           </fieldset>
+                         </div>
+
+                   </div>
+
+                 </fieldset>
+                 </div>
+
 
                   </div>
 
@@ -186,9 +229,54 @@
 
                   <div class="panel panel-border-narrow js-hidden" id="overpayment">
 
+                    <label class="form-label" for="fed-day" >Amount</label>
+
                     <span class="c-form-input-denote">£</span>
 
                  <input class="c-form-input-denote__input form-control form-control-1-4" id="underpayment-amount" type="text" name="underpayment-amount" value="">
+
+                 <div class="form-group" style="margin-top: 32px;">
+                   <fieldset>
+                     <legend>
+                       <h3 class="heading-small">
+                         Why are payments being suspended?
+                       </h3>
+                     </legend>
+                     <div class="multiple-choice">
+                         <input id="why-underpayment" name="why-underpayment" type="radio" value="yes">
+                         <label for="why-underpayment">Reason 1</label>
+                     </div>
+                     <div class="multiple-choice">
+                         <input id="why-underpayment" name="why-underpayment" type="radio" value="no">
+                         <label for="why-underpayment">Reason 2</label>
+                     </div>
+                     <div class="multiple-choice" data-target="why-underpayment-other">
+                         <input id="why-underpayment" name="why-underpayment" type="radio" value="no">
+                         <label for="why-underpayment">Other reason</label>
+                     </div>
+
+
+                     <div class="panel panel-border-narrow js-hidden" id="why-underpayment-other">
+
+                       <div class="form-group">
+
+                           <fieldset>
+
+                             <div class="form-group">
+<span class="form-label-bold">
+<span class="hidden">Other reason</span>
+</span>
+<textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea></div>
+
+                           </fieldset>
+                         </div>
+
+                   </div>
+
+                 </fieldset>
+                 </div>
+
+
 
                   </div>
 

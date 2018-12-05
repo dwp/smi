@@ -68,11 +68,53 @@
 
 
 
+                                                                <div class="form-group">
+                                                                  <fieldset>
+                                                                    <legend>
+                                                                      <h3 class="heading-small">
+                                                                        Why are payments being suspended?
+                                                                      </h3>
+                                                                    </legend>
+                                                                    <div class="multiple-choice">
+                                                                        <input id="why-suspended" name="why-suspended" type="radio" value="yes">
+                                                                        <label for="why-suspended">Reason 1</label>
+                                                                    </div>
+                                                                    <div class="multiple-choice">
+                                                                        <input id="why-suspended" name="why-suspended" type="radio" value="no">
+                                                                        <label for="why-suspended">Reason 2</label>
+                                                                    </div>
+                                                                    <div class="multiple-choice" data-target="why-suspended-other">
+                                                                        <input id="why-suspended" name="why-suspended" type="radio" value="no">
+                                                                        <label for="why-suspended">Other reason</label>
+                                                                    </div>
+
+
+                                                                    <div class="panel panel-border-narrow js-hidden" id="why-suspended-other">
+
+                                                                      <div class="form-group">
+
+                                                                          <fieldset>
+
+                                                                            <div class="form-group">
+<span class="form-label-bold">
+  <span class="hidden">Other reason</span>
+ </span>
+<textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea></div>
+
+                                                                          </fieldset>
+                                                                        </div>
+
+                                                                  </div>
+
+                                                                </fieldset>
+                                                                </div>
+
+
 
 
 
 <p><a href="smi-payments-outcome-suspend-payments" class="button">Continue</a></p>
-  <p style="margin-top:32px;">
+  <p style="margin-top:-8px;">
   <a href="loan-details">Cancel</a>
   </p>
             </div>
