@@ -12,217 +12,181 @@
 
      <div class="column-two-thirds"> <!-- COLUMN 2 THRIDS -->
 
-			 <h1 class="heading-large">Summary</h1>
-
-			 {% set navactive = "summary" %}
-			 {% if not newapplication %}
-			 {% include path+"/inc/admin_submenu.html" %}
-			 {% endif %}
+			 {% include path+"/inc/name-and-nino_in-payment.html" %}
 
 
-			<div class="admin-panes">
-		        <div class="admin-pane">
 
+<div class="panel panel-border-wide" style="border-color: #F47738; border-left-style: solid; background-color: #FABB9C;">
 
-							<div class="panel panel-border-wide" style="border-color: #F47738; border-left-style: solid; background-color: #FABB9C;">
-			 				 <h2 class="heading-small">To do</h2>
-			 				 <ul>
-			 					 <li>A loan has been agreed. <a href="">Set up payment</a></li>
-			 				 </ul>
-			 			 </div>
+	<h2 class="heading-small">A loan has been agreed. <a href="">Set up payment</a></h2>
+</div>
 
+<!--						 <div class="panel panel-border-wide" style="border-color: #005ea5; border-left-style: solid; background-color: #eaf4f9;">
 
-							{% if smitsstatus %}
-
-							<p>&nbsp;</p>
-
-							<div class="panel panel-border-wide" style="border-color: #F47738; border-left-style: solid; background-color: #FABB9C;">
-
-								{% if smitsstatus == "sent" %}
-
-			 				 <h2 class="heading-small">This application has been sent to SMITS</h2>
-			 				 <ul>
-			 					 <li>No action needed at this time. You will be informed when any action is needed.</li>
-			 				 </ul>
-
-							 {% endif %}
-
-			 			 </div>
-
-						 {% endif %}
-
-						 {% if payments == "suspended"%}
-
-
-						 <p>&nbsp;</p>
-
-						 <div class="panel panel-border-wide" style="border-color: #F47738; border-left-style: solid; background-color: #FABB9C;">
-
-							 <h2 class="heading-small">Payment suspended</h2>
 							 <ul>
-								 <li>Payment to this claimant was suspended on 20 October 2017.</li>
+								 <li>Review of payments due in 12 months.</li>
 							 </ul>
 
-						</div>
+						</div>-->
 
 
-						 {% endif %}
+												<h2 class="heading-medium" style="margin-top:64px;">Next payments</h2>
+												<p><span class="bold">29 May 2018</span><br />
+													£23.18 and 15.73<br />
+												<a href="list-of-loans-several-all-done">View loans and payments</a></p>
+
+												<p>&nbsp;</p>
+
+												{% include path+"/inc/summary_tab_overview.html" %}
+
+												<div class="tabs-content">
+												          <div class="tabs-panel" id="tab-1">
+												            <div class="tabs-panel-inner">
+												              <h2 class="js-hidden heading-medium">
+												                Case overview
+												              </h2>
 
 
-		            <table class="borrower-details">
-		                <tbody>
+<div id="tasks-content">
+	<ol class="task-list">
+			<ul class="task-list-items">
 
-											<tr>
-												<td valign=bottom>
-													<h2 class="heading-medium">Upper limit and deductions</h2>
-												</td>
-												<td valign=bottom align=right>
-													<a style="align:right;" href="limit_and_deductions?nino={{ nino }}">Edit<span class="visuallyhidden">overview details</span></a>
-												</td>
-												</tr>
+				<li class="task-list-item">
+					<a class="task-name" href="add-deductions">
+				Deductions and charges
+			</a>
+			<span class="status-complete">Completed</span>
+				</li>
 
-		                    <tr>
-		                        <td>
-		                            Upper limit
-		                        </td>
-		                        <td>
-		                            £100,000
-		                        </td>
+				<li class="task-list-item">
+					<a class="task-name" href="list-of-loans-several-all-done">
+				Loans and payments
+			</a>
+			<span class="status-complete">Completed</span>
+				</li>
+			</ul>
+	</ol>
+</div>
 
-		                    </tr>
+</div>
+</div>
 
-		                    <tr>
-		                        <td>
-		                            Ground rent and service charges
-		                        </td>
-		                        <td>
-		                            Nothing entered
-		                        </td>
-		                    </tr>
+<div class="tabs-panel" id="tab-2">
+	<div class="tabs-panel-inner">
+		<h2 class="js-hidden heading-medium">
+			Customer's details
+		</h2>
 
-		                    <tr>
-		                        <td>
-		                            Non-dependant deductions
-		                        </td>
-		                        <td>
-		                            Nothing entered
-		                        </td>
-		                    </tr>
-		                </tbody>
-		            </table>
-
-								<br /><br />
+		<p class="text">
+		</p>
+	</div>
+</div>
 
 
-		            <h2 class="heading-medium mb0">Payments for mortgages and loans</h2>
-
-								{% if mortgagesloans == "yes" %}
-
-	                <table class="loan-details">
-	                	<tbody>
-			                <tr>
-			                  <td>
-			                   <h2 class="heading-small">Mortgage or home loan ref</h2>
-			                  </td>
-			                  <td>
-			                  <h2 class="heading-small">Weekly payment with deductions</h2>
-			                  </td>
-												<td>
-												<h2 class="heading-small">Last paid</h2>
-												</td>
-			                  <td></td>
-			                </tr>
-
-			                <tr>
-			                  <td>
-			                    71207737
-			                  </td>
-			                  <td>
-													{% if payments == "yes" %}£50.00{% elif payments == "suspended" %}Payment suspended{% else %}No payment set up{% endif %}
-			                  </td>
-												<td>
-													{% if payments == "yes" %}Date{% elif payments == "suspended" %}-{% else %}-{% endif %}
-												</td>
-			                  <td>
-			                    <p class="heading-small mth"><a href="payment-detail?nino={{ nino }}&showdata=yes&lendercode=1111">Edit<span class="visuallyhidden"> mortgage or home loan details</span></a></p>
-			                  </td>
-			                </tr>
-
-											<tr>
-												<td>
-													26173770217
-												</td>
-												<td>
-													{% if payments == "yes" %}£50.00{% elif payments == "suspended" %}Payment suspended{% else %}No payment set up{% endif %}
-												</td>
-												<td>
-													{% if payments == "yes" %}Date{% elif payments == "suspended" %}-{% else %}-{% endif %}
-												</td>
-												<td>
-													<p class="heading-small mth"><a href="payment-detail?nino={{ nino }}&showdata=yes&lendercode=1111">Edit<span class="visuallyhidden"> mortgage or home loan details</span></a></p>
-												</td>
-											</tr>
-
-	                	</tbody>
-	            	</table>
-
-								<br />
-
-								<p><a href="money-lookup?nino={{ nino }}">Add another mortgage or loan</a></p>
-								<!--<p><a href="payments-list?nino={{ nino }}">View payment history</a></p>-->
-
-								{% else %}
-
-								<p></p>
-								<p>No mortgages or loans information provided.</p>
-								<p><a href="money">Add a mortgage or loan</a><br /><br /></p>
-
-								{% endif %}
-
-								<p class="mth mb0"><a href="calculate_award?nino={{ nino }}" class="button">Calculate award</a><br /><br /></p>
+</div>
 
 
-
-		        </div> <!-- ADMIN PANE -->
-		    </div> <!-- ADMIN PANES -->
 
 
 	        <!--<p class="mth mb0"><a href="payments" class="button">Proceed to authorise payments</a></p>-->
-      </div>     <!-- COLUMN 2 THRIDS -->
-
-
-			<!-- COLUMN 1 THIRD -->
+      </div>
 			<div class="column-one-third">
-			 <!--<div class="panel panel-border-wide alert-default">
-					 <p class="heading-small">Next thing to do:</p> Send out MI12 reminder
-					 <p><a href="#">View to do list</a></p>
-			 </div>-->
-			 <div class="left-aside">
-				 <h1 class="heading-medium">
-				 Applicant details
-			 </h1>
-				 <div class="panel panel-border-wide">
-				 <h2 class="heading-small">
-					 {% include path+"/inc/applicantname.html" %}<br />
-					 <span class="heading-secondary">{{ nino }}</span>
-				 </h1>
-				 </div>
+				<p>&nbsp;</p>
+				<h2 class="heading-medium">Case history</h2>
 
-				 <h3 class="heading-small">Date of birth</h3> <p>{% include path+"/inc/applicantDOB.html" %}</p>
-				 <hr  style="width:50%;margin:0"/>
-				 <h3 class="heading-small">Address</h3> <p>{% include path+"/inc/applicantaddress.html" %}</p>
-				 <hr  style="width:50%;margin:0"/>
-				 <h3 class="heading-small">Phone number</h3> <p>{% include path+"/inc/applicantphonenumber.html" %}</p>
-				 <hr  style="width:50%;margin:0"/>
-				 <h3 class="heading-small">Benefit</h3> <p>{% include path+"/inc/applicantbenefits.html" %}</p>
-				 <hr  style="width:50%;margin:0"/>
-				 <h3 class="heading-small">Representative appointee </h3> <p>{% include path+"/inc/applicantappointee.html" %}
-				 </p>
-				 <hr  style="width:50%;margin:0"/>
-			 </div>
+				<p>
+				<a href="add-note">Add note</a>
+			</p>
 
-			 </div> <!-- COLUMN 1 THIRD -->
+				<ul class="timeline-bsp">
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold">Payment set up</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+						<p>Loan reference number 26173770217</p>
 
+					</li>
+
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold">Payment set up</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+						<p>Loan reference number 71207737</p>
+
+					</li>
+
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold">Deductions added</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+					</li>
+
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold">Home improvement loan added</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+						<p>Loan reference number 26173770217<br />
+Allowable amount: £20,000.00</p>
+					</li>
+
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold"> Home purchase loan or mortgage
+
+ added</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+						<p>Loan reference number 71207737<br />
+Allowable amount: £35,000.00</p>
+
+					</li>
+
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold">Charge form been received back</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+					</li>
+
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold">Loan agreeement been received back</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+					</li>
+
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold">MI12 returned by the bank or building society</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+					</li>
+
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold">MI12 sent to the claimant</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+					</li>
+
+					<li>
+						<span class="entry"></span>
+						<h3 class="bold">Case created</h3>
+						<span>by Jo Arthur</span>
+						<span>21 May 2018</span>
+					</li>
+
+				</ul>
+
+				<!--<p style="margin-top: 32px;">
+          <a href="view-notes">View all notes</a>
+        </p>-->
+
+			</div>
 
     </div> <!-- GRID ROW -->
   </div> <!-- MAIN CONTENT -->
