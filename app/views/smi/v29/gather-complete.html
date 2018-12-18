@@ -1,0 +1,48 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+
+            <div class="admin-panes">
+              <div class="admin-pane">
+                <h1 class="heading-large">Gather complete</h1>
+
+              <h2 class="heading-medium">What the system has done</h2>
+                <ul class="list">
+                  <li>Created a skeleton case on the Support for Mortgage Interest system</li>
+                </ul>
+
+
+                <h2 class="heading-medium">What you need to do</h2>
+                <ul class="list">
+                  <li>Nothing. If any further action is needed you will be informed by the work lists.</li>
+                </ul>
+
+              </div>
+
+
+
+              <p class="mth mb0"><a href="search" class="button">Search again</a></p>
+
+              </div> <!-- ADMIN PANE -->
+            </div>  <!-- ADMIN PANES -->
+
+       <!-- COLUMN 2 THIRDS -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}
