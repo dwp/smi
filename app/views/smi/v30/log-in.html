@@ -1,0 +1,36 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'search' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+      <div class="column-full">
+        <div class="search-box-container">
+
+          <h1 class="heading-large">Log in</h1>
+
+          <form action="search" method="get" class="form" id="search-form">
+<!--            <label class="form-hint">Hint text</label>-->
+            <div class="form-group">
+            <label class="form-label" for="emailAddress">Email address</label>
+            <input id="userEmail" type="search" autocomplete="off" name="userEmail" class="form-control">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <input id="password" type="search" autocomplete="off" name="password" class="form-control">
+          </div>
+          <div class="form-group">
+            <input class="button" type="submit" value="Log in">
+          </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

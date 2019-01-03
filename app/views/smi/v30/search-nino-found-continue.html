@@ -1,0 +1,71 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'search' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+          <h1 class="heading-large">Confirm details</h1>
+
+<div class="panel panel-border-wide">
+  <p>This would be a continuing claim.</p>
+</div>
+
+
+            <table class="check-person">
+                <tbody>
+                    <tr>
+                        <td>
+                            Full name
+                        </td>
+                        <td>
+                            Kris Kelsey Shaw
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            National Insurance Number
+                        </td>
+                        <td>
+                            {{nino}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Date of birth
+                        </td>
+                        <td>
+                            14 July 1981
+                          </tr>
+                          <tr>
+                            <td valign="top">Address</td>
+                            <td>
+                              321 Highstreet<br />
+                              Bolton<br />
+                              UK<br />
+                              BL1 2AB</p>
+                            </td>
+                          </tr>
+                    <tr>
+                        <td>
+                            Qualifying benefit
+                        </td>
+                        <td>
+                            Jobseeker's Allowance
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="mth mb0"><br /><a href="summary" class="button">View applicant's claim summary</a><br /><br /></p>
+            <p class="mth mb0"><a href="search">Cancel and find someone else</a></p>
+         </div><!-- column -->
+    </div>
+  </div>
+</main>
+{% endblock %}

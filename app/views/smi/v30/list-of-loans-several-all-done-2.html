@@ -1,0 +1,177 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino_in-payment.html" %}
+
+
+        <div class="admin-panes">
+          <div class="admin-pane">
+            <h1 class="heading-large">Loans and payments</h1>
+
+
+            <h2 class="heading-medium">Loans</h2>
+
+            <!--
+                <div class="panel panel-border-wide" style="border-color: #F47738; border-left-style: solid; background-color: #FABB9C;">
+                 <h2 class="heading-small">There is not enough information to calculate a Support for Mortgage Interest payment</h2>
+                 <ul>
+                   <li>You need to give the amount owed on the mortgage or loan and the the details of the account to pay before a payment can be calculated.</li>
+                 </ul>
+               </div>
+             -->
+
+             <table>
+               <thead>
+                 <tr>
+                   <th class="col-0"></th>
+                   <th class="col-1">Status</th>
+                   <th class="col-2">Loan type</th>
+                   <th class="col-3">Lender</th>
+                   <th class="col-4">Loan reference</th>
+                   <th class="col-5">Amount</th>
+                   <th class="col-6">&nbsp;</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <tr>
+                   <td>
+                     <span>1.</span>
+                   </td>
+                   <td>
+                     <span class="status-in-payment">In payment</span>
+                   </td>
+                   <td>
+                     Mortgage
+                   </td>
+                   <td>
+                     Halifax
+                   </td>
+                   <td>
+                      71207737
+                   </td>
+                   <td>
+                      £23.18
+                   </td>
+                   <td>
+                     <a href="loan-details?nino={{ nino }}" >View</a>
+                   </td>
+                 </tr>
+
+                 <tr>
+                   <td>
+                     <span>2.</span>
+                   </td>
+                   <td>
+                     <span class="status-in-payment">In payment</span>
+                   </td>
+                   <td>
+                     Home improvement loan
+                   </td>
+                   <td>
+                     TSB
+                   </td>
+                   <td>
+                     26173770217
+                   </td>
+                   <td>
+                      £15.73
+                   </td>
+                   <td>
+                     <a href="loan-details?nino={{ nino }}" >View</a>
+                   </td>
+                 </tr>
+
+               </tbody>
+               </table>
+
+               <h2 class="heading-medium">Payments</h2>
+
+               <table>
+                 <thead>
+                   <tr>
+                     <th class="col-0">Payment</th>
+                     <th class="col-1">Lender</th>
+                     <th class="col-2">Loan reference</th>
+                     <th class="col-3">Period</th>
+                     <th class="col-4">Amount</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <tr>
+                     <td>
+                       <span>2.</span>
+                     </td>
+                     <td>
+                       TSB
+                     </td>
+                     <td>
+                       26173770217
+                     </td>
+                     <td>
+                       10 May 2018
+                       to
+                      7 June 2018
+                     </td>
+                     <td>
+                        £23.45
+                     </td>
+                   </tr>
+                   <tr>
+                     <td>
+                       <span>1.</span>
+                     </td>
+                     <td>
+                       Halifax
+                     </td>
+                     <td>
+                       71207737
+                     </td>
+                     <td>
+                       10 May 2018
+                        to
+                        7 June 2018
+                     </td>
+                     <td>
+                        £123.45
+                     </td>
+                   </tr>
+
+                   </tbody>
+                   </table>
+
+
+               <p style="margin-top:32px;">
+              <a href="summary-7" class="link-back">Back to case overview</a>
+            </p>
+
+
+          </div>
+          <!-- ADMIN PANE -->
+        </div>
+        <!-- ADMIN PANES -->
+        <br> </br>
+
+
+
+      </div>
+      <!-- COLUMN 2 THRIDS -->
+      <!-- COLUMN 1 THIRD -->
+
+      <!-- COLUMN 1 THIRD -->
+
+    </div>
+    <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}
