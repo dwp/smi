@@ -1,0 +1,72 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+	
+	<main id="content" role="main">
+		{% include path+"/inc/main_nav.html" %}
+
+		<div class="main-content">
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					{% include path+"/inc/name-and-nino.html" %}
+					
+					<h2 class="heading-medium">SMIL054 Award notification (Lender)</h2>
+
+					<p>Some text to explain the letter.</p>
+
+					<form action="letters-confirm">
+
+						<div class="form-group">
+							<label class="form-label form-label-bold" for="textarea">
+								Other Mortgage/Home Improvement Loan (if applicable)
+                <span class="form-hint">
+                  Free text to add reference details if any other Home Improvement Loans held with same company. Include all relevant identifying information
+                </span>
+							</label>
+							<textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea>
+						</div>
+
+						{# <div class="form-group">
+							<label class="form-label" for="full-name-f1">Full name</label>
+							<input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+						</div>
+
+						<div class="form-group">
+							<label class="form-label" for="textarea">
+								Why can't you provide a National Insurance number?
+							</label>
+							<textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea>
+						</div>
+
+						<div class="form-group">
+							<fieldset class="inline">
+
+								<legend>
+										Do you already have a personal user account?
+								</legend>
+
+								<div class="multiple-choice">
+									<input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+									<label for="radio-inline-1">Yes</label>
+								</div>
+								<div class="multiple-choice">
+									<input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+									<label for="radio-inline-2">No</label>
+								</div>
+
+							</fieldset>
+						</div> #}
+
+						<div class="form-group">
+							<a target="_blank" href="/public/pdf/SMIL007A.pdf" class="button">Generate letter</a>
+
+							<a href="summary-letters-with-note" class="button">Mark letter as sent</a>
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}
