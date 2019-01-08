@@ -1,0 +1,123 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+        <h1 class="heading-large">Restart payments for loan 1</h1>
+
+
+                  <table class="lender-details-1">
+                    <tbody>
+                      <tr>
+                      <td width=50%>
+                          <span class="bold-small">Amount</span>
+                      </td>
+                      <td width=50%>
+                            &pound;3.36 every week
+                      </td>
+                    </tr>
+                    <tr>
+                    <td>
+                        <span class="bold-small">Name of lender</span>
+                    </td>
+                    <td>
+                      Yorkshire Building Society
+                    </td>
+                  </tr>
+                      <tr>
+                      <td>
+                          <span class="bold-small">Sort code</span>
+                      </td>
+                      <td>
+                            50-00-36
+                      </td>
+                    </tr>
+
+                    <tr>
+                    <td>
+                        <span class="bold-small">Account number</span>
+                    </td>
+                    <td>
+                          5600360011
+                    </td>
+                  </tr>
+
+
+                                      <tr>
+                                        <td>
+                                            <span class="bold-small">SMI entitlement date</span>
+                                        </td>
+                                        <td>
+                                          <div class="u-1/4-lap-and-up">
+                                            <div class="form-date">
+
+24 January 2018
+
+                                            </div>
+                                          </div>
+                                        </td>
+                                      </tr>
+
+</table>
+
+
+
+
+
+<div class="form-group" style="margin-top:32px;">
+
+    <fieldset>
+
+      <legend>
+        <h3 class="heading-small">First restart payment due</h3>
+        <span class="form-hint" style="margin-bottom:16px">This will include any backdated payments to the lender.</span>
+
+      </legend>
+
+      <div class="form-date">
+        <div class="form-group form-group-day">
+          <label class="form-label" for="fed-day">Day</label>
+          <input class="form-control" id="fed-day" name="fed-day" type="number" pattern="[0-9]*" min="0" max="31" value="{{ dob_dd }}">
+        </div>
+        <div class="form-group form-group-month">
+          <label class="form-label" for="fed-month">Month</label>
+          <input class="form-control" id="fed-month" name="fed-month" type="number" pattern="[0-9]*" min="0" max="12" value="{{ dob_mm }}">
+        </div>
+        <div class="form-group form-group-year">
+          <label class="form-label" for="fed-year">Year</label>
+          <input class="form-control" id="fed-year" name="fed-year" type="number" pattern="[0-9]*" min="0" value="{{ dob_yy }}">
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+
+             <p class="mth mb0">
+               <a href="review-payment-restart" class="button" >Review payment</a><br />
+               <br />
+               <a href="">Cancel</a>
+             </p>
+
+
+      </div> <!-- COLUMN 2 THRIDS -->
+
+       <!-- COLUMN 1 THIRD -->
+       <!-- COLUMN 1 THIRD -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

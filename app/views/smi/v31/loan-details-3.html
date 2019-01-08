@@ -1,0 +1,98 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+
+                <h1 class="heading-large">Loan 1 details</h1>
+
+                <div class="tabs">
+                	<div class="tabs-nav">
+                		<ul class="tabs-list">
+                			<li>
+                				<a href="#tab-1">
+                					Lender details
+                				</a>
+                			</li>
+                			<li>
+                				<a href="#tab2">
+                          Payment details
+                				</a>
+                			</li>
+                      <li>
+                        <a href="#tab3">
+                          Payment schedule
+                        </a>
+                      </li>
+
+                		</ul>
+                	</div>
+                </div>
+
+
+                <table class="lender-details-1">
+                  <tbody>
+                    <tr>
+                    <th>
+                        <span class="bold-small">Date</span>
+                    </th>
+                    <th>
+                          Amount
+                    </th>
+                  </tr>
+
+
+                    <tr>
+                    <td>
+                        <span class="bold-small">13/5/2018</span>
+                    </td>
+                    <td>
+                          &pound;100.45
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <span class="bold-small">13/6/2018</span>
+                    </td>
+                    <td>
+                      &pound;105.37
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <span class="bold-small">13/7/2018</span>
+                    </td>
+                    <td>
+                      &pound;103.35
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <span class="bold-small">13/8/2018</span>
+                    </td>
+                    <td>
+                      &pound;105.37
+                    </td>
+                  </tr>
+</table>
+            </div>
+
+
+       <!-- COLUMN 2 THIRDS -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

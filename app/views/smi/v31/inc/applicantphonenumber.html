@@ -1,0 +1,49 @@
+
+{% if nino == "GB654321C" %}
+
+  {% set homephone = "01234 5678901"%}
+
+{% elif nino == "BG112233N" %}
+
+  {% set homephone = "01234 5678901"%}
+  {% set mobilephone = "0777 12345678"%}
+
+
+{% elif nino == "DD445566X" %}
+
+  {% set homephone = "01234 5678901"%}
+
+
+{% elif nino == "ZZ918273C" %}
+
+  {% set homephone = "01234 5678901"%}
+  {% set mobilephone = "0777 9876754"%}
+
+
+{% elif nino == "AA11111Z" %}
+
+  {% set homephone = "01234 5678901"%}
+
+{% elif nino == "QF082262D" %}
+
+  {% set homephone = "01234 5678901"%}
+
+
+
+{% else %}
+
+{% set homephone = "No phone number recorded."%}
+
+
+{% endif %}
+
+
+{% if homephone %}
+Home telephone<br />
+{{ homephone }}<br />
+{% endif %}
+
+{% if mobilephone %}
+Mobile telephone<br />
+{{ mobilephone }}
+{% endif %}

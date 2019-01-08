@@ -1,0 +1,47 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+	<main id="content" role="main">
+		{% include path+"/inc/main_nav.html" %}
+
+		<div class="main-content">
+				<div class="grid-row">
+					<div class="column-two-thirds">
+						{% include path+"/inc/name-and-nino_in-payment.html" %}
+
+            <ol  class="list list-number">
+
+              <li><a href="summary-letters-list">List of all letters</a></li>
+
+              <li><a href="summary-letters-table">Table: all letters</a></li>
+
+              <li><a href="summary-letters-table-english-customer">Table: English and letters to customer</a>, with view all letters underneath the table</li>
+
+              <li><a href="summary-letters-table-english-customer-2">Table: English and letters to customer</a>, with increased spacing about H3s</li>
+
+              <li><a href="summary-letters-table-english-customer-3">Table: English and letters to customer</a>, with "England" removed</li>
+
+              </ol>
+
+					</div>
+
+	  			<div class="column-one-third">
+						<h2 class="heading-medium">Case history</h2>
+
+						<a href="add-note">Add note</a>
+
+						<ul class="timeline-bsp">
+							<li>
+								<span class="entry"></span>
+								<h3 class="bold">Case created</h3>
+								<span>by Jo Arthur</span>
+								<span>21 May 2018</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+		</div>
+	</main>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% if not firstname %}
+  {% set firstname = "Sally" %}
+{% endif %}
+
+{% if not lastname %}
+  {% set lastname = "Worthington" %}
+{% endif %}
+
+{% if not nino %}
+  {% set nino = "DF 82 07 32 D" %}
+{% endif %}
+
+{% if startnino %}
+  {% set firstname = "No name" %}
+  {% set lastname = "No name" %}
+  {% set nino = "No NINo" %}
+{% endif %}
+
+  {% set casestatusdescription = "In payment" %}
+
+
+
+<h2 class="heading-large" style="margin-bottom:64px; line-height: 32px;">
+  <span class="heading-secondary" style="margin-bottom:0;">{{ firstname }} {{ lastname }}</span>
+  {{ nino }}<br />
+  <span class="status-label">Case status </span><span class="status-in-payment">{{ casestatusdescription }}</span>
+
+</h2>
