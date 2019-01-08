@@ -9,25 +9,32 @@
 		<div class="main-content">
 			<div class="grid-row">
 				<div class="column-two-thirds">
-					{% include path+"/inc/name-and-nino.html" %}
+					{% include path+"/inc/name-and-nino_in-payment.html" %}
 
           <h1 class="heading-large">Generate letter</h2>
 
 
 					<h2 class="heading-medium">SMIL007 Loan agreement received - Appointee</h2>
 
-          <p>A letter will be generated.</p>
 
-					<form action="letters-confirm">
-
+          <form action="letters-confirm">
 
 
-						<div class="form-group">
-              <p>...will open a new tab. Print or save the letter, then close the tab and return to this screen.</p>
+          						<div class="form-group">
 
-							<p><a target="_blank" href="/public/pdf/SMIL007A.pdf">Generate letter</a></p>
 
-              <p>When you have printed or saved the letter.</p>
+          <h3 class="heading-small">1. Generate letter</h3>
+
+          <p>The letter will be shown in new web browser tab.</p>
+
+          <p>Print or save the letter, then close the tab and return to this screen.</p>
+
+							<p><a target="_blank" href="/public/pdf/SMIL007A.pdf" class="button">Generate letter</a></p>
+
+              <h3 class="heading-small" style="padding-top: 32px;">2. Mark letter as sent</h3>
+
+
+              <p>When you have printed or saved the letter .</p>
 
 							<a href="summary-letters-with-note" class="button" type="submit">Mark letter as sent</a>
 						</div>
