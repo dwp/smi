@@ -13,7 +13,7 @@
         {% include path+"/inc/name-and-nino.html" %}
 
 
-        <h1 class="heading-large">Change deductions and charges</h1>
+        <h1 class="heading-large">Change ground rent</h1>
 
 
                 {% set navactive = "money" %}
@@ -26,13 +26,13 @@
                 <form action="changes-review-no-deps" method="get" class="form">
 
 
-                  <p>[existing] non-dependant deductions are £12.34.</p>
+                  <p>[existing] ground rent is £12.34 per week.</p>
 
                   <div class="form-group">
                       <fieldset>
                         <legend>
                           <span class="form-label-bold">
-                            [End date paying this.]
+                            End date paying this.
                           </span>
                         </legend>
                         <div class="form-date">
@@ -56,7 +56,7 @@
                     <fieldset>
 
                       <legend>
-                        <h3 class="heading-small">Are there new non-dependant deductions?</h3>
+                        <h3 class="heading-small">Is there a new amount for ground rent?</h3>
                       </legend>
 
                       <div class="multiple-choice" data-target="dependant-deductions-yes">
@@ -64,35 +64,9 @@
                         <label for="dependant-deductions-1">Yes</label>
                       </div>
                       <div class="panel panel-border-narrow js-hidden" id="dependant-deductions-yes">
-                        <div class="form-group">
                         <label class="form-label" for="deductions-amount">Enter the total per week, based on the number and type of non-dependant adults in the household</label>
                         <span class="c-form-input-denote">£</span>
                         <input class="c-form-input-denote__input form-control form-control-1-4" id="dependant-deductions-amount" type="text" name="dependant-deductions-amount">
-                        </div>
-                        <div class="form-group">
-                            <fieldset>
-                              <legend>
-                                <span class="form-label-bold">
-                                  [Start date paying this.]
-                                </span>
-                              </legend>
-                              <div class="form-date">
-                                <div class="form-group form-group-day">
-                                  <label class="form-label" for="dob-day">Day</label>
-                                  <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" value="">
-                                </div>
-                                <div class="form-group form-group-month">
-                                  <label class="form-label" for="dob-month">Month</label>
-                                  <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="">
-                                </div>
-                                <div class="form-group form-group-year">
-                                  <label class="form-label" for="dob-year">Year</label>
-                                  <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" value="">
-                                </div>
-                              </div>
-                            </fieldset>
-                          </div>
-
                       </div>
                       <div class="multiple-choice">
                         <input id="dependant-deductions-2" type="radio" name="dependant-deductions" value="No">
@@ -109,7 +83,7 @@
 
                   <p class="mth mb0">
 
-                    <input class="button" type="submit" value="Continue"><br />
+                    <input class="button" type="submit" value="Save"><br />
                     <br />
                     <a href="">Cancel</a>
                  </p>
