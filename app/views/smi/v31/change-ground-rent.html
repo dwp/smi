@@ -64,19 +64,40 @@
                         <label for="dependant-deductions-1">Yes</label>
                       </div>
                       <div class="panel panel-border-narrow js-hidden" id="dependant-deductions-yes">
+                        <div class="form-group">
                         <label class="form-label" for="deductions-amount">Enter the total per week, based on the number and type of non-dependant adults in the household</label>
                         <span class="c-form-input-denote">£</span>
                         <input class="c-form-input-denote__input form-control form-control-1-4" id="dependant-deductions-amount" type="text" name="dependant-deductions-amount">
+                        </div>
+                        <div class="form-group">
+                            <fieldset>
+                              <legend>
+                                <span class="form-label-bold">
+                                  [Start date paying this.]
+                                </span>
+                              </legend>
+                              <div class="form-date">
+                                <div class="form-group form-group-day">
+                                  <label class="form-label" for="dob-day">Day</label>
+                                  <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" value="">
+                                </div>
+                                <div class="form-group form-group-month">
+                                  <label class="form-label" for="dob-month">Month</label>
+                                  <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="">
+                                </div>
+                                <div class="form-group form-group-year">
+                                  <label class="form-label" for="dob-year">Year</label>
+                                  <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" value="">
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+
                       </div>
                       <div class="multiple-choice">
                         <input id="dependant-deductions-2" type="radio" name="dependant-deductions" value="No">
                         <label for="dependant-deductions-2">No</label>
                       </div>
-                      <div class="multiple-choice">
-                        <input id="dependant-deductions-3" type="radio" name="dependant-deductions" value="Not needed">
-                        <label for="dependant-deductions-3">Not needed</label>
-                      </div>
-
 
                     </fieldset>
                   </div>
