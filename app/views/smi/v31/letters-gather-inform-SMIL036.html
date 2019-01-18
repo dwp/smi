@@ -11,25 +11,29 @@
 				<div class="column-two-thirds">
 					{% include path+"/inc/name-and-nino.html" %}
 
+          <h1 class="heading-large">Generate letter</h1>
+
+
 					<h2 class="heading-medium">SMIL036 MI12 MI12R reminder</h2>
 
 					<form action="letters-confirm">
+
             <div class="form-group">
               <fieldset>
 
                 <legend class="bold"  >
-                    Who should the letter be addressed to?
+                    Letters for this case are to be sent to the cutomer. Do you want to send a letter to the customer?
                 </legend>
 
 
 
                 <div class="multiple-choice">
                   <input id="radio--1" type="radio" name="radio-inline-group" value="Yes">
-                  <label for="radio-1">Claimant</label>
+                  <label for="radio-1">Yes</label>
                 </div>
                 <div class="multiple-choice">
                   <input id="radio-2" type="radio" name="radio-inline-group" value="No">
-                  <label for="radio-2">Appointment</label>
+                  <label for="radio-2">No, send to an appointee</label>
                 </div>
 
               </fieldset>
@@ -81,17 +85,19 @@
 								</div>
 								<div class="multiple-choice">
 									<input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
-									<label for="radio-inline-2">No</label>
+									<label for="radio-inline-2">No, send letter to the customer</label>
 								</div>
 
 							</fieldset>
 						</div> #}
 
 						<div class="form-group">
-							<a target="_blank" href="/public/pdf/SMIL007A.pdf" class="button">Generate letter</a>
 
-							<a href="summary-letters-with-note" class="button" type="submit">Mark letter as sent</a>
+							<a href="letters-generate-letter-SMIL036" class="button" type="submit">Continue</a>
 						</div>
+
+            <p><a href="#">Cancel</a></p>
+
 					</form>
 
 				</div>
