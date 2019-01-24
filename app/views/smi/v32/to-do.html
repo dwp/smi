@@ -1,0 +1,35 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {% set currentPage = 'toDo' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="grid-row">
+
+
+        <div class="column-two-thirds">
+
+          <h1 class="heading-large">Daily reports</h1>
+
+          <h2 class="heading-medium">Choose a report for actions due</h2>
+
+              <ul class="list-bullet">
+<!--                <li><a href="screen_2?report=sendMI12R&benefittype=ESA">Send MI12R</a></li>
+                <li><a href="screen_2?report=makeSMIpayment&benefittype=ESA">Make SMI payment</a></li>
+                <li><a href="screen_2?report=checkeligibility&benefittype=ESA">Check current eligibility for SMI</a></li>-->
+                <li><a href="MI12Routstanding?&benefittype=ESA">MI12R outstanding</a></li>
+
+              </ul>
+
+        </div>
+      <!-- COLUMN 2 THRIDS -->
+
+    </div>
+    <!-- GRID ROM -->
+
+  </main>
+
+{% endblock %}

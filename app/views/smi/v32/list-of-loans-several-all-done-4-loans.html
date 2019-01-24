@@ -8,14 +8,22 @@
 
       <div class="column-two-thirds">
 
-        {% include path+"/inc/name-and-nino.html" %}
+        {% include path+"/inc/name-and-nino_in-payment.html" %}
 
 
         <div class="admin-panes">
           <div class="admin-pane">
             <h1 class="heading-large">Loans and payments</h1>
 
-            <p>&nbsp;</p>
+            {% include path+"/inc/loans-and-payments_loans.html" %}
+
+            <div class="tabs-content">
+                      <div class="tabs-panel" id="tab-1">
+                        <div class="tabs-panel-inner">
+
+
+            <h2 class="heading-medium"  style="padding-top: 32px;">Loans</h2>
+
             <!--
                 <div class="panel panel-border-wide" style="border-color: #F47738; border-left-style: solid; background-color: #FABB9C;">
                  <h2 class="heading-small">There is not enough information to calculate a Support for Mortgage Interest payment</h2>
@@ -39,37 +47,65 @@
                </thead>
                <tbody>
                  <tr>
-                   <td>1.</td>
-
                    <td>
-                     <span class="status-on-hold">No payment set up</span>
+                     <span>1.</span>
+                   </td>
+                   <td>
+                     <span class="status-in-payment">In payment</span>
                    </td>
                    <td>
                      Mortgage
                    </td>
-
                    <td>
-                     Yorkshire Building Society
+                     Halifax
                    </td>
                    <td>
-                      7611448890
+                      71207737
                    </td>
-
                    <td>
-                      £3.36
+                      £23.18
                    </td>
-
                    <td>
-                     <a href="set-up-payment?nino={{ nino }}" >Set up</a>
+                     <a href="loan-details?nino={{ nino }}" >View</a>
+                   </td>
+                 </tr>
+
+                 <tr>
+                   <td>
+                     <span>2.</span>
+                   </td>
+                   <td>
+                     <span class="status-in-payment">In payment</span>
+                   </td>
+                   <td>
+                     Home improvement loan
+                   </td>
+                   <td>
+                     TSB
+                   </td>
+                   <td>
+                     26173770217
+                   </td>
+                   <td>
+                      £15.73
+                   </td>
+                   <td>
+                     <a href="loan-details?nino={{ nino }}" >View</a>
                    </td>
                  </tr>
 
                </tbody>
                </table>
 
-               <p style="padding-top: 32px;"><a href="add-loan">Add loan</a></p>
 
 
+               <p style="margin-top:32px;">
+              <a href="summary-7" class="link-back">Back to case overview</a>
+            </p>
+
+</div>
+</div>
+</div>
 
           </div>
           <!-- ADMIN PANE -->

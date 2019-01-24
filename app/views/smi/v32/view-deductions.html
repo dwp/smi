@@ -1,0 +1,62 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino_in-payment.html" %}
+
+
+        <h1 class="heading-large">Deductions and charges</h1>
+
+
+                {% set navactive = "money" %}
+                {% if not newapplication %}
+
+                {% endif %}
+
+<table>
+  <tr>
+    <td>Non-dependant deductions</td>
+    <td>£14.56 per week</td>
+    <td><a href="change-non-deps">change</a></td>
+  </tr>
+  <tr>
+    <td>Ground rent</td>
+    <td>£6.78 per week</td>
+    <td><a href="change-ground-rent">change</a></td>
+  </tr>
+  <tr>
+    <td>Service charges</td>
+    <td>none</td>
+    <td><a href="change-service-charges">change</a></td>
+  </tr>
+  <tr>
+    <td>Deductions because of excess income</td>
+    <td>none</td>
+    <td><a href="change-deductions">change</a></td>
+  </tr>
+</table>
+
+<p style="margin-top:32px;">
+<a href="summary-6" class="link-back">Back to case overview</a>
+</p>
+
+
+
+      </div> <!-- COLUMN 2 THRIDS -->
+
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

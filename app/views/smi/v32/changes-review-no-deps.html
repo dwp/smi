@@ -1,0 +1,68 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino_in-payment.html" %}
+
+
+                <h1 class="heading-large">Review changes for non-dependant deductions</h1>
+
+                <p>&nbsp;</p>
+                <!--
+                <div class="panel panel-border-wide" style="border-color: #b10e1e; border-left-style: solid; background-color: #FFDAEA; margin-bottom: 64px;">
+
+                  <p><span class="bold">Payments will be changed</span><br />
+                  Non-dependant deductions have been changed.</p>
+                </div>-->
+
+                <table>
+                  <tr>
+                    <td>Previous amount</td>
+                    <td>£14.56 per week</td>
+                    <td><a href="change-non-deps">edit</a></td>
+
+                  <tr>
+                    <td>End date</td>
+                    <td>5 January 2019</td>
+                    <td><a href="change-non-deps">edit</a></td>
+
+                  </tr>
+                  <tr>
+                    <td>New amount</td>
+                    <td>£11.33 per week</td>
+                    <td><a href="change-non-deps">edit</a></td>
+                    </tr>
+                    <tr>
+                      <td>Starting from</td>
+                      <td>6 January 2019</td>
+                      <td><a href="change-non-deps">edit</a></td>
+                      </tr>
+                </table>
+
+
+
+
+                  <p>&nbsp;</p>
+
+              <p class="mth mb0"><a href="changes-smi-payments-non-deps" class="button">Continue</a></p>
+
+
+      </div> <!-- COLUMN 2 THRIDS -->
+      <!-- COLUMN 1 THIRD -->
+ <!-- COLUMN 1 THIRD -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

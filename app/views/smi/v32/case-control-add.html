@@ -1,0 +1,63 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino_in-payment.html" %}
+
+
+
+          <h1 class="heading-large">Add new case control</h1>
+
+          <form action="summary" method="get" class="form">
+
+            <textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea>
+
+            <div class="form-group" style="padding-top: 32px;">
+                <fieldset>
+                  <legend>
+                    <span class="form-label-bold">
+                      Due date
+                    </span>
+                  </legend>
+                  <div class="form-date">
+                    <div class="form-group form-group-day">
+                      <label class="form-label" for="dob-day">Day</label>
+                      <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" value="">
+                    </div>
+                    <div class="form-group form-group-month">
+                      <label class="form-label" for="dob-month">Month</label>
+                      <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="">
+                    </div>
+                    <div class="form-group form-group-year">
+                      <label class="form-label" for="dob-year">Year</label>
+                      <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" value="">
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+
+            <p class="mth mb0"><a href="case-management-new-case" class="button">Create</a></p>
+            <p>
+              <a href="case-management">Cancel</a>
+            </p>
+
+         </p>
+
+
+        </form>
+
+
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

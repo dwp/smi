@@ -1,0 +1,52 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino_in-payment.html" %}
+
+
+                <h1 class="heading-large">Remove case control for send MI12</h1>
+
+                <h2 class="heading-medium">What you should have done</h2>
+                <ul class="list  list-bullet">
+                  <li>Sent an MI12 to the customer</li>
+                </ul>
+
+
+                <h2 class="heading-medium">What you need to do next</h2>
+                <ul class="list  list-bullet">
+                  <li>Nothing</li>
+                </ul>
+
+
+              <h2 class="heading-medium">What happens next</h2>
+                <ul class="list list-bullet">
+                  <li>The case control will be removed</li>
+                  <li>A note that an MI12 has been issued will be created</li>
+                  <li>A reminder has been created for four weeks' time to check the MI12 has been returned</li>
+                </ul>
+
+
+              <p style="margin-top:32px;"><a href="case-management-reminder-added" class="button">Confirm</a></p>
+
+
+
+</div>
+
+       <!-- COLUMN 2 THIRDS -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}
