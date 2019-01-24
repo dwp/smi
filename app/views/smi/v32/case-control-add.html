@@ -17,7 +17,32 @@
 
           <form action="summary" method="get" class="form">
 
+            <div class="form-group"  style="padding-top:32px;">
+              <fieldset>
+
+                <legend>
+                  <h3 class="heading-small">What is the reminder for?</h3>
+                </legend>
+
+                <div class="multiple-choice">
+                  <input id="dependant-deductions-1" type="radio" name="dependant-deductions" value="Yes">
+                  <label for="dependant-deductions-1">MI12R due</label>
+                </div>
+
+                <div class="multiple-choice" data-target="other">
+                  <input id="dependant-deductions-other" type="radio" name="dependant-deductions" value="Other">
+                  <label for="dependant-deductions-other">Other</label>
+                </div>
+
+                <div class="panel panel-border-narrow js-hidden" id="other">
+                  <div class="form-group">
+
+
+
             <textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea>
+
+            </div>
+            </div>
 
             <div class="form-group" style="padding-top: 32px;">
                 <fieldset>
@@ -43,13 +68,16 @@
                 </fieldset>
               </div>
 
+              </div>
+
+
 
             <p class="mth mb0"><a href="case-management-new-case" class="button">Create</a></p>
             <p>
               <a href="case-management">Cancel</a>
             </p>
 
-         </p>
+
 
 
         </form>
