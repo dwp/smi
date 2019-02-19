@@ -1,0 +1,156 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino_on-hold.html" %}
+
+
+                <h1 class="heading-large">Review restart payment for loan 1</h1>
+
+                <p>
+                  Last previous date SMI was paid was 20 November 2018.
+                </p>
+
+
+                <h2 class="heading-medium">Amount</h2>
+
+
+                <table>
+                  <tbody>
+                    <tr>
+                    <td width=50%>
+                        <span class="bold-small">Weekly amount</span>
+                    </td>
+                    <td width=50%>
+                          &pound;3.36
+                    </td>
+                  </tr>
+                  <tr>
+                  <td>
+                      <span class="bold-small">Amount to be paid every 4 weeks</span>
+                  </td>
+                  <td>
+                        &pound;13.43
+                  </td>
+                </tr>
+
+                </table>
+
+
+                <h2 class="heading-medium">Paid to</h2>
+
+                <table>
+                  <tr>
+                    <td width=50%>
+                        <span class="bold-small">Lender name</span>
+                    </td>
+                    <td width=50%>
+                      Yorkshire Building Society
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                        <span class="bold-small">Loan reference number</span>
+                    </td>
+                    <td>
+                      7611448890
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>
+                        <span class="bold-small">Sort code</span>
+                    </td>
+                    <td>
+                      56-00-36
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <span class="bold-small">Account number</span>
+                    </td>
+                    <td>
+                      5600360011
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <span class="bold-small">QLR</span>
+                    </td>
+                    <td>
+                      6003
+                    </td>
+                  </tr>
+                </table>
+
+
+                <h2 class="heading-medium">Underpayment</h2>
+
+                <table>
+                  <tr>
+                    <td width=50%><span class="bold-small">Amount</span></td>
+                    <td width=50%>£55 (For period [period from previous page] for [reason from previous page here])</td>
+                  </tr>
+                </table>
+
+
+
+                <h2 class="heading-medium">Payments</h2>
+
+
+                <table>
+                  <tr>
+                    <td width=50%>
+                        <span class="bold-small">First payment</span>
+                    </td>
+                    <td width=50%>
+                      &pound;61.72 on 3 December 2018 (including £55 for underpayment)
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                        <span class="bold-small">Next payment</span>
+                    </td>
+                    <td>
+                      &pound;13.43 every 4 weeks from 28 December 2018
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                        <span class="bold-small">End date</span>
+                    </td>
+                    <td>
+                      None
+                    </td>
+                  </tr>
+
+</table>
+
+              <p class="mth mb0"><a href="smi-payments-outcome-payment-restarted-v2" class="button">Continue</a><br />
+                <br />
+              <a href="#">Cancel</a></p>
+
+            </div>
+
+
+       <!-- COLUMN 2 THIRDS -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}

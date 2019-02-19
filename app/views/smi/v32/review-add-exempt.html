@@ -1,0 +1,226 @@
+{% extends path+"/inc/layout.html" %} {% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        {% include path+"/inc/name-and-nino.html" %}
+
+
+        <div class="admin-panes">
+          <div class="admin-pane">
+            <h1 class="heading-large">Check this information is correct</h1>
+
+            <p>&nbsp;</p>
+            <!--
+                <div class="panel panel-border-wide" style="border-color: #F47738; border-left-style: solid; background-color: #FABB9C;">
+                 <h2 class="heading-small">There is not enough information to calculate a Support for Mortgage Interest payment</h2>
+                 <ul>
+                   <li>You need to give the amount owed on the mortgage or loan and the the details of the account to pay before a payment can be calculated.</li>
+                 </ul>
+               </div>
+             -->
+
+            <p>As the combined value of the two loans (£50,000) is less than the upper limit for pension credit (£100,000) no action is needed.</p>
+
+
+            <table>
+              <tbody>
+
+                <tr>
+                  <td colspan=2>
+                    <h2 class="heading-medium">Property charges and income</h2></td>
+                  <td><a href="property-money?nino={{ nino }}">Edit</a></td>
+                </tr>
+
+
+                <tr>
+                  <td>Ground rent per week</td>
+                  <td>Nothing entered</td>
+                  <td></td>
+
+                </tr>
+
+                <tr>
+                  <td>Service charges per week</td>
+                  <td>Nothing entered</td>
+                  <td></td>
+
+                </tr>
+
+
+                <tr>
+                  <td>Non-dependant deductions</td>
+                  <td>Nothing entered</td>
+                  <td></td>
+
+                </tr>
+
+                <tr>
+                  <td colspan=2>
+                    <p>&nbsp;</p>
+                    <h2 class="heading-medium">Loan 1: Mortgage</h2> Mortgage or home loan ref 71207737</td>
+                  <td valign=bottom><a href="money?nino={{ nino }}">Edit</a></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    Lender code
+                  </td>
+                  <td>
+                    1234
+                  </td>
+                  <td></td>
+
+                </tr>
+
+
+                <tr>
+                  <td>
+                    Outstanding balance
+                  </td>
+                  <td>
+                    £13,983
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    Share of housing cost
+                  </td>
+                  <td>
+                    1/1
+                  </td>
+                  <td></td>
+
+                </tr>
+
+                <tr>
+                  <td>
+                    Weekly mortgage protection policy amount
+                  </td>
+                  <td>
+                    Nothing entered
+                  </td>
+                  <td></td>
+
+                </tr>
+
+
+                <tr>
+                  <td>
+                    Loan exempt amount
+                  </td>
+                  <td>
+                    <input type="text">
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+
+
+
+
+                <tr>
+                  <td colspan=2>
+                    <p>&nbsp;</p>
+                    <h2 class="heading-medium">Loan 2: Home improvement loan</h2>Lender reference 26173770217</td>
+                  <td valign=bottom><a href="money?nino={{ nino }}">Edit</a></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    Lennder code
+                  </td>
+                  <td>
+                    5678
+                  </td>
+                  <td></td>
+
+                </tr>
+
+
+                <tr>
+                  <td>
+                    Outstanding balance
+                  </td>
+                  <td>
+                    £864.12
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    Share of housing cost
+                  </td>
+                  <td>
+                    1/1
+                  </td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    Weekly mortgage protection policy amount
+                  </td>
+                  <td>
+                    Nothing entered
+                  </td>
+                  <td></td>
+
+                </tr>
+
+
+                <tr>
+                  <td>
+                    Loan exempt amount
+                  </td>
+                  <td>
+                    <input type="text">
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+
+
+
+              </tbody>
+            </table>
+
+            <p>&nbsp;</p>
+
+
+            <p class="mth mb0"><a href="submit_for_processing?nino={{ nino }}" class="button">Calculate</a><br /></p>
+            <p class="mth mb0"><a href="summary?nino={{ nino }}" class="link-back">Cancel</a></p>
+
+          </div>
+          <!-- ADMIN PANE -->
+        </div>
+        <!-- ADMIN PANES -->
+        <br> </br>
+
+
+
+      </div>
+      <!-- COLUMN 2 THRIDS -->
+      <!-- COLUMN 1 THIRD -->
+
+      <!-- COLUMN 1 THIRD -->
+
+    </div>
+    <!-- GRID ROM -->
+
+  </div>
+  <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}
