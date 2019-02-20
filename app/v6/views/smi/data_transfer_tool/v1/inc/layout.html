@@ -1,0 +1,33 @@
+{% extends "admin_layout.html" %}
+
+{% block page_title %} Support for Mortgage Interest (SMI) data transfer tool {% endblock %}
+
+{% block head %}
+  <link href="/public/v6/stylesheets/mvp.css" media="screen" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block proposition_header %}
+  <div class="header-proposition">
+    <div class="content">
+      <nav id="proposition-menu">
+        <a href="/" id="logo" class="content">Support for Mortgage Interest (SMI) data transfer tool </a>
+      </nav>
+      <nav id="sign-out-menu">
+        <ul> <li class="bold">Firstname Surname</li> </ul>
+      </nav>
+    </div>
+  </div>
+{% endblock %}
+
+{% block headerClass %}{% endblock %}
+
+{% block body_end %}
+  <!-- Javascript -->
+  <script src="/public/v6/javascripts/details.polyfill.js"></script>
+  <script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/v6/javascripts/govuk/selection-buttons.js"></script>
+  <script src="/public/v6/javascripts/govuk/shim-links-with-button-role.js"></script>
+  <script src="/public/v6/javascripts/govuk/show-hide-content.js"></script>
+  <script src="/public/v6/javascripts/application.js"></script>
+  {% block page_scripts %}{% endblock %}
+{% endblock %}
