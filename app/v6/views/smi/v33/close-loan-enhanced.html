@@ -9,27 +9,69 @@
   <div class="main-content">
     <div class="grid-row">
       <div class="column-two-thirds">
-        {% include path+"/inc/name-and-nino_dormant.html" %}
+        {% include path+"/inc/name-and-nino_in-payment.html" %}
 
-        <h1 class="heading-large">Loan 1 removed</h1>
+        <h1 class="heading-large">Close loan 1 loan</h1>
 
-        <h2 class="heading-medium">What happens next</h2>
+        <div class="form-group">
+          <fieldset>
+
+            <legend>
+              <h1 class="heading-medium">
+                Why is this loan being closed?
+              </h1>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+              <label for="radio-inline-1">Customer no longer wants SMI</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+              <label for="radio-inline-2">The loan from the lender has been redeemed</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-inline-3" type="radio" name="radio-inline-group" value="No">
+              <label for="radio-inline-3">SMI entitlement has ended</label>
+            </div>
+            <div class="multiple-choice" data-target="closing-reason-panel">
+              <input id="radio-inline-4" type="radio" name="radio-inline-group" value="No">
+              <label for="radio-inline-4">Other</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="closing-reason-panel">
+              <label class="form-label" for="closing-reason">Reason for closing the loan</label>
+              <input class="form-control" name="closing-reason" type="text" id="closing-reason">
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend>
+              <span class="form-label-bold">
+                What is your date of birth?
+              </span>
+              <span class="form-hint">For example, 31 3 1980</span>
+            </legend>
+            <div class="form-date">
+              <div class="form-group form-group-day">
+                <label class="form-label" for="dob-day">Day</label>
+                <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+              </div>
+              <div class="form-group form-group-month">
+                <label class="form-label" for="dob-month">Month</label>
+                <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+              </div>
+              <div class="form-group form-group-year">
+                <label class="form-label" for="dob-year">Year</label>
+                <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+          </fieldset>
+        </div>
         
-        <ul class="list list-bullet">
-          <li>[SMI status set to on hold]</li>
-          <li>CPS (central payment system) has been instructed to suspend payments for this loan</li>
-          <li>Loan[x] has been closed </li>
-        </ul>
-
-        <h2 class="heading-medium">What you need to do next</h2>
-
-        <ul class="list list-bullet">
-          <li>Send letters to the customer and to the lender telling them loan (x) has been closed</li>
-          <li>Add a note to explain why loan (x) has been closed</li>
-          <li>Make the case dormant if it needs to be</li>
-        </ul>
-        
-        <p><a href="list-of-loans-one-loan-3-closed" class="button">Continue</a></p>
+        <p><a href="close-loan-enhanced-summary" class="button">Continue</a></p>
+        <p><a href="#">Cancel</a></p>
       </div>
     </div>
   </main>

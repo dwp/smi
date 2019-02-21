@@ -1,0 +1,182 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        {% include path+"/inc/name-and-nino_on-hold.html" %}
+      </div>
+    </div>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <h1 class="heading-large" style="margin-top: 0;">Loan 1 details</h1>
+
+        <h2 class="heading-medium">These are the details of this loan when it was closed</h2>
+
+        <table>
+          <tr>
+            <td width=45%>
+              <span class="bold-small">Type of loan</span>
+            </td>
+            <td width=45%>
+              Mortgage
+            </td>
+            <td width=10%></td>
+          </tr>
+        </table>
+
+        <h2 class="heading-medium">Lender details</h2>
+
+        <table class="lender-details-1">
+          <tbody>
+            <tr>
+              <td width=45%>
+                <span class="bold-small">Name of lender</span>
+              </td>
+              <td width=45%>
+                Yorkshire Building Society
+              </td>
+              <td width=10%>
+                
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                <span class="bold-small">Lender address</span>
+              </td>
+              <td>
+                47 High Street<br />
+                Birmingham<br />
+                Staffordshire<br />
+                B12 7CD
+              </td>
+              <td width=10% valign="top">
+                
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="bold-small">Account number</span>
+              </td>
+              <td>
+                5600360011
+              </td>
+              <td width=10%>
+                
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="bold-small">Sort code</span>
+              </td>
+              <td>
+                56-00-36
+              </td>
+              <td width=10%>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 class="heading-medium">Loan details</h2>
+
+        <table>
+          <tr>
+            <td width=45%>
+              <span class="bold-small">Loan reference number</span>
+            </td>
+            <td width=45%>
+              12345678
+            </td>
+            <td width=10%>
+              
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="bold-small">Allowable amount</span>
+            </td>
+            <td>
+              &pound;6,688.84
+            </td>
+            <td>
+              
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="bold-small">Weekly amount</span>
+            </td>
+            <td>
+              &pound;3.36
+            </td>
+            <td width=10%>
+            </td>
+
+          </tr>
+          <tr>
+            <td>
+              <span class="bold-small">Amount every 4 weeks</span>
+            </td>
+            <td>
+              &pound;13.43
+            </td>
+            <td width=10%>
+            </td>
+
+          </tr>
+          <tr>
+            <td>
+              <span class="bold-small">Applicant's share of loan payment</span>
+            </td>
+            <td>
+              100%
+            </td>
+            <td>
+              
+            </td>
+
+          </tr>
+          <tr>
+            <td>
+              <span class="bold-small">Date SMI loan paid to</span>
+            </td>
+            <td>
+              1 January 2019
+            </td>
+            <td width=10%>
+              
+            </td>
+          </tr>
+        </table>
+
+        <p style="margin-top:32px;">
+          <a href="list-of-loans-one-loan-1-close" class="link-back">Back to loans and payments</a>
+        </p>
+
+      </div>
+
+      <div class="column-third" style="border-top: 2px solid #005ea5;">
+
+        <h2 class="heading-medium" style="margin:16px 0;">Case actions</h2>
+
+        <p>
+          No actions available.
+        </p>
+
+      </div>
+
+      <!-- COLUMN 2 THIRDS -->
+
+    </div> <!-- GRID ROM -->
+
+  </div> <!-- MAIN CONTENT -->
+
+</main>
+
+{% endblock %}
