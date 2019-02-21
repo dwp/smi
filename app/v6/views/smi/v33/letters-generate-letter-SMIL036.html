@@ -1,0 +1,49 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+	<main id="content" role="main">
+		{% include path+"/inc/main_nav.html" %}
+
+		<div class="main-content">
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					{% include path+"/inc/name-and-nino_in-payment.html" %}
+
+          <h1 class="heading-large">Generate letter</h1>
+
+
+					<h2 class="heading-medium">SMIL036 MI12 MI12R reminder</h2>
+
+
+          <form action="letters-confirm">
+
+
+          						<div class="form-group">
+
+
+          <h3 class="heading-small">1. Generate letter</h3>
+
+          <p>The letter will be shown in new web browser tab.</p>
+
+          <p>Print or save the letter, then close the tab and return to this screen.</p>
+
+							<p><a target="_blank" href="/public/v6/pdf/SMIL007A.pdf" class="button">Generate letter</a></p>
+
+              <h3 class="heading-small" style="padding-top: 32px;">2. Mark letter as sent</h3>
+
+
+              <p>When you have printed or saved the letter .</p>
+
+							<a href="summary-letters-table-english-customer-2-sent-letter" class="button" type="submit">Mark letter as sent</a>
+						</div>
+					</form>
+
+          <p><a href="#">Cancel</a></p>
+
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}

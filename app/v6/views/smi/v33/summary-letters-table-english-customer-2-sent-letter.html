@@ -1,0 +1,52 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+	<main id="content" role="main">
+		{% include path+"/inc/main_nav.html" %}
+
+
+		<div class="main-content">
+				<div class="grid-row">
+					<div class="column-two-thirds">
+						{% include path+"/inc/name-and-nino_in-payment.html" %}
+
+
+                <div class="panel panel-border-wide" style="border-color: #28a197; border-left-style: solid; background-color: #eaf6f5; margin-bottom: 64px;">
+
+                  <h2 class="heading-small">Note has been created saying letter has been sent</h2>
+                </div>
+
+
+						{% include path+"/inc/summary_tab_letters_table_english_customer-2.html" %}
+					</div>
+
+	  			<div class="column-one-third">
+						<h2 class="heading-medium">Case history</h2>
+
+						<a href="add-note">Add note</a>
+
+            <ul class="timeline-bsp">
+							<li>
+								<span class="entry"></span>
+								<h3 class="bold">Letter (SMIL007 Loan agreement received) has been sent </h3>
+								<span>by Jo Arthur</span>
+								<span>18 January May 2019</span>
+							</li>
+						</ul>
+
+
+						<ul class="timeline-bsp">
+							<li>
+								<span class="entry"></span>
+								<h3 class="bold">Case created</h3>
+								<span>by Jo Arthur</span>
+								<span>21 May 2018</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+		</div>
+	</main>
+{% endblock %}

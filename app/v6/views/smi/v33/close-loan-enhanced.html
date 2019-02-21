@@ -1,0 +1,36 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+  <main id="content" role="main">
+
+	{% set currentPage = 'claimant' %}
+	{% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        {% include path+"/inc/name-and-nino_dormant.html" %}
+
+        <h1 class="heading-large">Loan 1 removed</h1>
+
+        <h2 class="heading-medium">What happens next</h2>
+        
+        <ul class="list list-bullet">
+          <li>[SMI status set to on hold]</li>
+          <li>CPS (central payment system) has been instructed to suspend payments for this loan</li>
+          <li>Loan[x] has been closed </li>
+        </ul>
+
+        <h2 class="heading-medium">What you need to do next</h2>
+
+        <ul class="list list-bullet">
+          <li>Send letters to the customer and to the lender telling them loan (x) has been closed</li>
+          <li>Add a note to explain why loan (x) has been closed</li>
+          <li>Make the case dormant if it needs to be</li>
+        </ul>
+        
+        <p><a href="list-of-loans-one-loan-3-closed" class="button">Continue</a></p>
+      </div>
+    </div>
+  </main>
+{% endblock %}
