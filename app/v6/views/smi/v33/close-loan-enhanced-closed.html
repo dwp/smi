@@ -19,16 +19,27 @@
           <li>Loan 1 has been closed </li>
           <li>CPS (Central Payment System) has been instructed to stop payments for this loan</li>
           <li>**A final payment of £10.00 has been sent for loan 1</li>
+          {% if multipleLoans %}
+            <li>**A final payment of £10.00 has been sent for loan 2</li>
+          {% endif %}
         </ul>
 
         <h2 class="heading-medium">What you need to do</h2>
         <ul class="list list-bullet">
           <li>Send letters to the customer and to the lender telling them loan 1 has been closed</li>
           <li>Check operational instructions for additional steps to take (IS THE A LINK THAT WE COULD PROVIDE HERE?)</li>
-          <li>**There has been a potential overpayment of £10.00, please consider corrective action</li>
+          <li>**There has been a potential overpayment of £10.00, please consider corrective action.</li>
+          {% if multipleLoans %}
+            <li>**There has been a potential overpayment of £10.00, please consider corrective action.</li>
+          {% endif %}
         </ul>
         
-        <p><a href="list-of-loans-one-loan-1-close" class="button">Continue</a></p>
+        {% if multipleLoans %}
+          <p><a href="list-of-loans-several-all-closed" class="button">Continue</a></p>
+        {%else %}
+          <p><a href="list-of-loans-one-loan-1-close" class="button">Continue</a></p>
+        {%endif%}
+        
       </div>
     </div>
   </main>

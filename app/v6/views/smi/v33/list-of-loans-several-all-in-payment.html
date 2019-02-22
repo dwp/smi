@@ -1,0 +1,100 @@
+{% extends path+"/inc/layout.html" %} 
+
+{% block content %}
+  <main id="content" role="main">
+    {% include path+"/inc/main_nav.html" %}
+
+    <div class="main-content">
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          {% include path+"/inc/name-and-nino_in-payment.html" %}
+
+          <div class="admin-panes">
+            <div class="admin-pane">
+              <h1 class="heading-large">Loans and payments</h1>
+
+              <p>&nbsp;</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th class="col-0"></th>
+                    <th class="col-1">Status</th>
+                    <th class="col-2">Loan type</th>
+                    <th class="col-3">Lender</th>
+                    <th class="col-4">Loan reference</th>
+                    <th class="col-5">Amount</th>
+                    <th class="col-6">&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span>1.</span>
+                    </td>
+
+                    <td>
+                      <span class="status-in-payment">In payment</span>
+                    </td>
+                    <td>
+                      Home purchase loan
+                    </td>
+
+                    <td>
+                      Yorkshire Building Society
+                    </td>
+                    <td>
+                      7611448890
+                    </td>
+                    <td>
+                      £3.36
+                    </td>
+
+                    <td>
+                      <a href="loan-details?nino={{ nino }}">View</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span>2.</span>
+                    </td>
+
+                    <td>
+                      <span class="status-in-payment">In payment</span>
+                    </td>
+                    <td>
+                      Home improvement loan
+                    </td>
+
+                    <td>
+                      Halifax
+                    </td>
+                    <td>
+                      QA1234
+                    </td>
+                    <td>
+                      £3.36
+                    </td>
+
+                    <td>
+                      <a href="loan-details?nino={{ nino }}">View</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p style="padding-top: 32px;"><a href="add-loan">Add loan</a></p>
+
+              <p><a href="close-loan-enhanced?multipleLoans=true">Close loan</a></p>
+
+              <p style="margin-top:32px;">
+                <a href="summary-6" class="link-back">Back to case overview</a>
+              </p>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}

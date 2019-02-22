@@ -15,6 +15,7 @@ router.get('*', function (req, res, next) {
   req.data = req.data || { };
   req.data.path = path.dirname(req.params[0]).substr(1);
   res.locals = req.data;
+  res.locals = Object.assign(req.query, res.locals)
   next();
 })
 
