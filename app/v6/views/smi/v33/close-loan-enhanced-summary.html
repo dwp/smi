@@ -19,12 +19,20 @@
         </div>
 
         <h2 class="heading-medium">Loan 1</h2>
-
-        <div class="panel panel-border-wide alert-default">
-          <p>
-            Loan 1 to be closed. Loan end date on 1 January 2019.
-          </p>
-        </div>
+      
+        {% if selectedLoan %}
+          <div class="panel panel-border-wide alert-success">
+            <p>
+                Loan 1 to remain in payment. The weekly SMI has changed.
+            </p>
+          </div>
+        {% else %}
+          <div class="panel panel-border-wide alert-default">
+            <p>
+              Loan 1 to be closed. Loan end date on 1 January 2019.
+            </p>
+          </div>
+        {%endif %}
 
         <table class="table-50-50">
           <tbody>
@@ -56,10 +64,18 @@
               <td>Share of mortgage or loan</td>
               <td>100%</td>
             </tr>
-            <tr>
-              <td><span class="bold">Final payment</span></td>
-              <td><span class="bold">None</span></td>
-            </tr>
+
+            {% if selectedLoan %}
+              <tr>
+                <td><span class="bold">Weeky SMI payment</span></td>
+                <td><span class="bold">£51.00</span></td>
+              </tr>
+            {% else %}
+              <tr>
+                <td><span class="bold">Final payment</span></td>
+                <td><span class="bold">None</span></td>
+              </tr>
+            {% endif %}
           </tbody>
         </table>
         
@@ -136,7 +152,7 @@
           </tbody>
         </table>
         
-        <p><a href="close-loan-enhanced-closed{{ '?multipleLoans=true' if multipleLoans }}" class="button">Continue</a></p>
+        <p><a href="close-loan-enhanced-closed{{ '?multipleLoans=true' if multipleLoans }}{{ '&selectedLoan=true' if selectedLoan }}" class="button">Continue</a></p>
         <p><a href="#">Cancel</a></p>
       </div>
     </div>

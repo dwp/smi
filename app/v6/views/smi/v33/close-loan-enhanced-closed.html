@@ -16,10 +16,15 @@
         <h2>What the system will do</h2>
         <ul class="list list-bullet">
           <li>SMI status set to on hold</li>
-          <li>Loan 1 has been closed </li>
+
+          {% if selectedLoan %}
+            <li>Loan 2 has been closed </li>
+          {% else %}
+            <li>Loan 1 has been closed </li>
+          {% endif %}
           <li>CPS (Central Payment System) has been instructed to stop payments for this loan</li>
           <li>**A final payment of £10.00 has been sent for loan 1</li>
-          {% if multipleLoans %}
+          {% if multipleLoans and not selectedLoan %}
             <li>**A final payment of £10.00 has been sent for loan 2</li>
           {% endif %}
         </ul>
@@ -34,9 +39,11 @@
           {% endif %}
         </ul>
         
-        {% if multipleLoans %}
+        {% if multipleLoans and not selectedLoan %}
           <p><a href="list-of-loans-several-all-closed" class="button">Continue</a></p>
-        {%else %}
+        {%elif  multipleLoans and selectedLoan  %}
+          <p><a href="list-of-loans-several-one-closed" class="button">Continue</a></p>
+        {% else %}
           <p><a href="list-of-loans-one-loan-1-close" class="button">Continue</a></p>
         {%endif%}
         

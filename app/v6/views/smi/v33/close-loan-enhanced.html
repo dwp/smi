@@ -27,11 +27,11 @@
                 </h1>
               </legend>
 
-              <div class="multiple-choice" data-target="reasons-why-container">
+              <div class="multiple-choice" data-target="close-all-loans-container">
                 <input id="radio-inline-5" type="radio" name="close-option" value="Yes">
                 <label for="radio-inline-5">Yes</label>
               </div>
-              <div class="multiple-choice">
+              <div class="multiple-choice" data-target="close-selected-loans-container">
                 <input id="radio-inline-6" type="radio" name="close-option" value="No">
                 <label for="radio-inline-6">No</label>
               </div>
@@ -39,7 +39,7 @@
           </div>
         {% endif %}
 
-        <div class="{{ 'panel panel-border-narrow js-hidden' if multipleLoans }}" id="reasons-why-container">
+        <div class="{{ 'panel panel-border-narrow js-hidden' if multipleLoans }}" id="close-all-loans-container">
           <div class="form-group">
             <fieldset>
               <legend>
@@ -102,11 +102,105 @@
               </div>
             </fieldset>
           </div>
+          
         </div>
+
+
+        {% if multipleLoans %}
+          <div class="{{ 'panel panel-border-narrow js-hidden' if multipleLoans }}" id="close-selected-loans-container">
+            <div class="form-group">
+              <fieldset>
+
+                <legend>
+                  <h3 class="heading-medium">Which loans do you want to close?</h3>
+                  <span class="body-text">Select all that apply</span>
+                </legend>
+
+                <div class="multiple-choice">
+                  <input id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
+                  <label for="waste-type-1">Loan 1</label>
+                </div>
+                <div class="multiple-choice" data-target="close-loan-2-container">
+                  <input id="waste-type-2" name="waste-types" type="checkbox" value="waste-mines">
+                  <label for="waste-type-2">Loan 2</label>
+                </div>
+              </fieldset>
+            </div>
+            
+            <div class="panel panel-border-narrow js-hidden" id="close-loan-2-container">
+              <div class="form-group">
+                <fieldset>
+                  <legend>
+                    <h1 class="heading-medium">
+                        Why is this loan being closed?
+                    </h1>
+                  </legend>
+
+                  <div class="multiple-choice">
+                    <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+                    <label for="radio-inline-1">Customer no longer wants SMI</label>
+                  </div>
+                  <div class="multiple-choice">
+                    <input id="radio-inline-3" type="radio" name="radio-inline-group" value="No">
+                    <label for="radio-inline-3">SMI entitlement has ended</label>
+                  </div>
+                  <div class="multiple-choice" data-target="closing-single-loan-reason-panel">
+                    <input id="radio-inline-4" type="radio" name="radio-inline-group" value="No">
+                    <label for="radio-inline-4">Other</label>
+                  </div>
+                  <div class="panel panel-border-narrow js-hidden" id="closing-single-loan-reason-panel">
+                    <label class="form-label" for="closing-reason">Reason for closing the loan</label>
+                    <input class="form-control" name="closing-reason" type="text" id="closing-reason">
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="form-group">
+                <fieldset>
+                  <legend>
+                    <span class="form-label-bold">
+                      What is your date of birth?
+                    </span>
+                    <span class="form-hint">For example, 31 3 1980</span>
+                  </legend>
+                  <div class="form-date">
+                    <div class="form-group form-group-day">
+                      <label class="form-label" for="dob-day">Day</label>
+                      <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                    </div>
+                    <div class="form-group form-group-month">
+                      <label class="form-label" for="dob-month">Month</label>
+                      <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                    </div>
+                    <div class="form-group form-group-year">
+                      <label class="form-label" for="dob-year">Year</label>
+                      <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        {% endif %}
         
-        <p><a href="close-loan-enhanced-summary{{ '?multipleLoans=true' if multipleLoans }}" class="button">Continue</a></p>
+        <p><a id="link_continue" href="close-loan-enhanced-summary{{ '?multipleLoans=true' if multipleLoans }}" class="button">Continue</a></p>
         <p><a href="#">Cancel</a></p>
       </div>
     </div>
   </main>
+
+  <script>
+    var linkContinue = document.getElementById("link_continue");
+    console.log(linkContinue)
+    linkContinue.addEventListener('click', function(e){
+      e.preventDefault();
+      console.log(this.href)
+
+      if(document.querySelector('#radio-inline-6:checked')){
+        location.href = this.href + '&selectedLoan=true';
+      } else {
+        location.href = this.href
+      }
+    })
+  </script>
 {% endblock %}
