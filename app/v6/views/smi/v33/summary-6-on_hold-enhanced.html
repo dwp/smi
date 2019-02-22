@@ -9,7 +9,11 @@
   <div class="main-content">
     <div class="grid-row">
       <div class="column-two-thirds">
-        {% include path+"/inc/name-and-nino_on-hold.html" %}
+        {% if selectedLoan %}
+          {% include path+"/inc/name-and-nino_in-payment.html" %}
+        {% else %}
+          {% include path+"/inc/name-and-nino_on-hold.html" %}
+        {% endif %}
 
         <p>&nbsp;</p>
 
@@ -37,7 +41,11 @@
                       <a class="task-name" href="list-of-loans-several-all-done">
                         Loans and payments
                       </a>
-                      <span class="status-dormant">Loans closed</span>
+                      {% if selectedLoan %}
+                        <span class="status-in-payment">In payment</span>
+                      {% else %}
+                        <span class="status-dormant">Loans closed</span>
+                      {% endif %}
                     </li>
                   </ul>
                 </ol>

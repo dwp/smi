@@ -23,7 +23,7 @@
             <li>Loan 1 has been closed </li>
           {% endif %}
           <li>CPS (Central Payment System) has been instructed to stop payments for this loan</li>
-          <li>**A final payment of £10.00 has been sent for loan 1</li>
+          <li>**A final payment of £10.00 has been sent for loan {{'2' if selectedLoan else '1'}}</li>
           {% if multipleLoans and not selectedLoan %}
             <li>**A final payment of £10.00 has been sent for loan 2</li>
           {% endif %}
@@ -33,9 +33,9 @@
         <ul class="list list-bullet">
           <li>Send letters to the customer and to the lender telling them loan 1 has been closed</li>
           <li>Check operational instructions for additional steps to take (IS THE A LINK THAT WE COULD PROVIDE HERE?)</li>
-          <li>**There has been a potential overpayment of £10.00, please consider corrective action.</li>
-          {% if multipleLoans %}
-            <li>**There has been a potential overpayment of £10.00, please consider corrective action.</li>
+          <li>**There has been a potential overpayment of £10.00, please consider corrective action for loan {{'2' if selectedLoan else '1'}}.</li>
+          {% if multipleLoans and not selectedLoan  %}
+            <li>**There has been a potential overpayment of £10.00, please consider corrective action for loan 2.</li>
           {% endif %}
         </ul>
         
