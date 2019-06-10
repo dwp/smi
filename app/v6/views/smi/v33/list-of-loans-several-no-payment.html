@@ -1,0 +1,127 @@
+{% extends path+"/inc/layout.html" %} 
+
+{% block content %}
+  <main id="content" role="main">
+    {% include path+"/inc/main_nav.html" %}
+
+    <div class="main-content">
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          {% include path+"/inc/name-and-nino_on-hold.html" %}
+
+          <div class="admin-panes">
+            <div class="admin-pane">
+              <h1 class="heading-large">Loans and payments</h1>
+
+              <p>&nbsp;</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th class="col-0"></th>
+                    <th class="col-1">Status</th>
+                    <th class="col-2">Loan type</th>
+                    <th class="col-3">Lender</th>
+                    <th class="col-4">Loan reference</th>
+                    <th class="col-5">Amount</th>
+                    <th class="col-6">&nbsp;</th>
+                    <th class="col-6">&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span>1.</span>
+                    </td>
+                    <td>
+                      <span class="status-on-hold">No payment setup</span>
+                    </td>
+                    <td>
+                      Home purchase loan
+                    </td>
+                    <td>
+                      Yorkshire Building Society
+                    </td>
+                    <td>
+                      7611448890
+                    </td>
+                    <td>
+                      £51.00
+                    </td>
+                    <td>
+                      <a href="loan-details-closed-enhanced?nino={{ nino }}">View</a>
+                    </td>
+                    <td>
+                      <a href="loan-details-closed-enhanced?nino={{ nino }}">Setup</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span>2.</span>
+                    </td>
+                    <td>
+                      <span class="status-on-hold">No payment setup</span>
+                    </td>
+                    <td>
+                      Home improvement loan
+                    </td>
+                    <td>
+                      Yorkshire Building Society
+                    </td>
+                    <td>
+                      7611448891
+                    </td>
+                    <td>
+                      £10.00
+                    </td>
+                    <td>
+                      <a href="loan-details-closed-enhanced?nino={{ nino }}">View</a>
+                    </td>
+                    <td>
+                      <a href="loan-details-closed-enhanced?nino={{ nino }}">Setup</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span>3.</span>
+                    </td>
+                    <td>
+                      <span class="status-on-hold">No payment setup</span>
+                    </td>
+                    <td>
+                      Home improvement loan
+                    </td>
+                    <td>
+                      Yorkshire Building Society
+                    </td>
+                    <td>
+                      7611448892
+                    </td>
+                    <td>
+                      £9.00
+                    </td>
+                    <td>
+                      <a href="loan-details-closed-enhanced?nino={{ nino }}">View</a>
+                    </td>
+                    <td>
+                      <a href="loan-details-closed-enhanced?nino={{ nino }}">Setup</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p style="padding-top: 32px;"><a href="add-loan">Add loan</a></p>
+
+              <p><a href="close-loan-enhanced-no-payment-setup">Close loan</a></p>
+
+              <p style="margin-top:32px;">
+                <a href="summary-6-on_hold-enhanced?multipleLoans=true&selectedLoan=true" class="link-back">Back to case overview</a>
+              </p>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}

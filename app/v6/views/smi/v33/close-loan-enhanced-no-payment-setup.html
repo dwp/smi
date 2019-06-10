@@ -1,0 +1,209 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+  <main id="content" role="main">
+
+    {% set currentPage = 'claimant' %}
+    {% include path+"/inc/main_nav.html" %}
+
+    <div class="main-content">
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          {% include path+"/inc/name-and-nino_in-payment.html" %}
+
+          <h1 class="heading-large">Close loan {{'1' if not multipleLoans}}</h1>
+
+          {% if multipleLoans %}
+            <div class="form-group">
+              <fieldset>
+                <legend>
+                  <h1 class="heading-medium">
+                    Would you like to close all loans for this customer?
+                  </h1>
+                </legend>
+
+                <div class="multiple-choice" data-target="close-all-container">
+                  <input id="close-all-loan-yes" type="radio" name="close-option" value="Yes">
+                  <label for="close-all-loan-yes">Yes</label>
+                </div>
+                <div class="multiple-choice" data-target="loan-selection-container">
+                  <input id="close-all-loan-no" type="radio" name="close-option" value="No">
+                  <label for="close-all-loan-no">No</label>
+                </div>
+              </fieldset>
+            </div>
+ 
+            <div class="form-group panel panel-border-narrow js-hidden" id="loan-selection-container">
+              <fieldset>
+                <legend>
+                  <h3 class="heading-medium">Which loans do you want to close?</h3>
+                  <span class="body-text">Select all that apply</span>
+                </legend>
+
+                <div class="multiple-choice" data-target="loan-1">
+                  <input id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
+                  <label for="waste-type-1">Loan 1 - 7611448890</label>
+                </div>
+                {{ loanSelection('loan-1', 'loan 1') }}
+                <div class="multiple-choice" data-target="loan-2">
+                  <input id="waste-type-2" name="waste-types" type="checkbox" value="waste-mines">
+                  <label for="waste-type-2">Loan 2 - 7611448891</label>
+                </div>
+                {{ loanSelection('loan-2', 'loan 2') }}
+                <div class="multiple-choice" data-target="loan-3">
+                  <input id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural">
+                  <label for="waste-type-3">Loan 3 - 7611448892</label>
+                </div>
+                {{ loanSelection('loan-3', 'loan 3') }}
+              </fieldset>
+            </div>
+          {% endif %}
+
+          {% if not multipleLoans %}
+            {{ loanSelection('single-loan') }}
+          {% else %}
+            {{ loanSelection('loan-1', 'loan 1') }}
+            {{ loanSelection('loan-2', 'loan 2') }}
+            {{ loanSelection('loan-3', 'loan 3') }}
+
+
+            <div class="form-group panel panel-border-narrow js-hidden" id="close-all-container">
+              {{ reasonsForClosing('all') }}
+            </div>
+          {% endif %}
+          
+          <p><a id="link_continue" href="close-loan-enhanced-summary{{ '?multipleLoans=true' if multipleLoans }}" class="button">Continue</a></p>
+          <p><a href="#">Cancel</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    var linkContinue = document.getElementById("link_continue");
+    console.log(linkContinue)
+    linkContinue.addEventListener('click', function(e){
+      e.preventDefault();
+      console.log(this.href)
+
+      if(document.querySelector('#radio-inline-6:checked')){
+        location.href = this.href + '&selectedLoan=true';
+      } else {
+        location.href = this.href
+      }
+    })
+  </script>
+{% endblock %}
+
+{% macro loanSelection(id, loanName) %}
+  <div class="{{ 'panel panel-border-narrow js-hidden' if multipleLoans}}" id="{{id}}">
+    <div class="form-group">
+      <fieldset>
+        <legend>
+          <h1 class="heading-medium">
+            There has been no SMI payment made for {{loanName}}. Do you need to make a final payment?
+          </h1>
+        </legend>
+
+        <div class="multiple-choice" data-target="final-payment-container-{{id}}">
+          <input id="final-payment-yes-{{id}}" type="radio" name="final-payment-option" value="Yes">
+          <label for="final-payment-yes-{{id}}">Yes</label>
+        </div>
+        <div class="multiple-choice" data-target="close-selected-loans-container-{{id}}">
+          <input id="final-payment-no-{{id}}" type="radio" name="final-payment-option" value="No">
+          <label for="final-payment-no-{{id}}">No</label>
+        </div>
+      </fieldset>
+    </div>
+  
+    <div class="panel panel-border-narrow js-hidden" id="final-payment-container-{{id}}">
+      <div class="form-group">
+        <fieldset>
+          <legend>
+            <span class="form-label-bold">
+              Payment from date
+            </span>
+            
+          </legend>
+          <div class="form-date">
+            <div class="form-group form-group-day">
+              <label class="form-label" for="payment-from-date-day">Day</label>
+              <input class="form-control" id="payment-from-date-day-{{id}}" name="payment-from-date-day">
+            </div>
+            <div class="form-group form-group-month">
+              <label class="form-label" for="payment-from-date-month">Month</label>
+              <input class="form-control" id="payment-from-date-month-{{id}}" name="payment-from-date-month" >
+            </div>
+            <div class="form-group form-group-year">
+              <label class="form-label" for="payment-from-date-year">Year</label>
+              <input class="form-control" id="payment-from-date-year-{{id}}" name="payment-from-date-year">
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="form-group">
+        <fieldset>
+          <legend>
+            <span class="form-label-bold">
+              Final SMI paid to date
+            </span>
+            
+          </legend>
+          <div class="form-date">
+            <div class="form-group form-group-day">
+              <label class="form-label" for="final-smi-paid-to-day-{{id}}">Day</label>
+              <input class="form-control" id="final-smi-paid-to-day-{{id}}" name="final-smi-paid-to-day" >
+            </div>
+            <div class="form-group form-group-month">
+              <label class="form-label" for="final-smi-paid-to-month-{{id}}">Month</label>
+              <input class="form-control" id="final-smi-paid-to-month-{{id}}" name="final-smi-paid-to-month" >
+            </div>
+            <div class="form-group form-group-year">
+              <label class="form-label" for="final-smi-paid-to-year-{{id}}">Year</label>
+              <input class="form-control" id="final-smi-paid-to-year-{{id}}" name="final-smi-paid-to-year" >
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    {{reasonsForClosing()}}
+  </div>
+{% endmacro %}
+
+
+{% macro reasonsForClosing(id) %}
+  <div class="form-group">
+    <fieldset>
+      <legend>
+        <h1 class="heading-medium">
+          {% if id === 'all' %}
+            Why are payments being suspended?
+          {% else %}
+            Why is this loan being closed?
+          {% endif %}
+        </h1>
+      </legend>
+
+      <div class="multiple-choice">
+        <input id="suspened-reason-1-{{id}}" type="radio" name="suspened-reason-group-{{id}}" value="Yes">
+        <label for="suspened-reason-1-{{id}}">Customer no longer wants SMI</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="suspened-reason-2-{{id}}" type="radio" name="suspened-reason-group-{{id}}" value="No">
+        <label for="suspened-reason-2-{{id}}">The loan from the lender has been redeemed</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="suspened-reason-3-{{id}}" type="radio" name="suspened-reason-group-{{id}}" value="No">
+        <label for="suspened-reason-3-{{id}}">SMI entitlement has ended</label>
+      </div>
+      <div class="multiple-choice" data-target="closing-reason-panel-{{id}}">
+        <input id="suspened-reason-4-{{id}}" type="radio" name="suspened-reason-group-{{id}}" value="No">
+        <label for="suspened-reason-4-{{id}}">Other</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="closing-reason-panel-{{id}}">
+        <label class="form-label" for="closing-reason-{{id}}">Reason for closing the loan</label>
+        <input class="form-control" name="closing-reason-{{id}}" type="text" id="closing-reason">
+      </div>
+    </fieldset>
+  </div>
+{% endmacro %}
